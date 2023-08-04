@@ -1,0 +1,28 @@
+{
+  "name": "@joingo/vuery",
+  "version": "0.1.0",
+  "description": "面向 Ruoyi 服务框架开发的 Vue3 应用程序脚手架。",
+  "main": "index.js",
+  "repository": "git@codeup.aliyun.com:61935ec0e84c82e79291a8b7/base/vuery.git",
+  "author": "Wang Yucai <netowls-studio@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "script": {
+    "release:patch-dryrun": "standard-version -r patch -i CHANGELOG.md --dry-run",
+    "release:patch": "standard-version -r patch -i CHANGELOG.md",
+    "release:minor-dryrun": "standard-version -r minor -i CHANGELOG.md --dry-run",
+    "release:minor": "standard-version -r minor -i CHANGELOG.md",
+    "release:major-dryrun": "standard-version -r major -i CHANGELOG.md --dry-run",
+    "release:major": "standard-version -r major -i CHANGELOG.md",
+    "version:prerelease": "npm version prerelease --no-git-tag-version --workspaces",
+    "version:prepatch": "npm version prepatch --no-git-tag-version --workspaces",
+    "version:preminor": "npm version preminor --no-git-tag-version --workspaces",
+    "version:premajor": "npm version premajor --no-git-tag-version --workspaces",
+    "version:patch": "npm version patch --no-git-tag-version --workspaces",
+    "version:minor": "npm version minor --no-git-tag-version --workspaces",
+    "version:major": "npm version major --no-git-tag-version --workspaces"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
