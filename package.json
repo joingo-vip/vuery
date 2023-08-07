@@ -21,10 +21,12 @@
     "version:patch": "npm version patch --no-git-tag-version --workspaces",
     "version:minor": "npm version minor --no-git-tag-version --workspaces",
     "version:major": "npm version major --no-git-tag-version --workspaces",
-    "ts:compile": "npm run ts:compile -w packages\\core"
+    "ts:compile": "npm run ts:compile -w packages\\runtime"
   },
   "devDependencies": {
     "standard-version": "^9.5.0"
   },
-  "workspaces": []
+  "workspaces": [
+    "packages\\runtime"
+  ]
 }
