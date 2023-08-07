@@ -1,0 +1,39 @@
+{
+  "name": "@vuery/core",
+  "version": "0.1.0",
+  "description": "Vuery 核心应用程序模块。",
+  "main": "build/index.js",
+  "type": "module",
+  "types": "build/index.d.ts",
+  "typings": "build/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^20.4.7",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "ts:compile": "tsc -p ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@codeup.aliyun.com:61935ec0e84c82e79291a8b7/base/vuery.git"
+  },
+  "keywords": [
+    "vuery",
+    "typescript",
+    "javascript",
+    "es6",
+    "core"
+  ],
+  "author": "Wang Yucai",
+  "license": "MIT",
+  "files": [
+    "src/*.ts",
+    "src/**/*.ts",
+    "typings/*.d.ts",
+    "build/*.js",
+    "build/*.d.ts",
+    "build/**/*.js",
+    "build/**/*.d.ts",
+    "README.md"
+  ]
+}
