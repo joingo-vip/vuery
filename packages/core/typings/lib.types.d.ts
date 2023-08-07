@@ -12,7 +12,7 @@
  * @packageDocumentation
  */
 
-declare namespace vuery {
+declare namespace sys {
   /**
    * 提供了可能为空的 {@link T} 类型。
    * @author Wang Yucai

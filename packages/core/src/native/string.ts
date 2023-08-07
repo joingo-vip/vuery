@@ -4,13 +4,26 @@
 // *******************************************************************************************************************************************************
 
 /**
- * JavaScript 原生类型扩展方法。
+ * {@link String} 类型扩展方法。
  *
  * @remarks
- * "index.ts": JavaScript 原生类型扩展方法。
+ * "string.ts": {@link String} 类型扩展方法。
  *
  * @packageDocumentation
  */
 
-import './object';
-import './string';
+import formatImpl from 'string-template';
+
+String.empty = '';
+
+String.isNullOrEmpty = (s?: sys.Nullable<string>): boolean => {
+  return (s ?? '').length === 0;
+};
+
+String.isNullOrWhitespace = (s?: sys.Nullable<string>): boolean => {
+  return String.isNullOrEmpty((s ?? String.empty).trim());
+};
+
+String.format = (formatter: string, ...args: Array<any>): string => {
+  return formatImpl(formatter, args);
+};

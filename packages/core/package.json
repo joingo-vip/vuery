@@ -8,6 +8,7 @@
   "typings": "build/index.d.ts",
   "devDependencies": {
     "@types/node": "^20.4.7",
+    "@types/string-template": "^1.0.2",
     "typescript": "^5.1.6"
   },
   "scripts": {
@@ -35,5 +36,8 @@
     "build/**/*.js",
     "build/**/*.d.ts",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "string-template": "^1.0.0"
+  }
 }
