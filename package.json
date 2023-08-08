@@ -21,12 +21,14 @@
     "version:patch": "npm version patch --no-git-tag-version --workspaces",
     "version:minor": "npm version minor --no-git-tag-version --workspaces",
     "version:major": "npm version major --no-git-tag-version --workspaces",
-    "ts:compile": "npm run ts:compile -w packages\\runtime"
+    "ts:compile": "npm run ts:compile -w packages\\runtime",
+    "debug:web": "npm run debug -w packages\\vuery-web"
   },
   "devDependencies": {
     "standard-version": "^9.5.0"
   },
   "workspaces": [
-    "packages\\runtime"
+    "packages\\runtime",
+    "packages\\vuery-web"
   ]
 }

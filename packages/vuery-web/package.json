@@ -1,0 +1,28 @@
+{
+  "name": "@vuery/web",
+  "description": "适用于 Desktop 浏览器的 Vuery 应用程序。",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "debug": "vite --mode debug",
+    "release": "vite build --mode release",
+    "pre-release": "vite build --mode pre-release",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vuery/runtime": "^0.1.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.6",
+    "@types/node": "^20.4.8",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "figlet": "^1.6.0",
+    "sass": "^1.64.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-html": "^3.2.0",
+    "vue-tsc": "^1.8.5"
+  }
+}
