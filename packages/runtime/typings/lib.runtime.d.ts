@@ -12,6 +12,8 @@
  * @packageDocumentation
  */
 
+/// <reference types="vue" />
+
 declare namespace vuery {
   /**
    * 定义了字符串格式化的方法委托。
