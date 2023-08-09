@@ -5,10 +5,16 @@
   // *******************************************************************************************************************************************************
 -->
 
+<!--app.vue: Vuery 应用程序根节点组件-->
 <template>
-  <AppWidget></AppWidget>
+  <div class="app">
+    <!-- 此处为组件：app.vue -->
+    <slot />
+  </div>
 </template>
 
-<script lang="ts" setup>
-import { AppWidget } from '@/components';
-</script>
+<script lang="ts" setup></script>
+
+<style lang="scss">
+@use '../style/app.scss';
+</style>

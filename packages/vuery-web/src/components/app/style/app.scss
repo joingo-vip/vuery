@@ -1,0 +1,7 @@
+.app {
+    --app--background-color: var(--white);
+    --app--height          : #{percentage($number: 1)};
+
+    height          : var(--app--height);
+    background-color: var(--app--background-color);
+}
