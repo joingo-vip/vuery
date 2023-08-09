@@ -11,7 +11,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/font": "^7.2.96",
     "@vuery/runtime": "^0.1.0",
+    "animate.css": "^4.1.1",
+    "element-plus": "^2.3.9",
+    "string-template": "^1.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
