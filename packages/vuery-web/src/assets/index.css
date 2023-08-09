@@ -1,0 +1,159 @@
+@charset "UTF-8";
+:root {
+  /* Vuery 主题色 */
+  --black: #000;
+  --white: #fff;
+  --primary: #0d47a1;
+  --success: #33691e;
+  --warning: #f57f17;
+  --danger: #b71c1c;
+  --error: #b71c1c;
+  --info: #9e9e9e;
+  /* Vuery 字体色 */
+  --black-text: #000;
+  --white-text: #fff;
+  --main-text: #212121;
+  --secondary-text: #424242;
+  --tertiary-text: #616161;
+  --prompt-text: #bdbdbd;
+  --primary-text: #0d47a1;
+  --success-text: #33691e;
+  --warning-text: #f57f17;
+  --danger-text: #b71c1c;
+  --error-text: #b71c1c;
+  --info-text: #9e9e9e;
+  /* Vuery 字体尺寸 */
+  --text-reglar: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+  --text-xxs: 0.625rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-xxl: 1.375rem;
+  --max-zindex: 2023;
+  --radius: 0.125rem;
+}
+
+/* Vuery 主题色 */
+.black {
+  background-color: var(--black);
+}
+
+.white, html,
+body {
+  background-color: var(--white);
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.success {
+  background-color: var(--success);
+}
+
+.warning {
+  background-color: var(--warning);
+}
+
+.danger {
+  background-color: var(--danger);
+}
+
+.error {
+  background-color: var(--error);
+}
+
+.info {
+  background-color: var(--info);
+}
+
+/* Vuery 字体色 */
+.black-text {
+  color: var(--black-text);
+}
+
+.white-text {
+  color: var(--white-text);
+}
+
+.main-text {
+  color: var(--main-text);
+}
+
+.secondary-text {
+  color: var(--secondary-text);
+}
+
+.tertiary-text {
+  color: var(--tertiary-text);
+}
+
+.prompt-text {
+  color: var(--prompt-text);
+}
+
+.primary-text {
+  color: var(--primary-text);
+}
+
+.success-text {
+  color: var(--success-text);
+}
+
+.warning-text {
+  color: var(--warning-text);
+}
+
+.danger-text {
+  color: var(--danger-text);
+}
+
+.error-text {
+  color: var(--error-text);
+}
+
+.info-text {
+  color: var(--info-text);
+}
+
+/* Vuery 字体尺寸 */
+html {
+  font-size: 16px;
+}
+
+.text-reglar {
+  font-size: var(--text-reglar);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.text-xs {
+  font-size: var(--text-xs);
+}
+
+.text-xxs {
+  font-size: var(--text-xxs);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.text-xxl {
+  font-size: var(--text-xxl);
+}
+
+html,
+body {
+  height: 100%;
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+}

@@ -31,6 +31,8 @@ function configureApp(app: App): void {
       console.debug(`[DEBUG] - <main.ts: aedfad>: 尝试注册样式表。`);
       import('animate.css/animate.css');
       import('@mdi/font/css/materialdesignicons.css');
+      import('@/assets/overrides/element-plus.scss');
+      import('@/assets/index.scss');
     })
     .use((_app) => {
       console.debug(

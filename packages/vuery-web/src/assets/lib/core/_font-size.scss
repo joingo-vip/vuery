@@ -1,0 +1,35 @@
+@use "sass:math"as *;
+@use "../vars";
+
+$--fontsize:("-reglar":vars.$fontsize-regular,
+    "-sm":vars.$fontsize-sm,
+    "-xs":vars.$fontsize-xs,
+    "-xxs":vars.$fontsize-xxs,
+    "-lg":vars.$fontsize-lg,
+    "-xl":vars.$fontsize-xl,
+    "-xxl":vars.$fontsize-xxl,
+);
+
+@mixin build-fontsize-vars {
+
+    /* Vuery 字体尺寸 */
+    @each $key,
+    $value in $--fontsize {
+        --text#{$key}: #{div($value, vars.$fontsize-base)}rem;
+    }
+}
+
+@mixin build-fontsize-class {
+    /* Vuery 字体尺寸 */
+
+    html {
+        font-size: #{vars.$fontsize-base}px;
+    }
+
+    @each $key,
+    $value in $--fontsize {
+        .text#{$key} {
+            font-size: var(--text#{$key});
+        }
+    }
+}

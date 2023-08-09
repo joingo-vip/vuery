@@ -1,0 +1,60 @@
+@use 'sass:map'as *;
+@use '../vars';
+
+$--base-colors: (black: #000,
+  white: #fff,
+);
+
+$--colors: (primary: vars.$primary,
+  success: vars.$success,
+  warning: vars.$warning,
+  danger : vars.$danger,
+  error : vars.$error,
+  info : vars.$info,
+);
+
+$--text-colors: (main : vars.$main-text,
+  secondary: vars.$secondary-text,
+  tertiary : vars.$tertiary-text,
+  prompt : vars.$prompt-text,
+  primary : vars.$primary-text,
+  success : vars.$success-text,
+  warning : vars.$warning-text,
+  danger : vars.$danger-text,
+  error : vars.$error-text,
+  info : vars.$info-text,
+);
+
+@mixin build-color-vars {
+
+  /* Vuery 主题色 */
+  @each $key,
+  $value in merge($--base-colors, $--colors) {
+    --#{$key}: #{$value};
+  }
+
+  /* Vuery 字体色 */
+  @each $key,
+  $value in merge($--base-colors, $--text-colors) {
+    --#{$key}-text: #{$value};
+  }
+}
+
+@mixin build-color-class {
+
+  /* Vuery 主题色 */
+  @each $key,
+  $value in merge($--base-colors, $--colors) {
+    .#{$key} {
+      background-color: var(--#{$key});
+    }
+  }
+
+  /* Vuery 字体色 */
+  @each $key,
+  $value in merge($--base-colors, $--text-colors) {
+    .#{$key}-text {
+      color: var(--#{$key}-text);
+    }
+  }
+}

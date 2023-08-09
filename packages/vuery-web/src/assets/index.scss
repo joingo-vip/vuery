@@ -1,0 +1,23 @@
+@use "sass:math"as *;
+@use './lib/index'as vry;
+
+:root {
+  @include vry.build-color-vars;
+  @include vry.build-fontsize-vars;
+
+  --max-zindex: #{vry.$max-zindex};
+  --radius    : #{div(vry.$radius, vry.$fontsize-base)}rem;
+}
+
+@include vry.build-color-class;
+@include vry.build-fontsize-class;
+
+html,
+body {
+  @extend .white;
+
+  height : percentage($number: 1);
+  border : 0 none;
+  padding: 0;
+  margin : 0;
+}

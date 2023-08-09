@@ -1,0 +1,30 @@
+@use '../lib/index' as ry;
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': ry.$primary,
+    ),
+    'success': (
+      'base': ry.$success,
+    ),
+    'warning': (
+      'base': ry.$warning,
+    ),
+    'danger': (
+      'base': ry.$danger,
+    ),
+    'error': (
+      'base': ry.$error,
+    ),
+    'info': (
+      'base': ry.$info,
+    ),
+  ),
+
+  $border-radius: (
+    base: 2px,
+  )
+);
+
+@use 'element-plus/theme-chalk/src/index.scss' as *;
