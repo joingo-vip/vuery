@@ -119,6 +119,15 @@ class Program {
         host: Program.s_developmentServerHost,
         port: Program.s_developmentServerPort,
         open: true,
+        proxy: {
+          '/web-api': {
+            target: environmentVars.VITE_WEBAPI_PROXYURL,
+            changeOrigin: true,
+            rewrite(path) {
+              return path.replace(/^\/web-api/gi, '');
+            },
+          },
+        },
       },
       build: {
         outDir: buildOutputDir,
