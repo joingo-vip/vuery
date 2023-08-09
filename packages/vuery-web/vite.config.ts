@@ -44,7 +44,7 @@ class Program {
    * @returns {UserConfigExport}
    */
   static main({ mode }): UserConfigExport {
-    figlet.text('Vuery!', 'ANSI Regular', (error, result) => {
+    figlet.text('Vuery!', 'ANSI Shadow', (error, result) => {
       console.log(result);
     });
 
