@@ -16,6 +16,7 @@ import { RuntimeExtensions } from '@vuery/runtime';
 import { App, createApp } from 'vue';
 import Main from './Main.vue';
 import ElementPlus from 'element-plus';
+import '@vuery/native';
 
 /**
  * 配置应用程序。

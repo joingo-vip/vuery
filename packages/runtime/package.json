@@ -37,5 +37,8 @@
     "build/*.d.ts",
     "build/**/*.js",
     "build/**/*.d.ts"
-  ]
+  ],
+  "dependencies": {
+    "@vuery/native": "^0.1.0"
+  }
 }

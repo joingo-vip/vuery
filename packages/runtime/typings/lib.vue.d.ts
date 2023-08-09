@@ -20,9 +20,8 @@ declare module 'vue' {
      * 格式化字符串。
      * @author Wang Yucai
      *
-     * @type {vuery.StringFormatFunction}
-     * @see {@link https://www.npmjs.com/package/string-template}
+     * @type {(s: string | null, ...args: Array<any>) => string | null}
      */
-    $format: vuery.StringFormatFunction;
+    $format: (s: string | null, ...args: Array<any>) => string | null;
   }
 }

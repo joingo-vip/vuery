@@ -3,8 +3,9 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
+/// <reference types="@vuery/native" />
+
 import { App } from 'vue';
-import formatImpl from 'string-template';
 
 /**
  * 定义了配置 {@link https://www.npmjs.com/package/vue} 应用程序方法委托。
@@ -56,7 +57,7 @@ export class RuntimeExtensions {
       `[DEBUG] - <runtime-extensions.ts: 0bc88e>: 尝试注册 Vue 应用程序全局扩展方法 “$format”。`
     );
 
-    this.m_app.config.globalProperties.$format = formatImpl;
+    this.m_app.config.globalProperties.$format = String.format;
 
     return this;
   }

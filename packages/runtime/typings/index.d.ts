@@ -12,5 +12,4 @@
  * @packageDocumentation
  */
 
-/// <reference path="lib.runtime.d.ts" />
 /// <reference path="lib.vue.d.ts" />
