@@ -60,4 +60,10 @@ String.format = (s: string | null, ...args: Array<any>): string | null => {
   return stringTemplate(s, args);
 };
 
+String.getStaticResourceUri = (path: string): string => {
+  return `${__VUERY_BASE_URI}${path}`;
+};
+
 Date.current = (): Date => new Date();
+
+var __VUERY_BASE_URI: string = '';

@@ -16,6 +16,14 @@ export {};
 
 declare global {
   /**
+   * 基础 URL 地址。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  var __VUERY_BASE_URI: string = '';
+
+  /**
    * 为 {@link Object} 类型提供的静态扩展方法。
    * @author Wang Yucai
    *
