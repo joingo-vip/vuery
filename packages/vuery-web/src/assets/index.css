@@ -160,4 +160,15 @@ body {
 
 * {
   font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  /* ry-app.vue 组件样式*/
+  --ry-app--background-color: #fafafa;
+  --ry-app--height: 100%;
+}
+body .ry-app {
+  background-color: var(--ry-app--background-color);
+  height: var(--ry-app--height);
 }

@@ -1,0 +1,14 @@
+@use "../lib/index"as lib;
+
+@mixin build-vars {
+    /* ry-app.vue 组件样式*/
+    --ry-app--background-color: #fafafa;
+    --ry-app--height          : #{percentage($number: 1)};
+}
+
+@mixin build-class {
+    .ry-app {
+        background-color: var(--ry-app--background-color);
+        height          : var(--ry-app--height);
+    }
+}

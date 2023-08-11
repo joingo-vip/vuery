@@ -1,0 +1,12 @@
+@use "sass:math"as *;
+@use "../vars";
+
+@function rem($value:0) {
+    @if($value==0) {
+        @return 0;
+    }
+
+    @else {
+        @return #{div($value, vars.$fontsize-base)}rem;
+    }
+}

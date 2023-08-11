@@ -5,10 +5,11 @@
   // *******************************************************************************************************************************************************
 -->
 
+<!--ry-app.vue: Vuery 应用程序根节点组件-->
 <template>
-  <Application></Application>
+  <div class="ry-app">
+    <slot />
+  </div>
 </template>
 
-<script lang="ts" setup>
-import { Application } from '@/components';
-</script>
+<script lang="ts" setup></script>

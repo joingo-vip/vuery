@@ -1,16 +1,17 @@
 @use "sass:math"as *;
-@use './lib/index'as vry;
+@use './lib/index'as lib;
+@use "./components/index"as components;
 
 :root {
-  @include vry.build-color-vars;
-  @include vry.build-fontsize-vars;
+  @include lib.build-color-vars;
+  @include lib.build-fontsize-vars;
 
-  --max-zindex: #{vry.$max-zindex};
-  --radius    : #{div(vry.$radius, vry.$fontsize-base)}rem;
+  --max-zindex: #{lib.$max-zindex};
+  --radius    : #{div(lib.$radius, lib.$fontsize-base)}rem;
 }
 
-@include vry.build-color-class;
-@include vry.build-fontsize-class;
+@include lib.build-color-class;
+@include lib.build-fontsize-class;
 
 html,
 body {
@@ -26,4 +27,7 @@ body {
 
 * {
   font-family: 'Microsoft Yahei', Arial, Helvetica, sans-serif;
+  box-sizing : border-box;
 }
+
+@include components.build-components-class;

@@ -1,0 +1,9 @@
+@use "./app";
+
+@mixin build-components-class {
+    body {
+        @include app.build-vars;
+        @include app.build-class;
+    }
+
+}
