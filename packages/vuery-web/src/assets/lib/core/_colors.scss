@@ -30,13 +30,13 @@ $--text-colors: (main : vars.$main-text,
   /* Vuery 主题色 */
   @each $key,
   $value in merge($--base-colors, $--colors) {
-    --#{$key}: #{$value};
+    --ry-#{$key}: #{$value};
   }
 
   /* Vuery 字体色 */
   @each $key,
   $value in merge($--base-colors, $--text-colors) {
-    --#{$key}-text: #{$value};
+    --ry-#{$key}-text: #{$value};
   }
 }
 
@@ -45,16 +45,16 @@ $--text-colors: (main : vars.$main-text,
   /* Vuery 主题色 */
   @each $key,
   $value in merge($--base-colors, $--colors) {
-    .#{$key} {
-      background-color: var(--#{$key});
+    .ry-#{$key} {
+      background-color: var(--ry-#{$key});
     }
   }
 
   /* Vuery 字体色 */
   @each $key,
   $value in merge($--base-colors, $--text-colors) {
-    .#{$key}-text {
-      color: var(--#{$key}-text);
+    .ry-#{$key}-text {
+      color: var(--ry-#{$key}-text);
     }
   }
 }

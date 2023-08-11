@@ -6,9 +6,7 @@
 -->
 
 <template>
-  <AppWidget></AppWidget>
+  <div></div>
 </template>
 
-<script lang="ts" setup>
-import { AppWidget } from '@/components';
-</script>
+<script lang="ts" setup></script>

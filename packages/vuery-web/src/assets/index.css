@@ -1,120 +1,120 @@
 @charset "UTF-8";
 :root {
   /* Vuery 主题色 */
-  --black: #000;
-  --white: #fff;
-  --primary: #0d47a1;
-  --success: #33691e;
-  --warning: #f57f17;
-  --danger: #b71c1c;
-  --error: #b71c1c;
-  --info: #9e9e9e;
+  --ry-black: #000;
+  --ry-white: #fff;
+  --ry-primary: #0d47a1;
+  --ry-success: #33691e;
+  --ry-warning: #f57f17;
+  --ry-danger: #b71c1c;
+  --ry-error: #b71c1c;
+  --ry-info: #9e9e9e;
   /* Vuery 字体色 */
-  --black-text: #000;
-  --white-text: #fff;
-  --main-text: #212121;
-  --secondary-text: #424242;
-  --tertiary-text: #616161;
-  --prompt-text: #bdbdbd;
-  --primary-text: #0d47a1;
-  --success-text: #33691e;
-  --warning-text: #f57f17;
-  --danger-text: #b71c1c;
-  --error-text: #b71c1c;
-  --info-text: #9e9e9e;
+  --ry-black-text: #000;
+  --ry-white-text: #fff;
+  --ry-main-text: #212121;
+  --ry-secondary-text: #424242;
+  --ry-tertiary-text: #616161;
+  --ry-prompt-text: #bdbdbd;
+  --ry-primary-text: #0d47a1;
+  --ry-success-text: #33691e;
+  --ry-warning-text: #f57f17;
+  --ry-danger-text: #b71c1c;
+  --ry-error-text: #b71c1c;
+  --ry-info-text: #9e9e9e;
   /* Vuery 字体尺寸 */
-  --text-reglar: 1rem;
-  --text-sm: 0.875rem;
-  --text-xs: 0.75rem;
-  --text-xxs: 0.625rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-xxl: 1.375rem;
+  --ry-text-reglar: 1rem;
+  --ry-text-sm: 0.875rem;
+  --ry-text-xs: 0.75rem;
+  --ry-text-xxs: 0.625rem;
+  --ry-text-lg: 1.125rem;
+  --ry-text-xl: 1.25rem;
+  --ry-text-xxl: 1.375rem;
   --max-zindex: 2023;
   --radius: 0.125rem;
 }
 
 /* Vuery 主题色 */
-.black {
-  background-color: var(--black);
+.ry-black {
+  background-color: var(--ry-black);
 }
 
-.white, html,
+.ry-white, html,
 body {
-  background-color: var(--white);
+  background-color: var(--ry-white);
 }
 
-.primary {
-  background-color: var(--primary);
+.ry-primary {
+  background-color: var(--ry-primary);
 }
 
-.success {
-  background-color: var(--success);
+.ry-success {
+  background-color: var(--ry-success);
 }
 
-.warning {
-  background-color: var(--warning);
+.ry-warning {
+  background-color: var(--ry-warning);
 }
 
-.danger {
-  background-color: var(--danger);
+.ry-danger {
+  background-color: var(--ry-danger);
 }
 
-.error {
-  background-color: var(--error);
+.ry-error {
+  background-color: var(--ry-error);
 }
 
-.info {
-  background-color: var(--info);
+.ry-info {
+  background-color: var(--ry-info);
 }
 
 /* Vuery 字体色 */
-.black-text {
-  color: var(--black-text);
+.ry-black-text {
+  color: var(--ry-black-text);
 }
 
-.white-text {
-  color: var(--white-text);
+.ry-white-text {
+  color: var(--ry-white-text);
 }
 
-.main-text {
-  color: var(--main-text);
+.ry-main-text {
+  color: var(--ry-main-text);
 }
 
-.secondary-text {
-  color: var(--secondary-text);
+.ry-secondary-text {
+  color: var(--ry-secondary-text);
 }
 
-.tertiary-text {
-  color: var(--tertiary-text);
+.ry-tertiary-text {
+  color: var(--ry-tertiary-text);
 }
 
-.prompt-text {
-  color: var(--prompt-text);
+.ry-prompt-text {
+  color: var(--ry-prompt-text);
 }
 
-.primary-text {
-  color: var(--primary-text);
+.ry-primary-text {
+  color: var(--ry-primary-text);
 }
 
-.success-text {
-  color: var(--success-text);
+.ry-success-text {
+  color: var(--ry-success-text);
 }
 
-.warning-text {
-  color: var(--warning-text);
+.ry-warning-text {
+  color: var(--ry-warning-text);
 }
 
-.danger-text {
-  color: var(--danger-text);
+.ry-danger-text {
+  color: var(--ry-danger-text);
 }
 
-.error-text {
-  color: var(--error-text);
+.ry-error-text {
+  color: var(--ry-error-text);
 }
 
-.info-text {
-  color: var(--info-text);
+.ry-info-text {
+  color: var(--ry-info-text);
 }
 
 /* Vuery 字体尺寸 */
@@ -122,32 +122,32 @@ html {
   font-size: 16px;
 }
 
-.text-reglar {
-  font-size: var(--text-reglar);
+.ry-text-reglar {
+  font-size: var(--ry-text-reglar);
 }
 
-.text-sm {
-  font-size: var(--text-sm);
+.ry-text-sm {
+  font-size: var(--ry-text-sm);
 }
 
-.text-xs {
-  font-size: var(--text-xs);
+.ry-text-xs {
+  font-size: var(--ry-text-xs);
 }
 
-.text-xxs {
-  font-size: var(--text-xxs);
+.ry-text-xxs {
+  font-size: var(--ry-text-xxs);
 }
 
-.text-lg {
-  font-size: var(--text-lg);
+.ry-text-lg {
+  font-size: var(--ry-text-lg);
 }
 
-.text-xl {
-  font-size: var(--text-xl);
+.ry-text-xl {
+  font-size: var(--ry-text-xl);
 }
 
-.text-xxl {
-  font-size: var(--text-xxl);
+.ry-text-xxl {
+  font-size: var(--ry-text-xxl);
 }
 
 html,
@@ -156,4 +156,8 @@ body {
   border: 0 none;
   padding: 0;
   margin: 0;
+}
+
+* {
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
 }

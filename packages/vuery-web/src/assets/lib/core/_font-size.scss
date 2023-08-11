@@ -15,7 +15,7 @@ $--fontsize:("-reglar":vars.$fontsize-regular,
     /* Vuery 字体尺寸 */
     @each $key,
     $value in $--fontsize {
-        --text#{$key}: #{div($value, vars.$fontsize-base)}rem;
+        --ry-text#{$key}: #{div($value, vars.$fontsize-base)}rem;
     }
 }
 
@@ -28,8 +28,8 @@ $--fontsize:("-reglar":vars.$fontsize-regular,
 
     @each $key,
     $value in $--fontsize {
-        .text#{$key} {
-            font-size: var(--text#{$key});
+        .ry-text#{$key} {
+            font-size: var(--ry-text#{$key});
         }
     }
 }
