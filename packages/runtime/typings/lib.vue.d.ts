@@ -23,5 +23,13 @@ declare module 'vue' {
      * @type {(s: string | null, ...args: Array<any>) => string | null}
      */
     $format: (s: string | null, ...args: Array<any>) => string | null;
+
+    /**
+     * 获取静态资源 URI 地址。
+     * @author Wang Yucai
+     *
+     * @type {(path: string) => string}
+     */
+    $staticUri: (path: string) => string;
   }
 }

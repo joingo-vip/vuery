@@ -108,6 +108,15 @@ export interface IAppBuilder {
   use(configure: (app: App) => void): IAppBuilder;
 
   /**
+   * 配置 Vuery 应用程序基础 URI 地址。
+   * @author Wang Yucai
+   *
+   * @param {string} baseUri
+   * @returns {IAppBuilder}
+   */
+  configureBaseUri(baseUri: string): IAppBuilder;
+
+  /**
    * 构建应用程序 {@link IApplication} 类型的对象实例。
    * @author Wang Yucai
    *
@@ -165,12 +174,36 @@ export class AppBuilder implements IAppBuilder {
       : selector.trim();
   }
 
-  use(configure: (app: App<any>) => void): IAppBuilder {
-    configure(this.app);
+  configureBaseUri(baseUri: string): IAppBuilder {
+    __VUERY_BASE_URI = baseUri;
     return this;
   }
 
+  use(configure: (app: App<any>) => void): IAppBuilder {
+    configure(this.app);
+    return this;
+    ``;
+  }
+
+  /**
+   * 配置 Vue 应用程序扩展方法。
+   * @author Wang Yucai
+   *
+   * @protected
+   */
+  protected configureFunctionEx(): void {
+    console.debug(
+      `[DEBUG] - <app-builder.ts: 01f9a7>: 尝试配置 Vue 应用程序扩展。`
+    );
+    this.app.config.globalProperties.$format = String.format;
+    this.app.config.globalProperties.$staticUri = String.getStaticResourceUri;
+    console.debug(
+      `[DEBUG] - <app-builder.ts: be9406>: Vue 应用程序扩展注册完成。`
+    );
+  }
+
   build(): IApplication {
+    this.configureFunctionEx();
     return new Application(this.app, this.selector);
   }
 }
