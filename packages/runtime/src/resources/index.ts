@@ -4,23 +4,13 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块。
+ * 多语言支持资源包。
  *
  * @remarks
- * "index.ts": Vuery 运行时扩展模块。
+ * "index.ts": 多语言支持资源包。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
-
-export {
-  AppBuilder,
-  Application,
-  IAppBuilder,
-  IApplication,
-} from './app-builder';
-export {
-  SimplifiedChineseLanguagePack,
-  UnitedStatesLanguagePack,
-} from './resources';
+export { UnitedStatesLanguagePack } from './en-US';
+export { SimplifiedChineseLanguagePack } from './zh-Hans';

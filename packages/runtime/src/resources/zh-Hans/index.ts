@@ -4,23 +4,14 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块。
+ * 简体中文语言包。
  *
  * @remarks
- * "index.ts": Vuery 运行时扩展模块。
+ * "index.ts": 简体中文语言包。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
+import SimplifiedChineseLanguagePack from './i18n.json';
 
-export {
-  AppBuilder,
-  Application,
-  IAppBuilder,
-  IApplication,
-} from './app-builder';
-export {
-  SimplifiedChineseLanguagePack,
-  UnitedStatesLanguagePack,
-} from './resources';
+export { SimplifiedChineseLanguagePack };
