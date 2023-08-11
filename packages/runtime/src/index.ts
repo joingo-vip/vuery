@@ -14,4 +14,9 @@
 
 /// <reference path="../typings/index.d.ts" />
 
-export { RuntimeExtensions } from './extensions';
+export {
+  AppBuilder,
+  Application,
+  IAppBuilder,
+  IApplication,
+} from './app-builder';
