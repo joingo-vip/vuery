@@ -13,3 +13,4 @@
  */
 
 /// <reference path="lib.vue.d.ts" />
+/// <reference path="lib.types.d.ts" />
