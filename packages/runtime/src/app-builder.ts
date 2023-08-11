@@ -175,7 +175,7 @@ export class AppBuilder implements IAppBuilder {
   }
 
   configureBaseUri(baseUri: string): IAppBuilder {
-    __VUERY_BASE_URI = baseUri;
+    window.__VUERY_BASE_URI = baseUri;
     return this;
   }
 

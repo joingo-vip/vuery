@@ -14,6 +14,8 @@
 
 import stringTemplate from 'string-template';
 
+let __VUERY_BASE_URI: string = '';
+
 Object.isUndefined = (obj: any): boolean => {
   const _isUndefined: boolean = typeof obj === 'undefined';
 
@@ -65,5 +67,3 @@ String.getStaticResourceUri = (path: string): string => {
 };
 
 Date.current = (): Date => new Date();
-
-var __VUERY_BASE_URI: string = '';
