@@ -24,3 +24,4 @@ export {
   SimplifiedChineseLanguagePack,
   UnitedStatesLanguagePack,
 } from './resources';
+export { SR } from './sr';
