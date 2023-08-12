@@ -4,18 +4,22 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vite 环境变量定义模块。
+ * JavaScript 原生类型运行时扩展类型模块。
  *
  * @remarks
- * "lib.vite.d.ts": Vite 环境变量定义模块。
+ * "lib.native.d.ts": JavaScript 原生类型运行时扩展类型模块。
  *
  * @packageDocumentation
  */
 
-/// <reference types="vite/client" />
+export {};
 
-interface ImportMetaEnv extends vuery.EnvironmentVariableRecord {}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
+declare global {
+  /**
+   * Vuery 默认语言。
+   * @author Wang Yucai
+   *
+   * @type {(string | vuery.SupportedLanguage | null)}
+   */
+  var __VUERY_DEFAULT_LANGUAGE: string | vuery.SupportedLanguage | null;
 }

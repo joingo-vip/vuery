@@ -12,7 +12,12 @@
  * @packageDocumentation
  */
 
+import i18next from 'i18next';
 import { App } from 'vue';
+import {
+  SimplifiedChineseLanguagePack,
+  UnitedStatesLanguagePack,
+} from './resources';
 
 /**
  * 定义了 Vuery 应用程序的接口。
@@ -117,6 +122,26 @@ export interface IAppBuilder {
   configureBaseUri(baseUri: string): IAppBuilder;
 
   /**
+   * 配置 Vuery 默认语言。
+   * @author Wang Yucai
+   *
+   * @param {(string | vuery.SupportedLanguage | null)} lng 默认的语言名称。
+   * @returns {IAppBuilder}
+   */
+  configureDefaultLanguage(
+    lng: string | vuery.SupportedLanguage | null
+  ): IAppBuilder;
+
+  /**
+   * 配置多语言支持资源。
+   * @author Wang Yucai
+   *
+   * @param {Record<string, any>} resources 资源包。
+   * @returns {IAppBuilder}
+   */
+  configureMultilingualResources(resources: Record<string, any>): IAppBuilder;
+
+  /**
    * 构建应用程序 {@link IApplication} 类型的对象实例。
    * @author Wang Yucai
    *
@@ -159,6 +184,11 @@ export class AppBuilder implements IAppBuilder {
    */
   protected readonly selector: string;
 
+  private m_resources: Record<string, any> = {
+    'zh-Hans': SimplifiedChineseLanguagePack,
+    'en-US': UnitedStatesLanguagePack,
+  };
+
   /**
    * 初始化 {@link AppBuilder} 的新实例。
    * @author Wang Yucai
@@ -173,6 +203,15 @@ export class AppBuilder implements IAppBuilder {
       ? 'body'
       : selector.trim();
   }
+  configureMultilingualResources(resources: Record<string, any>): IAppBuilder {
+    this.m_resources = Object.assign({}, this.m_resources, resources);
+    return this;
+  }
+
+  configureDefaultLanguage(lng: string): IAppBuilder {
+    window.__VUERY_DEFAULT_LANGUAGE = lng ?? 'zh-Hans';
+    return this;
+  }
 
   configureBaseUri(baseUri: string): IAppBuilder {
     window.__VUERY_BASE_URI = baseUri;
@@ -182,7 +221,6 @@ export class AppBuilder implements IAppBuilder {
   use(configure: (app: App<any>) => void): IAppBuilder {
     configure(this.app);
     return this;
-    ``;
   }
 
   /**
@@ -202,8 +240,28 @@ export class AppBuilder implements IAppBuilder {
     );
   }
 
+  /**
+   * 配置 {@link https://www.npmjs.com/package/i18next} 多语言支持。
+   * @author Wang Yucai
+   *
+   * @protected
+   * @see {@link https://www.npmjs.com/package/i18next}
+   */
+  protected configureI18next(): void {
+    console.debug(
+      `[DEBUG] - <app-builder.ts: abf20f>: 尝试配置 i18next 多语言支持资源包。详情参见：%o`,
+      this.m_resources
+    );
+    i18next.init({
+      lng: window.__VUERY_DEFAULT_LANGUAGE,
+      defaultNS: 'default',
+      resources: this.m_resources,
+    });
+  }
+
   build(): IApplication {
     this.configureFunctionEx();
+    this.configureI18next();
     return new Application(this.app, this.selector);
   }
 }

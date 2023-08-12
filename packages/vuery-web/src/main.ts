@@ -13,13 +13,16 @@
  */
 
 import { AppBuilder } from '@vuery/runtime';
-import { App, createApp } from 'vue';
+import { createApp } from 'vue';
 import Main from './Main.vue';
 import ElementPlus from 'element-plus';
 import '@vuery/native';
+import i18next from 'i18next';
+import I18nextVue from 'i18next-vue';
 
 new AppBuilder(createApp(Main), 'body')
   .configureBaseUri(import.meta.env.BASE_URL)
+  .configureDefaultLanguage(import.meta.env.RUNTIME_DEFAULT_LANGUAGE)
   .use(() => {
     console.debug(`[DEBUG] - <main.ts: 00160e>: 注册全局样式表。`);
     import('@mdi/font/css/materialdesignicons.css');
@@ -29,6 +32,9 @@ new AppBuilder(createApp(Main), 'body')
   })
   .use((app) => {
     app.use(ElementPlus, { size: 'default', 'zIndex': 2023 });
+  })
+  .use((app) => {
+    app.use(I18nextVue, { i18next });
   })
   .build()
   .run();
