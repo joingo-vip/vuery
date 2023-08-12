@@ -1,0 +1,47 @@
+@use "../lib/index"as lib;
+
+@mixin build-vars {
+    --ry-scrollable-box--trace-size : #{lib.rem(6)};
+    --ry-scrollable-box--width      : #{percentage($number: 1)};
+    --ry-scrollable-box--height     : #{percentage($number: 1)};
+}
+
+@mixin build-class {
+    .ry-scrollbar-box {
+        scrollbar-width: thin;
+        scrollbar-color: #E0E0E0 #F5F5F5;
+        width          : var(--ry-scrollable-box--width);
+        height         : var(--ry-scrollable-box--height);
+    }
+
+    .ry-scrollbar-box::-webkit-scrollbar {
+        width : var(--ry-scrollable-box--trace-size);
+        height: var(--ry-scrollable-box--trace-size);
+    }
+
+    .ry-scrollbar-box::-webkit-scrollbar-track {
+        border-radius   : var(--ry-scrollable-box--trace-size);
+        background-color: #F5F5F5;
+    }
+
+    .ry-scrollbar-box::-webkit-scrollbar-track:hover {
+        background-color: #EEEEEE;
+    }
+
+    .ry-scrollbar-box::-webkit-scrollbar-track:active {
+        background-color: #EEEEEE;
+    }
+
+    .ry-scrollbar-box::-webkit-scrollbar-thumb {
+        border-radius   : var(--ry-scrollable-box--trace-size);
+        background-color: #E0E0E0;
+    }
+
+    .ry-scrollbar-box::-webkit-scrollbar-thumb:hover {
+        background-color: #BDBDBD;
+    }
+
+    .ry-scrollbar-box::-webkit-scrollbar-thumb:active {
+        background-color: #BDBDBD;
+    }
+}

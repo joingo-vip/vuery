@@ -164,11 +164,45 @@ body {
 }
 
 body {
-  /* ry-app.vue 组件样式*/
+  /* ry-app.vue 组件样式 */
   --ry-app--background-color: #fafafa;
   --ry-app--height: 100%;
+  /* ry-scrollable-box.vue 组件样式 */
+  --ry-scrollable-box--trace-size: 0.375rem;
+  --ry-scrollable-box--width: 100%;
+  --ry-scrollable-box--height: 100%;
 }
 body .ry-app {
   background-color: var(--ry-app--background-color);
   height: var(--ry-app--height);
+}
+body .ry-app .ry-scrollbar-box {
+  scrollbar-width: thin;
+  scrollbar-color: #E0E0E0 #F5F5F5;
+  width: var(--ry-scrollable-box--width);
+  height: var(--ry-scrollable-box--height);
+}
+body .ry-app .ry-scrollbar-box::-webkit-scrollbar {
+  width: var(--ry-scrollable-box--trace-size);
+  height: var(--ry-scrollable-box--trace-size);
+}
+body .ry-app .ry-scrollbar-box::-webkit-scrollbar-track {
+  border-radius: var(--ry-scrollable-box--trace-size);
+  background-color: #F5F5F5;
+}
+body .ry-app .ry-scrollbar-box::-webkit-scrollbar-track:hover {
+  background-color: #EEEEEE;
+}
+body .ry-app .ry-scrollbar-box::-webkit-scrollbar-track:active {
+  background-color: #EEEEEE;
+}
+body .ry-app .ry-scrollbar-box::-webkit-scrollbar-thumb {
+  border-radius: var(--ry-scrollable-box--trace-size);
+  background-color: #E0E0E0;
+}
+body .ry-app .ry-scrollbar-box::-webkit-scrollbar-thumb:hover {
+  background-color: #BDBDBD;
+}
+body .ry-app .ry-scrollbar-box::-webkit-scrollbar-thumb:active {
+  background-color: #BDBDBD;
 }

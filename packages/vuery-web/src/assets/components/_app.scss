@@ -1,14 +1,19 @@
 @use "../lib/index"as lib;
+@use "./scrollable-box";
 
 @mixin build-vars {
-    /* ry-app.vue 组件样式*/
+    /* ry-app.vue 组件样式 */
     --ry-app--background-color: #fafafa;
     --ry-app--height          : #{percentage($number: 1)};
+    /* ry-scrollable-box.vue 组件样式 */
+    @include scrollable-box.build-vars;
 }
 
 @mixin build-class {
     .ry-app {
         background-color: var(--ry-app--background-color);
         height          : var(--ry-app--height);
+
+        @include scrollable-box.build-class;
     }
 }
