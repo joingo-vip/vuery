@@ -4,12 +4,22 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 组件相关定义模块。
+ * 用于修饰密闭类的装饰器模块。
  *
  * @remarks
- * "index.ts": Vuery 组件相关定义模块。
+ * "sealed-decorator.ts": 用于修饰密闭类的装饰器模块。
  *
  * @packageDocumentation
  */
 
-export { UIScrollableBoxProperties } from './components';
+/**
+ * 提供了修饰密闭类相关的方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @param {Function} ctor 目标类的构造方法。
+ */
+export function sealedDecorator(ctor: Function): void {
+  Object.seal(ctor);
+  Object.seal(ctor.prototype);
+}

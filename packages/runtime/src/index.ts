@@ -20,9 +20,9 @@ export {
   IAppBuilder,
   IApplication,
 } from './app-builder';
+export { sealed } from './decorators';
 export {
   SimplifiedChineseLanguagePack,
   UnitedStatesLanguagePack,
 } from './resources';
 export { SR } from './sr';
-export { UIScrollableBoxProperties } from './ui';

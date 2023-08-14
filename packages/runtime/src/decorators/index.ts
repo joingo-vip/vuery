@@ -4,28 +4,12 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 组件定义模块。
+ * TypeScript 装饰器模块。
  *
  * @remarks
- * "lib.components.d.ts": Vuery 组件定义模块。
+ * "index.ts": TypeScript 装饰器模块。
  *
  * @packageDocumentation
  */
 
-declare namespace vuery {
-  namespace ui {
-    /**
-     * 定义了滚动条选项枚举类型。
-     * @author Wang Yucai
-     *
-     * @typedef {UIScrollbarOptions}
-     */
-    type UIScrollbarOptions =
-      | 'visible'
-      | 'hidden'
-      | 'clip'
-      | 'scroll'
-      | 'auto'
-      | null;
-  }
-}
+export { sealedDecorator, sealedDecorator as sealed } from './sealed-decorator';
