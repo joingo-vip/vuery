@@ -150,6 +150,14 @@ html {
   font-size: var(--ry-text-xxl);
 }
 
+.ry-bold-text {
+  font-weight: bold;
+}
+
+.ry-italic-text {
+  font-style: italic;
+}
+
 .ry-h--0 {
   height: 0;
 }

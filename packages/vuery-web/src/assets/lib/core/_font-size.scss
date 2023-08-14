@@ -32,4 +32,12 @@ $--fontsize:("-reglar":vars.$fontsize-regular,
             font-size: var(--ry-text#{$key});
         }
     }
+
+    .ry-bold-text {
+        font-weight: bold;
+    }
+
+    .ry-italic-text {
+        font-style: italic;
+    }
 }

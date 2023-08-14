@@ -25,5 +25,8 @@ export const DefaultRouteTable: Array<RouteRecordRaw> = [
     name: 'Default',
     path: '/',
     component: () => import('@/views/startup.vue'),
+    meta: {
+      allowAnonymous: true,
+    },
   },
 ];

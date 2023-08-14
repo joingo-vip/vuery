@@ -19,11 +19,8 @@
     <div>
       <img :src="$staticUri('static/icons/vuery.png')" />
     </div>
-    <div
-      class="ry-white-text ry-text-xxl ry-pd-top--20"
-      style="font-weight: bolder"
-    >
-      "Vuery" - {{ $t('default:phrases.application') }}
+    <div class="ry-white-text ry-text-lg ry-pd-top--20">
+      "Vuery Desktop" - {{ $t('default:phrases.application') }}
     </div>
     <div class="ry-pd-top--20">
       <ElButton type="primary" size="large">{{

@@ -13,6 +13,7 @@
  */
 
 import 'vue';
+import 'vue-router';
 
 declare module 'vue' {
   interface ComponentCustomProperties {
@@ -31,5 +32,19 @@ declare module 'vue' {
      * @type {(path: string) => string}
      */
     $staticUri: (path: string) => string;
+  }
+}
+
+declare module 'vue-router' {
+  interface RouteMeta {
+    /**
+     * 是否允许匿名访问。
+     * @author Wang Yucai
+     *
+     * @type {?boolean}
+     * @remarks
+     * 设置或获取一个 {@link Boolean} 类型值，用于表示是否允许匿名访问。
+     */
+    allowAnonymous?: boolean;
   }
 }
