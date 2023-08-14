@@ -4,25 +4,12 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块。
+ * Vuery 组件相关定义模块。
  *
  * @remarks
- * "index.ts": Vuery 运行时扩展模块。
+ * "index.ts": Vuery 组件相关定义模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
-
-export {
-  AppBuilder,
-  Application,
-  IAppBuilder,
-  IApplication,
-} from './app-builder';
-export {
-  SimplifiedChineseLanguagePack,
-  UnitedStatesLanguagePack,
-} from './resources';
-export { SR } from './sr';
-export { UIScrollableBoxProperties } from './ui';
+export { UIScrollableBoxProperties } from './components';
