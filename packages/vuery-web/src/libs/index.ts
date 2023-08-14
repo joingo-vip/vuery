@@ -4,26 +4,12 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块。
+ * Vuery Desktop 应用程序类库。
  *
  * @remarks
- * "index.ts": Vuery 运行时扩展模块。
+ * "index.ts": Vuery Desktop 应用程序类库。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
-
-export {
-  AppBuilder,
-  Application,
-  IAppBuilder,
-  IApplication,
-} from './app-builder';
-export { sealed } from './decorators';
-export {
-  SimplifiedChineseLanguagePack,
-  UnitedStatesLanguagePack,
-} from './resources';
-export { IRouteManager, RouteManager } from './route-manager';
-export { SR } from './sr';
+export { DefaultRouteTable, DefaultRouteManager } from './routers';

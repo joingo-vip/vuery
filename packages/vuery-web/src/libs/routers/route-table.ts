@@ -4,26 +4,26 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块。
+ * 路由表配置模块。
  *
  * @remarks
- * "index.ts": Vuery 运行时扩展模块。
+ * "route-table.ts": 路由表配置模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
+import { RouteRecordRaw } from 'vue-router';
 
-export {
-  AppBuilder,
-  Application,
-  IAppBuilder,
-  IApplication,
-} from './app-builder';
-export { sealed } from './decorators';
-export {
-  SimplifiedChineseLanguagePack,
-  UnitedStatesLanguagePack,
-} from './resources';
-export { IRouteManager, RouteManager } from './route-manager';
-export { SR } from './sr';
+/**
+ * 默认应用路由表。
+ * @author Wang Yucai
+ *
+ * @type {Array<RouteRecordRaw>}
+ */
+export const DefaultRouteTable: Array<RouteRecordRaw> = [
+  {
+    name: 'Default',
+    path: '/',
+    component: () => import('@/views/startup.vue'),
+  },
+];

@@ -133,5 +133,8 @@
     "user_name": {
       "placeholder": "请输入用户名"
     }
+  },
+  "exceptions": {
+    "configure_router_failed": "Vuery 注册动态路由时，引发了一个未处理的异常。"
   }
 }

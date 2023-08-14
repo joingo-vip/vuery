@@ -13,15 +13,29 @@
 </template>
 
 <script lang="ts" setup>
+import { PropType } from 'vue';
 import { StyleValue, computed } from 'vue';
-import { UIScrollableBoxProperties } from '@vuery/runtime';
 
 /**
  * 定义了组件 “ry-scrollable-box.vue” 的属性。
  */
-const $props = withDefaults(defineProps<UIScrollableBoxProperties>(), {
-  horizontalScrollbar: null,
-  verticalScrollbar: 'auto',
+const $props = defineProps({
+  /**
+   * 横向滚动条选项。
+   */
+  horizontalScrollbar: {
+    type: String as PropType<vuery.ui.UIScrollbarOptions>,
+    default: null,
+    required: false,
+  },
+  /**
+   * 纵向滚动条选项。
+   */
+  verticalScrollbar: {
+    type: String as PropType<vuery.ui.UIScrollbarOptions>,
+    default: 'auto',
+    required: false,
+  },
 });
 
 /* 组件 ry-scrollable-box.vue 内联样式 */

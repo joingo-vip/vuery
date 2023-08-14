@@ -133,5 +133,8 @@
     "user_name": {
       "placeholder": "Please typed the user-name."
     }
+  },
+  "exceptions": {
+    "configure_router_failed": "When \"Vuery\" registered dynamic routes, an unhandled exception was thrown."
   }
 }
