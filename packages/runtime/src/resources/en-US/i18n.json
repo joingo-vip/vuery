@@ -1,6 +1,7 @@
 {
   "default": {
     "phrases": {
+      "application": "Vue front-end scaffolding for the Ruoyi server framework",
       "get_started": "Get started",
       "is_copied": "Copied to the clipboard",
       "is_deleted": "Deleted",
@@ -120,6 +121,9 @@
       "view": "View"
     }
   },
+  "exceptions": {
+    "configure_router_failed": "When \"Vuery\" registered dynamic routes, an unhandled exception was thrown."
+  },
   "prompts": {
     "captcha": {
       "placeholder": "Please typed the captcha."
@@ -133,8 +137,5 @@
     "user_name": {
       "placeholder": "Please typed the user-name."
     }
-  },
-  "exceptions": {
-    "configure_router_failed": "When \"Vuery\" registered dynamic routes, an unhandled exception was thrown."
   }
 }

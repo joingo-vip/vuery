@@ -1,6 +1,7 @@
 {
   "default": {
     "phrases": {
+      "application": "面向“若依”服务器框架的 Vue 前端脚手架",
       "get_started": "开始",
       "is_copied": "已经复制",
       "is_deleted": "已经删除",
@@ -120,6 +121,9 @@
       "view": "查看"
     }
   },
+  "exceptions": {
+    "configure_router_failed": "Vuery 注册动态路由时，引发了一个未处理的异常。"
+  },
   "prompts": {
     "captcha": {
       "placeholder": "请输入验证码"
@@ -133,8 +137,5 @@
     "user_name": {
       "placeholder": "请输入用户名"
     }
-  },
-  "exceptions": {
-    "configure_router_failed": "Vuery 注册动态路由时，引发了一个未处理的异常。"
   }
 }

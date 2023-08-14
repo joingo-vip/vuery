@@ -10462,3 +10462,6 @@ body .ry-app .ry-scrollbar-box::-webkit-scrollbar-thumb:active {
 body .ry-app .ry-flex-box {
   display: flex;
 }
+body .ry-app .ry-flex-box > .ry-flex-box--fill {
+  flex: 1;
+}
