@@ -7,9 +7,31 @@
 
 <!--ry-scrollable-box.vue: 可滚动的容器组件-->
 <template>
-  <div class="ry-scrollbar-box">
+  <div class="ry-scrollbar-box" :style="$thisInlineStyles">
     <slot />
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { StyleValue, computed } from 'vue';
+
+/**
+ * 定义了组件 “ry-scrollable-box.vue” 的属性。
+ */
+const $props = withDefaults(defineProps<vuery.ui.ScrollableBoxProperties>(), {
+  horizontalScrollbar: null,
+  verticalScrollbar: 'auto',
+});
+
+/* 组件 ry-scrollable-box.vue 内联样式 */
+const $thisInlineStyles = computed<StyleValue>(() => {
+  let inlineStyle: StyleValue = {};
+  if ($props.horizontalScrollbar) {
+    inlineStyle.overflowX = $props.horizontalScrollbar;
+  }
+  if ($props.verticalScrollbar) {
+    inlineStyle.overflowY = $props.verticalScrollbar;
+  }
+  return inlineStyle;
+});
+</script>

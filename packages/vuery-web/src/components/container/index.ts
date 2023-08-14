@@ -4,15 +4,14 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块类型定义。
+ * 可滚动的容器组件模块。
  *
  * @remarks
- * "index.d.ts": Vuery 运行时扩展模块类型定义。
+ * "index.ts": 可滚动的容器组件模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="lib.vue.d.ts" />
-/// <reference path="lib.types.d.ts" />
-/// <reference path="lib.native.d.ts" />
-/// <reference path="lib.components.d.ts" />
+import ScrollableBoxWidget from './src/ry-scrollable-box.vue';
+
+export { ScrollableBoxWidget };
