@@ -12,6 +12,7 @@
  * @packageDocumentation
  */
 
+import FlexBoxWidget from './src/ry-flex-box.vue';
 import ScrollableBoxWidget from './src/ry-scrollable-box.vue';
 
-export { ScrollableBoxWidget };
+export { FlexBoxWidget, ScrollableBoxWidget };

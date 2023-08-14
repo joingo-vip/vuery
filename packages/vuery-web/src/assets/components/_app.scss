@@ -1,5 +1,6 @@
 @use "../lib/index"as lib;
 @use "./scrollable-box";
+@use "./flex-box";
 
 @mixin build-vars {
     /* ry-app.vue 组件样式 */
@@ -7,6 +8,8 @@
     --ry-app--height          : #{percentage($number: 1)};
     /* ry-scrollable-box.vue 组件样式 */
     @include scrollable-box.build-vars;
+    /* ry-flex-box.vue 组件样式 */
+    @include flex-box.build-vars;
 }
 
 @mixin build-class {
@@ -15,5 +18,6 @@
         height          : var(--ry-app--height);
 
         @include scrollable-box.build-class;
+        @include flex-box.build-class;
     }
 }

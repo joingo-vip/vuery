@@ -1,0 +1,9 @@
+@use "../lib/index"as lib;
+
+@mixin build-vars {}
+
+@mixin build-class {
+    .ry-flex-box {
+        display: flex;
+    }
+}

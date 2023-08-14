@@ -13,4 +13,7 @@
  */
 
 export { AppWidget as Application } from './app';
-export { ScrollableBoxWidget as ScrollableBox } from './container';
+export {
+  FlexBoxWidget as FlexBox,
+  ScrollableBoxWidget as ScrollableBox,
+} from './container';

@@ -1,0 +1,62 @@
+@use "sass:math"as *;
+@use "./functions";
+
+$--sizes: ('height': 'h',
+    'width': 'w',
+    'padding': 'pd',
+    'margin': 'ma',
+    'line-height': 'lh',
+    'min-width': 'wi',
+    'max-width': 'wx',
+    'min-height': 'hi',
+    'max-height': 'hx',
+);
+
+$--size-positions:("top", "right", "bottom", "left");
+
+@mixin build-sizes-class {
+    .ry {
+        @for $index from 0 through 100 {
+
+            @each $key,
+            $value in $--sizes {
+                @if($index==0) {
+                    &-#{$value}--0 {
+                        #{$key}: 0;
+                    }
+
+                    @if($key=="padding") or ($key=="margin") {
+                        @each $pos in $--size-positions {
+                            &-#{$value}-#{$pos}--0 {
+                                #{$key}-#{$pos}: 0;
+                            }
+                        }
+                    }
+                }
+
+                @else {
+                    &-#{$value}--#{$index} {
+                        #{$key}: #{functions.rem($index)};
+                    }
+
+                    &-#{$value}--#{$index}p {
+                        #{$key}: percentage($number: div($index, 100));
+                    }
+
+                    @if($key=="padding") or ($key=="margin") {
+                        @each $pos in $--size-positions {
+                            &-#{$value}-#{$pos}--#{$index} {
+                                #{$key}-#{$pos}: #{functions.rem($index)};
+                            }
+
+                            &-#{$value}-#{$pos}--#{$index}p {
+                                #{$key}-#{$pos}: percentage($number: div($index, 100));
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

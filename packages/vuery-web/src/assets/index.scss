@@ -12,17 +12,16 @@
 
 @include lib.build-color-class;
 @include lib.build-fontsize-class;
+@include lib.build-sizes-class;
 
 html,
 body {
   @extend .ry-white;
+  @extend .ry-h--100p;
+  @extend .ry-pd--0;
+  @extend .ry-ma--0;
 
-  height : percentage($number: 1);
-  border : 0 none;
-  padding: 0;
-  margin : 0;
-
-
+  border: 0 none;
 }
 
 * {

@@ -7,9 +7,16 @@
 
 <!--startup.vue: 启动页视图-->
 <template>
-  <div></div>
+  <FlexBox
+    class="ry-w--100p ry-h--100p"
+    direction="column"
+    justify="center"
+    align-items="center"
+  ></FlexBox>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { FlexBox } from '@/components';
+</script>
 
 <style lang="scss" scoped></style>
