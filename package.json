@@ -21,7 +21,7 @@
     "version:patch": "npm version patch --no-git-tag-version --workspaces",
     "version:minor": "npm version minor --no-git-tag-version --workspaces",
     "version:major": "npm version major --no-git-tag-version --workspaces",
-    "ts:compile": "npm run ts:compile -w packages\\native && npm run ts:compile -w packages\\runtime",
+    "ts:compile": "npm run ts:compile -w packages\\native && npm run ts:compile -w packages\\runtime && npm run ts:compile -w packages\\services",
     "debug:web": "npm run debug -w packages\\vuery-web"
   },
   "devDependencies": {
@@ -30,6 +30,7 @@
   "workspaces": [
     "packages\\runtime",
     "packages\\vuery-web",
-    "packages\\native"
+    "packages\\native",
+    "packages\\services"
   ]
 }
