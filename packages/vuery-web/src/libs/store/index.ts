@@ -4,16 +4,12 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 可滚动的容器组件模块。
+ * 状态管理模块。
  *
  * @remarks
- * "index.ts": 可滚动的容器组件模块。
+ * "index.ts": 状态管理模块。
  *
  * @packageDocumentation
  */
 
-import AnimateBoxWidget from './src/ry-animate-box.vue';
-import FlexBoxWidget from './src/ry-flex-box.vue';
-import ScrollableBoxWidget from './src/ry-scrollable-box.vue';
-
-export { AnimateBoxWidget, FlexBoxWidget, ScrollableBoxWidget };
+export { getDefaultNopersistentStore } from './nopersistent-store';

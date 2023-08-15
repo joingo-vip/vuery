@@ -5,29 +5,28 @@
   // *******************************************************************************************************************************************************
 -->
 
-<!--startup.vue: 启动页视图-->
+<!--index.vue: 身份认证默认页视图-->
 <template>
-  <FlexBox
-    class="ry-w--100p ry-h--100p startup-scope"
-    direction="column"
-    justify="center"
-    align-items="center"
+  <div
+    class="scoped-view ry-h--100p"
     :style="{
       backgroundImage: `url(${$staticUri('static/images/background.jpg')})`,
     }"
   >
-    <div>
-      <img :src="$staticUri('static/icons/vuery.png')" />
-    </div>
-    <div class="ry-white-text ry-text-lg ry-pd-top--20">
-      "Vuery Desktop" - {{ $t('default:phrases.application') }}
-    </div>
-    <div class="ry-pd-top--20">
-      <ElButton type="primary" size="large">{{
-        $t('default:phrases.get_started')
-      }}</ElButton>
-    </div>
-  </FlexBox>
+    <FlexBox
+      justify="center"
+      align-items="center"
+      class="ry-h--100p ry-w--100p"
+    >
+      <div class="scoped-view-container">
+        <!--
+          视图：index.vue - 身份认证内容容器。
+          (标签：#a339fa)
+        -->
+        <RouterView />
+      </div>
+    </FlexBox>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -35,11 +34,5 @@ import { FlexBox } from '@/components';
 </script>
 
 <style lang="scss" scoped>
-.startup-scope {
-  background: {
-    size: percentage($number: 1) percentage($number: 1);
-    repeat: no-repeat;
-    position: 0 0;
-  }
-}
+@use '../style/index.vue.scss';
 </style>

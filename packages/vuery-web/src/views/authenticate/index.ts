@@ -4,16 +4,32 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 可滚动的容器组件模块。
+ * 身份认证视图模块。
  *
  * @remarks
- * "index.ts": 可滚动的容器组件模块。
+ * "index.ts": 身份认证视图模块。
  *
  * @packageDocumentation
  */
 
-import AnimateBoxWidget from './src/ry-animate-box.vue';
-import FlexBoxWidget from './src/ry-flex-box.vue';
-import ScrollableBoxWidget from './src/ry-scrollable-box.vue';
+/**
+ * (可等待的方法) 动态导入 “AuthenticationIndex” 视图。
+ *
+ * @export
+ * @public
+ * @async
+ */
+export function AuthenticationIndexView() {
+  return import('./src/index.vue');
+}
 
-export { AnimateBoxWidget, FlexBoxWidget, ScrollableBoxWidget };
+/**
+ * (可等待的方法) 动态导入 “SignIn” 视图。
+ *
+ * @export
+ * @public
+ * @async
+ */
+export function SignInPartial() {
+  return import('./src/sign-in.vue');
+}

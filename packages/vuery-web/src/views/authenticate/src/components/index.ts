@@ -4,16 +4,14 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 可滚动的容器组件模块。
+ * 身份认证内部组件模块。
  *
  * @remarks
- * "index.ts": 可滚动的容器组件模块。
+ * "index.ts": 身份认证内部组件模块。
  *
  * @packageDocumentation
  */
 
-import AnimateBoxWidget from './src/ry-animate-box.vue';
-import FlexBoxWidget from './src/ry-flex-box.vue';
-import ScrollableBoxWidget from './src/ry-scrollable-box.vue';
+import TitlebarWidget from './src/titlebar.vue';
 
-export { AnimateBoxWidget, FlexBoxWidget, ScrollableBoxWidget };
+export { TitlebarWidget as InternalTitlebar };

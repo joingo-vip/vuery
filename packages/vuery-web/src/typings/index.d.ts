@@ -13,5 +13,6 @@
  */
 
 /// <reference path="lib.vite.d.ts" />
+/// <reference path="lib.types.d.ts" />
 /// <reference types="@vuery/runtime" />
 /// <reference types="@vuery/native" />

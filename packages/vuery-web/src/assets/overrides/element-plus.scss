@@ -1,30 +1,26 @@
-@use '../lib/index' as ry;
+@use '../lib/index'as lib;
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  $colors: (
-    'primary': (
-      'base': ry.$primary,
+@forward 'element-plus/theme-chalk/src/common/var.scss'with ($colors: ('primary': ('base': lib.$primary,
     ),
-    'success': (
-      'base': ry.$success,
+    'success': ('base': lib.$success,
     ),
-    'warning': (
-      'base': ry.$warning,
+    'warning': ('base': lib.$warning,
     ),
-    'danger': (
-      'base': ry.$danger,
+    'danger': ('base': lib.$danger,
     ),
-    'error': (
-      'base': ry.$error,
+    'error': ('base': lib.$error,
     ),
-    'info': (
-      'base': ry.$info,
+    'info': ('base': lib.$info,
     ),
   ),
 
-  $border-radius: (
-    base: 2px,
-  )
-);
+  $border-radius: (base: 2px,
+  ));
 
-@use 'element-plus/theme-chalk/src/index.scss' as *;
+@use 'element-plus/theme-chalk/src/index.scss'as *;
+
+.el-card {
+  /* 用于覆盖 ElementPlus Card 组件样式变量 */
+  --el-card-padding      : 10px;
+  --el-card-border-radius: #{lib.rem(lib.$radius)};
+}

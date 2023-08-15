@@ -12,4 +12,5 @@
  * @packageDocumentation
  */
 
-export { DefaultRouteTable, DefaultRouteManager } from './routers';
+export { DefaultRouteManager, DefaultRouteTable } from './routers';
+export { getDefaultNopersistentStore } from './store';

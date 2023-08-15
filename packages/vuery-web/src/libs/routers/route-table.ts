@@ -13,6 +13,7 @@
  */
 
 import { RouteRecordRaw } from 'vue-router';
+import { AuthenticationIndexView, SignInPartial } from '@/views/authenticate';
 
 /**
  * 默认应用路由表。
@@ -24,9 +25,31 @@ export const DefaultRouteTable: Array<RouteRecordRaw> = [
   {
     name: 'Default',
     path: '/',
-    component: () => import('@/views/startup.vue'),
+    redirect(to) {
+      return { name: 'Authentication' };
+    },
     meta: {
       allowAnonymous: true,
     },
+  },
+  {
+    name: 'Authentication',
+    path: '/authentication-service',
+    component: AuthenticationIndexView,
+    meta: {
+      allowAnonymous: true,
+    },
+    children: [
+      {
+        name: 'Authentication:Default',
+        path: '',
+        component: SignInPartial,
+      },
+      {
+        name: 'Authentication:SignIn',
+        path: 'sign-in',
+        component: SignInPartial,
+      },
+    ],
   },
 ];

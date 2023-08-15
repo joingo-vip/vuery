@@ -5,11 +5,27 @@
   // *******************************************************************************************************************************************************
 -->
 
-<!--sign-in.vue: 身份认证登录视图-->
+<!--ry-animate-box.vue: 基于 animate.css 的动画容器组件-->
 <template>
-  <div></div>
+  <div class="animate__animated" :class="[animateClass]">
+    <slot />
+  </div>
 </template>
 
-<script lang="ts" setup></script>
-
-<style lang="scss" scoped></style>
+<script lang="ts" setup>
+/**
+ * 定义了组件 “ry-animate-box.vue” 的属性。
+ */
+defineProps({
+  /**
+   * 动画样式类名称。
+   *
+   * @see {@link https://animate.style/}
+   */
+  animateClass: {
+    type: String,
+    default: 'animate__flipInY',
+    required: false,
+  },
+});
+</script>

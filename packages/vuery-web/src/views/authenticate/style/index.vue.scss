@@ -1,0 +1,13 @@
+@use "../../../assets/lib/index"as lib;
+
+.scoped-view {
+    background: {
+        repeat  : no-repeat;
+        size    : percentage($number: 1) percentage($number: 1);
+        position: center center;
+    }
+
+    &-container {
+        width: #{lib.rem(500)};
+    }
+}

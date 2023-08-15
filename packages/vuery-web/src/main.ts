@@ -20,6 +20,8 @@ import '@vuery/native';
 import i18next from 'i18next';
 import I18nextVue from 'i18next-vue';
 import { DefaultRouteManager } from '@/libs';
+import { createPinia } from 'pinia';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 
 new AppBuilder(createApp(Main), 'body')
   .configureBaseUri(import.meta.env.BASE_URL)
@@ -39,6 +41,11 @@ new AppBuilder(createApp(Main), 'body')
   })
   .use((app) => {
     DefaultRouteManager.current.configure(app);
+  })
+  .use((app) => {
+    const pinia = createPinia();
+    pinia.use(piniaPluginPersistedstate);
+    app.use(pinia);
   })
   .build()
   .run();
