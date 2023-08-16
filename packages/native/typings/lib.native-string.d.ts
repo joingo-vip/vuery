@@ -74,4 +74,21 @@ declare global {
      */
     getStaticResourceUri: (path: string) => string;
   }
+
+  /**
+   * 为 {@link String} 类型提供的扩展方法。
+   * @author Wang Yucai
+   *
+   * @interface String
+   * @typedef {String}
+   */
+  interface String {
+    /**
+     * 将字符串转换成 “hello-vuery” 格式的字符串。
+     * @author Wang Yucai
+     *
+     * @type {() => string}
+     */
+    toKebabCase: () => string;
+  }
 }

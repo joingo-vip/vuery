@@ -13,6 +13,7 @@
  */
 
 import stringTemplate from 'string-template';
+import { paramCase } from 'change-case';
 
 let __VUERY_BASE_URI: string = '';
 
@@ -67,3 +68,7 @@ String.getStaticResourceUri = (path: string): string => {
 };
 
 Date.current = (): Date => new Date();
+
+String.prototype.toKebabCase = (): string => {
+  return paramCase(this);
+};
