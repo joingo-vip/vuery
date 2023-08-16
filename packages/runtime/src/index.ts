@@ -21,7 +21,11 @@ export {
   IApplication,
 } from './app-builder';
 export { sealed } from './decorators';
-export { DefaultPagingSize, DefaultPagingSizes } from './defaults';
+export {
+  DefaultPagingSize,
+  DefaultPagingSizes,
+  DefaultTimeoutMilliseconds,
+} from './defaults';
 export {
   SimplifiedChineseLanguagePack,
   UnitedStatesLanguagePack,

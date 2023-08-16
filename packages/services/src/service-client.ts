@@ -13,7 +13,12 @@
  */
 
 import { SR } from '@vuery/runtime';
-import axios, { AxiosRequestConfig, AxiosInstance, AxiosResponse } from 'axios';
+import axios, {
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+  Method,
+} from 'axios';
 
 /**
  * 定义了描述服务调用失败原因枚举类型。
@@ -375,4 +380,143 @@ export class ServiceClient implements IServiceClient {
   protected createHttpClient(): AxiosInstance {
     return axios.create();
   }
+}
+
+/**
+ * 定义了构建 {@link IServiceClient} 的接口。
+ * @author Wang Yucai
+ *
+ * @export
+ * @interface IServiceClientBuilder
+ * @typedef {IServiceClientBuilder}
+ */
+export interface IServiceClientBuilder {
+  /**
+   * 设置基础 URI 地址。
+   * @author Wang Yucai
+   *
+   * @param {string} baseUri 服务基础 URI 地址。
+   * @returns {IServiceClientBuilder}
+   */
+  withBaseUri(baseUri: string): IServiceClientBuilder;
+
+  /**
+   * 设置服务的 URI 地址。
+   * @author Wang Yucai
+   *
+   * @param {string} uri 服务 URI 地址。
+   * @returns {IServiceClientBuilder}
+   */
+  withUri(uri: string): IServiceClientBuilder;
+
+  /**
+   * 设置服务请求的 HTTP 方式。
+   * @author Wang Yucai
+   *
+   * @param {Method} method 服务请求的 HTTP 方式。
+   * @returns {IServiceClientBuilder}
+   */
+  withMethod(method: Method): IServiceClientBuilder;
+
+  /**
+   * 设置以 HTTP-GET 方式请求服务。
+   * @author Wang Yucai
+   *
+   * @returns {IServiceClientBuilder}
+   */
+  withHttpGet(): IServiceClientBuilder;
+
+  /**
+   * 设置以 HTTP-POST 方式请求服务。
+   * @author Wang Yucai
+   *
+   * @returns {IServiceClientBuilder}
+   */
+  withHttpPost(): IServiceClientBuilder;
+
+  /**
+   * 设置以 HTTP-DELETE 方式请求服务。
+   * @author Wang Yucai
+   *
+   * @returns {IServiceClientBuilder}
+   */
+  withHttpDelete(): IServiceClientBuilder;
+
+  /**
+   * 设置以 HTTP-PUT 方式请求服务。
+   * @author Wang Yucai
+   *
+   * @returns {IServiceClientBuilder}
+   */
+  withHttpPut(): IServiceClientBuilder;
+
+  /**
+   * 设置服务请求时所需的查询字符串。
+   * @author Wang Yucai
+   *
+   * @param {?Record<string, any>} [query] 服务请求时所需的查询字符串字典。
+   * @returns {IServiceClientBuilder}
+   */
+  withQuery(query?: Record<string, any>): IServiceClientBuilder;
+
+  /**
+   * 设置服务请求时所需提交的数据。
+   * @author Wang Yucai
+   *
+   * @param {?*} [data] 服务请求时所需提交的数据。
+   * @returns {IServiceClientBuilder}
+   */
+  withData(data?: any): IServiceClientBuilder;
+
+  /**
+   * 设置分页查询所需的起始查询页索引数字。
+   * @author Wang Yucai
+   *
+   * @param {?number} [value] 分页查询所需的起始查询页索引数字。默认值：1。
+   * @returns {IServiceClientBuilder}
+   */
+  take(value?: number): IServiceClientBuilder;
+
+  /**
+   * 设置分页查询所需的每页返回数据行数。
+   * @author Wang Yucai
+   *
+   * @param {?number} [value] 服务请求时所需提交的数据。
+   * @returns {IServiceClientBuilder}
+   */
+  skip(value?: number): IServiceClientBuilder;
+
+  /**
+   * 设置忽略 Ruoyi 服务端框架中 Authorization 请求头声明。
+   * @author Wang Yucai
+   *
+   * @returns {IServiceClientBuilder}
+   */
+  allowAnonymous(): IServiceClientBuilder;
+
+  /**
+   * 设置服务请求所需的 HTTP 请求头。
+   * @author Wang Yucai
+   *
+   * @param {?Record<string, string>} [headers] 服务请求所需的 HTTP 请求头字典。
+   * @returns {IServiceClientBuilder}
+   */
+  withHeaders(headers?: Record<string, string>): IServiceClientBuilder;
+
+  /**
+   * 设置服务请求超时毫秒数。
+   * @author Wang Yucai
+   *
+   * @param {?number} [timeout] 服务请求超时毫秒数。
+   * @returns {IServiceClientBuilder}
+   */
+  withTimeout(timeout?: number): IServiceClientBuilder;
+
+  /**
+   * 构建 {@linkcode IServiceClient} 类型的对象实例。
+   * @author Wang Yucai
+   *
+   * @returns {IServiceClient}
+   */
+  build(): IServiceClient;
 }

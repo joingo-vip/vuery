@@ -25,6 +25,8 @@ export {
 export {
   AbstractServiceResult,
   DefaultServiceResult,
+  IServiceClient,
+  IServiceClientBuilder,
   PagingQueryParameter,
   PagingServiceResult,
   ServiceClient,

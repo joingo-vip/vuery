@@ -27,3 +27,11 @@ export const DefaultPagingSizes: number[] = [10, 20, 50, 100];
  * @type {number}
  */
 export const DefaultPagingSize: number = 20;
+
+/**
+ * 默认的服务请求超时毫秒数。
+ * @author Wang Yucai
+ *
+ * @type {number}
+ */
+export const DefaultTimeoutMilliseconds: number = 30 * 1000;
