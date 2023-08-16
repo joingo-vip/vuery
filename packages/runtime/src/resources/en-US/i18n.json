@@ -126,7 +126,8 @@
   },
   "prompts": {
     "captcha": {
-      "placeholder": "Please typed the captcha."
+      "placeholder": "Please typed the captcha.",
+      "refresh": "Click here to refresh the captcha."
     },
     "confirm_password": {
       "placeholder": "Please confirm the password again."

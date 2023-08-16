@@ -18,3 +18,4 @@ export {
   FlexBoxWidget as FlexBox,
   ScrollableBoxWidget as ScrollableBox,
 } from './container';
+export { MdiconWidget as Mdicon } from './icons';

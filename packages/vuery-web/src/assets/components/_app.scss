@@ -1,6 +1,7 @@
 @use "../lib/index"as lib;
 @use "./scrollable-box";
 @use "./flex-box";
+@use "./mdicon"as mdi;
 
 @mixin build-vars {
     /* ry-app.vue 组件样式 */
@@ -10,6 +11,8 @@
     @include scrollable-box.build-vars;
     /* ry-flex-box.vue 组件样式 */
     @include flex-box.build-vars;
+    /* ry-mdicon.vue 组件样式 */
+    @include mdi.build-vars;
 }
 
 @mixin build-class {
@@ -19,5 +22,6 @@
 
         @include scrollable-box.build-class;
         @include flex-box.build-class;
+        @include mdi.build-class;
     }
 }

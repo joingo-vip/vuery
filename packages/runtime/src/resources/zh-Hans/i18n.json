@@ -126,7 +126,8 @@
   },
   "prompts": {
     "captcha": {
-      "placeholder": "请输入验证码"
+      "placeholder": "请输入验证码",
+      "refresh": "单击此处刷新验证码。"
     },
     "confirm_password": {
       "placeholder": "请再次确认登录口令"

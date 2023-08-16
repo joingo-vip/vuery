@@ -10432,6 +10432,9 @@ body {
   --ry-scrollable-box--width: 100%;
   --ry-scrollable-box--height: 100%;
   /* ry-flex-box.vue 组件样式 */
+  /* ry-mdicon.vue 组件样式 */
+  --ry-mdicon--size: var(--ry-text-lg);
+  --ry-mdicon--color: var(--ry-tertiary-text);
 }
 body .ry-app {
   background-color: var(--ry-app--background-color);
@@ -10472,4 +10475,9 @@ body .ry-app .ry-flex-box {
 }
 body .ry-app .ry-flex-box > .ry-flex-box--fill {
   flex: 1;
+}
+body .ry-app .ry-mdicon {
+  color: var(--ry-mdicon--color);
+  font-size: var(--ry-mdicon--size);
+  font-style: normal;
 }

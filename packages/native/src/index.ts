@@ -69,6 +69,6 @@ String.getStaticResourceUri = (path: string): string => {
 
 Date.current = (): Date => new Date();
 
-String.prototype.toKebabCase = (): string => {
-  return paramCase(this);
+String.prototype.toKebabCase = function () {
+  return paramCase(this.toString());
 };

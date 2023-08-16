@@ -16,6 +16,7 @@
     "@vuery/runtime": "^0.1.0",
     "@vuery/services": "^0.1.0",
     "animate.css": "^4.1.1",
+    "change-case": "^4.1.2",
     "element-plus": "^2.3.9",
     "i18next": "^23.4.4",
     "i18next-vue": "^3.0.0",

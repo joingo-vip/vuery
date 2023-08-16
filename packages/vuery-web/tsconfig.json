@@ -19,7 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["@vuery/runtime", "@vuery/native"],
+    "types": ["@vuery/runtime", "@vuery/native", "@vuery/services"],
 
     /* Vite Alias */
     "baseUrl": ".",

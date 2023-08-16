@@ -69,5 +69,13 @@ declare namespace vuery {
       | 'baseline'
       | 'stretch'
       | UIFlexBoxAlignmentOptions;
+
+    /**
+     * 定义了 @mdi/font 图标旋转角度枚举类型。
+     * @author Wang Yucai
+     *
+     * @typedef {UIMaterialIconRotateAngle}
+     */
+    type UIMaterialIconRotateAngle = 0 | 45 | 90 | 135 | 180 | 225 | 270 | 315;
   }
 }

@@ -26,7 +26,7 @@ export const DefaultRouteTable: Array<RouteRecordRaw> = [
     name: 'Default',
     path: '/',
     redirect(to) {
-      return { name: 'Authentication' };
+      return { name: 'Authentication:SignIn' };
     },
     meta: {
       allowAnonymous: true,

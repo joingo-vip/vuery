@@ -12,6 +12,7 @@
  * @packageDocumentation
  */
 
+import CaptchaWidget from './src/captcha.vue';
 import TitlebarWidget from './src/titlebar.vue';
 
-export { TitlebarWidget as InternalTitlebar };
+export { CaptchaWidget as InternalCaptcha, TitlebarWidget as InternalTitlebar };
