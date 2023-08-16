@@ -122,7 +122,10 @@
     }
   },
   "exceptions": {
-    "configure_router_failed": "When \"Vuery\" registered dynamic routes, an unhandled exception was thrown."
+    "configure_router_failed": "When \"Vuery\" registered dynamic routes, an unhandled exception was thrown.",
+    "service_request_failed": "When the application calls a RESTful service, an unhandled exception is thrown.",
+    "service_no_response_data": "The service is unresponsive, or no valid data results are returned.",
+    "service_unauthorized": "This service requires authorized access. Your identity information may have expired, please log in again."
   },
   "prompts": {
     "captcha": {

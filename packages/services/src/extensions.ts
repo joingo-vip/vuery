@@ -4,30 +4,26 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 服务模块。
+ * Vuery 服务扩展。
  *
  * @remarks
- * "index.ts": 服务模块。
+ * "extensions.ts": Vuery 服务扩展。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
+import { AppBuilder, IAppBuilder } from '@vuery/runtime';
 
-import 'reflect-metadata';
-import './extensions';
+var __VUERY_SERVICE_BASE_URI: string = '';
 
-export {
-  AuthenticationPayloadBase,
-  FormAuthenticationPayload,
-  FormAuthenticationPayloadBase,
-} from './security';
-export {
-  AbstractServiceResult,
-  DefaultServiceResult,
-  PagingQueryParameter,
-  PagingServiceResult,
-  ServiceClient,
-  ServiceResult,
-  ServiceStatus,
-} from './service-client';
+AppBuilder.prototype.configureServiceBaseUri = function (
+  baseUri: string
+): IAppBuilder {
+  console.debug(
+    `[DEBUG] - <extensions.ts: 02a79e>: 尝试配置服务基础 URI 地址为 “${baseUri}”。`
+  );
+
+  __VUERY_SERVICE_BASE_URI = baseUri;
+
+  return this;
+};

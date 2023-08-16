@@ -29,7 +29,9 @@
   "license": "MIT",
   "dependencies": {
     "@vuery/native": "^0.1.0",
-    "@vuery/runtime": "^0.1.0"
+    "@vuery/runtime": "^0.1.0",
+    "axios": "^1.4.0",
+    "reflect-metadata": "^0.1.13"
   },
   "files": [
     "build/*.js",

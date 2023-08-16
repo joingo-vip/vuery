@@ -4,30 +4,22 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 服务模块。
+ * Vuery 服务 JavaScript 原生类型定义模块。
  *
  * @remarks
- * "index.ts": 服务模块。
+ * "lib.native.d.ts": Vuery 服务 JavaScript 原生类型定义模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
+export {};
 
-import 'reflect-metadata';
-import './extensions';
-
-export {
-  AuthenticationPayloadBase,
-  FormAuthenticationPayload,
-  FormAuthenticationPayloadBase,
-} from './security';
-export {
-  AbstractServiceResult,
-  DefaultServiceResult,
-  PagingQueryParameter,
-  PagingServiceResult,
-  ServiceClient,
-  ServiceResult,
-  ServiceStatus,
-} from './service-client';
+declare global {
+  /**
+   * Vuery 服务默认基础 URL 地址。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  var __VUERY_SERVICE_BASE_URI: string;
+}

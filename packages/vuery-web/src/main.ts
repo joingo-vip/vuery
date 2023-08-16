@@ -12,20 +12,22 @@
  * @packageDocumentation
  */
 
-import { AppBuilder } from '@vuery/runtime';
-import { createApp } from 'vue';
-import Main from './Main.vue';
-import ElementPlus from 'element-plus';
+import { DefaultRouteManager } from '@/libs';
 import '@vuery/native';
+import '@vuery/services';
+import { AppBuilder } from '@vuery/runtime';
+import ElementPlus from 'element-plus';
 import i18next from 'i18next';
 import I18nextVue from 'i18next-vue';
-import { DefaultRouteManager } from '@/libs';
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
+import { createApp } from 'vue';
+import Main from './Main.vue';
 
 new AppBuilder(createApp(Main), 'body')
   .configureBaseUri(import.meta.env.BASE_URL)
   .configureDefaultLanguage(import.meta.env.RUNTIME_DEFAULT_LANGUAGE)
+  .configureServiceBaseUri(import.meta.env.RUNTIME_WEBAPI_BASEURL)
   .use(() => {
     console.debug(`[DEBUG] - <main.ts: 00160e>: 注册全局样式表。`);
     import('@mdi/font/css/materialdesignicons.css');

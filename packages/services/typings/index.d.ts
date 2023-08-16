@@ -4,30 +4,13 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 服务模块。
+ * Vuery 服务类型定义模块。
  *
  * @remarks
- * "index.ts": 服务模块。
+ * "index.d.ts": Vuery 服务类型定义模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
-
-import 'reflect-metadata';
-import './extensions';
-
-export {
-  AuthenticationPayloadBase,
-  FormAuthenticationPayload,
-  FormAuthenticationPayloadBase,
-} from './security';
-export {
-  AbstractServiceResult,
-  DefaultServiceResult,
-  PagingQueryParameter,
-  PagingServiceResult,
-  ServiceClient,
-  ServiceResult,
-  ServiceStatus,
-} from './service-client';
+/// <reference path="lib.native.d.ts" />
+/// <reference path="lib.runtime.d.ts" />

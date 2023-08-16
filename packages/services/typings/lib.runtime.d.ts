@@ -4,30 +4,27 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 服务模块。
+ * Vuery 运行时扩展类型模块。
  *
  * @remarks
- * "index.ts": 服务模块。
+ * "lib.runtime.d.ts": Vuery 运行时扩展类型模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
+import '@vuery/runtime';
 
-import 'reflect-metadata';
-import './extensions';
+declare module '@vuery/runtime' {
+  interface IAppBuilder {
+    /**
+     * 配置服务默认基础 URL 地址。
+     * @author Wang Yucai
+     *
+     * @param {string} baseUri 默认基础 URI 地址。
+     * @returns {IAppBuilder}
+     */
+    configureServiceBaseUri(baseUri: string): IAppBuilder;
+  }
 
-export {
-  AuthenticationPayloadBase,
-  FormAuthenticationPayload,
-  FormAuthenticationPayloadBase,
-} from './security';
-export {
-  AbstractServiceResult,
-  DefaultServiceResult,
-  PagingQueryParameter,
-  PagingServiceResult,
-  ServiceClient,
-  ServiceResult,
-  ServiceStatus,
-} from './service-client';
+  interface AppBuilder extends IAppBuilder {}
+}

@@ -122,7 +122,10 @@
     }
   },
   "exceptions": {
-    "configure_router_failed": "Vuery 注册动态路由时，引发了一个未处理的异常。"
+    "configure_router_failed": "Vuery 注册动态路由时，引发了一个未处理的异常。",
+    "service_request_failed": "应用程序调用 RESTful 服务时，引发了未处理的异常。",
+    "service_no_response_data": "服务无响应，或者没有返回有效的数据结果。",
+    "service_unauthorized": "此服务需要授权访问。您的身份信息可能已经过期，请重新登录。"
   },
   "prompts": {
     "captcha": {
