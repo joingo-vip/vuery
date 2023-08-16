@@ -4,27 +4,26 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块。
+ * Vuery 运行时常量值模块。
  *
  * @remarks
- * "index.ts": Vuery 运行时扩展模块。
+ * "defaults.ts": Vuery 运行时常量值模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="../typings/index.d.ts" />
+/**
+ * 默认的分页大小数组。
+ * @author Wang Yucai
+ *
+ * @type {number[]}
+ */
+export const DefaultPagingSizes: number[] = [10, 20, 50, 100];
 
-export {
-  AppBuilder,
-  Application,
-  IAppBuilder,
-  IApplication,
-} from './app-builder';
-export { sealed } from './decorators';
-export { DefaultPagingSize, DefaultPagingSizes } from './defaults';
-export {
-  SimplifiedChineseLanguagePack,
-  UnitedStatesLanguagePack,
-} from './resources';
-export { IRouteManager, RouteManager } from './route-manager';
-export { SR } from './sr';
+/**
+ * 默认的分页大小。
+ * @author Wang Yucai
+ *
+ * @type {number}
+ */
+export const DefaultPagingSize: number = 20;
