@@ -12,13 +12,19 @@
  * @packageDocumentation
  */
 
-import { SR } from '@vuery/runtime';
+import {
+  Culture,
+  DefaultPagingSize,
+  DefaultTimeoutMilliseconds,
+  SR,
+} from '@vuery/runtime';
 import axios, {
   AxiosInstance,
   AxiosRequestConfig,
   AxiosResponse,
   Method,
 } from 'axios';
+import { TokenString } from './security';
 
 /**
  * 定义了描述服务调用失败原因枚举类型。
@@ -519,4 +525,125 @@ export interface IServiceClientBuilder {
    * @returns {IServiceClient}
    */
   build(): IServiceClient;
+}
+
+/**
+ * 提供了构建 {@linkcode IServiceClient} 相关的方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @class ServiceClientBuilder
+ * @typedef {ServiceClientBuilder}
+ * @implements {IServiceClientBuilder}
+ */
+export class ServiceClientBuilder implements IServiceClientBuilder {
+  private m_baseUri: string = window.__VUERY_BASE_URI;
+  private m_uri: string = String.empty();
+  private m_method: Method = 'GET';
+  private m_queryStr: Record<string, any> = {};
+  private m_pageIdx: number | null = null;
+  private m_rowsNum: number | null = null;
+  private m_postedData: any = null;
+  private m_allowAnonymous: boolean = false;
+  private m_headers: Record<string, string> = {};
+  private m_timeout: number = DefaultTimeoutMilliseconds;
+
+  withBaseUri(baseUri: string): IServiceClientBuilder {
+    if (!String.isNullOrWhitespace(baseUri)) {
+      this.m_baseUri = baseUri;
+    }
+    return this;
+  }
+  withUri(uri: string): IServiceClientBuilder {
+    if (!String.isNullOrWhitespace(uri)) {
+      this.m_uri = uri;
+    }
+    return this;
+  }
+  withMethod(method: Method): IServiceClientBuilder {
+    this.m_method = method;
+    return this;
+  }
+  withHttpGet(): IServiceClientBuilder {
+    return this.withMethod('GET');
+  }
+  withHttpPost(): IServiceClientBuilder {
+    return this.withMethod('POST');
+  }
+  withHttpDelete(): IServiceClientBuilder {
+    return this.withMethod('DELETE');
+  }
+  withHttpPut(): IServiceClientBuilder {
+    return this.withMethod('PUT');
+  }
+  withQuery(query?: Record<string, any> | undefined): IServiceClientBuilder {
+    if (!Object.isNull(query)) {
+      this.m_queryStr = Object.assign({}, this.m_queryStr, query);
+    }
+    return this;
+  }
+  withData(data?: any): IServiceClientBuilder {
+    if (!Object.isNull(data)) {
+      this.m_postedData = data;
+    }
+
+    return this;
+  }
+  take(value?: number | undefined): IServiceClientBuilder {
+    this.m_pageIdx = value ?? 1;
+
+    return this;
+  }
+  skip(value?: number | undefined): IServiceClientBuilder {
+    this.m_rowsNum = value ?? DefaultPagingSize;
+
+    return this;
+  }
+  allowAnonymous(): IServiceClientBuilder {
+    this.m_allowAnonymous = true;
+
+    return this;
+  }
+  withHeaders(
+    headers?: Record<string, string> | undefined
+  ): IServiceClientBuilder {
+    if (!Object.isNull(headers)) {
+      headers = Object.assign({}, this.m_headers, headers);
+    }
+
+    return this;
+  }
+  withTimeout(timeout?: number | undefined): IServiceClientBuilder {
+    if (!Object.isNull(timeout) || timeout !== this.m_timeout) {
+      this.m_timeout = timeout;
+    }
+
+    return this;
+  }
+  build(): IServiceClient {
+    const cultureInfo = Culture.getCurrentCulture();
+    this.withQuery({ t: cultureInfo.friendlyName ?? cultureInfo.name });
+    if (!this.m_allowAnonymous) {
+      const tokenStr = TokenString.current;
+      if (!String.isNullOrWhitespace(tokenStr?.value)) {
+        this.withHeaders({ 'Authorization': `Bearer ${tokenStr.value}` });
+      }
+    }
+    if (!Object.isNull(this.m_pageIdx) || !Object.isNull(this.m_rowsNum)) {
+      this.withQuery({
+        pageIndex: this.m_pageIdx ?? 1,
+        pageNum: this.m_rowsNum ?? DefaultPagingSize,
+      });
+    }
+    const axiosOptions: AxiosRequestConfig = {
+      baseURL: this.m_baseUri,
+      url: this.m_uri,
+      method: this.m_method,
+      params: this.m_queryStr,
+      data: this.m_postedData,
+      headers: this.m_headers,
+      timeout: this.m_timeout,
+    };
+    return new ServiceClient(axiosOptions);
+  }
 }

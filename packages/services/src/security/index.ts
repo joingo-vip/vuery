@@ -16,4 +16,6 @@ export {
   AuthenticationPayloadBase,
   FormAuthenticationPayload,
   FormAuthenticationPayloadBase,
+  ITokenString,
+  TokenString,
 } from './authentication-service';

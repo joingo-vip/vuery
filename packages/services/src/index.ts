@@ -21,6 +21,8 @@ export {
   AuthenticationPayloadBase,
   FormAuthenticationPayload,
   FormAuthenticationPayloadBase,
+  ITokenString,
+  TokenString,
 } from './security';
 export {
   AbstractServiceResult,
@@ -30,6 +32,7 @@ export {
   PagingQueryParameter,
   PagingServiceResult,
   ServiceClient,
+  ServiceClientBuilder,
   ServiceResult,
   ServiceStatus,
 } from './service-client';
