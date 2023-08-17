@@ -13,7 +13,7 @@
  */
 
 import { container } from 'tsyringe';
-import { IServiceBase } from './service-base';
+import { IServiceBase, ServiceBase } from './service-base';
 
 /**
  * 提供了服务发现相关的方法。
@@ -34,13 +34,13 @@ export class ServiceProvider {
   private constructor() {}
 
   /**
-   * 获取必要的、名为 {@link serviceName}
+   * 获取名称为 {@linkcode serviceName} 的 {@linkcode TService} 类型的服务。
    * @author Wang Yucai
    *
    * @public
    * @static
    * @template TService
-   * @param {string} serviceName 服务名称。
+   * @param {string | null} [serviceName] 服务名称。
    * @returns {TService}
    */
   public static getRequiredService<TService extends IServiceBase>(

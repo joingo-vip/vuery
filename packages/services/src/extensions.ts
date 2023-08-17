@@ -15,6 +15,7 @@
 import { AppBuilder, IAppBuilder } from '@vuery/runtime';
 import { container } from 'tsyringe';
 import { CaptchaServiceProvider, ICaptchaService } from './security';
+import { ServiceCollection } from './service-collection';
 
 var __VUERY_SERVICE_BASE_URI: string = '';
 
@@ -32,7 +33,7 @@ AppBuilder.prototype.configureServiceBaseUri = function (
 
 AppBuilder.prototype.configureServices = function (): IAppBuilder {
   console.debug(`[DEBUG] - <extensions.ts: 64f5d2>: 尝试注册服务。`);
-  container.register<ICaptchaService>('Captcha', {
+  container.register<ICaptchaService>(ServiceCollection.CaptchaService, {
     useClass: CaptchaServiceProvider,
   });
   return this;

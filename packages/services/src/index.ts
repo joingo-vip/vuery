@@ -41,4 +41,5 @@ export {
 } from './service-client';
 
 export { IServiceBase, ServiceBase } from './service-base';
+export { ServiceCollection } from './service-collection';
 export { ServiceProvider } from './service-provider';
