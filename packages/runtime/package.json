@@ -1,6 +1,6 @@
 {
   "name": "@vuery/runtime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vuefy 运行时扩展。",
   "main": "build/index.js",
   "type": "module",
