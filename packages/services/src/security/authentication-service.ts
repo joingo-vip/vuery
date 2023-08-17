@@ -13,6 +13,9 @@
  */
 
 import { sealed } from '@vuery/runtime';
+import { IServiceBase, ServiceBase } from '../service-base';
+import { ServiceResult } from '../service-client';
+import { injectable } from 'tsyringe';
 
 /**
  * 身份认证服务负载数据抽象结构。
@@ -184,5 +187,83 @@ export class TokenString implements ITokenString {
     } catch {
       return null;
     }
+  }
+}
+
+/**
+ * 提供了特殊的验证码服务返回值结果类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {CaptchaResult}
+ */
+export type CaptchaResult =
+  | {
+      img?: string | null;
+      captchaEnabled: boolean;
+      uuid?: string | null;
+    }
+  | ServiceResult;
+
+/**
+ * 定义了验证码相关的服务接口。
+ * @author Wang Yucai
+ *
+ * @export
+ * @interface ICaptchaService
+ * @typedef {ICaptchaService}
+ * @extends {IServiceBase}
+ */
+export interface ICaptchaService extends IServiceBase {
+  /**
+   * (可等待的方法) 刷新并获取一个新的验证码结果。
+   * @author Wang Yucai
+   *
+   * @returns {Promise<CaptchaResult>}
+   */
+  refreshAsync(): Promise<CaptchaResult>;
+
+  test(): void;
+}
+
+/**
+ * 提供了验证码相关的方法。密闭的，不可以从此类型派生。
+ * @author Wang Yucai
+ *
+ * @export
+ * @class CaptchaServiceProvider
+ * @typedef {CaptchaServiceProvider}
+ * @extends {ServiceBase}
+ * @implements {ICaptchaService}
+ * @remarks
+ * 密闭的，不可以从此类型派生。
+ */
+@sealed
+@injectable()
+export class CaptchaServiceProvider
+  extends ServiceBase
+  implements ICaptchaService
+{
+  /**
+   * 初始化 {@link CaptchaServiceProvider} 的新实例。
+   * @author Wang Yucai
+   *
+   * @constructor
+   */
+  constructor() {
+    super();
+  }
+  test(): void {
+    console.error('Method not implemented.');
+  }
+
+  /**
+   * (可等待的方法) 刷新并获取一个新的验证码结果。
+   * @author Wang Yucai
+   *
+   * @returns {Promise<CaptchaResult>}
+   */
+  async refreshAsync(): Promise<CaptchaResult> {
+    return {};
   }
 }

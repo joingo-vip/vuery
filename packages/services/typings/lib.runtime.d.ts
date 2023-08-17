@@ -24,6 +24,14 @@ declare module '@vuery/runtime' {
      * @returns {IAppBuilder}
      */
     configureServiceBaseUri(baseUri: string): IAppBuilder;
+
+    /**
+     * 配置服务。
+     * @author Wang Yucai
+     *
+     * @returns {IAppBuilder}
+     */
+    configureServices(): IAppBuilder;
   }
 
   interface AppBuilder extends IAppBuilder {}

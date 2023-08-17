@@ -28,6 +28,7 @@ new AppBuilder(createApp(Main), 'body')
   .configureBaseUri(import.meta.env.BASE_URL)
   .configureDefaultLanguage(import.meta.env.RUNTIME_DEFAULT_LANGUAGE)
   .configureServiceBaseUri(import.meta.env.RUNTIME_WEBAPI_BASEURL)
+  .configureServices()
   .use(() => {
     console.debug(`[DEBUG] - <main.ts: 00160e>: 注册全局样式表。`);
     import('@mdi/font/css/materialdesignicons.css');

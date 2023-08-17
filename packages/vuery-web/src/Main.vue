@@ -13,4 +13,8 @@
 
 <script lang="ts" setup>
 import { Application } from '@/components';
+import { ICaptchaService, ServiceProvider } from '@vuery/services';
+
+const a = ServiceProvider.getRequiredService<ICaptchaService>('Captcha');
+a.test();
 </script>

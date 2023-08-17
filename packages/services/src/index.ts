@@ -19,8 +19,11 @@ import './extensions';
 
 export {
   AuthenticationPayloadBase,
+  CaptchaResult,
+  CaptchaServiceProvider,
   FormAuthenticationPayload,
   FormAuthenticationPayloadBase,
+  ICaptchaService,
   ITokenString,
   TokenString,
 } from './security';
@@ -36,3 +39,6 @@ export {
   ServiceResult,
   ServiceStatus,
 } from './service-client';
+
+export { IServiceBase, ServiceBase } from './service-base';
+export { ServiceProvider } from './service-provider';

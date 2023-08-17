@@ -4,21 +4,32 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 系统安全服务模块。
+ * Vuery 服务基础模块。
  *
  * @remarks
- * "index.ts": 系统安全服务模块。
+ * "service-base.ts": Vuery 服务基础模块。
  *
  * @packageDocumentation
  */
 
-export {
-  AuthenticationPayloadBase,
-  CaptchaResult,
-  CaptchaServiceProvider,
-  FormAuthenticationPayload,
-  FormAuthenticationPayloadBase,
-  ICaptchaService,
-  ITokenString,
-  TokenString,
-} from './authentication-service';
+/**
+ * 定义了 Vuery 服务抽象接口。
+ * @author Wang Yucai
+ *
+ * @export
+ * @interface IServiceBase
+ * @typedef {IServiceBase}
+ */
+export interface IServiceBase {}
+
+/**
+ * 提供了 Vuery 服务相关的基本方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @abstract
+ * @class ServiceBase
+ * @typedef {ServiceBase}
+ * @implements {ServiceBase}
+ */
+export abstract class ServiceBase implements ServiceBase {}

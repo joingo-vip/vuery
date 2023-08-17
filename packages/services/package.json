@@ -31,7 +31,8 @@
     "@vuery/native": "^0.1.0",
     "@vuery/runtime": "^0.1.0",
     "axios": "^1.4.0",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.8.0"
   },
   "files": [
     "build/*.js",
