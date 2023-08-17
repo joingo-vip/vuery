@@ -114,4 +114,35 @@ declare namespace vuery {
      */
     readonly RUNTIME_DEFAULT_LANGUAGE: string;
   }
+
+  namespace globalization {
+    /**
+     * 文化区域信息。
+     * @author Wang Yucai
+     *
+     * @interface CultureInfo
+     * @typedef {CultureInfo}
+     */
+    interface CultureInfo {
+      /**
+       * 文化区域名称。
+       * @author Wang Yucai
+       *
+       * @type {string}
+       * @remarks
+       * 设置或获取一个字符串，用于表示文化区域名称。
+       */
+      name: string;
+
+      /**
+       * 文化区域友好名称。
+       * @author Wang Yucai
+       *
+       * @type {?(string | null)}
+       * @remarks
+       * 设置或获取一个字符串，用于表示文化区域友好名称。
+       */
+      friendlyName?: string | null;
+    }
+  }
 }

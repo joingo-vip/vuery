@@ -4,30 +4,29 @@
 // *******************************************************************************************************************************************************
 
 /**
- * JavaScript 原生类型运行时扩展类型模块。
+ * 函数定义模块。
  *
  * @remarks
- * "lib.native.d.ts": JavaScript 原生类型运行时扩展类型模块。
+ * "lib.functions.d.ts": 函数定义模块。
  *
  * @packageDocumentation
  */
 
-export {};
-
-declare global {
+declare namespace vuery {
   /**
-   * Vuery 默认语言。
+   * 定义了读取当前文化区域信息的方法委托。
    * @author Wang Yucai
    *
-   * @type {(string | vuery.SupportedLanguage | null)}
+   * @interface CurrentCultureInfoReadFunction
+   * @typedef {CurrentCultureInfoReadFunction}
    */
-  var __VUERY_DEFAULT_LANGUAGE: string | vuery.SupportedLanguage | null;
-
-  /**
-   * 读取当前文化区域信息的工厂方法。
-   * @author Wang Yucai
-   *
-   * @type {vuery.CurrentCultureInfoReadFunction}
-   */
-  var __getCurrentCulture: vuery.CurrentCultureInfoReadFunction;
+  interface CurrentCultureInfoReadFunction {
+    /**
+     * 定义了读取当前文化区域信息的方法委托。
+     * @author Wang Yucai
+     *
+     * @returns {Readonly<vuery.globalization.CultureInfo>}
+     */
+    (): Readonly<vuery.globalization.CultureInfo>;
+  }
 }

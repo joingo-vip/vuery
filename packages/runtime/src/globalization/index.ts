@@ -4,16 +4,12 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 运行时扩展模块类型定义。
+ * Vuery 全球化模块。
  *
  * @remarks
- * "index.d.ts": Vuery 运行时扩展模块类型定义。
+ * "index.ts": Vuery 全球化模块。
  *
  * @packageDocumentation
  */
 
-/// <reference path="lib.vue.d.ts" />
-/// <reference path="lib.types.d.ts" />
-/// <reference path="lib.native.d.ts" />
-/// <reference path="lib.components.d.ts" />
-/// <reference path="lib.functions.d.ts" />
+export { Culture } from './culture';

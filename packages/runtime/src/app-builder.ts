@@ -18,6 +18,7 @@ import {
   SimplifiedChineseLanguagePack,
   UnitedStatesLanguagePack,
 } from './resources';
+import { Culture } from './globalization';
 
 /**
  * 定义了 Vuery 应用程序的接口。
@@ -142,6 +143,17 @@ export interface IAppBuilder {
   configureMultilingualResources(resources: Record<string, any>): IAppBuilder;
 
   /**
+   * 配置读取当前文化区域信息的工厂方法。
+   * @author Wang Yucai
+   *
+   * @param {vuery.CurrentCultureInfoReadFunction} factory {@linkcode vuery.CurrentCultureInfoReadFunction} 类型的对象实例。
+   * @returns {IAppBuilder}
+   */
+  configureCurrentCultureInfoFactory(
+    factory: vuery.CurrentCultureInfoReadFunction
+  ): IAppBuilder;
+
+  /**
    * 构建应用程序 {@link IApplication} 类型的对象实例。
    * @author Wang Yucai
    *
@@ -203,6 +215,19 @@ export class AppBuilder implements IAppBuilder {
       ? 'body'
       : selector.trim();
   }
+
+  configureCurrentCultureInfoFactory(
+    factory: vuery.CurrentCultureInfoReadFunction
+  ): IAppBuilder {
+    console.debug(
+      `[DEBUG] - <app-builder.ts: c89dcf>: 尝试配置读取当前文化区域设置的工厂方法。`
+    );
+
+    window.__getCurrentCulture = factory;
+
+    return this;
+  }
+
   configureMultilingualResources(resources: Record<string, any>): IAppBuilder {
     this.m_resources = Object.assign({}, this.m_resources, resources);
     return this;
@@ -257,6 +282,13 @@ export class AppBuilder implements IAppBuilder {
       defaultNS: 'default',
       resources: this.m_resources,
     });
+    if (!window.__getCurrentCulture) {
+      console.warn(
+        `[WARN] - <app-builder.ts: 7a195f>: 设置默认的获取当前的文化区域信息的工厂方法。`
+      );
+
+      window.__getCurrentCulture = Culture.getCurrentCulture;
+    }
   }
 
   build(): IApplication {
