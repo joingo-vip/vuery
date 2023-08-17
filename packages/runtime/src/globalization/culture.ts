@@ -43,7 +43,7 @@ export class Culture {
    * @type {vuery.globalization.CultureInfo}
    */
   public static readonly CultureInfoOfChina: vuery.globalization.CultureInfo = {
-    friendlyName: 'zh-CN',
+    friendlyName: 'zh_CN',
     name: 'zh-Hans',
   };
 
@@ -59,6 +59,7 @@ export class Culture {
   public static readonly CultureInfoOfUnitedStates: vuery.globalization.CultureInfo =
     {
       name: 'en-US',
+      friendlyName: 'en_US',
     };
 
   private static readonly s_cultureInfoDictionary: Record<

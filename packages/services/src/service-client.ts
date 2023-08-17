@@ -622,7 +622,7 @@ export class ServiceClientBuilder implements IServiceClientBuilder {
   }
   build(): IServiceClient {
     const cultureInfo = Culture.getCurrentCulture();
-    this.withQuery({ t: cultureInfo.friendlyName ?? cultureInfo.name });
+    this.withQuery({ lang: cultureInfo.friendlyName ?? cultureInfo.name });
     if (!this.m_allowAnonymous) {
       const tokenStr = TokenString.current;
       if (!String.isNullOrWhitespace(tokenStr?.value)) {
