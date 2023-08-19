@@ -26,7 +26,7 @@ AppBuilder.prototype.configureServiceBaseUri = function (
     `[DEBUG] - <extensions.ts: 02a79e>: 尝试配置服务基础 URI 地址为 “${baseUri}”。`
   );
 
-  __VUERY_SERVICE_BASE_URI = baseUri;
+  window.__VUERY_SERVICE_BASE_URI = baseUri;
 
   return this;
 };

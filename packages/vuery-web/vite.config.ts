@@ -124,7 +124,7 @@ class Program {
             target: environmentVars.VITE_WEBAPI_PROXYURL,
             changeOrigin: true,
             rewrite(path) {
-              return path.replace(/^\/web-api/gi, '');
+              return path.replace(/\/web-api/gi, '');
             },
           },
         },

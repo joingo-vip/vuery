@@ -14,7 +14,7 @@
 
 import { sealed } from '@vuery/runtime';
 import { IServiceBase, ServiceBase } from '../service-base';
-import { ServiceResult } from '../service-client';
+import { ServiceClientBuilder, ServiceResult } from '../service-client';
 import { injectable } from 'tsyringe';
 
 /**
@@ -222,8 +222,6 @@ export interface ICaptchaService extends IServiceBase {
    * @returns {Promise<CaptchaResult>}
    */
   refreshAsync(): Promise<CaptchaResult>;
-
-  test(): void;
 }
 
 /**
@@ -244,6 +242,8 @@ export class CaptchaServiceProvider
   extends ServiceBase
   implements ICaptchaService
 {
+  private readonly m_captchaServiceUri: string = '/captchaImage';
+
   /**
    * 初始化 {@link CaptchaServiceProvider} 的新实例。
    * @author Wang Yucai
@@ -253,9 +253,6 @@ export class CaptchaServiceProvider
   constructor() {
     super();
   }
-  test(): void {
-    console.error('Method not implemented.');
-  }
 
   /**
    * (可等待的方法) 刷新并获取一个新的验证码结果。
@@ -264,6 +261,12 @@ export class CaptchaServiceProvider
    * @returns {Promise<CaptchaResult>}
    */
   async refreshAsync(): Promise<CaptchaResult> {
-    return {};
+    const client = new ServiceClientBuilder()
+      .withUri(this.m_captchaServiceUri)
+      .allowAnonymous()
+      .withHttpGet()
+      .withTimeout()
+      .build();
+    return await client.requestAsync<CaptchaResult>();
   }
 }

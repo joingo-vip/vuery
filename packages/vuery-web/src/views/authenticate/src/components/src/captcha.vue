@@ -10,7 +10,29 @@
   <img class="scoped-component" />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import {
+  ICaptchaService,
+  ServiceCollection,
+  ServiceProvider,
+} from '@vuery/services';
+import { onMounted } from 'vue';
+
+const captchaService = ServiceProvider.getRequiredService<ICaptchaService>(
+  ServiceCollection.CaptchaService
+);
+
+/**
+ * (可等待的方法) 刷新验证码。
+ */
+async function refreshAsync(): Promise<void> {
+  await captchaService.refreshAsync();
+}
+
+onMounted(async () => {
+  await refreshAsync();
+});
+</script>
 
 <style lang="scss" scoped>
 @use '../style/captcha.vue.scss';

@@ -537,7 +537,7 @@ export interface IServiceClientBuilder {
  * @implements {IServiceClientBuilder}
  */
 export class ServiceClientBuilder implements IServiceClientBuilder {
-  private m_baseUri: string = window.__VUERY_BASE_URI;
+  private m_baseUri: string = window.__VUERY_SERVICE_BASE_URI;
   private m_uri: string = String.empty();
   private m_method: Method = 'GET';
   private m_queryStr: Record<string, any> = {};
@@ -644,6 +644,11 @@ export class ServiceClientBuilder implements IServiceClientBuilder {
       headers: this.m_headers,
       timeout: this.m_timeout,
     };
+    console.trace(
+      `[TRACE] - <service-client.ts: 9bf3a4>: 服务配置选项为:%o。`,
+      axiosOptions
+    );
+
     return new ServiceClient(axiosOptions);
   }
 }
