@@ -195,15 +195,15 @@ export class TokenString implements ITokenString {
  * @author Wang Yucai
  *
  * @export
+ * @interface CaptchaResult
  * @typedef {CaptchaResult}
+ * @extends {ServiceResult}
  */
-export type CaptchaResult =
-  | {
-      img?: string | null;
-      captchaEnabled: boolean;
-      uuid?: string | null;
-    }
-  | ServiceResult;
+export interface CaptchaResult extends ServiceResult {
+  img?: string | null;
+  captchaEnabled: boolean;
+  uuid?: string | null;
+}
 
 /**
  * 定义了验证码相关的服务接口。

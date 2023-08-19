@@ -7,26 +7,33 @@
 
 <!--captcha.vue: 组件-->
 <template>
-  <img class="scoped-component" />
+  <img class="scoped-component" :src="captchaDataUri" />
 </template>
 
 <script lang="ts" setup>
 import {
+  CaptchaResult,
   ICaptchaService,
   ServiceCollection,
   ServiceProvider,
 } from '@vuery/services';
 import { onMounted } from 'vue';
+import { ref } from 'vue';
 
 const captchaService = ServiceProvider.getRequiredService<ICaptchaService>(
   ServiceCollection.CaptchaService
 );
 
+const captchaDataUri = ref<string>('');
+
 /**
  * (可等待的方法) 刷新验证码。
  */
 async function refreshAsync(): Promise<void> {
-  await captchaService.refreshAsync();
+  try {
+    const result: CaptchaResult = await captchaService.refreshAsync();
+    captchaDataUri.value = `data:image/git;base64,${result.img ?? ''}`;
+  } catch (error) {}
 }
 
 onMounted(async () => {

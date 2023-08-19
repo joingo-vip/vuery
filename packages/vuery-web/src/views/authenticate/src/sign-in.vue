@@ -57,7 +57,7 @@
                 <template #prefix>
                   <Mdicon icon-name="mdiSpellcheck" />
                 </template>
-                <template #append>
+                <template #suffix>
                   <InternalCaptcha />
                 </template>
               </ElInput>

@@ -1,4 +1,6 @@
+@use "../../../../../assets/lib/index"as lib;
+
 .scoped-component {
-    height: percentage($number: 1);
+    height: #{lib.rem(30)};
     width : auto;
 }
