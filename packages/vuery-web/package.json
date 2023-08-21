@@ -2,7 +2,7 @@
   "name": "@vuery/web",
   "description": "适用于 Desktop 浏览器的 Vuery 应用程序。",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "scripts": {
     "debug": "vite --mode debug",
