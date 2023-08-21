@@ -1,6 +1,6 @@
 {
   "name": "@joingo/vuery",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "面向 Ruoyi 服务框架开发的 Vue3 应用程序脚手架。",
   "main": "index.js",
   "repository": "git@codeup.aliyun.com:61935ec0e84c82e79291a8b7/base/vuery.git",

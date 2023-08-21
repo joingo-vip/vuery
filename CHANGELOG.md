@@ -1,4 +1,29 @@
 # RELEASE NOTES
+### [0.1.2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/compare/v0.1.1...v0.1.2) (2023-08-21)
+
+
+### 代码样式变更 CODE STYLE
+
+* 格式化代码。 ([e7bd61b](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/e7bd61b36c4d6db26f371918efa0d8997ec01944))
+
+
+### 新功能 NEW FEATURE
+
+* 调整了文化区域参数设置 URL 参数名称。 ([721f6cd](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/721f6cd46ec126450ed12b397d40720ee274d0ca))
+* 完成了 HTTP 服务调试。 ([086924d](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/086924d18249026e910faec6c44599ec922bdb7e))
+* 完成了身份认证登录服务。Closes [#1](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/1) ([0f199c5](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/0f199c53a4fd7b32d37304a57be0a6d6666b352b))
+* 完成了验证码组件。Issues [#1](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/1) ([b5d2722](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/b5d27227a9685f533d9ddc956d5495856cd3fb04))
+* 新增服务名称集合枚举。 ([b995866](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/b9958662c878f112a9cee4c3e3f069fee2fc9e17))
+* 新增服务依赖注入方法。 ([4bffe39](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/4bffe39e1605a7f4aec2a289b992ba2b86407930))
+* 新增服务异常提示对话框。 ([7900671](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/790067110b1aa00a502dc2717e4e1df529cccf87))
+* 新增验证码 DataUri 格式化。 ([b6df696](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/b6df6967d88f81c46744ccb177906000bb77c659))
+
+
+### 其他 CHORE
+
+* 更新了依赖。 ([939c6a1](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/939c6a1370cfb237d75765828bdaee35954ef104))
+* 修改了版本号。 ([8c765b3](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/8c765b3022d55dd92d5397aae11563743962f06c))
+
 ### 0.1.1 (2023-08-17)
 
 
