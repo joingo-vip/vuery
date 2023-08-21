@@ -16,15 +16,15 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted, ref } from 'vue';
+
+import { getDefaultTransientStore } from '@/libs';
 import {
   CaptchaResult,
   ICaptchaService,
   ServiceCollection,
   ServiceProvider,
 } from '@vuery/services';
-import { onMounted } from 'vue';
-import { ref } from 'vue';
-import { getDefaultTransientStore } from '@/libs';
 
 const transientStore = getDefaultTransientStore();
 
