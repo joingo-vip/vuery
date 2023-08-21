@@ -1,5 +1,19 @@
 @charset "UTF-8";
 :root {
+  /* ry-app.vue 组件样式 */
+  --ry-app--background-color: #fafafa;
+  --ry-app--height: 100%;
+  /* ry-scrollable-box.vue 组件样式 */
+  --ry-scrollable-box--trace-size: 0.375rem;
+  --ry-scrollable-box--width: 100%;
+  --ry-scrollable-box--height: 100%;
+  /* ry-flex-box.vue 组件样式 */
+  /* ry-mdicon.vue 组件样式 */
+  --ry-mdicon--size: var(--ry-text-lg);
+  --ry-mdicon--color: var(--ry-tertiary-text);
+}
+
+:root {
   /* Vuery 主题色 */
   --ry-black: #000;
   --ry-white: #fff;
@@ -10423,61 +10437,57 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  /* ry-app.vue 组件样式 */
-  --ry-app--background-color: #fafafa;
-  --ry-app--height: 100%;
-  /* ry-scrollable-box.vue 组件样式 */
-  --ry-scrollable-box--trace-size: 0.375rem;
-  --ry-scrollable-box--width: 100%;
-  --ry-scrollable-box--height: 100%;
-  /* ry-flex-box.vue 组件样式 */
-  /* ry-mdicon.vue 组件样式 */
-  --ry-mdicon--size: var(--ry-text-lg);
-  --ry-mdicon--color: var(--ry-tertiary-text);
-}
-body .ry-app {
+.ry-app {
   background-color: var(--ry-app--background-color);
   height: var(--ry-app--height);
 }
-body .ry-app .ry-scrollbar-box {
+
+.ry-scrollbar-box {
   scrollbar-width: thin;
   scrollbar-color: #E0E0E0 #F5F5F5;
   width: var(--ry-scrollable-box--width);
   height: var(--ry-scrollable-box--height);
 }
-body .ry-app .ry-scrollbar-box::-webkit-scrollbar {
+
+.ry-scrollbar-box::-webkit-scrollbar {
   width: var(--ry-scrollable-box--trace-size);
   height: var(--ry-scrollable-box--trace-size);
 }
-body .ry-app .ry-scrollbar-box::-webkit-scrollbar-track {
+
+.ry-scrollbar-box::-webkit-scrollbar-track {
   border-radius: var(--ry-scrollable-box--trace-size);
   background-color: #F5F5F5;
 }
-body .ry-app .ry-scrollbar-box::-webkit-scrollbar-track:hover {
+
+.ry-scrollbar-box::-webkit-scrollbar-track:hover {
   background-color: #EEEEEE;
 }
-body .ry-app .ry-scrollbar-box::-webkit-scrollbar-track:active {
+
+.ry-scrollbar-box::-webkit-scrollbar-track:active {
   background-color: #EEEEEE;
 }
-body .ry-app .ry-scrollbar-box::-webkit-scrollbar-thumb {
+
+.ry-scrollbar-box::-webkit-scrollbar-thumb {
   border-radius: var(--ry-scrollable-box--trace-size);
   background-color: #E0E0E0;
 }
-body .ry-app .ry-scrollbar-box::-webkit-scrollbar-thumb:hover {
+
+.ry-scrollbar-box::-webkit-scrollbar-thumb:hover {
   background-color: #BDBDBD;
 }
-body .ry-app .ry-scrollbar-box::-webkit-scrollbar-thumb:active {
+
+.ry-scrollbar-box::-webkit-scrollbar-thumb:active {
   background-color: #BDBDBD;
 }
-body .ry-app .ry-flex-box {
+
+.ry-flex-box {
   display: flex;
 }
-body .ry-app .ry-flex-box > .ry-flex-box--fill {
+.ry-flex-box > .ry-flex-box--fill {
   flex: 1;
 }
-body .ry-app .ry-mdicon {
-  color: var(--ry-mdicon--color);
+
+.ry-mdicon {
   font-size: var(--ry-mdicon--size);
   font-style: normal;
 }

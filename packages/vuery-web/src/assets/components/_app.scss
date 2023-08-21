@@ -20,8 +20,10 @@
         background-color: var(--ry-app--background-color);
         height          : var(--ry-app--height);
 
-        @include scrollable-box.build-class;
-        @include flex-box.build-class;
-        @include mdi.build-class;
+
     }
+
+    @include scrollable-box.build-class;
+    @include flex-box.build-class;
+    @include mdi.build-class;
 }

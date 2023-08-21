@@ -7,8 +7,6 @@
 
 @mixin build-class {
     .ry-mdicon {
-        color: var(--ry-mdicon--color);
-
         font: {
             size : var(--ry-mdicon--size);
             style: normal;

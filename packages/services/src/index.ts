@@ -36,6 +36,7 @@ export {
   PagingServiceResult,
   ServiceClient,
   ServiceClientBuilder,
+  ServiceException,
   ServiceResult,
   ServiceStatus,
 } from './service-client';

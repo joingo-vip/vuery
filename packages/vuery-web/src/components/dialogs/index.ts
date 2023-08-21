@@ -4,13 +4,14 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery Desktop 应用程序类库。
+ * 对话框组件模块。
  *
  * @remarks
- * "index.ts": Vuery Desktop 应用程序类库。
+ * "index.ts": 对话框组件模块。
  *
  * @packageDocumentation
  */
 
-export { DefaultRouteManager, DefaultRouteTable } from './routers';
-export { getDefaultNopersistentStore, getDefaultTransientStore } from './store';
+import ServiceExceptionDialogWidget from './ry-service-exception-dialog.vue';
+
+export { ServiceExceptionDialogWidget };

@@ -18,4 +18,5 @@ export {
   FlexBoxWidget as FlexBox,
   ScrollableBoxWidget as ScrollableBox,
 } from './container';
+export { ServiceExceptionDialogWidget as ServiceExceptionDialog } from './dialogs';
 export { MdiconWidget as Mdicon } from './icons';

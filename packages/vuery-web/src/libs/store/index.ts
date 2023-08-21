@@ -12,4 +12,7 @@
  * @packageDocumentation
  */
 
-export { getDefaultNopersistentStore } from './nopersistent-store';
+export {
+  getDefaultNopersistentStore,
+  getDefaultTransientStore,
+} from './nopersistent-store';

@@ -24,6 +24,9 @@ import {
 } from '@vuery/services';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
+import { getDefaultTransientStore } from '@/libs';
+
+const transientStore = getDefaultTransientStore();
 
 const captchaService = ServiceProvider.getRequiredService<ICaptchaService>(
   ServiceCollection.CaptchaService
@@ -60,7 +63,9 @@ async function refreshAsync(): Promise<void> {
     }
 
     $onRefreshed();
-  } catch (error) {}
+  } catch (error: any) {
+    transientStore.catchServiceException(error);
+  }
 }
 
 /**

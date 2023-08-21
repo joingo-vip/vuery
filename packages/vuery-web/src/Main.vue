@@ -9,8 +9,9 @@
   <Application>
     <RouterView />
   </Application>
+  <ServiceExceptionDialog />
 </template>
 
 <script lang="ts" setup>
-import { Application } from '@/components';
+import { Application, ServiceExceptionDialog } from '@/components';
 </script>

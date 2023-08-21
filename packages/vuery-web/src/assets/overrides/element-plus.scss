@@ -23,4 +23,10 @@
   /* 用于覆盖 ElementPlus Card 组件样式变量 */
   --el-card-padding      : 10px;
   --el-card-border-radius: #{lib.rem(lib.$radius)};
+
+}
+
+.el-dialog {
+  /* 用于覆盖 ElementPlus Dialog 组件样式 */
+  --el-dialog-padding-primary: #{lib.rem(10)};
 }
