@@ -282,9 +282,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@^20.4.8", "@types/node@^20.4.9", "@types/node@^20.5.0":
-  version "20.5.0"
-  resolved "https://registry.npmmirror.com/@types/node/-/node-20.5.0.tgz#7fc8636d5f1aaa3b21e6245e97d56b7f56702313"
-  integrity sha512-Mgq7eCtoTjT89FqNoTzzXg2XvCi5VMhRV6+I2aYanc6kQCBImeNaAYRs/DyoVqk1YEUJK5gN9VO7HRIdz4Wo3Q==
+  version "20.5.1"
+  resolved "https://registry.npmmirror.com/@types/node/-/node-20.5.1.tgz#178d58ee7e4834152b0e8b4d30cbfab578b9bb30"
+  integrity sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -971,14 +971,6 @@ dargs@^7.0.0:
   resolved "https://registry.npmmirror.com/dargs/-/dargs-7.0.0.tgz"
   integrity sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==
 
-datauri@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.npmmirror.com/datauri/-/datauri-4.1.0.tgz#19e6e4fadc38ff8cea724d8ff59dcaad832520e4"
-  integrity sha512-y17kh32+I82G+ED9MNWFkZiP/Cq/vO1hN9+tSZsT9C9qn3NrvcBnh7crSepg0AQPge1hXx2Ca44s1FRdv0gFWA==
-  dependencies:
-    image-size "1.0.0"
-    mimer "^2.0.2"
-
 dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npmmirror.com/dateformat/-/dateformat-3.0.3.tgz"
@@ -1430,13 +1422,6 @@ i18next@^23.4.4:
   dependencies:
     "@babel/runtime" "^7.22.5"
 
-image-size@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmmirror.com/image-size/-/image-size-1.0.0.tgz#58b31fe4743b1cec0a0ac26f5c914d3c5b2f0750"
-  integrity sha512-JLJ6OwBfO1KcA+TvJT+v8gbE6iWbj24LyDNFgFEN0lzegn6cC6a/p3NIDaepMsJjQjlUWqIC7wJv8lBFxPNjcw==
-  dependencies:
-    queue "6.0.2"
-
 immutable@^4.0.0:
   version "4.3.2"
   resolved "https://registry.npmmirror.com/immutable/-/immutable-4.3.2.tgz#f89d910f8dfb6e15c03b2cae2faaf8c1f66455fe"
@@ -1711,11 +1696,6 @@ mime-types@^2.1.12:
   integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
   dependencies:
     mime-db "1.52.0"
-
-mimer@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmmirror.com/mimer/-/mimer-2.0.2.tgz#941da26070e80bb485aed8a1ef4a5a325cbbfa96"
-  integrity sha512-izxvjsB7Ur5HrTbPu6VKTrzxSMBFBqyZQc6dWlZNQ4/wAvf886fD4lrjtFd8IQ8/WmZKdxKjUtqFFNaj3hQ52g==
 
 min-indent@^1.0.0:
   version "1.0.1"
@@ -2020,13 +2000,6 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmmirror.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-queue@6.0.2:
-  version "6.0.2"
-  resolved "https://registry.npmmirror.com/queue/-/queue-6.0.2.tgz#b91525283e2315c7553d2efa18d83e76432fed65"
-  integrity sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==
-  dependencies:
-    inherits "~2.0.3"
-
 quick-lru@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmmirror.com/quick-lru/-/quick-lru-4.0.1.tgz"
@@ -2164,9 +2137,9 @@ safe-buffer@~5.2.0:
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
 
 sass@^1.64.2:
-  version "1.66.0"
-  resolved "https://registry.npmmirror.com/sass/-/sass-1.66.0.tgz#74728eed49b0e490cd729c233e7f1c6ce356e638"
-  integrity "sha1-dHKO7Umw5JDNcpwjPn8cbONW5jg= sha512-C3U+RgpAAlTXULZkWwzfysgbbBBo8IZudNAOJAVBLslFbIaZv4MBPkTqhuvpK4lqgdoFiWhnOGMoV4L1FyOBag=="
+  version "1.66.1"
+  resolved "https://registry.npmmirror.com/sass/-/sass-1.66.1.tgz#04b51c4671e4650aa393740e66a4e58b44d055b1"
+  integrity sha512-50c+zTsZOJVgFfTgwwEzkjA3/QACgdNsKueWPyAR0mRINIvLAStVQBbPg14iuqEQ74NPDbXzJARJ/O4SI1zftA==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
