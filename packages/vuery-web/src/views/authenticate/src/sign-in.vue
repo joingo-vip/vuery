@@ -113,7 +113,7 @@ const $context = getCurrentInstance();
 /**
  * 当前组件的路由上下文。
  */
-const routeContext = {
+const $routeContext = {
   /**
    * 全局路由管理程序。
    */
@@ -191,11 +191,11 @@ function onSignInButtonClick(): void {
         nopersistentStore.authorize(token.value);
 
         const redirectRoute: string =
-          routeContext.route.query['rp']?.toString() ?? '';
+          $routeContext.route.query['rp']?.toString() ?? '';
         if (String.isNullOrWhitespace(redirectRoute)) {
-          routeContext.router.push({ path: '/home' });
+          $routeContext.router.push({ path: '/home' });
         } else {
-          routeContext.router.push({ path: redirectRoute });
+          $routeContext.router.push({ path: redirectRoute });
         }
       })
       .catch((error: any) => {
