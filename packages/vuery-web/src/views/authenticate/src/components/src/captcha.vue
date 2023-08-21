@@ -7,7 +7,12 @@
 
 <!--captcha.vue: 组件-->
 <template>
-  <img class="scoped-component" :src="captchaDataUri" />
+  <img
+    class="scoped-component"
+    :src="captchaPictureUri"
+    :title="$t('prompts:captcha.refresh')"
+    @click="onImageElementClick"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -24,7 +29,15 @@ const captchaService = ServiceProvider.getRequiredService<ICaptchaService>(
   ServiceCollection.CaptchaService
 );
 
-const captchaDataUri = ref<string>('');
+const captchaPictureUri = ref<string>('');
+const captchaPictureChecksums = ref<string>('');
+
+/**
+ * 定义了组件 “captcha.vue” 的事件。
+ */
+const $emits = defineEmits<{
+  refreshed: [e: vuery.EventArgs<string>];
+}>();
 
 /**
  * (可等待的方法) 刷新验证码。
@@ -32,8 +45,31 @@ const captchaDataUri = ref<string>('');
 async function refreshAsync(): Promise<void> {
   try {
     const result: CaptchaResult = await captchaService.refreshAsync();
-    captchaDataUri.value = `data:image/git;base64,${result.img ?? ''}`;
+    captchaPictureUri.value = `data:image/git;base64,${result.img ?? ''}`;
+    captchaPictureChecksums.value = result.uuid ?? '';
+
+    /**
+     * 触发组件的 “Refreshed” 事件。
+     *
+     * @private
+     * @see {@link $emits}
+     */
+    function $onRefreshed(): void {
+      console.debug(`[DEBUG] - <captcha.vue: 131651>: 验证码已经刷新。`);
+      $emits('refreshed', { payload: captchaPictureChecksums.value });
+    }
+
+    $onRefreshed();
   } catch (error) {}
+}
+
+/**
+ * 用于处理 “HTML Image Element” 组件的 “ImageElementClick” 事件
+ *
+ * @private
+ */
+async function onImageElementClick(): Promise<void> {
+  await refreshAsync();
 }
 
 onMounted(async () => {

@@ -1,4 +1,5 @@
 .scoped-component {
   height: 1.875rem;
   width: auto;
+  cursor: pointer;
 }

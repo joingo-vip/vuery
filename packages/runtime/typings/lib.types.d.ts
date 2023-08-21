@@ -115,6 +115,27 @@ declare namespace vuery {
     readonly RUNTIME_DEFAULT_LANGUAGE: string;
   }
 
+  /**
+   * 组件事件参数类型。
+   * @author Wang Yucai
+   *
+   * @interface EventArgs
+   * @typedef {EventArgs}
+   * @template TPayload 事件负载数据类型。
+   */
+  interface EventArgs<TPayload> {
+    /**
+     * 事件负载数据。
+     * @author Wang Yucai
+     *
+     * @readonly
+     * @type {TPayload}
+     * @remarks
+     * 获取 {@linkcode TPayload} 类型的对象实例或值，用于表示事件负载数据。
+     */
+    readonly payload: TPayload;
+  }
+
   namespace globalization {
     /**
      * 文化区域信息。
