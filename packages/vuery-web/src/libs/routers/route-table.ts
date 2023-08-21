@@ -14,6 +14,7 @@
 
 import { RouteRecordRaw } from 'vue-router';
 import { AuthenticationIndexView, SignInPartial } from '@/views/authenticate';
+import { HomeView } from '@/views/home';
 
 /**
  * 默认应用路由表。
@@ -25,7 +26,7 @@ export const DefaultRouteTable: Array<RouteRecordRaw> = [
   {
     name: 'Default',
     path: '/',
-    redirect(to) {
+    redirect() {
       return { name: 'Authentication:SignIn' };
     },
     meta: {
@@ -51,5 +52,10 @@ export const DefaultRouteTable: Array<RouteRecordRaw> = [
         component: SignInPartial,
       },
     ],
+  },
+  {
+    name: 'Home',
+    path: '/home',
+    component: HomeView,
   },
 ];

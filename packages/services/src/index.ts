@@ -26,6 +26,8 @@ export {
   ICaptchaService,
   ITokenString,
   TokenString,
+  IAuthenticationService,
+  FormAuthenticationResult,
 } from './security';
 export {
   AbstractServiceResult,

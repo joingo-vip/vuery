@@ -15,6 +15,7 @@
 import { App } from 'vue';
 import { DefaultRouteTable } from './route-table';
 import { IRouteManager, RouteManager, sealed } from '@vuery/runtime';
+import { TokenString } from '@vuery/services';
 
 /**
  * 提供了管理默认路由相关的方法。
@@ -59,5 +60,19 @@ export class DefaultRouteManager extends RouteManager implements IRouteManager {
     app.use(this.router);
   }
 
-  protected registerRouterHooks(): void {}
+  protected registerRouterHooks(): void {
+    this.router.beforeEach((to, from, next) => {
+      if (
+        to.meta.allowAnonymous ||
+        !String.isNullOrWhitespace(TokenString.current?.value ?? '')
+      ) {
+        next();
+      } else {
+        console.warn(
+          `[WARN] - <route-manager.ts: 4b7011>: 路由 “${to.fullPath}” 需要身份认证。`
+        );
+        next({ name: 'Authentication:SignIn', query: { rp: to.fullPath } });
+      }
+    });
+  }
 }

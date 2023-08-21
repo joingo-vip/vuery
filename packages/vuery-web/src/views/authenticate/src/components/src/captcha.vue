@@ -42,6 +42,12 @@ const $emits = defineEmits<{
   refreshed: [e: vuery.EventArgs<string>];
 }>();
 
+defineExpose({
+  refresh(): void {
+    refreshAsync().then(() => {});
+  },
+});
+
 /**
  * (可等待的方法) 刷新验证码。
  */

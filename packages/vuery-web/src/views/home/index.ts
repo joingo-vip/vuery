@@ -4,31 +4,21 @@
 // *******************************************************************************************************************************************************
 
 /**
- * 服务名称集合模块。
+ * 首页视图模块。
  *
  * @remarks
- * "service-collection.ts": 服务名称集合模块。
+ * "index.ts": 首页视图模块。
  *
  * @packageDocumentation
  */
 
 /**
- * 定义了服务名称集合枚举类型。
- * @author Wang Yucai
+ * (可等待的方法) 动态导入 “Home” 视图。
  *
  * @export
- * @enum {number}
+ * @public
+ * @async
  */
-export enum ServiceCollection {
-  /**
-   * 验证码服务。
-   * @author Wang Yucai
-   */
-  CaptchaService = 'Captcha',
-
-  /**
-   * 基于用户名、口令的身份认证服务。
-   * @author Wang Yucai
-   */
-  FormAuthenticationService = 'FormAuthenticationService',
+export function HomeView() {
+  return import('./src/index.vue');
 }

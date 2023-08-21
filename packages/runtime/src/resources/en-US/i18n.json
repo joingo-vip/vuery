@@ -2,7 +2,7 @@
   "default": {
     "phrases": {
       "application": "Vue front-end scaffolding for the Ruoyi server framework",
-      "exception_detailed": "Exception Detailed",
+      "exception_detailed": "Detailed",
       "get_started": "Get started",
       "is_copied": "Copied to the clipboard",
       "is_deleted": "Deleted",
@@ -99,7 +99,7 @@
       "search": "Search",
       "select": "Select",
       "send": "Send",
-      "service_exception": "Service Exception",
+      "service_exception": "Service Failure",
       "settings": "Settings",
       "share": "Share",
       "sign_in": "Sign In",
@@ -126,7 +126,7 @@
   "exceptions": {
     "configure_router_failed": "When \"Vuery\" registered dynamic routes, an unhandled exception was thrown.",
     "service_no_response_data": "The service is unresponsive, or no valid data results are returned.",
-    "service_request_failed": "When the application calls a RESTful service, an unhandled exception is thrown.",
+    "service_request_failed": "The application failed to call the service.",
     "service_unauthorized": "This service requires authorized access. Your identity information may have expired, please log in again."
   },
   "prompts": {
@@ -142,6 +142,7 @@
     },
     "user_name": {
       "placeholder": "Please typed the user-name."
-    }
+    },
+    "is_signing": "Signing in, please wait..."
   }
 }

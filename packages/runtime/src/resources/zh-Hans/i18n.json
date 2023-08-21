@@ -2,7 +2,7 @@
   "default": {
     "phrases": {
       "application": "面向“若依”服务器框架的 Vue 前端脚手架",
-      "exception_detailed": "异常详情",
+      "exception_detailed": "详情",
       "get_started": "开始",
       "is_copied": "已经复制",
       "is_deleted": "已经删除",
@@ -99,7 +99,7 @@
       "search": "搜索",
       "select": "选择",
       "send": "发送",
-      "service_exception": "服务异常",
+      "service_exception": "失败",
       "settings": "设置",
       "share": "分享",
       "sign_in": "登录",
@@ -126,7 +126,7 @@
   "exceptions": {
     "configure_router_failed": "Vuery 注册动态路由时，引发了一个未处理的异常。",
     "service_no_response_data": "服务无响应，或者没有返回有效的数据结果。",
-    "service_request_failed": "应用程序调用 RESTful 服务时，引发了未处理的异常。",
+    "service_request_failed": "应用程序调用服务失败。",
     "service_unauthorized": "此服务需要授权访问。您的身份信息可能已经过期，请重新登录。"
   },
   "prompts": {
@@ -137,6 +137,7 @@
     "confirm_password": {
       "placeholder": "请再次确认登录口令"
     },
+    "is_signing": "正在身份认证，请稍候...",
     "password": {
       "placeholder": "请输入登录口令"
     },

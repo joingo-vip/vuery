@@ -15,13 +15,20 @@
       <template #header>
         <InternalTitlebar :title-text="$t('default:words.sign_in')" />
       </template>
-      <div>
+      <div
+        v-loading="signingIn"
+        :element-loading-text="$t('prompts:is_signing')"
+      >
         <div>
           <!--
             视图：sign-in.vue - 登录输入控件区域。
             (标签：#effec8)
           -->
-          <ElForm :model="formAuthenData" :rules="formAuthenDataRules">
+          <ElForm
+            ref="authenForm"
+            :model="formAuthenData"
+            :rules="formAuthenDataRules"
+          >
             <ElFormItem prop="userName">
               <ElInput
                 v-model="formAuthenData.userName"
@@ -50,7 +57,6 @@
               <ElInput
                 v-model="formAuthenData.captcha"
                 :placeholder="$t('prompts:captcha.placeholder')"
-                clearable
                 :maxlength="8"
                 :minlength="1"
               >
@@ -58,11 +64,22 @@
                   <Mdicon icon-name="mdiSpellcheck" />
                 </template>
                 <template #suffix>
-                  <InternalCaptcha />
+                  <InternalCaptcha
+                    ref="captcha"
+                    @refreshed="onCaptchaRefreshed"
+                  />
                 </template>
               </ElInput>
             </ElFormItem>
           </ElForm>
+        </div>
+        <div>
+          <ElButton
+            type="primary"
+            class="ry-w--100p"
+            @click="onSignInButtonClick"
+            >{{ $t('default:words.sign_in') }}</ElButton
+          >
         </div>
       </div>
     </ElCard>
@@ -70,28 +87,56 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue';
+import { getCurrentInstance, reactive } from 'vue';
 
-import { ElInput, FormRules } from 'element-plus';
+import { ElInput, FormInstance, FormRules } from 'element-plus';
 
 import { AnimateBox, Mdicon } from '@/components';
 import { SR } from '@vuery/runtime';
-import { FormAuthenticationPayloadBase } from '@vuery/services';
+import {
+  FormAuthenticationPayloadBase,
+  IAuthenticationService,
+  ServiceCollection,
+  ServiceProvider,
+} from '@vuery/services';
 
 import { InternalCaptcha, InternalTitlebar } from './components';
+import { ref } from 'vue';
+import { getDefaultNopersistentStore, getDefaultTransientStore } from '@/libs';
+import { useRoute, useRouter } from 'vue-router';
 
 /**
- * 表单身份认证数据。
+ * Vue 应用程序上下文信息。
  */
+const $context = getCurrentInstance();
+
+/**
+ * 当前组件的路由上下文。
+ */
+const routeContext = {
+  /**
+   * 全局路由管理程序。
+   */
+  router: useRouter(),
+  /**
+   * 当前的路由信息。
+   */
+  route: useRoute(),
+};
+
+const nopersistentStore = getDefaultNopersistentStore();
+const transientStore = getDefaultTransientStore();
+const authenService =
+  ServiceProvider.getRequiredService<IAuthenticationService>(
+    ServiceCollection.FormAuthenticationService
+  );
+
 const formAuthenData = reactive<FormAuthenticationPayloadBase>({
   userName: '',
   password: '',
   captcha: '',
 });
 
-/**
- * 表单身份认证数据校验规则。
- */
 const formAuthenDataRules = reactive<FormRules<FormAuthenticationPayloadBase>>({
   userName: [
     {
@@ -121,6 +166,56 @@ const formAuthenDataRules = reactive<FormRules<FormAuthenticationPayloadBase>>({
     },
   ],
 });
+
+const signingIn = ref<boolean>(false);
+const captchaChecksums = ref<string>('');
+
+/**
+ * 用于处理 “ElementPlus Button” 组件的 “SignInButtonClick” 事件
+ *
+ * @private
+ */
+function onSignInButtonClick(): void {
+  const $authenForm = $context?.proxy?.$refs['authenForm'] as FormInstance;
+  $authenForm.validate().then(() => {
+    signingIn.value = true;
+    authenService
+      .signInAsync({
+        userName: formAuthenData.userName,
+        password: formAuthenData.password,
+        captcha: formAuthenData.captcha,
+        captchaChecksum: captchaChecksums.value,
+      })
+      .then((token) => {
+        token.save();
+        nopersistentStore.authorize(token.value);
+
+        const redirectRoute: string =
+          routeContext.route.query['rp']?.toString() ?? '';
+        if (String.isNullOrWhitespace(redirectRoute)) {
+          routeContext.router.push({ path: '/home' });
+        } else {
+          routeContext.router.push({ path: redirectRoute });
+        }
+      })
+      .catch((error: any) => {
+        transientStore.catchServiceException(error);
+      })
+      .finally(() => {
+        $context?.proxy?.$refs['captcha'].refresh();
+        signingIn.value = false;
+      });
+  });
+}
+
+/**
+ * 用于处理 “Captcha” 组件的 “CaptchaRefreshed” 事件
+ *
+ * @private
+ */
+function onCaptchaRefreshed(e: vuery.EventArgs<string>): void {
+  captchaChecksums.value = e.payload;
+}
 </script>
 
 <style lang="scss" scoped>

@@ -14,10 +14,13 @@
 
 export {
   AuthenticationPayloadBase,
+  AuthenticationServiceProvider,
   CaptchaResult,
   CaptchaServiceProvider,
   FormAuthenticationPayload,
   FormAuthenticationPayloadBase,
+  FormAuthenticationResult,
+  IAuthenticationService,
   ICaptchaService,
   ITokenString,
   TokenString,

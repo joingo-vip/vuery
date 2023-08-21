@@ -270,3 +270,104 @@ export class CaptchaServiceProvider
     return await client.requestAsync<CaptchaResult>();
   }
 }
+
+/**
+ * 身份认证服务结果类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @interface FormAuthenticationResult
+ * @typedef {FormAuthenticationResult}
+ * @extends {ServiceResult}
+ */
+export interface FormAuthenticationResult extends ServiceResult {
+  /**
+   * 身份认证令牌字符串。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  token?: string;
+}
+
+/**
+ * 定义了身份认证服务的接口。
+ * @author Wang Yucai
+ *
+ * @export
+ * @interface IAuthenticationService
+ * @typedef {IAuthenticationService}
+ * @extends {IServiceBase}
+ */
+export interface IAuthenticationService extends IServiceBase {
+  /**
+   * (可等待的方法) 使用用户名密码进行登录。
+   * @author Wang Yucai
+   *
+   * @param {FormAuthenticationPayload} payload 登录负载数据。
+   * @returns {Promise<ITokenString>}
+   */
+  signInAsync(payload: FormAuthenticationPayload): Promise<ITokenString>;
+}
+
+/**
+ * 提供了身份认证相关的服务方法。密闭的，不可以从此类型派生。
+ * @author Wang Yucai
+ *
+ * @export
+ * @class AuthenticationServiceProvider
+ * @typedef {AuthenticationServiceProvider}
+ * @extends {ServiceBase}
+ * @implements {IAuthenticationService}
+ *
+ * @remarks
+ * 密闭的，不可以从此类型派生。
+ */
+@sealed
+@injectable()
+export class AuthenticationServiceProvider
+  extends ServiceBase
+  implements IAuthenticationService
+{
+  private readonly m_signinServiceUri: string = '/login';
+
+  /**
+   * 初始化 {@link AuthenticationServiceProvider} 的新实例。
+   * @author Wang Yucai
+   *
+   * @constructor
+   */
+  constructor() {
+    super();
+  }
+
+  /**
+   * (可等待的方法) 用户名、密码登录。
+   * @author Wang Yucai
+   *
+   * @private
+   * @param {FormAuthenticationPayload} payload 登录负载数据。
+   * @returns {Promise<FormAuthenticationResult>}
+   */
+  private async __internalSignInAsync(
+    payload: FormAuthenticationPayload
+  ): Promise<FormAuthenticationResult> {
+    const client = new ServiceClientBuilder()
+      .withData({
+        code: payload.captcha,
+        uuid: payload.captchaChecksum,
+        username: payload.userName,
+        password: payload.password,
+      })
+      .allowAnonymous()
+      .withHttpPost()
+      .withUri(this.m_signinServiceUri)
+      .build();
+    return await client.requestAsync<FormAuthenticationResult>();
+  }
+
+  async signInAsync(payload: FormAuthenticationPayload): Promise<ITokenString> {
+    const result = await this.__internalSignInAsync(payload);
+    return new TokenString(result.token);
+  }
+}

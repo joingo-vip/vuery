@@ -13,7 +13,7 @@
  */
 
 import { container } from 'tsyringe';
-import { IServiceBase, ServiceBase } from './service-base';
+import { IServiceBase } from './service-base';
 
 /**
  * 提供了服务发现相关的方法。
