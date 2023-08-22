@@ -18,16 +18,19 @@ import 'reflect-metadata';
 import './extensions';
 
 export {
+  AESCryptographyServiceProvider,
   AuthenticationPayloadBase,
   CaptchaResult,
   CaptchaServiceProvider,
+  CryptographyService,
   FormAuthenticationPayload,
   FormAuthenticationPayloadBase,
+  FormAuthenticationResult,
+  IAuthenticationService,
   ICaptchaService,
+  ICryptographyService,
   ITokenString,
   TokenString,
-  IAuthenticationService,
-  FormAuthenticationResult,
 } from './security';
 export {
   AbstractServiceResult,

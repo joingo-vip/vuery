@@ -15,10 +15,12 @@
 import { AppBuilder, IAppBuilder } from '@vuery/runtime';
 import { container } from 'tsyringe';
 import {
+  AESCryptographyServiceProvider,
   AuthenticationServiceProvider,
   CaptchaServiceProvider,
   IAuthenticationService,
   ICaptchaService,
+  ICryptographyService,
 } from './security';
 import { ServiceCollection } from './service-collection';
 
@@ -49,7 +51,10 @@ AppBuilder.prototype.configureServices = function (): IAppBuilder {
       {
         useClass: AuthenticationServiceProvider,
       }
-    );
+    )
+    .register<ICryptographyService>(ServiceCollection.AESCryptographyService, {
+      useClass: AESCryptographyServiceProvider,
+    });
   return this;
 };
 

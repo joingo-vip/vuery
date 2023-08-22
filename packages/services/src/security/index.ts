@@ -25,3 +25,8 @@ export {
   ITokenString,
   TokenString,
 } from './authentication-service';
+export {
+  AESCryptographyServiceProvider,
+  CryptographyService,
+  ICryptographyService,
+} from './cryptography-service';

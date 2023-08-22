@@ -31,4 +31,10 @@ export enum ServiceCollection {
    * @author Wang Yucai
    */
   FormAuthenticationService = 'FormAuthenticationService',
+
+  /**
+   * AES 加密、解密服务。
+   * @author Wang Yucai
+   */
+  AESCryptographyService = 'AES',
 }
