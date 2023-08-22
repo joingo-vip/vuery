@@ -12,10 +12,10 @@
  * @packageDocumentation
  */
 
+import { IRouteManager, RouteManager, sealed } from '@vuery/runtime';
+import { Principal } from '@vuery/services';
 import { App } from 'vue';
 import { DefaultRouteTable } from './route-table';
-import { IRouteManager, RouteManager, sealed } from '@vuery/runtime';
-import { TokenString } from '@vuery/services';
 
 /**
  * 提供了管理默认路由相关的方法。
@@ -64,7 +64,7 @@ export class DefaultRouteManager extends RouteManager implements IRouteManager {
     this.router.beforeEach((to, from, next) => {
       if (
         to.meta.allowAnonymous ||
-        !String.isNullOrWhitespace(TokenString.current?.value ?? '')
+        Principal.currentPrincipal.user.isAuthenticated
       ) {
         next();
       } else {

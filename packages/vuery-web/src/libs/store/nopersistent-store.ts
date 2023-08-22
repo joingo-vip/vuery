@@ -34,16 +34,6 @@ interface SessionStateData extends vuery.StateData {
    * 设置或获取一个 {@link Boolean} 类型值，用于表示是否已经身份认证。
    */
   isAuthenticated: boolean;
-
-  /**
-   * 授权凭据。
-   * @author Wang Yucai
-   *
-   * @type {string}
-   * @remarks
-   * 设置或获取一个字符串，用于表示授权凭据。
-   */
-  authorizationToken: string;
 }
 
 /**
@@ -78,19 +68,22 @@ export const getDefaultNopersistentStore = defineStore(
     state(): SessionStateData {
       return {
         isAuthenticated: false,
-        authorizationToken: String.empty(),
       };
     },
     actions: {
       /**
        * 身份认证成功后进行授权。
        * @author Wang Yucai
-       *
-       * @param {(string | null)} tokenStr 身份令牌字符串。
        */
-      authorize(tokenStr: string | null): void {
-        if ((this.isAuthenticated = !String.isNullOrWhitespace(tokenStr)))
-          this.authorizationToken = tokenStr ?? '';
+      authorize(): void {
+        this.isAuthenticated = true;
+      },
+      /**
+       * 撤销授权。
+       * @author Wang Yucai
+       */
+      revoke(): void {
+        this.isAuthenticated = false;
       },
     },
     persist: {

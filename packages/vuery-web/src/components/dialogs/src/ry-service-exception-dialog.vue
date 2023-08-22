@@ -55,8 +55,23 @@ import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
 import { MdiconWidget } from '../../icons';
 import { FlexBoxWidget, ScrollableBoxWidget } from '../../container';
+import { useRoute, useRouter } from 'vue-router';
 
 const transientStore = getDefaultTransientStore();
+
+/**
+ * 当前组件的路由上下文。
+ */
+const $routeContext = {
+  /**
+   * 全局路由管理程序。
+   */
+  router: useRouter(),
+  /**
+   * 当前的路由信息。
+   */
+  route: useRoute(),
+};
 
 const { serviceException } = storeToRefs(transientStore);
 const anExceptionWasThrown = ref<boolean>(false);
@@ -71,6 +86,7 @@ transientStore.$subscribe((_mutation, state) => {
  * @private
  */
 function onDialogClosed(): void {
+  whenUnauthorized();
   transientStore.clearServiceException();
 }
 
@@ -80,7 +96,20 @@ function onDialogClosed(): void {
  * @private
  */
 function onCloseButtonClick(): void {
+  whenUnauthorized();
   transientStore.clearServiceException();
   anExceptionWasThrown.value = false;
+}
+
+/**
+ * 当异常为未授权时，重定向到登录视图。
+ */
+function whenUnauthorized(): void {
+  if (serviceException?.value?.reason === 'UNAUTHORIZED') {
+    $routeContext.router.push({
+      name: 'Authentication:SignIn',
+      query: { rp: $routeContext.route.fullPath },
+    });
+  }
 }
 </script>

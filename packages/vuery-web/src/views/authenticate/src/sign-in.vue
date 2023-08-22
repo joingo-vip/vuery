@@ -188,6 +188,7 @@ function onSignInButtonClick(): void {
       })
       .then((token) => {
         authenService.authorize(token);
+        nopersistentStore.authorize();
 
         const redirectRoute: string =
           $routeContext.route.query['rp']?.toString() ?? '';
