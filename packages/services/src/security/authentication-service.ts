@@ -15,7 +15,9 @@
 import { sealed } from '@vuery/runtime';
 import { IServiceBase, ServiceBase } from '../service-base';
 import { ServiceClientBuilder, ServiceResult } from '../service-client';
-import { injectable } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
+import { ICryptographyService } from './cryptography-service';
+import { ServiceCollection } from '../service-collection';
 
 /**
  * 身份认证服务负载数据抽象结构。
@@ -308,6 +310,14 @@ export interface IAuthenticationService extends IServiceBase {
    * @returns {Promise<ITokenString>}
    */
   signInAsync(payload: FormAuthenticationPayload): Promise<ITokenString>;
+
+  /**
+   * 授权访问资源。
+   * @author Wang Yucai
+   *
+   * @param {?(ITokenString | null)} [token] 身份认证令牌字符串。
+   */
+  authorize(token?: ITokenString | null): void;
 }
 
 /**
@@ -330,15 +340,31 @@ export class AuthenticationServiceProvider
   implements IAuthenticationService
 {
   private readonly m_signinServiceUri: string = '/login';
+  private readonly m_cryptoService: ICryptographyService;
 
   /**
    * 初始化 {@link AuthenticationServiceProvider} 的新实例。
    * @author Wang Yucai
    *
    * @constructor
+   * @param {ICryptographyService} cryptoService 加密解密服务。
    */
-  constructor() {
+  constructor(
+    @inject(ServiceCollection.AESCryptographyService)
+    private cryptoService: ICryptographyService
+  ) {
     super();
+    this.m_cryptoService = cryptoService;
+  }
+
+  authorize(token?: ITokenString): void {
+    if (String.isNullOrWhitespace(token?.value)) {
+      console.warn(
+        `[WARN] - <authentication-service.ts: e1e453>: 空白的身份认证令牌。`
+      );
+    } else {
+      new TokenString(this.m_cryptoService.encrypt(token.value)).save();
+    }
   }
 
   /**

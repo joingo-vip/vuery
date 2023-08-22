@@ -11,6 +11,10 @@
   /* ry-mdicon.vue 组件样式 */
   --ry-mdicon--size: var(--ry-text-lg);
   --ry-mdicon--color: var(--ry-tertiary-text);
+  /* ry-desktop.vue 组件样式 */
+  --ry-desktop--height: 100%;
+  --ry-desktop-header--height: 2.5rem;
+  --ry-desktop-header--background-color: #0d47a1;
 }
 
 :root {
@@ -10490,4 +10494,14 @@ body {
 .ry-mdicon {
   font-size: var(--ry-mdicon--size);
   font-style: normal;
+}
+
+.ry-desktop {
+  height: var(--ry-desktop--height);
+}
+.ry-desktop .ry-desktop-header {
+  width: 100%;
+}
+.ry-desktop .ry-desktop-header {
+  min-height: var(--ry-desktop-header--height);
 }

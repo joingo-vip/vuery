@@ -12,6 +12,6 @@
  * @packageDocumentation
  */
 
-import ServiceExceptionDialogWidget from './ry-service-exception-dialog.vue';
+import ServiceExceptionDialogWidget from './src/ry-service-exception-dialog.vue';
 
 export { ServiceExceptionDialogWidget };

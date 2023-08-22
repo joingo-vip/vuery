@@ -4,27 +4,14 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vite 环境变量定义模块。
+ * 布局组件模块。
  *
  * @remarks
- * "lib.vite.d.ts": Vite 环境变量定义模块。
+ * "index.ts": 布局组件模块。
  *
  * @packageDocumentation
  */
 
-/// <reference types="vite/client" />
+import DesktopWidget from './src/ry-desktop.vue';
 
-interface ImportMetaEnv extends vuery.EnvironmentVariableRecord {
-  /**
-   * 加密服务密钥。
-   * @author Wang Yucai
-   *
-   * @readonly
-   * @type {string}
-   */
-  readonly COMPILER_CRYPTOSERVICE_SECRETKEY: string;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
+export { DesktopWidget };

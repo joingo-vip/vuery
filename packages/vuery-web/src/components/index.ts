@@ -20,3 +20,4 @@ export {
 } from './container';
 export { ServiceExceptionDialogWidget as ServiceExceptionDialog } from './dialogs';
 export { MdiconWidget as Mdicon } from './icons';
+export { DesktopWidget as Desktop } from './layouts';

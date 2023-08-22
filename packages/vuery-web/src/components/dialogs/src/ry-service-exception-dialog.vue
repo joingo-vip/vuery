@@ -53,8 +53,8 @@
 import { getDefaultTransientStore } from '@/libs';
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
-import { MdiconWidget } from '../icons';
-import { FlexBoxWidget, ScrollableBoxWidget } from '../container';
+import { MdiconWidget } from '../../icons';
+import { FlexBoxWidget, ScrollableBoxWidget } from '../../container';
 
 const transientStore = getDefaultTransientStore();
 

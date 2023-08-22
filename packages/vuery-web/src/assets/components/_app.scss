@@ -2,6 +2,7 @@
 @use "./scrollable-box";
 @use "./flex-box";
 @use "./mdicon"as mdi;
+@use "./desktop";
 
 @mixin build-vars {
     /* ry-app.vue 组件样式 */
@@ -13,17 +14,18 @@
     @include flex-box.build-vars;
     /* ry-mdicon.vue 组件样式 */
     @include mdi.build-vars;
+    /* ry-desktop.vue 组件样式 */
+    @include desktop.build-vars;
 }
 
 @mixin build-class {
     .ry-app {
         background-color: var(--ry-app--background-color);
         height          : var(--ry-app--height);
-
-
     }
 
     @include scrollable-box.build-class;
     @include flex-box.build-class;
     @include mdi.build-class;
+    @include desktop.build-class;
 }

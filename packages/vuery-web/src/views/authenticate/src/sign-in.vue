@@ -187,8 +187,7 @@ function onSignInButtonClick(): void {
         captchaChecksum: captchaChecksums.value,
       })
       .then((token) => {
-        token.save();
-        nopersistentStore.authorize(token.value);
+        authenService.authorize(token);
 
         const redirectRoute: string =
           $routeContext.route.query['rp']?.toString() ?? '';

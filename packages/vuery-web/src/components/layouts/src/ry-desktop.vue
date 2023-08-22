@@ -5,15 +5,17 @@
   // *******************************************************************************************************************************************************
 -->
 
-<!--index.vue: 默认页视图-->
+<!--ry-desktop.vue: 默认桌面布局组件-->
 <template>
-  <div class="ry-h--100p">
-    <Desktop></Desktop>
+  <div class="ry-desktop">
+    <FlexBoxWidget direction="column" class="ry-h--100p">
+      <div class="ry-desktop-header">
+        <div></div>
+      </div>
+    </FlexBoxWidget>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Desktop } from '@/components';
+import { FlexBoxWidget } from '../../container';
 </script>
-
-<style lang="scss" scoped></style>

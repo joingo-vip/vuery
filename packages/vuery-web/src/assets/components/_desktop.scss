@@ -1,0 +1,28 @@
+@use "../lib/index"as lib;
+
+@mixin build-vars {
+    --ry-desktop--height                 : #{percentage($number: 1)};
+    --ry-desktop-header--height          : #{lib.rem(40)};
+    --ry-desktop-header--background-color: #{lib.$primary};
+}
+
+@mixin build-class {
+    .ry-desktop {
+        height: var(--ry-desktop--height);
+
+        %main-layout {
+            width: percentage($number: 1);
+        }
+
+        #{&}-header {
+            @extend %main-layout;
+
+            min-height      : var(--ry-desktop-header--height);
+            background-color: var(--ry-desktop-header--background-color);
+
+            >div {
+                height: percentage($number: 1);
+            }
+        }
+    }
+}
