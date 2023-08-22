@@ -30,3 +30,12 @@ export {
   CryptographyService,
   ICryptographyService,
 } from './cryptography-service';
+export {
+  AnonymousIdentity,
+  AnonymousPrincipal,
+  ClaimsIdentity,
+  ClaimsPrincipal,
+  IIdentity,
+  IPrincipal,
+  Principal,
+} from './principal';

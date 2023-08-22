@@ -24,7 +24,7 @@ import axios, {
   AxiosResponse,
   Method,
 } from 'axios';
-import { TokenString } from './security';
+import { ClaimsIdentity, IPrincipal, Principal, TokenString } from './security';
 
 /**
  * 定义了描述服务调用失败原因枚举类型。
@@ -624,9 +624,15 @@ export class ServiceClientBuilder implements IServiceClientBuilder {
     const cultureInfo = Culture.getCurrentCulture();
     this.withQuery({ lang: cultureInfo.friendlyName ?? cultureInfo.name });
     if (!this.m_allowAnonymous) {
-      const tokenStr = TokenString.current;
-      if (!String.isNullOrWhitespace(tokenStr?.value)) {
-        this.withHeaders({ 'Authorization': `Bearer ${tokenStr.value}` });
+      const principal: IPrincipal = Principal.currentPrincipal;
+      if (principal.user.isAuthenticated) {
+        this.withHeaders({
+          'Authorization': `Bearer ${
+            (principal.user as ClaimsIdentity).claims[
+              ClaimsIdentity.ACCESS_TOKEN
+            ]
+          }`,
+        });
       }
     }
     if (!Object.isNull(this.m_pageIdx) || !Object.isNull(this.m_rowsNum)) {

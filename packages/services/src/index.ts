@@ -19,9 +19,13 @@ import './extensions';
 
 export {
   AESCryptographyServiceProvider,
+  AnonymousIdentity,
+  AnonymousPrincipal,
   AuthenticationPayloadBase,
   CaptchaResult,
   CaptchaServiceProvider,
+  ClaimsIdentity,
+  ClaimsPrincipal,
   CryptographyService,
   FormAuthenticationPayload,
   FormAuthenticationPayloadBase,
@@ -29,7 +33,10 @@ export {
   IAuthenticationService,
   ICaptchaService,
   ICryptographyService,
+  IIdentity,
+  IPrincipal,
   ITokenString,
+  Principal,
   TokenString,
 } from './security';
 export {
