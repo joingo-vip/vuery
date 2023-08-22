@@ -4,30 +4,10 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery 服务 JavaScript 原生类型定义模块。
+ * 加密解密服务模块。
  *
  * @remarks
- * "lib.native.d.ts": Vuery 服务 JavaScript 原生类型定义模块。
+ * "cryptography-service.ts": 加密解密服务模块。
  *
  * @packageDocumentation
  */
-
-export {};
-
-declare global {
-  /**
-   * Vuery 服务默认基础 URL 地址。
-   * @author Wang Yucai
-   *
-   * @type {string}
-   */
-  var __VUERY_SERVICE_BASE_URI: string;
-
-  /**
-   * Vuery 加密服务默认密钥。
-   * @author Wang Yucai
-   *
-   * @type {string}
-   */
-  var __VUERY_CRYPTOGRAPHY_SECRET_KEY: string;
-}

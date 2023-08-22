@@ -32,6 +32,15 @@ declare module '@vuery/runtime' {
      * @returns {IAppBuilder}
      */
     configureServices(): IAppBuilder;
+
+    /**
+     * 配置加密服务所需的密钥。
+     * @author Wang Yucai
+     *
+     * @param {string} secretKey
+     * @returns {IAppBuilder}
+     */
+    configureCryptographySecretKey(secretKey: string): IAppBuilder;
   }
 
   interface AppBuilder extends IAppBuilder {}

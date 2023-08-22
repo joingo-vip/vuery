@@ -24,6 +24,8 @@ import { ServiceCollection } from './service-collection';
 
 var __VUERY_SERVICE_BASE_URI: string = '';
 
+var __VUERY_CRYPTOGRAPHY_SECRET_KEY: string = 'TpxdwP3xuKT5e6n6';
+
 AppBuilder.prototype.configureServiceBaseUri = function (
   baseUri: string
 ): IAppBuilder {
@@ -48,5 +50,14 @@ AppBuilder.prototype.configureServices = function (): IAppBuilder {
         useClass: AuthenticationServiceProvider,
       }
     );
+  return this;
+};
+
+AppBuilder.prototype.configureCryptographySecretKey = function (
+  secretKey: string
+): IAppBuilder {
+  if (!String.isNullOrWhitespace(secretKey)) {
+    window.__VUERY_CRYPTOGRAPHY_SECRET_KEY = secretKey;
+  }
   return this;
 };
