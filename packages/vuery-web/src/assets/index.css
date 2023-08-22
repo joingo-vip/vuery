@@ -13,8 +13,10 @@
   --ry-mdicon--color: var(--ry-tertiary-text);
   /* ry-desktop.vue 组件样式 */
   --ry-desktop--height: 100%;
-  --ry-desktop-header--height: 2.5rem;
+  --ry-desktop-header--min-height: 2.5rem;
   --ry-desktop-header--background-color: #0d47a1;
+  --ry-desktop-footer--min-height: var(--ry-desktop-header--min-height);
+  --ry-desktop-footer--border: 0.0625rem solid #fafafa;
 }
 
 :root {
@@ -176,7 +178,7 @@ html {
   font-style: italic;
 }
 
-.ry-h--0 {
+.ry-h--0, .ry-desktop .ry-desktop-body {
   height: 0;
 }
 .ry-w--0 {
@@ -649,7 +651,7 @@ body {
 .ry-w--5p {
   width: 5%;
 }
-.ry-pd--5 {
+.ry-pd--5, .ry-desktop .ry-desktop-footer, .ry-desktop .ry-desktop-header {
   padding: 0.3125rem;
 }
 .ry-pd--5p {
@@ -10330,7 +10332,7 @@ body {
 .ry-h--100 {
   height: 6.25rem;
 }
-.ry-h--100p, html,
+.ry-h--100p, .ry-desktop .ry-desktop-body > div, html,
 body {
   height: 100%;
 }
@@ -10499,9 +10501,23 @@ body {
 .ry-desktop {
   height: var(--ry-desktop--height);
 }
-.ry-desktop .ry-desktop-header {
+.ry-desktop .ry-desktop-footer, .ry-desktop .ry-desktop-body, .ry-desktop .ry-desktop-header {
   width: 100%;
 }
 .ry-desktop .ry-desktop-header {
-  min-height: var(--ry-desktop-header--height);
+  min-height: var(--ry-desktop-header--min-height);
+  background-color: var(--ry-desktop-header--background-color);
+}
+.ry-desktop .ry-desktop-header > div {
+  height: 100%;
+}
+.ry-desktop .ry-desktop-body {
+  flex: 1;
+}
+.ry-desktop .ry-desktop-footer {
+  min-height: var(--ry-desktop-footer--min-height);
+  border-top: var(--ry-desktop-footer--border);
+}
+.ry-desktop .ry-desktop-footer > div {
+  height: 100%;
 }

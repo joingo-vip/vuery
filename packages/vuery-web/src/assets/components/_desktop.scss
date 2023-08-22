@@ -2,8 +2,10 @@
 
 @mixin build-vars {
     --ry-desktop--height                 : #{percentage($number: 1)};
-    --ry-desktop-header--height          : #{lib.rem(40)};
+    --ry-desktop-header--min-height      : #{lib.rem(40)};
     --ry-desktop-header--background-color: #{lib.$primary};
+    --ry-desktop-footer--min-height      : var(--ry-desktop-header--min-height);
+    --ry-desktop-footer--border          : #{lib.rem(1)} solid #eeeeee;
 }
 
 @mixin build-class {
@@ -16,9 +18,34 @@
 
         #{&}-header {
             @extend %main-layout;
+            @extend .ry-pd--5;
 
-            min-height      : var(--ry-desktop-header--height);
+            min-height      : var(--ry-desktop-header--min-height);
             background-color: var(--ry-desktop-header--background-color);
+
+            >div {
+                height: percentage($number: 1);
+            }
+        }
+
+        #{&}-body {
+            @extend %main-layout;
+            @extend .ry-h--0;
+
+            flex: 1;
+
+            >div {
+                @extend .ry-h--100p;
+            }
+        }
+
+
+        #{&}-footer {
+            @extend %main-layout;
+            @extend .ry-pd--5;
+
+            min-height: var(--ry-desktop-footer--min-height);
+            border-top: var(--ry-desktop-footer--border);
 
             >div {
                 height: percentage($number: 1);
