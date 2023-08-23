@@ -25,11 +25,34 @@
           justify="flex-end"
           class="ry-h--100p"
         >
+          <slot name="actions" />
+          <AppbarItemWidget v-show="settingsIconVisible">
+            <MdiconWidget
+              icon-name="mdiCog"
+              class="ry-white-text ry-text-xxl ry-clickable"
+              :title="
+                $format(
+                  '{0}{1}',
+                  $t('default:words.preferences'),
+                  $t('default:words.settings')
+                )
+              "
+              @click="onClick('perference-settings')"
+            />
+          </AppbarItemWidget>
+          <AppbarItemWidget v-show="translateIconVisible">
+            <MdiconWidget
+              icon-name="mdiTranslate"
+              class="ry-white-text ry-text-xxl ry-clickable"
+              :title="$t('default:phrases.languages')"
+              @click="onClick('languages')"
+            />
+          </AppbarItemWidget>
           <AppbarItemWidget v-show="userIconVisible && currentUser">
             <ElPopover trigger="click" :width="200" :show-arrow="false">
               <template #reference>
                 <MdiconWidget
-                  icon-name="mdiAccountCircle"
+                  icon-name="mdiAccount"
                   class="ry-white-text ry-text-xxl ry-clickable"
                 />
               </template>
@@ -50,10 +73,14 @@
                 </div>
                 <div>
                   <FlexBoxWidget align-items="center" justify="center">
-                    <ElButton :title="$t('default:words.settings')" plain>
+                    <ElButton
+                      :title="$t('default:words.settings')"
+                      plain
+                      @click="onClick('settings')"
+                    >
                       <MdiconWidget icon-name="mdiCog" />
                     </ElButton>
-                    <ElButton type="primary" plain>
+                    <ElButton type="primary" plain @click="onClick('sign-off')">
                       <MdiconWidget icon-name="mdiLogoutVariant" />
                       {{ $t('default:words.sign_off') }}
                     </ElButton>
@@ -116,6 +143,22 @@ const $props = defineProps({
    * 是否显示当前用户图标。
    */
   userIconVisible: {
+    type: Boolean,
+    default: true,
+    required: false,
+  },
+  /**
+   * 是否显示语言设置图标。
+   */
+  translateIconVisible: {
+    type: Boolean,
+    default: true,
+    required: false,
+  },
+  /**
+   * 是否显示设置图标。
+   */
+  settingsIconVisible: {
     type: Boolean,
     default: true,
     required: false,
