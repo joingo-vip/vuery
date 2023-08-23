@@ -1,14 +1,10 @@
 @use "../lib/index"as lib;
 
-@mixin build-vars {
-    --ry-mdicon--size : var(--ry-text-lg);
-    --ry-mdicon--color: var(--ry-tertiary-text);
-}
+@mixin build-vars {}
 
 @mixin build-class {
     .ry-mdicon {
         font: {
-            size : var(--ry-mdicon--size);
             style: normal;
         }
     }

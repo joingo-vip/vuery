@@ -5,19 +5,11 @@
   // *******************************************************************************************************************************************************
 -->
 
-<!--index.vue: 默认页视图-->
+<!--ry-appbar-item.vue: 应用导航条目菜单项组件-->
 <template>
-  <div class="ry-h--100p">
-    <Desktop>
-      <template #header>
-        <Appbar></Appbar>
-      </template>
-    </Desktop>
+  <div class="ry-appbar-action">
+    <slot />
   </div>
 </template>
 
-<script lang="ts" setup>
-import { Desktop, Appbar } from '@/components';
-</script>
-
-<style lang="scss" scoped></style>
+<script lang="ts" setup></script>

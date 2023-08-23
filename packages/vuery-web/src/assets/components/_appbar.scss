@@ -1,0 +1,48 @@
+@use "../lib/index"as lib;
+
+@mixin build-vars {
+    /* 组件 appbar.vue 变量定义 */
+    --ry-appbar--width                : #{percentage($number: 1)};
+    --ry-appbar-icon--size            : #{lib.rem(30)};
+    --ry-appbar-userprofiler--padding : #{lib.rem(5)};
+}
+
+@mixin build-class {
+    /* 组件 appbar.vue 样式定义 */
+
+    .ry-appbar {
+        width : var(--ry-appbar--width);
+        height: percentage($number: 1);
+
+        #{&}-item {
+            @extend .ry-pd-right--10;
+        }
+
+        #{&}-action {
+            @extend .ry-pd-left--10;
+        }
+
+        #{&}-item:last-child {
+            @extend .ry-pd-right--0;
+        }
+
+        #{&}-action:first-child {
+            @extend .ry-pd-left--0;
+        }
+    }
+
+    .ry-appbar-userprofiler {
+        width: percentage($number: 1);
+
+        >div {
+            padding: {
+                top   : var(--ry-appbar-userprofiler--padding);
+                bottom: var(--ry-appbar-userprofiler--padding);
+            }
+        }
+
+        >#{&}-title {
+            border-bottom: 1px solid #eeeeee;
+        }
+    }
+}

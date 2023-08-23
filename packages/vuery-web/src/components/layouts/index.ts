@@ -12,6 +12,8 @@
  * @packageDocumentation
  */
 
+import AppbarItemWidget from './src/ry-appbar-item.vue';
+import AppbarWidget from './src/ry-appbar.vue';
 import DesktopWidget from './src/ry-desktop.vue';
 
-export { DesktopWidget };
+export { AppbarItemWidget, AppbarWidget, DesktopWidget };

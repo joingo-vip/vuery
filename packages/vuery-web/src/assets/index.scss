@@ -29,4 +29,8 @@ body {
   box-sizing : border-box;
 }
 
+.ry-clickable {
+  cursor: pointer;
+}
+
 @include components.build-components-class;

@@ -30,3 +30,8 @@
   /* 用于覆盖 ElementPlus Dialog 组件样式 */
   --el-dialog-padding-primary: #{lib.rem(10)};
 }
+
+.el-popover {
+  --el-popover-border-radius: #{lib.rem(lib.$radius)};
+  --el-popover-padding      : #{lib.rem(5)};
+}
