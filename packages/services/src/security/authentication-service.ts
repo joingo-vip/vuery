@@ -318,6 +318,12 @@ export interface IAuthenticationService extends IServiceBase {
    * @param {?(ITokenString | null)} [token] 身份认证令牌字符串。
    */
   authorize(token?: ITokenString | null): void;
+
+  /**
+   * 回收授权信息。
+   * @author Wang Yucai
+   */
+  revoke(): void;
 }
 
 /**
@@ -355,6 +361,10 @@ export class AuthenticationServiceProvider
   ) {
     super();
     this.m_cryptoService = cryptoService;
+  }
+
+  revoke(): void {
+    TokenString.current?.remove();
   }
 
   authorize(token?: ITokenString): void {

@@ -1,3 +1,4 @@
+import { AuthenticatedUserResult } from './../../../../services/build/core/user-service.d';
 import { ServiceException } from './../../../../services/src/service-client';
 // *******************************************************************************************************************************************************
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
@@ -34,6 +35,14 @@ interface SessionStateData extends vuery.StateData {
    * 设置或获取一个 {@link Boolean} 类型值，用于表示是否已经身份认证。
    */
   isAuthenticated: boolean;
+
+  /**
+   * 当前的用户信息。
+   * @author Wang Yucai
+   *
+   * @type {?(AuthenticatedUserResult | null)}
+   */
+  currentUser?: AuthenticatedUserResult | null;
 }
 
 /**
@@ -68,6 +77,7 @@ export const getDefaultNopersistentStore = defineStore(
     state(): SessionStateData {
       return {
         isAuthenticated: false,
+        currentUser: null,
       };
     },
     actions: {
@@ -85,10 +95,20 @@ export const getDefaultNopersistentStore = defineStore(
       revoke(): void {
         this.isAuthenticated = false;
       },
+
+      /**
+       * 更新当前的用户信息。
+       * @author Wang Yucai
+       *
+       * @param {AuthenticatedUserResult} user 经过身份认证的用户信息。
+       */
+      updateCurrentUser(user: AuthenticatedUserResult): void {
+        this.currentUser = user;
+      },
     },
     persist: {
       storage: sessionStorage,
-      paths: ['isAuthenticated', 'authorizationToken'],
+      paths: ['isAuthenticated'],
       key(id) {
         if (import.meta.env.COMPILER_CONFIGURATION === 'Release') {
           return 'VdSbdqFD4OszcvMSMotvb7YhmH0KEhOV';

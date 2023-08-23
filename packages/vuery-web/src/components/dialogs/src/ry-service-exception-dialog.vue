@@ -50,14 +50,24 @@
 </template>
 
 <script lang="ts" setup>
-import { getDefaultTransientStore } from '@/libs';
+import { getDefaultNopersistentStore, getDefaultTransientStore } from '@/libs';
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
 import { MdiconWidget } from '../../icons';
 import { FlexBoxWidget, ScrollableBoxWidget } from '../../container';
 import { useRoute, useRouter } from 'vue-router';
+import {
+  IAuthenticationService,
+  ServiceCollection,
+  ServiceProvider,
+} from '@vuery/services';
 
 const transientStore = getDefaultTransientStore();
+const nopersistentStore = getDefaultNopersistentStore();
+const authenService =
+  ServiceProvider.getRequiredService<IAuthenticationService>(
+    ServiceCollection.FormAuthenticationService
+  );
 
 /**
  * 当前组件的路由上下文。
@@ -106,6 +116,8 @@ function onCloseButtonClick(): void {
  */
 function whenUnauthorized(): void {
   if (serviceException?.value?.reason === 'UNAUTHORIZED') {
+    nopersistentStore.revoke();
+    authenService.revoke();
     $routeContext.router.push({
       name: 'Authentication:SignIn',
       query: { rp: $routeContext.route.fullPath },

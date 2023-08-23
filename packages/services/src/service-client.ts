@@ -608,7 +608,7 @@ export class ServiceClientBuilder implements IServiceClientBuilder {
     headers?: Record<string, string> | undefined
   ): IServiceClientBuilder {
     if (!Object.isNull(headers)) {
-      headers = Object.assign({}, this.m_headers, headers);
+      this.m_headers = Object.assign({}, this.m_headers, headers);
     }
 
     return this;
@@ -625,6 +625,7 @@ export class ServiceClientBuilder implements IServiceClientBuilder {
     this.withQuery({ lang: cultureInfo.friendlyName ?? cultureInfo.name });
     if (!this.m_allowAnonymous) {
       const principal: IPrincipal = Principal.currentPrincipal;
+
       if (principal.user.isAuthenticated) {
         this.withHeaders({
           'Authorization': `Bearer ${
