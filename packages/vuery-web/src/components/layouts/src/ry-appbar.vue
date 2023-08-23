@@ -25,15 +25,41 @@
           justify="flex-end"
           class="ry-h--100p"
         >
-          <AppbarItemWidget v-show="userIconVisible">
-            <ElPopover trigger="click" :width="300" :show-arrow="false">
+          <AppbarItemWidget v-show="userIconVisible && currentUser">
+            <ElPopover trigger="click" :width="200" :show-arrow="false">
               <template #reference>
                 <MdiconWidget
                   icon-name="mdiAccountCircle"
                   class="ry-white-text ry-text-xxl ry-clickable"
                 />
               </template>
-              <div class="ry-appbar-userprofiler"></div>
+              <div class="ry-appbar-userprofiler">
+                <div>
+                  <FlexBoxWidget justify="center" align-items="center">
+                    <div class="ry-appbar-userprofiler-gravatar">
+                      <img
+                        :src="$staticUri('static/icons/default-gravatar.png')"
+                      />
+                    </div>
+                  </FlexBoxWidget>
+                </div>
+                <div class="ry-center-text">
+                  <ElText truncate type="primary" class="ry-text-reglar">{{
+                    currentUser?.user.userName
+                  }}</ElText>
+                </div>
+                <div>
+                  <FlexBoxWidget align-items="center" justify="center">
+                    <ElButton :title="$t('default:words.settings')" plain>
+                      <MdiconWidget icon-name="mdiCog" />
+                    </ElButton>
+                    <ElButton type="primary" plain>
+                      <MdiconWidget icon-name="mdiLogoutVariant" />
+                      {{ $t('default:words.sign_off') }}
+                    </ElButton>
+                  </FlexBoxWidget>
+                </div>
+              </div>
             </ElPopover>
           </AppbarItemWidget>
         </FlexBoxWidget>
@@ -43,9 +69,28 @@
 </template>
 
 <script lang="ts" setup>
+import {
+  IUserService,
+  ServiceCollection,
+  ServiceException,
+  ServiceProvider,
+} from '@vuery/services';
 import { FlexBoxWidget } from '../../container';
 import { MdiconWidget } from '../../icons';
 import AppbarItemWidget from './ry-appbar-item.vue';
+import { getDefaultNopersistentStore, getDefaultTransientStore } from '@/libs';
+import { storeToRefs } from 'pinia';
+import { onMounted } from 'vue';
+
+const userService: IUserService =
+  ServiceProvider.getRequiredService<IUserService>(
+    ServiceCollection.UserService
+  );
+
+const nopersistentStore = getDefaultNopersistentStore();
+const { currentUser } = storeToRefs(nopersistentStore);
+
+const transientStore = getDefaultTransientStore();
 
 /**
  * 定义了组件 “ry-appbar.vue” 的属性。
@@ -106,4 +151,20 @@ function onClick(target: string): void {
 
   $onClick();
 }
+
+/**
+ * (可等待的方法) 初始化组件。
+ */
+async function initializeComponent(): Promise<void> {
+  try {
+    const user = await userService.getAuthenticatedUserAsync();
+    nopersistentStore.updateCurrentUser(user);
+  } catch (error) {
+    transientStore.catchServiceException(error as ServiceException);
+  }
+}
+
+onMounted(async () => {
+  await initializeComponent();
+});
 </script>

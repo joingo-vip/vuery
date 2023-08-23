@@ -87,11 +87,13 @@
 </template>
 
 <script lang="ts" setup>
-import { getCurrentInstance, reactive } from 'vue';
+import { getCurrentInstance, reactive, ref } from 'vue';
 
 import { ElInput, FormInstance, FormRules } from 'element-plus';
+import { useRoute, useRouter } from 'vue-router';
 
 import { AnimateBox, Mdicon } from '@/components';
+import { getDefaultNopersistentStore, getDefaultTransientStore } from '@/libs';
 import { SR } from '@vuery/runtime';
 import {
   FormAuthenticationPayloadBase,
@@ -101,9 +103,6 @@ import {
 } from '@vuery/services';
 
 import { InternalCaptcha, InternalTitlebar } from './components';
-import { ref } from 'vue';
-import { getDefaultNopersistentStore, getDefaultTransientStore } from '@/libs';
-import { useRoute, useRouter } from 'vue-router';
 
 /**
  * Vue 应用程序上下文信息。

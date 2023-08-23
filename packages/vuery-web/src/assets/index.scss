@@ -33,4 +33,10 @@ body {
   cursor: pointer;
 }
 
+@each $value in ("center", "left", "right") {
+  .ry-#{$value}-text {
+    text-align: #{$value};
+  }
+}
+
 @include components.build-components-class;

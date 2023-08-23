@@ -2,9 +2,11 @@
 
 @mixin build-vars {
     /* 组件 appbar.vue 变量定义 */
-    --ry-appbar--width                : #{percentage($number: 1)};
-    --ry-appbar-icon--size            : #{lib.rem(30)};
-    --ry-appbar-userprofiler--padding : #{lib.rem(5)};
+    --ry-appbar--width                                 : #{percentage($number: 1)};
+    --ry-appbar-icon--size                             : #{lib.rem(30)};
+    --ry-appbar-userprofiler--padding                  : #{lib.rem(5)};
+    --ry-appbar-userprofiler-gravatar--size            : #{lib.rem(32)};
+    --ry-appbar-userprofiler-gravatar--background-color: var(--ry-primary);
 }
 
 @mixin build-class {
@@ -41,8 +43,16 @@
             }
         }
 
-        >#{&}-title {
-            border-bottom: 1px solid #eeeeee;
+        &-gravatar {
+            width           : var(--ry-appbar-userprofiler-gravatar--size);
+            height          : var(--ry-appbar-userprofiler-gravatar--size);
+            background-color: var(--ry-appbar-userprofiler-gravatar--background-color);
+            border-radius   : percentage($number: 0.5);
+
+            >img {
+                width : percentage($number: 1);
+                height: percentage($number: 1);
+            }
         }
     }
 }
