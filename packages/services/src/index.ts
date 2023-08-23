@@ -53,6 +53,12 @@ export {
   ServiceStatus,
 } from './service-client';
 
+export {
+  BaseEntity,
+  DepartmentEntity,
+  RoleEntity,
+  UserEntity,
+} from './entities';
 export { IServiceBase, ServiceBase } from './service-base';
 export { ServiceCollection } from './service-collection';
 export { ServiceProvider } from './service-provider';

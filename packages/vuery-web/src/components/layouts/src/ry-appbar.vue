@@ -9,7 +9,7 @@
 <template>
   <div class="ry-appbar">
     <FlexBoxWidget align-items="center" class="ry-h--100p">
-      <div class="ry-appbar-item" v-show="appiconVisible">
+      <div class="ry-appbar-item" v-show="appIconVisible">
         <MdiconWidget
           icon-name="mdiApps"
           class="ry-white-text ry-text-xxl ry-clickable"
