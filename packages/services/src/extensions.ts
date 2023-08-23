@@ -14,6 +14,7 @@
 
 import { AppBuilder, IAppBuilder } from '@vuery/runtime';
 import { container } from 'tsyringe';
+import { IUserService, UserServiceProvider } from './core';
 import {
   AESCryptographyServiceProvider,
   AuthenticationServiceProvider,
@@ -54,6 +55,9 @@ AppBuilder.prototype.configureServices = function (): IAppBuilder {
     )
     .register<ICryptographyService>(ServiceCollection.AESCryptographyService, {
       useClass: AESCryptographyServiceProvider,
+    })
+    .register<IUserService>(ServiceCollection.UserService, {
+      useClass: UserServiceProvider,
     });
   return this;
 };

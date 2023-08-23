@@ -37,4 +37,10 @@ export enum ServiceCollection {
    * @author Wang Yucai
    */
   AESCryptographyService = 'AES',
+
+  /**
+   * 用户信息服务。
+   * @author Wang Yucai
+   */
+  UserService = 'UserService',
 }

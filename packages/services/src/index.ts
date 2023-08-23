@@ -54,6 +54,11 @@ export {
 } from './service-client';
 
 export {
+  AuthenticatedUserResult,
+  IUserService,
+  UserServiceProvider,
+} from './core';
+export {
   BaseEntity,
   DepartmentEntity,
   RoleEntity,
