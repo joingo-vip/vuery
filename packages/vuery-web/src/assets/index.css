@@ -14,8 +14,11 @@
   --ry-appbar--width: 100%;
   --ry-appbar-icon--size: 1.875rem;
   --ry-appbar-userprofiler--padding: 0.3125rem;
-  --ry-appbar-userprofiler-gravatar--size: 4rem;
+  --ry-appbar-userprofiler-gravatar--size: 2rem;
   --ry-appbar-userprofiler-gravatar--background-color: var(--ry-primary);
+  /* 组件 ry-footer.vue 变量定义 */
+  --ry-footer--height: 100%;
+  --ry-footer-item--padding: 0.625rem;
 }
 
 :root {
@@ -1184,7 +1187,7 @@ body {
 .ry-pd-bottom--10p {
   padding-bottom: 10%;
 }
-.ry-pd-left--10, .ry-appbar .ry-appbar-action {
+.ry-pd-left--10 {
   padding-left: 0.625rem;
 }
 .ry-pd-left--10p {
@@ -2204,7 +2207,7 @@ body {
 .ry-pd-bottom--20p {
   padding-bottom: 20%;
 }
-.ry-pd-left--20 {
+.ry-pd-left--20, .ry-appbar .ry-appbar-action {
   padding-left: 1.25rem;
 }
 .ry-pd-left--20p {
@@ -10557,4 +10560,14 @@ body {
 .ry-appbar-userprofiler-gravatar > img {
   width: 100%;
   height: 100%;
+}
+
+.ry-footer {
+  height: var(--ry-footer--height);
+}
+.ry-footer > .ry-footer-item {
+  padding-left: var(--ry-footer-item--padding);
+}
+.ry-footer > .ry-footer-item:last-child {
+  padding-left: 0;
 }

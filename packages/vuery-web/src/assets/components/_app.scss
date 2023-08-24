@@ -4,6 +4,7 @@
 @use "./mdicon"as mdi;
 @use "./desktop";
 @use "./appbar";
+@use "./footer";
 
 @mixin build-vars {
     --ry-app--background-color: #fafafa;
@@ -13,6 +14,7 @@
     @include mdi.build-vars;
     @include desktop.build-vars;
     @include appbar.build-vars;
+    @include footer.build-vars;
 }
 
 @mixin build-class {
@@ -26,4 +28,5 @@
     @include mdi.build-class;
     @include desktop.build-class;
     @include appbar.build-class;
+    @include footer.build-class;
 }

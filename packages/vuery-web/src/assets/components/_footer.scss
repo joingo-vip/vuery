@@ -1,0 +1,21 @@
+@use "../lib/index"as lib;
+
+@mixin build-vars {
+    /* 组件 ry-footer.vue 变量定义 */
+    --ry-footer--height      : #{percentage($number: 1)};
+    --ry-footer-item--padding: #{lib.rem(10)};
+}
+
+@mixin build-class {
+    .ry-footer {
+        height: var(--ry-footer--height);
+
+        >#{&}-item {
+            padding-left: var(--ry-footer-item--padding);
+        }
+
+        >#{&}-item:last-child {
+            padding-left: 0;
+        }
+    }
+}

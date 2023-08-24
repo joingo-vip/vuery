@@ -5,22 +5,26 @@
   // *******************************************************************************************************************************************************
 -->
 
-<!--index.vue: 默认页视图-->
+<!--ry-footer.vue: 页脚布局组件-->
 <template>
-  <div class="ry-h--100p">
-    <Desktop>
-      <template #header>
-        <Appbar></Appbar>
-      </template>
-      <template #footer>
-        <Footer />
-      </template>
-    </Desktop>
+  <div class="ry-footer">
+    <FlexBoxWidget justify="center" align-items="center" class="ry-h--100p">
+      <div class="ry-footer-item">
+        <span class="ry-text-sm ry-info-text">{{
+          $format(
+            $t('default:templates.copyright'),
+            currentYear,
+            $t('default:application.corporation')
+          )
+        }}</span>
+      </div>
+      <slot name="items" />
+    </FlexBoxWidget>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Desktop, Appbar, Footer } from '@/components';
-</script>
+import { FlexBoxWidget } from '../../container';
 
-<style lang="scss" scoped></style>
+const currentYear = Date.current().getFullYear();
+</script>

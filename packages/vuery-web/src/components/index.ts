@@ -24,4 +24,5 @@ export {
   AppbarWidget as Appbar,
   AppbarItemWidget as AppbarItem,
   DesktopWidget as Desktop,
+  FooterWidget as Footer,
 } from './layouts';
