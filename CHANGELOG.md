@@ -1,4 +1,40 @@
 # RELEASE NOTES
+### [0.1.3](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/compare/v0.1.2...v0.1.3) (2023-08-24)
+
+
+### 代码样式变更 CODE STYLE
+
+* 调整了变量命名。 ([0cba8eb](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/0cba8eb03478862f5a6044b83697283a35e4b969))
+
+
+### 代码重构 REFACTOR
+
+* 新增加密服务，增加了身份令牌加密方法。 ([384e496](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/384e496ebe65fd73e1bc34ecabeb32df99931e0d)), closes [#3](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/3)
+
+
+### 新功能 NEW FEATURE
+
+* 调整了 IAppBuilder 的 configureMultilingualResources 方法实现。 ([c943eb4](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/c943eb45870072dab4262a58e30346db9e691459))
+* 调整了身份认证逻辑。 ([5500f9d](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/5500f9d55436efe117de3fe64a706ba1f0e2907f))
+* 完成了 appbar 组件。Issues [#2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/2) ([1b72823](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/1b7282358b82f14ada78d48d25cc5acfe1634c30))
+* 完成了 appbar 组件。Issues [#2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/2) ([7b66691](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/7b666911251a4246b084720e2455dea95e708810))
+* 完成了身份认证服务的重构。 ([260fbaf](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/260fbaf83aff720c9df15cb133e325ed1f89228d))
+* 为 appbar 组件增加了注销、设置按钮弹窗。 ([003549c](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/003549c615872afb43bc7f1a3660809090b87f4b))
+* 新增 Desktop 布局组件。Issues [#2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/2) ([d19c45d](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/d19c45d0acdc792d10c361922506c049902b01a4))
+* 新增 ry-appbar-item.vue 和 ry-appbar.vue 组件。 ([576c1eb](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/576c1ebf52a2b92145d30a72053432d702e3db35))
+* 新增 ry-footer.vue 组件。Issues [#2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/2) ([a367273](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/a367273d284d62e80b469beb149888918b008792))
+* 新增加密服务。Issues [#3](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/3) ([07491c5](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/07491c5367b1dc4059025df3d26df68c0796bd4b))
+* 新增加密服务所需的配置方法。 ([4e30788](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/4e3078864c5ed063f7fe521283eaa8b0e9189295))
+* 新增身份摘要信息类。 ([e1df2d8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/e1df2d8494a8272b5cec501eca4d6b25a65997ef))
+* 新增数据实体。 ([2b0b998](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/2b0b99892225aba5854f79d8d27f6e386b8d0b16))
+* 新增用户信息服务。Issues [#2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/2) ([f0ed8d3](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/f0ed8d34557eab53ca86abc36f18124a61a55503))
+
+
+### 其他 CHORE
+
+* 升级了 npm 依赖。 ([61ce5f1](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/61ce5f1480eb229f3138a8745b706af6c4286746))
+* 修改了包版本号为 0.1.3。 ([684f221](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/684f2214a278794f1a04ab83c7b0cf73e2335c4d))
+
 ### [0.1.2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/compare/v0.1.1...v0.1.2) (2023-08-21)
 
 
