@@ -1,6 +1,6 @@
 {
   "name": "@vuery/native",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Vuery 原生类型扩展。",
   "main": "build/index.js",
   "type": "module",

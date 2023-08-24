@@ -1,6 +1,6 @@
 {
   "name": "@vuery/services",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Vuery 服务模块。",
   "main": "build/index.js",
   "type": "module",
