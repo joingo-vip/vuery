@@ -19,6 +19,7 @@ import {
   UnitedStatesLanguagePack,
 } from './resources';
 import { Culture } from './globalization';
+import merge from 'deepmerge';
 
 /**
  * 定义了 Vuery 应用程序的接口。
@@ -229,7 +230,7 @@ export class AppBuilder implements IAppBuilder {
   }
 
   configureMultilingualResources(resources: Record<string, any>): IAppBuilder {
-    this.m_resources = Object.assign({}, this.m_resources, resources);
+    this.m_resources = merge(this.m_resources, resources);
     return this;
   }
 

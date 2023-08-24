@@ -4,14 +4,18 @@
 // *******************************************************************************************************************************************************
 
 /**
- * Vuery Desktop 应用程序类库。
+ * 应用程序自定义资源包。
  *
  * @remarks
- * "index.ts": Vuery Desktop 应用程序类库。
+ * "index.ts": 应用程序自定义资源包。
  *
  * @packageDocumentation
  */
 
-export * as InPrivateLanguagePackages from './resources';
-export { DefaultRouteManager, DefaultRouteTable } from './routers';
-export { getDefaultNopersistentStore, getDefaultTransientStore } from './store';
+import InPrivateEnglishLanguagePackage from './en-US.json';
+import InPrivateSimplifiedChineseLanguagePackage from './zh-Hans.json';
+
+export {
+  InPrivateEnglishLanguagePackage,
+  InPrivateSimplifiedChineseLanguagePackage,
+};

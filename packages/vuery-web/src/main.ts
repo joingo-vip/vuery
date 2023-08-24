@@ -12,7 +12,7 @@
  * @packageDocumentation
  */
 
-import { DefaultRouteManager } from '@/libs';
+import { DefaultRouteManager, InPrivateLanguagePackages } from '@/libs';
 import '@vuery/native';
 import '@vuery/services';
 import { AppBuilder } from '@vuery/runtime';
@@ -32,6 +32,11 @@ new AppBuilder(createApp(Main), 'body')
   .configureCryptographySecretKey(
     import.meta.env.COMPILER_CRYPTOSERVICE_SECRETKEY
   )
+  .configureMultilingualResources({
+    'zh-Hans':
+      InPrivateLanguagePackages.InPrivateSimplifiedChineseLanguagePackage,
+    'en-US': InPrivateLanguagePackages.InPrivateEnglishLanguagePackage,
+  })
   .use(() => {
     console.debug(`[DEBUG] - <main.ts: 00160e>: 注册全局样式表。`);
     import('@mdi/font/css/materialdesignicons.css');

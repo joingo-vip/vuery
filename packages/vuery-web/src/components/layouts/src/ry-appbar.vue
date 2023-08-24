@@ -48,11 +48,10 @@
               @click="onClick('languages')"
             />
           </AppbarItemWidget>
-          <AppbarItemWidget v-show="userIconVisible && currentUser">
+          <AppbarItemWidget v-show="userIconVisible">
             <ElPopover trigger="click" :width="200" :show-arrow="false">
               <template #reference>
-                <MdiconWid
-                  get
+                <MdiconWidget
                   icon-name="mdiAccount"
                   class="ry-white-text ry-text-xxl ry-clickable"
                 />
