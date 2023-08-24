@@ -10,7 +10,7 @@
   <div class="ry-h--100p">
     <Desktop>
       <template #header>
-        <Appbar></Appbar>
+        <Appbar @click="onAppbarClick"></Appbar>
       </template>
       <template #footer>
         <Footer />
@@ -21,6 +21,15 @@
 
 <script lang="ts" setup>
 import { Desktop, Appbar, Footer } from '@/components';
+
+/**
+ * 用于处理 “Appbar” 组件的 “AppbarClick” 事件
+ *
+ * @private
+ */
+function onAppbarClick(e: vuery.EventArgs<string>): void {
+  console.warn(e.payload);
+}
 </script>
 
 <style lang="scss" scoped></style>

@@ -37,7 +37,7 @@
                   $t('default:words.settings')
                 )
               "
-              @click="onClick('perference-settings')"
+              @click="onClick('settings')"
             />
           </AppbarItemWidget>
           <AppbarItemWidget v-show="translateIconVisible">
