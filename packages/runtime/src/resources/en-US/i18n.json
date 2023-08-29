@@ -32,7 +32,8 @@
     },
     "templates": {
       "copyright": "Copyright © {0} {1}. All rights reserved.",
-      "rows_perpage": "{0} rows per page"
+      "rows_perpage": "{0} rows per page",
+      "total_rows_number": "Total {0} rows"
     },
     "words": {
       "abort": "Abort",

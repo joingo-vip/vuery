@@ -32,7 +32,8 @@
     },
     "templates": {
       "copyright": "版权所有 © {0} {1}。保留所有权利。",
-      "rows_perpage": "每页 {0} 条数据"
+      "rows_perpage": "每页 {0} 行数据",
+      "total_rows_number": "共 {0} 行数据"
     },
     "words": {
       "abort": "终止",
