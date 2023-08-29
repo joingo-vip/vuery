@@ -2,6 +2,7 @@
   "default": {
     "phrases": {
       "application": "Vue front-end scaffolding for the Ruoyi server framework",
+      "created_in": "Created in",
       "exception_detailed": "Detailed",
       "get_started": "Get started",
       "is_copied": "Copied to the clipboard",
@@ -10,6 +11,7 @@
       "is_sent": "Sent",
       "languages": "Language Settings",
       "loading": "Loading data, please wait...",
+      "modified_in": "Modified on",
       "nodata": "Sorry, no data right now!",
       "other_authenticate_mode": "Other authentication methods",
       "personal_profile": "Personal profile",
@@ -137,12 +139,12 @@
     "confirm_password": {
       "placeholder": "Please confirm the password again."
     },
+    "is_signing": "Signing in, please wait...",
     "password": {
       "placeholder": "Please typed the password."
     },
     "user_name": {
       "placeholder": "Please typed the user-name."
-    },
-    "is_signing": "Signing in, please wait..."
+    }
   }
 }

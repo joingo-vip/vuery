@@ -2,6 +2,7 @@
   "default": {
     "phrases": {
       "application": "面向“若依”服务器框架的 Vue 前端脚手架",
+      "created_in": "创建于",
       "exception_detailed": "详情",
       "get_started": "开始",
       "is_copied": "已经复制",
@@ -10,6 +11,7 @@
       "is_sent": "已经发送",
       "languages": "语言设置",
       "loading": "正在装载数据，请稍候...",
+      "modified_in": "修改于",
       "nodata": "暂无数据！",
       "other_authenticate_mode": "其他身份认证方式",
       "personal_profile": "个人资料",
