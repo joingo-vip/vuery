@@ -123,7 +123,8 @@
       "upload": "Upload",
       "user_name": "User Name",
       "version": "Version",
-      "view": "View"
+      "view": "View",
+      "warning": "Warning"
     }
   },
   "exceptions": {

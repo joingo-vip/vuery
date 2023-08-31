@@ -123,7 +123,8 @@
       "upload": "上载",
       "user_name": "用户名",
       "version": "版本",
-      "view": "查看"
+      "view": "查看",
+      "warning": "警告"
     }
   },
   "exceptions": {
