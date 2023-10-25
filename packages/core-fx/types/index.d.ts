@@ -5,3 +5,4 @@
 
 /// <reference path="./lib.types.d.ts" />
 /// <reference path="./lib.functions.d.ts" />
+/// <reference path="./lib.interfaces.d.ts" />
