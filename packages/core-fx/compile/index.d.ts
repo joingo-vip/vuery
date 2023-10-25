@@ -1,2 +1,2 @@
 /// <reference path="../types/index.d.ts" />
-export { JSObject } from './common/abstract-object';
+export { AssertUtilities } from './lib/assert-utils';

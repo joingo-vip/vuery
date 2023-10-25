@@ -20,3 +20,37 @@ declare type Undefined<TSource> = TSource | undefined;
  * @template TSource 可能为 undefined 类型或 null 的源类型。
  */
 declare type Null<TSource> = Undefined<TSource> | null;
+
+/**
+ * 定义了事件参数类型。
+ * @author Wang Yucai
+ *
+ * @typedef {EventArgs}
+ */
+declare type EventArgs = {
+  /**
+   * 事件名称。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  name: string;
+};
+
+/**
+ * 定义了包含 {@linkcode TPayload} 类型负载数据的事件参数。
+ * @author Wang Yucai
+ *
+ * @typedef {GeneralEventArgs}
+ * @template TPayload 负载数据类型。
+ * @see {@linkcode EventArgs}
+ */
+declare type GeneralEventArgs<TPayload> = EventArgs & {
+  /**
+   * 事件负载数据。
+   * @author Wang Yucai
+   *
+   * @type {TPayload}
+   */
+  payload: TPayload;
+};

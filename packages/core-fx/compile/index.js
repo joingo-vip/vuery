@@ -3,4 +3,4 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 /// <reference path="../types/index.d.ts" />
-export { JSObject } from './common/abstract-object';
+export { AssertUtilities } from './lib/assert-utils';

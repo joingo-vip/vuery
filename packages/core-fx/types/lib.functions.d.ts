@@ -308,3 +308,11 @@ declare type Func9<T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult> = (
  * @template TResult 返回值类型。
  */
 declare type ParameterizedFunc<TResult> = (...args: any[]) => TResult;
+
+/**
+ * 定义了处理事件的委托。
+ * @author Wang Yucai
+ *
+ * @typedef {EventHandler}
+ */
+declare type EventHandler = (sender: any, e: EventArgs) => void;
