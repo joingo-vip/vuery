@@ -7,7 +7,7 @@
   "author": "Wang Yucai <netowls-studio@outlook.com>",
   "license": "MIT",
   "private": true,
-  "script": {
+  "scripts": {
     "release:patch-dryrun": "standard-version -r patch -i CHANGELOG.md --dry-run",
     "release:patch": "standard-version -r patch -i CHANGELOG.md",
     "release:minor-dryrun": "standard-version -r minor -i CHANGELOG.md --dry-run",
@@ -20,7 +20,8 @@
     "version:premajor": "npm version premajor --no-git-tag-version --workspaces",
     "version:patch": "npm version patch --no-git-tag-version --workspaces",
     "version:minor": "npm version minor --no-git-tag-version --workspaces",
-    "version:major": "npm version major --no-git-tag-version --workspaces"
+    "version:major": "npm version major --no-git-tag-version --workspaces",
+    "compile:pnpm": "pnpm --filter ./packages/** run tsc:compile"
   },
   "devDependencies": {
     "standard-version": "^9.5.0"

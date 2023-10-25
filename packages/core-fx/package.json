@@ -1,0 +1,44 @@
+{
+  "name": "@joingo.vip/core",
+  "version": "1.0.0",
+  "description": "Beijing JoinGo Information Technology Co., Ltd.: Front-end core class library. Such libraries contain public methods, type definitions, and so on.",
+  "main": "compile/index.js",
+  "module": "compile/index.js",
+  "types": "compile/index.d.ts",
+  "typings": "compile/index.d.ts",
+  "scripts": {
+    "version:prerelease": "npm version prerelease --no-git-tag-version",
+    "version:prepatch": "npm version prepatch --no-git-tag-version",
+    "version:preminor": "npm version preminor --no-git-tag-version",
+    "version:premajor": "npm version premajor --no-git-tag-version",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
+    "tsc:compile": "tsc --project ./tsconfig.es6.json"
+  },
+  "keywords": [
+    "joingo.vip",
+    "core-library",
+    "typescript",
+    "javascript",
+    "es6"
+  ],
+  "author": {
+    "email": "netowls-studio@outlook.com",
+    "name": "Wang Yucai"
+  },
+  "files": [
+    "./README.md",
+    "./types/*.d.ts",
+    "./types/**/*.d.ts",
+    "./compile/*.js",
+    "./compile/*.d.ts",
+    "./compile/**/*.js",
+    "./compile/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "readme": "README.md",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
