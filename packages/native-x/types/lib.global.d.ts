@@ -139,4 +139,52 @@ declare global {
      */
     errorIf(where: boolean | sys.Func<boolean>, message?: sys.Null<string>, ...optionalParams: any[]): boolean;
   }
+
+  /**
+   * 为 {@link String} 类型提供的静态扩展方法。
+   * @author Wang Yucai
+   *
+   * @interface StringConstructor
+   * @typedef {StringConstructor}
+   */
+  interface StringConstructor {
+    /**
+     * 当字符串 {@linkcode s} 为 undefined 类型；null 值或长度等于 0 时返回 true；否则返回 false。
+     * @author Wang Yucai
+     *
+     * @param {sys.Null<string>} s 需要验证的字符串。
+     * @returns {boolean}
+     * @see {@linkcode Object.isNull}
+     */
+    isNullOrEmpty(s: sys.Null<string>): boolean;
+
+    /**
+     * 当字符串 {@linkcode s} 为 undefined 类型；null 值、长度等于 0 或空白符时返回 true；否则返回 false。
+     * @author Wang Yucai
+     *
+     * @param {sys.Null<string>} s 需要验证的字符串。
+     * @returns {boolean}
+     * @see {@linkcode String.isNullOrEmpty}
+     */
+    isNullOrWhitespace(s: sys.Null<string>): boolean;
+
+    /**
+     * 空字符串。
+     * @author Wang Yucai
+     *
+     * @type {string}
+     */
+    empty: string;
+
+    /**
+     * 格式化字符串。
+     * @author Wang Yucai
+     *
+     * @param {string} formatter 格式化字符串。
+     * @param {...any[]} args 格式化参数。
+     * @returns {string}
+     * @see {@link https://www.npmjs.com/package/string-template}
+     */
+    format(formatter: string, ...args: any[]): string;
+  }
 }
