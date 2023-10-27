@@ -52,4 +52,79 @@ declare global {
      */
     extends(...values: any[]): any;
   }
+
+  /**
+   * 为 console 类型提供的扩展方法。
+   * @author Wang Yucai
+   *
+   * @interface Console
+   * @typedef {Console}
+   */
+  interface Console {
+    /**
+     * 当条件表达式 {@linkcode where} 为 true 时，输出日志信息 {@linkcode message}，并返回 {@linkcode where}。
+     * @author Wang Yucai
+     *
+     * @param {(boolean | sys.Func<boolean>)} where 条件表达式。
+     * @param {?sys.Null<string>} [message] 日志信息。
+     * @param {...any[]} optionalParams 可选的参数数组。
+     * @returns {boolean}
+     */
+    logIf(where: boolean | sys.Func<boolean>, message?: sys.Null<string>, ...optionalParams: any[]): boolean;
+
+    /**
+     * 当条件表达式 {@linkcode where} 为 true 时，输出日志信息 {@linkcode message}，并返回 {@linkcode where}。
+     * @author Wang Yucai
+     *
+     * @param {(boolean | sys.Func<boolean>)} where 条件表达式。
+     * @param {?sys.Null<string>} [message] 日志信息。
+     * @param {...any[]} optionalParams 可选的参数数组。
+     * @returns {boolean}
+     */
+    debugIf(where: boolean | sys.Func<boolean>, message?: sys.Null<string>, ...optionalParams: any[]): boolean;
+
+    /**
+     * 当条件表达式 {@linkcode where} 为 true 时，输出日志信息 {@linkcode message}，并返回 {@linkcode where}。
+     * @author Wang Yucai
+     *
+     * @param {(boolean | sys.Func<boolean>)} where 条件表达式。
+     * @param {?sys.Null<string>} [message] 日志信息。
+     * @param {...any[]} optionalParams 可选的参数数组。
+     * @returns {boolean}
+     */
+    infoIf(where: boolean | sys.Func<boolean>, message?: sys.Null<string>, ...optionalParams: any[]): boolean;
+
+    /**
+     * 当条件表达式 {@linkcode where} 为 true 时，输出日志信息 {@linkcode message}，并返回 {@linkcode where}。
+     * @author Wang Yucai
+     *
+     * @param {(boolean | sys.Func<boolean>)} where 条件表达式。
+     * @param {?sys.Null<string>} [message] 日志信息。
+     * @param {...any[]} optionalParams 可选的参数数组。
+     * @returns {boolean}
+     */
+    warnIf(where: boolean | sys.Func<boolean>, message?: sys.Null<string>, ...optionalParams: any[]): boolean;
+
+    /**
+     * 当条件表达式 {@linkcode where} 为 true 时，输出日志信息 {@linkcode message}，并返回 {@linkcode where}。
+     * @author Wang Yucai
+     *
+     * @param {(boolean | sys.Func<boolean>)} where 条件表达式。
+     * @param {?sys.Null<string>} [message] 日志信息。
+     * @param {...any[]} optionalParams 可选的参数数组。
+     * @returns {boolean}
+     */
+    traceIf(where: boolean | sys.Func<boolean>, message?: sys.Null<string>, ...optionalParams: any[]): boolean;
+
+    /**
+     * 当条件表达式 {@linkcode where} 为 true 时，输出日志信息 {@linkcode message}，并返回 {@linkcode where}。
+     * @author Wang Yucai
+     *
+     * @param {(boolean | sys.Func<boolean>)} where 条件表达式。
+     * @param {?sys.Null<string>} [message] 日志信息。
+     * @param {...any[]} optionalParams 可选的参数数组。
+     * @returns {boolean}
+     */
+    errorIf(where: boolean | sys.Func<boolean>, message?: sys.Null<string>, ...optionalParams: any[]): boolean;
+  }
 }

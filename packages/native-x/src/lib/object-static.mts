@@ -5,25 +5,21 @@
 
 import $deepmerge from 'deepmerge';
 
-Object.isUndefined = (value: any): boolean => {
-  if (typeof value === 'undefined') {
-    console.warn(
-      `[WARN] - <object-static.mts: b6604f>: The parameter "value" may be of type "undefined", please pay attention.`
-    );
-
-    return true;
-  }
-  return false;
+Object.isUndefined = function (value: any): boolean {
+  return console.warnIf(
+    typeof value === 'undefined',
+    `[WARN] - <object-static.mts: b6604f>: The parameter "value" may be of type "undefined", please pay attention.`
+  );
 };
 
 Object.isNull = (value: any): boolean => {
   if (Object.isUndefined(value)) {
     return true;
-  } else if (value === null || value == null) {
-    console.warn(`[WARN] - <object-static.mts: ff49b1>: The parameter "value" may be a "NULL" value, please pay attention.`);
-    return true;
   }
-  return false;
+  return console.warnIf(
+    value === null || value == null,
+    `[WARN] - <object-static.mts: ff49b1>: The parameter "value" may be a "NULL" value, please pay attention.`
+  );
 };
 
 Object.as = function <T>(value: any): sys.Null<T> {
