@@ -6,8 +6,9 @@
 
 - **Npm Dependency**
 
-  | NPM Package                                                           | URL                                                                                    |
-  | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-  | **typescript**                                                        | [https://www.npmjs.com/package/typescript](https://www.npmjs.com/package/typescript)   |
-  | **[@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped)** | [https://www.npmjs.com/package/@types/node](https://www.npmjs.com/package/@types/node) |
-  | **deepmerge**                                                         | [https://www.npmjs.com/package/deepmerge](https://www.npmjs.com/package/deepmerge)     |
+  | NPM Package                                                           | URL                                                                                            |
+  | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+  | **typescript**                                                        | [https://www.npmjs.com/package/typescript](https://www.npmjs.com/package/typescript)           |
+  | **[@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped)** | [https://www.npmjs.com/package/@types/node](https://www.npmjs.com/package/@types/node)         |
+  | **deepmerge**                                                         | [https://www.npmjs.com/package/deepmerge](https://www.npmjs.com/package/deepmerge)             |
+  | **fast-deep-equal**                                                   | [https://www.npmjs.com/package/fast-deep-equal](https://www.npmjs.com/package/fast-deep-equal) |

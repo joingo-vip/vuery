@@ -49,8 +49,20 @@ declare global {
      *
      * @param {...any[]} values 需要扩展的数组。
      * @returns {*}
+     * @see {@link https://www.npmjs.com/package/deepmerge}
      */
     extends(...values: any[]): any;
+
+    /**
+     * 当 {@linkcode a} 与 {@linkcode b} 相等时返回 true；否则返回 false。
+     * @author Wang Yucai
+     *
+     * @param {*} a 需要对比的值。
+     * @param {*} b 需要对比的值。
+     * @returns {boolean}
+     * @see {@link https://www.npmjs.com/package/fast-deep-equal}
+     */
+    referenceEquals(a: any, b: any): boolean;
   }
 
   /**

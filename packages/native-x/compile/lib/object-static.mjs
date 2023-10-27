@@ -3,10 +3,11 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 import $deepmerge from 'deepmerge';
+import $deepeq from 'fast-deep-equal';
 Object.isUndefined = function (value) {
     return console.warnIf(typeof value === 'undefined', `[WARN] - <object-static.mts: b6604f>: The parameter "value" may be of type "undefined", please pay attention.`);
 };
-Object.isNull = (value) => {
+Object.isNull = function (value) {
     if (Object.isUndefined(value)) {
         return true;
     }
@@ -15,10 +16,13 @@ Object.isNull = (value) => {
 Object.as = function (value) {
     return value;
 };
-Object.extends = (...values) => {
+Object.extends = function (...values) {
     let obj = {};
     values === null || values === void 0 ? void 0 : values.forEach((item) => {
         obj = $deepmerge(obj, item !== null && item !== void 0 ? item : {});
     });
     return obj;
+};
+Object.referenceEquals = function (a, b) {
+    return $deepeq(a, b);
 };

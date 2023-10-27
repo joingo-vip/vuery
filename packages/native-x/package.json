@@ -2,8 +2,8 @@
   "name": "@joingo/native-x",
   "version": "1.0.0",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: Native type extensions. Such libraries contain JavaScript native type extension methods; Extension type definitions, etc.",
-  "main": "compile/index.js",
-  "module": "compile/index.js",
+  "main": "compile/index.mjs",
+  "module": "compile/index.mjs",
   "types": "types/index.d.ts",
   "typings": "types/index.d.ts",
   "scripts": {
@@ -32,8 +32,8 @@
     "./README.md",
     "./types/*.d.ts",
     "./types/**/*.d.ts",
-    "./compile/*.js",
-    "./compile/**/*.js"
+    "./compile/*.mjs",
+    "./compile/**/*.mjs"
   ],
   "readme": "README.md",
   "type": "module",
@@ -42,6 +42,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "deepmerge": "^4.3.1"
+    "deepmerge": "^4.3.1",
+    "fast-deep-equal": "^3.1.3"
   }
 }

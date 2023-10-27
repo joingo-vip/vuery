@@ -4,6 +4,7 @@
 // *******************************************************************************************************************************************************
 
 import $deepmerge from 'deepmerge';
+import $deepeq from 'fast-deep-equal';
 
 Object.isUndefined = function (value: any): boolean {
   return console.warnIf(
@@ -12,7 +13,7 @@ Object.isUndefined = function (value: any): boolean {
   );
 };
 
-Object.isNull = (value: any): boolean => {
+Object.isNull = function (value: any): boolean {
   if (Object.isUndefined(value)) {
     return true;
   }
@@ -26,10 +27,14 @@ Object.as = function <T>(value: any): sys.Null<T> {
   return value as T;
 };
 
-Object.extends = (...values: any[]): any => {
+Object.extends = function (...values: any[]): any {
   let obj = {};
   values?.forEach((item) => {
     obj = $deepmerge(obj, item ?? {});
   });
   return obj;
+};
+
+Object.referenceEquals = function (a: any, b: any): boolean {
+  return $deepeq(a, b);
 };
