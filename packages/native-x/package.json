@@ -1,11 +1,11 @@
 {
-  "name": "@joingo.vip/core",
+  "name": "@joingo/native-x",
   "version": "1.0.0",
-  "description": "Beijing JoinGo Information Technology Co., Ltd.: Front-end core class library. Such libraries contain public methods, type definitions, etc.",
+  "description": "Beijing JoinGo Information Technology Co., Ltd.: Native type extensions. Such libraries contain JavaScript native type extension methods; Extension type definitions, etc.",
   "main": "compile/index.js",
   "module": "compile/index.js",
-  "types": "compile/index.d.ts",
-  "typings": "compile/index.d.ts",
+  "types": "types/index.d.ts",
+  "typings": "types/index.d.ts",
   "scripts": {
     "version:prerelease": "npm version prerelease --no-git-tag-version",
     "version:prepatch": "npm version prepatch --no-git-tag-version",
@@ -18,7 +18,7 @@
   },
   "keywords": [
     "joingo.vip",
-    "core-library",
+    "native-type-extensions",
     "typescript",
     "javascript",
     "es6"
@@ -27,18 +27,21 @@
     "email": "netowls-studio@outlook.com",
     "name": "Wang Yucai"
   },
+  "license": "MIT",
   "files": [
     "./README.md",
     "./types/*.d.ts",
     "./types/**/*.d.ts",
     "./compile/*.js",
-    "./compile/*.d.ts",
-    "./compile/**/*.js",
-    "./compile/**/*.d.ts"
+    "./compile/**/*.js"
   ],
-  "license": "MIT",
   "readme": "README.md",
+  "type": "module",
   "devDependencies": {
+    "@types/node": "^20.8.9",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "deepmerge": "^4.3.1"
   }
 }

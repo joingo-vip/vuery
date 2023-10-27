@@ -2,7 +2,7 @@
 
 > ## Beijing JoinGo Information Technology Co., Ltd.
 >
-> Front-end core class library. Such libraries contain public methods, type definitions, and so on.
+> Front-end core class library. Such libraries contain public methods, type definitions, etc.
 
 - **Npm Dependency**
 
