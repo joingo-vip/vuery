@@ -21,4 +21,12 @@ declare namespace sys {
    * @template TSource 可能为 undefined 类型或 null 的源类型。
    */
   type Null<TSource> = Undefined<TSource> | null;
+
+  /**
+   * 定义了 {@link String} 比较配置选项枚举类型。
+   * @author Wang Yucai
+   *
+   * @typedef {StringComparerOptions}
+   */
+  type StringComparerOptions = 'Default' | 'IgnoreCase';
 }

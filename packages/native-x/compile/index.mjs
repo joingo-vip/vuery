@@ -5,3 +5,4 @@
 import './lib/console.mjs';
 import './lib/object-static.mjs';
 import './lib/string-static.mjs';
+import './lib/string.mjs';

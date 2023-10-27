@@ -187,4 +187,24 @@ declare global {
      */
     format(formatter: string, ...args: any[]): string;
   }
+
+  /**
+   * 为 {@link String} 类型提供的扩展方法。
+   * @author Wang Yucai
+   *
+   * @interface String
+   * @typedef {String}
+   */
+  interface String {
+    /**
+     * 对比字符串与 {@linkcode s} 是否相等。
+     * @author Wang Yucai
+     *
+     * @param {sys.Null<string>} s 需要对比的字符串。
+     * @param {sys.StringComparerOptions} [options='Default'] {@linkcode sys.StringComparerOptions} 中的一个值。默认为 {@linkcode sys.StringComparerOptions}.Default。
+     * @returns {boolean}
+     * @see {@linkcode Object.referenceEquals}
+     */
+    equals(s: sys.Null<string>, options: sys.StringComparerOptions = 'Default'): boolean;
+  }
 }
