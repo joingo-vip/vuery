@@ -207,4 +207,37 @@ declare global {
      */
     equals(s: sys.Null<string>, options: sys.StringComparerOptions = 'Default'): boolean;
   }
+
+  /**
+   * 提供了参数异常相关的方法。
+   * @author Wang Yucai
+   *
+   * @interface ArgumentError
+   * @typedef {ArgumentError}
+   * @extends {Error}
+   */
+  interface ArgumentError extends Error {
+    /**
+     * 引发异常的参数名称。
+     * @author Wang Yucai
+     *
+     * @type string
+     */
+    argumentName?: string;
+  }
+
+  /**
+   * 定义了构造 {@linkcode ArgumentError} 类型的对象实例的接口。
+   * @author Wang Yucai
+   *
+   * @interface ArgumentErrorConstructor
+   * @typedef {ArgumentErrorConstructor}
+   * @extends {ErrorConstructor}
+   */
+  interface ArgumentErrorConstructor extends ErrorConstructor {
+    new (message?: string, argName?: string): ArgumentError;
+    (message?: string, argName?: string): ArgumentError;
+  }
+
+  var ArgumentError: ArgumentErrorConstructor;
 }
