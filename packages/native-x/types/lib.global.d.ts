@@ -209,6 +209,99 @@ declare global {
   }
 
   /**
+   * 为 {@link Date} 类型提供的扩展方法。
+   * @author Wang Yucai
+   *
+   * @interface DateConstructor
+   * @typedef {DateConstructor}
+   */
+  interface DateConstructor {
+    /**
+     * 获取当前的日期时间。
+     * @author Wang Yucai
+     *
+     * @returns {Date}
+     */
+    currentDateTime(): Date;
+
+    /**
+     * 日期时间格式化字符串。
+     * @author Wang Yucai
+     *
+     * @type {string}
+     */
+    DateTimeFormatter: string;
+
+    /**
+     * 日期格式化字符串。
+     * @author Wang Yucai
+     *
+     * @type {string}
+     */
+    DateFormatter: string;
+
+    /**
+     * 时间格式化字符串。
+     * @author Wang Yucai
+     *
+     * @type {string}
+     */
+    TimeFormatter: string;
+
+    /**
+     * 短日期格式化字符串。
+     * @author Wang Yucai
+     *
+     * @type {string}
+     */
+    ShortDateFormatter: string;
+
+    /**
+     * 短时间（排除秒位）格式化字符串。
+     * @author Wang Yucai
+     *
+     * @type {string}
+     */
+    ShortTimeFormatter: string;
+
+    /**
+     * 短日期时间格式化字符串。
+     * @author Wang Yucai
+     *
+     * @type {string}
+     */
+    ShortDateTimeFormatter: string;
+  }
+
+  /**
+   * 为 {@link Date} 类型提供的扩展方法。
+   * @author Wang Yucai
+   *
+   * @interface Date
+   * @typedef {Date}
+   * @see {@link https://www.npmjs.com/package/dayjs}
+   */
+  interface Date {
+    /**
+     * 将日期时间值格式化成字符串。
+     * @author Wang Yucai
+     *
+     * @param {?(string | sys.Func<string>)} [formatter] 格式化模板字符串。
+     * @returns {string}
+     */
+    toString(formatter?: string | sys.Func<string>): string;
+
+    /**
+     * 计算指定日期时间与 {@linkcode target} 之间的时间跨度。
+     * @author Wang Yucai
+     *
+     * @param {Date} target 目标日期时间。
+     * @returns {Readonly<sys.TimeSpan>}
+     */
+    diff(target: Date): Readonly<sys.TimeSpan>;
+  }
+
+  /**
    * 提供了参数异常相关的方法。
    * @author Wang Yucai
    *

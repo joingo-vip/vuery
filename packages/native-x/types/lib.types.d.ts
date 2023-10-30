@@ -29,4 +29,93 @@ declare namespace sys {
    * @typedef {StringComparerOptions}
    */
   type StringComparerOptions = 'Default' | 'IgnoreCase';
+
+  /**
+   * 定义了时间跨度相关的信息。
+   * @author Wang Yucai
+   *
+   * @interface TimeSpan
+   * @typedef {TimeSpan}
+   */
+  interface TimeSpan {
+    /**
+     * 总毫秒值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalMilliseconds: number;
+
+    /**
+     * 总秒值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalSeconds: number;
+
+    /**
+     * 总分钟值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalMinutes: number;
+
+    /**
+     * 总小时值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalHours: number;
+
+    /**
+     * 总天数值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalDays: number;
+
+    /**
+     * 总星期值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalWeeks: number;
+
+    /**
+     * 总月份值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalMonths: number;
+
+    /**
+     * 总年份值。
+     * @author Wang Yucai
+     *
+     * @type {number}
+     */
+    totalYears: number;
+
+    /**
+     * 是否在指定日期时间之前。
+     * @author Wang Yucai
+     *
+     * @type {boolean}
+     */
+    before: boolean;
+
+    /**
+     * 是否在指定日期时间之后。
+     * @author Wang Yucai
+     *
+     * @type {boolean}
+     */
+    after: boolean;
+  }
 }

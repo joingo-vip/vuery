@@ -13,3 +13,4 @@
   | **deepmerge**                                                                                         | [https://www.npmjs.com/package/deepmerge](https://www.npmjs.com/package/deepmerge)             |
   | **fast-deep-equal**                                                                                   | [https://www.npmjs.com/package/fast-deep-equal](https://www.npmjs.com/package/fast-deep-equal) |
   | string-template & **[@types/string-template](https://www.yarnpkg.cn/package/@types/string-template)** | [https://www.npmjs.com/package/string-template](https://www.npmjs.com/package/string-template) |
+  | **dayjs**                                                                                             | [https://www.npmjs.com/package/dayjs](https://www.npmjs.com/package/dayjs)                     |
