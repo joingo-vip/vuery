@@ -235,7 +235,22 @@ declare global {
    * @extends {ErrorConstructor}
    */
   interface ArgumentErrorConstructor extends ErrorConstructor {
+    /**
+     * 初始化 {@linkcode ArgumentError} 的新实例。
+     *
+     * @param {?string} [message] 异常描述信息。
+     * @param {?string} [argName] 引发异常的参数名称。
+     */
     new (message?: string, argName?: string): ArgumentError;
+
+    /**
+     * 创建 {@linkcode ArgumentError} 类型的对象实例。
+     * @author Wang Yucai
+     *
+     * @param {?string} [message] 异常描述信息。
+     * @param {?string} [argName] 引发异常的参数名称。
+     * @returns {ArgumentError}
+     */
     (message?: string, argName?: string): ArgumentError;
   }
 
