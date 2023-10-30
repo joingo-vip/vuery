@@ -11,6 +11,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var StringBuilder_1;
 import { sealedDecorator as sealed } from './sealed-decorator.mjs';
 /**
  * 提供了字符串拼接操作相关的方法。密闭的，不可以从此类型派生。
@@ -23,7 +24,7 @@ import { sealedDecorator as sealed } from './sealed-decorator.mjs';
  * @remarks
  *  密闭的，不可以从此类型派生。
  */
-let StringBuilder = class StringBuilder {
+let StringBuilder = StringBuilder_1 = class StringBuilder {
     /**
      * 初始化 {@linkcode StringBuilder} 的新实例。
      * @author Wang Yucai
@@ -80,8 +81,19 @@ let StringBuilder = class StringBuilder {
     toString() {
         return this.m_buffer.join(String.empty);
     }
+    /**
+     * 创建一个新的 {@linkcode StringBuilder} 类型的对象实例。
+     * @author Wang Yucai
+     *
+     * @static
+     * @param {sys.Null<string>} [s=null] 用于初始化的字符串。
+     * @returns {StringBuilder}
+     */
+    static create(s = null) {
+        return new StringBuilder_1(s);
+    }
 };
-StringBuilder = __decorate([
+StringBuilder = StringBuilder_1 = __decorate([
     sealed,
     __metadata("design:paramtypes", [Object])
 ], StringBuilder);

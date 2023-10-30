@@ -54,4 +54,13 @@ export declare class StringBuilder {
      * @returns {string}
      */
     toString(): string;
+    /**
+     * 创建一个新的 {@linkcode StringBuilder} 类型的对象实例。
+     * @author Wang Yucai
+     *
+     * @static
+     * @param {sys.Null<string>} [s=null] 用于初始化的字符串。
+     * @returns {StringBuilder}
+     */
+    static create(s?: sys.Null<string>): StringBuilder;
 }
