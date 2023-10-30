@@ -2,10 +2,10 @@
   "name": "@joingo.vip/core",
   "version": "1.0.0",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: Front-end core class library. Such libraries contain public methods, type definitions, etc.",
-  "main": "compile/index.js",
-  "module": "compile/index.js",
-  "types": "compile/index.d.ts",
-  "typings": "compile/index.d.ts",
+  "main": "compile/index.mjs",
+  "module": "compile/index.mjs",
+  "types": "compile/index.d.mts",
+  "typings": "compile/index.d.mts",
   "scripts": {
     "version:prerelease": "npm version prerelease --no-git-tag-version",
     "version:prepatch": "npm version prepatch --no-git-tag-version",
@@ -40,5 +40,8 @@
   "readme": "README.md",
   "devDependencies": {
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@joingo.vip/native-x": "workspace:^"
   }
 }

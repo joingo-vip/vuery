@@ -13,6 +13,10 @@ importers:
         version: 9.5.0
 
   packages/core-fx:
+    dependencies:
+      '@joingo.vip/native-x':
+        specifier: workspace:^
+        version: link:../native-x
     devDependencies:
       typescript:
         specifier: ^5.2.2

@@ -1,5 +1,5 @@
 {
-  "name": "@joingo/native-x",
+  "name": "@joingo.vip/native-x",
   "version": "1.0.0",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: Native type extensions. Such libraries contain JavaScript native type extension methods; Extension type definitions, etc.",
   "main": "compile/index.mjs",

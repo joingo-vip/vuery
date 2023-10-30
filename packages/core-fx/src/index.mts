@@ -3,7 +3,4 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-/// <reference path="./lib.types.d.ts" />
-/// <reference path="./lib.functions.d.ts" />
-/// <reference path="./lib.global.d.ts" />
-/// <reference path="./lib.interfaces.d.ts" />
+export { sealedDecorator as sealed, sealedDecorator } from './lib/sealed-decorator.mjs';
