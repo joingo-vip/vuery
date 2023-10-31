@@ -3,3 +3,4 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 export { sealedDecorator as sealed, sealedDecorator } from './lib/sealed-decorator.mjs';
+export { StringBuilder } from './lib/string-builder.mjs';
