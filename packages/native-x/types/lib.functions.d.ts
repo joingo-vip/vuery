@@ -309,4 +309,21 @@ declare namespace sys {
    * @template TResult 返回值类型。
    */
   type ParameterizedFunc<TResult> = (...args: any[]) => TResult;
+
+  /**
+   * 定义了处理事件的委托。
+   * @author Wang Yucai
+   *
+   * @typedef {EventHandler}
+   */
+  type EventHandler = (sender: any, e: sys.EventArgs) => void;
+
+  /**
+   * 定义了处理通用=事件的委托。
+   * @author Wang Yucai
+   *
+   * @typedef {GenericEventHandler}
+   * @template TPayload 事件负载数据类型。
+   */
+  type GenericEventHandler<TPayload> = (sender: any, e: sys.GenericEventArgs<TPayload>) => void;
 }

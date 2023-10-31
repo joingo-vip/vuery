@@ -118,4 +118,32 @@ declare namespace sys {
      */
     after: boolean;
   }
+
+  /**
+   * 定义了事件参数类型。
+   * @author Wang Yucai
+   *
+   * @interface EventArgs
+   * @typedef {EventArgs}
+   */
+  interface EventArgs {}
+
+  /**
+   * 定义了通用事件参数类型。
+   * @author Wang Yucai
+   *
+   * @interface GenericEventArgs
+   * @typedef {GenericEventArgs}
+   * @template TPayload 事件负载数据类型。
+   * @extends {EventArgs}
+   */
+  interface GenericEventArgs<TPayload> extends EventArgs {
+    /**
+     * 事件负载数据。
+     * @author Wang Yucai
+     *
+     * @type {sys.Null<TPayload>}
+     */
+    payload: sys.Null<TPayload>;
+  }
 }
