@@ -1,0 +1,11 @@
+{
+    "resourceNamespaces": {
+        "exceptions": {
+            "defaultException": "应用程序抛出了一个未处理的异常。",
+            "invalidArgumentException": "无效的参数。",
+            "invalidArgumentException_1": "无效的参数 “{0}” 值：{1}。",
+            "argumentNullException": "缺少必需的参数。",
+            "argumentNullException_1": "缺少必需的参数：“{0}”。"
+        }
+    }
+}
