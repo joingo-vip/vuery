@@ -32,10 +32,10 @@
     "./README.md",
     "./types/*.d.ts",
     "./types/**/*.d.ts",
-    "./compile/*.js",
-    "./compile/*.d.ts",
-    "./compile/**/*.js",
-    "./compile/**/*.d.ts"
+    "./compile/*.mjs",
+    "./compile/*.d.mts",
+    "./compile/**/*.mjs",
+    "./compile/**/*.d.mts"
   ],
   "license": "MIT",
   "readme": "README.md",
