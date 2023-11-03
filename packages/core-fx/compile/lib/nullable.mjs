@@ -73,3 +73,15 @@ Nullable = __decorate([
     __metadata("design:paramtypes", [Object])
 ], Nullable);
 export { Nullable };
+/**
+ * 使用可能为空的 {@linkcode T} 类型的对象实例。
+ * @author Wang Yucai
+ *
+ * @export
+ * @template T
+ * @param {sys.Null<T>} value 可能为空的 {@linkcode T} 类型的对象实例或值。
+ * @returns {Nullable<T>}
+ */
+export function useNullable(value) {
+    return new Nullable(value);
+}
