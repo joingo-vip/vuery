@@ -9,3 +9,7 @@
   | NPM Package    | URL                                                                                  |
   | -------------- | ------------------------------------------------------------------------------------ |
   | **typescript** | [https://www.npmjs.com/package/typescript](https://www.npmjs.com/package/typescript) |
+  | **i18next**    | [https://www.npmjs.com/package/i18next](https://www.npmjs.com/package/i18next)       |
+
+- **Workspace Dependency**
+  - _@joingo.vip/native-x_
