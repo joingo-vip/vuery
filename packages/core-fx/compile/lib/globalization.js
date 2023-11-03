@@ -13,7 +13,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var CultureInfo_1;
 import { changeLanguage } from 'i18next';
-import { sealedDecorator as sealed } from './sealed-decorator.mjs';
+import { sealedDecorator as sealed } from './sealed-decorator';
 let __JOINGO_NATURAL_CULTUREINFO_MAP__ = 'zh-Hans';
 let __JOINGO_CURRENT_CULTUREINFO__ = __JOINGO_NATURAL_CULTUREINFO_MAP__;
 const __JOINGO_CULTUREINFO_STORAGEKEY__ = 'joingo.vip.globalization.cultureinfo';

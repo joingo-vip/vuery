@@ -2,10 +2,14 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
-import './lib/console.mjs';
-import './lib/date-static.mjs';
-import './lib/date.mjs';
-import './lib/error-classes.mjs';
-import './lib/object-static.mjs';
-import './lib/string-static.mjs';
-import './lib/string.mjs';
+
+/// <reference path="../types/index.d.ts" />
+
+import { ApplicationBuilder } from '@joingo.vip/core';
+
+var JOINGO_DEFAULT_SECUREKEY: string = 'HF1Rtchx5LtuCfos';
+
+ApplicationBuilder.prototype.configureSecureKey = function (secureKey?: string): ApplicationBuilder {
+  if (!String.isNullOrWhitespace(secureKey)) JOINGO_DEFAULT_SECUREKEY = secureKey;
+  return this;
+};

@@ -12,7 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var StringBuilder_1;
-import { sealedDecorator as sealed } from './sealed-decorator.mjs';
+import { sealedDecorator as sealed } from './sealed-decorator';
 /**
  * 提供了字符串拼接操作相关的方法。密闭的，不可以从此类型派生。
  * @author Wang Yucai

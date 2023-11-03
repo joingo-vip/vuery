@@ -3,8 +3,8 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-import { CultureInfo, type I18nMiddlewareOptions } from './globalization.mjs';
-import { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitedStatesLanguagePack } from './i18n/index.mjs';
+import { CultureInfo, type I18nMiddlewareOptions } from './globalization';
+import { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitedStatesLanguagePack } from './i18n/index';
 import i18next, { InitOptions } from 'i18next';
 
 /**

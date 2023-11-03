@@ -2,13 +2,10 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
-Date.currentDateTime = function () {
-    return new Date();
-};
-Date.DateFormatter = 'YYYY-MM-DD';
-Date.TimeFormatter = 'HH:mm:ss';
-Date.DateTimeFormatter = `${Date.DateFormatter} ${Date.TimeFormatter}`;
-Date.ShortDateFormatter = 'DD/MM/YY';
-Date.ShortTimeFormatter = 'HH:mm';
-Date.ShortDateTimeFormatter = `${Date.ShortTimeFormatter} ${Date.ShortDateFormatter}`;
-export {};
+import './lib/console';
+import './lib/date-static';
+import './lib/date';
+import './lib/error-classes';
+import './lib/object-static';
+import './lib/string-static';
+import './lib/string';

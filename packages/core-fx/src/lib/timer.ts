@@ -3,8 +3,8 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-import { sealedDecorator as sealed } from './sealed-decorator.mjs';
-import { SR } from './resource.mjs';
+import { sealedDecorator as sealed } from './sealed-decorator';
+import { SR } from './resource';
 
 /**
  * 定义了处理时钟到达事件的委托。
