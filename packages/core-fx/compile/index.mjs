@@ -2,6 +2,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
+export { Application, ApplicationBuilder } from './lib/appbuilder.mjs';
 export { CultureInfo, DefaultCultureChangedCallbackHandler, DefaultCultureInfoGetProvider, DefaultCultureInfoStorageProvider, } from './lib/globalization.mjs';
 export { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitedStatesLanguagePack } from './lib/i18n/index.mjs';
 export { Nullable, useNullable } from './lib/nullable.mjs';

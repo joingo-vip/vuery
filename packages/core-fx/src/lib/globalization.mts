@@ -202,3 +202,37 @@ export const DefaultCultureChangedCallbackHandler: sys.Action1<CultureInfo> = fu
       });
   }
 };
+
+/**
+ * 定义了 i18n 中间件配置选项类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @interface I18nMiddlewareOptions
+ * @typedef {I18nMiddlewareOptions}
+ */
+export interface I18nMiddlewareOptions {
+  /**
+   * 默认的文化区域名称。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  natural: string;
+
+  /**
+   * 默认的资源命名空间。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  resourceNamespace: string;
+
+  /**
+   * 资源文件。
+   * @author Wang Yucai
+   *
+   * @type {?Record<string, Record<string, any>>}
+   */
+  resources?: Record<string, Record<string, any>>;
+}

@@ -1,4 +1,5 @@
-export { CultureInfo, DefaultCultureChangedCallbackHandler, DefaultCultureInfoGetProvider, DefaultCultureInfoStorageProvider, } from './lib/globalization.mjs';
+export { Application, ApplicationBuilder, type ApplicationContext, type ApplicationMiddleware } from './lib/appbuilder.mjs';
+export { CultureInfo, DefaultCultureChangedCallbackHandler, DefaultCultureInfoGetProvider, DefaultCultureInfoStorageProvider, type I18nMiddlewareOptions, } from './lib/globalization.mjs';
 export { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitedStatesLanguagePack } from './lib/i18n/index.mjs';
 export { Nullable, useNullable } from './lib/nullable.mjs';
 export { ResourceManager, SR } from './lib/resource.mjs';
