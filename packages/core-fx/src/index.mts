@@ -15,3 +15,4 @@ export { ResourceManager, SR } from './lib/resource.mjs';
 export { sealedDecorator as sealed, sealedDecorator } from './lib/sealed-decorator.mjs';
 export { StopWatch, useStopWatch } from './lib/stopwatch.mjs';
 export { StringBuilder } from './lib/string-builder.mjs';
+export { Timer } from './lib/timer.mjs';
