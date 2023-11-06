@@ -1,5 +1,5 @@
 /// <reference types="@joingo.vip/native-x" />
-import { CultureInfo } from './globalization';
+import { CultureInfo } from './globalization.mjs';
 /**
  * 提供了管理资源资源相关的方法。
  * @author Wang Yucai

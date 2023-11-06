@@ -3,8 +3,8 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-import { CultureInfo } from './globalization';
-import { sealedDecorator as sealed } from './sealed-decorator';
+import { CultureInfo } from './globalization.mjs';
+import { sealedDecorator as sealed } from './sealed-decorator.mjs';
 import { t } from 'i18next';
 
 /**

@@ -11,7 +11,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { sealedDecorator as sealed } from './sealed-decorator';
+import { sealedDecorator as sealed } from './sealed-decorator.mjs';
 /**
  * 提供了可能为空 {@linkcode T} 类型相关的方法。密闭的，不可以从此类型派生。
  * @author Wang Yucai

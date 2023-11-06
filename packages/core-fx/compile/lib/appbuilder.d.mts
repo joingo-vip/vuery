@@ -1,5 +1,5 @@
 /// <reference types="@joingo.vip/native-x" />
-import { type I18nMiddlewareOptions } from './globalization';
+import { type I18nMiddlewareOptions } from './globalization.mjs';
 /**
  * 提供了应用程序相关的基本方法。
  * @author Wang Yucai

@@ -2,10 +2,10 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
-import './lib/console';
-import './lib/date-static';
-import './lib/date';
-import './lib/error-classes';
-import './lib/object-static';
-import './lib/string-static';
-import './lib/string';
+import './lib/console.mjs';
+import './lib/date-static.mjs';
+import './lib/date.mjs';
+import './lib/error-classes.mjs';
+import './lib/object-static.mjs';
+import './lib/string-static.mjs';
+import './lib/string.mjss';

@@ -4,7 +4,7 @@
 // *******************************************************************************************************************************************************
 
 import { changeLanguage } from 'i18next';
-import { sealedDecorator as sealed } from './sealed-decorator';
+import { sealedDecorator as sealed } from './sealed-decorator.mjs';
 
 let __JOINGO_NATURAL_CULTUREINFO_MAP__: string = 'zh-Hans';
 let __JOINGO_CURRENT_CULTUREINFO__: string = __JOINGO_NATURAL_CULTUREINFO_MAP__;

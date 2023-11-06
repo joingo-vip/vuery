@@ -11,8 +11,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CultureInfo } from './globalization';
-import { sealedDecorator as sealed } from './sealed-decorator';
+import { CultureInfo } from './globalization.mjs';
+import { sealedDecorator as sealed } from './sealed-decorator.mjs';
 import { t } from 'i18next';
 /**
  * 提供了管理资源资源相关的方法。

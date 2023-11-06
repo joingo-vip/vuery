@@ -3,7 +3,7 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-import { sealedDecorator as sealed } from './sealed-decorator';
+import { sealedDecorator as sealed } from './sealed-decorator.mjs';
 
 /**
  * 提供了可能为空 {@linkcode T} 类型相关的方法。密闭的，不可以从此类型派生。
