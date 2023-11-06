@@ -1,5 +1,6 @@
 /// <reference types="@joingo.vip/native-x" />
 import { type I18nMiddlewareOptions } from './globalization.mjs';
+import { Version } from './version.mjs';
 /**
  * 提供了应用程序相关的基本方法。
  * @author Wang Yucai
@@ -10,6 +11,13 @@ import { type I18nMiddlewareOptions } from './globalization.mjs';
  * @typedef {Application}
  */
 export declare abstract class Application {
+    /**
+     * 应用程序版本号。
+     * @author Wang Yucai
+     *
+     * @type {Version}
+     */
+    applicationVersion: Version;
     /**
      * 初始化 {@linkcode Application} 的新实例。
      * @author Wang Yucai
@@ -70,6 +78,22 @@ export declare abstract class ApplicationBuilder {
      * @returns {Application}
      */
     abstract build(): Application;
+    /**
+     * 应用程序版本号。
+     * @author Wang Yucai
+     *
+     * @protected
+     * @type {Version}
+     */
+    protected applicationVersion: Version;
+    /**
+     * 配置应用程序版本号。
+     * @author Wang Yucai
+     *
+     * @param {Version} appVersion 应用程序版本号。
+     * @returns {ApplicationBuilder}
+     */
+    configureAppVersion(appVersion: Version): ApplicationBuilder;
     /**
      * 创建应用程序上下文。
      * @author Wang Yucai

@@ -5,6 +5,7 @@
 import { CultureInfo } from './globalization.mjs';
 import { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitedStatesLanguagePack } from './i18n/index.mjs';
 import i18next from 'i18next';
+import { SdkVersion } from './version.mjs';
 /**
  * 提供了应用程序相关的基本方法。
  * @author Wang Yucai
@@ -22,7 +23,9 @@ export class Application {
      * @constructor
      * @protected
      */
-    constructor() { }
+    constructor() {
+        this.applicationVersion = SdkVersion;
+    }
 }
 /**
  * 提供了构建应用程序相关的基本方法。
@@ -42,6 +45,17 @@ export class ApplicationBuilder {
      * @protected
      */
     constructor() { }
+    /**
+     * 配置应用程序版本号。
+     * @author Wang Yucai
+     *
+     * @param {Version} appVersion 应用程序版本号。
+     * @returns {ApplicationBuilder}
+     */
+    configureAppVersion(appVersion) {
+        this.applicationVersion = appVersion;
+        return this;
+    }
     /**
      * 使用指定的应用程序中间件。
      * @author Wang Yucai

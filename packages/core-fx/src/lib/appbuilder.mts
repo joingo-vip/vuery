@@ -6,6 +6,7 @@
 import { CultureInfo, type I18nMiddlewareOptions } from './globalization.mjs';
 import { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitedStatesLanguagePack } from './i18n/index.mjs';
 import i18next, { InitOptions } from 'i18next';
+import { SdkVersion, Version } from './version.mjs';
 
 /**
  * 提供了应用程序相关的基本方法。
@@ -18,13 +19,23 @@ import i18next, { InitOptions } from 'i18next';
  */
 export abstract class Application {
   /**
+   * 应用程序版本号。
+   * @author Wang Yucai
+   *
+   * @type {Version}
+   */
+  applicationVersion: Version;
+
+  /**
    * 初始化 {@linkcode Application} 的新实例。
    * @author Wang Yucai
    *
    * @constructor
    * @protected
    */
-  protected constructor() {}
+  protected constructor() {
+    this.applicationVersion = SdkVersion;
+  }
 
   /**
    * 启动应用程序。
@@ -81,6 +92,27 @@ export abstract class ApplicationBuilder {
    * @returns {Application}
    */
   abstract build(): Application;
+
+  /**
+   * 应用程序版本号。
+   * @author Wang Yucai
+   *
+   * @protected
+   * @type {Version}
+   */
+  protected applicationVersion: Version;
+
+  /**
+   * 配置应用程序版本号。
+   * @author Wang Yucai
+   *
+   * @param {Version} appVersion 应用程序版本号。
+   * @returns {ApplicationBuilder}
+   */
+  configureAppVersion(appVersion: Version): ApplicationBuilder {
+    this.applicationVersion = appVersion;
+    return this;
+  }
 
   /**
    * 创建应用程序上下文。
