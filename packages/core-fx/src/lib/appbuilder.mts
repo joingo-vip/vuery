@@ -83,7 +83,7 @@ export abstract class ApplicationBuilder {
    * @protected
    */
   protected constructor() {
-    this.applicationVersion = SdkVersion.toString();
+    __JOINGO_APPLICATION_VERSION__ = this.applicationVersion = SdkVersion.toString();
   }
 
   /**
@@ -117,6 +117,7 @@ export abstract class ApplicationBuilder {
     } else {
       this.applicationVersion = version.toString();
     }
+    __JOINGO_APPLICATION_VERSION__ = this.applicationVersion;
     return this;
   }
 

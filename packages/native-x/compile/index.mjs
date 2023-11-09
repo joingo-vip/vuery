@@ -9,3 +9,4 @@ import './lib/error-classes.mjs';
 import './lib/object-static.mjs';
 import './lib/string-static.mjs';
 import './lib/string.mjss';
+import './lib/variables.mjs';

@@ -7,6 +7,14 @@ export {};
 
 declare global {
   /**
+   * 应用程序版本号。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  var __JOINGO_APPLICATION_VERSION__: string;
+
+  /**
    * 为 {@link Object} 类型提供的扩展方法。
    * @author Wang Yucai
    *
