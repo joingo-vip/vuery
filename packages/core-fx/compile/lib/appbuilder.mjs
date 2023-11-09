@@ -44,16 +44,23 @@ export class ApplicationBuilder {
      * @constructor
      * @protected
      */
-    constructor() { }
+    constructor() {
+        this.applicationVersion = SdkVersion.toString();
+    }
     /**
-     * 配置应用程序版本号。
+     * 配置当前的应用程序版本。
      * @author Wang Yucai
      *
-     * @param {Version} appVersion 应用程序版本号。
+     * @param {(string | Version)} version 版本号。
      * @returns {ApplicationBuilder}
      */
-    configureAppVersion(appVersion) {
-        this.applicationVersion = appVersion;
+    configureAppVersion(version) {
+        if (typeof version === 'string') {
+            this.applicationVersion = version;
+        }
+        else {
+            this.applicationVersion = version.toString();
+        }
         return this;
     }
     /**

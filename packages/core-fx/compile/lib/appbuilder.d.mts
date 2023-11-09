@@ -83,17 +83,17 @@ export declare abstract class ApplicationBuilder {
      * @author Wang Yucai
      *
      * @protected
-     * @type {Version}
+     * @type {string}
      */
-    protected applicationVersion: Version;
+    protected applicationVersion: string;
     /**
-     * 配置应用程序版本号。
+     * 配置当前的应用程序版本。
      * @author Wang Yucai
      *
-     * @param {Version} appVersion 应用程序版本号。
+     * @param {(string | Version)} version 版本号。
      * @returns {ApplicationBuilder}
      */
-    configureAppVersion(appVersion: Version): ApplicationBuilder;
+    configureAppVersion(version: string | Version): ApplicationBuilder;
     /**
      * 创建应用程序上下文。
      * @author Wang Yucai

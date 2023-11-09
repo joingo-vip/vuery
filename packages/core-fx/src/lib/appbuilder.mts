@@ -82,7 +82,9 @@ export abstract class ApplicationBuilder {
    * @constructor
    * @protected
    */
-  protected constructor() {}
+  protected constructor() {
+    this.applicationVersion = SdkVersion.toString();
+  }
 
   /**
    * 构建应用程序。
@@ -98,19 +100,23 @@ export abstract class ApplicationBuilder {
    * @author Wang Yucai
    *
    * @protected
-   * @type {Version}
+   * @type {string}
    */
-  protected applicationVersion: Version;
+  protected applicationVersion: string;
 
   /**
-   * 配置应用程序版本号。
+   * 配置当前的应用程序版本。
    * @author Wang Yucai
    *
-   * @param {Version} appVersion 应用程序版本号。
+   * @param {(string | Version)} version 版本号。
    * @returns {ApplicationBuilder}
    */
-  configureAppVersion(appVersion: Version): ApplicationBuilder {
-    this.applicationVersion = appVersion;
+  configureAppVersion(version: string | Version): ApplicationBuilder {
+    if (typeof version === 'string') {
+      this.applicationVersion = version;
+    } else {
+      this.applicationVersion = version.toString();
+    }
     return this;
   }
 
