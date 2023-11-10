@@ -4,6 +4,7 @@
 // *******************************************************************************************************************************************************
 /// <reference path="../types/index.d.ts" />
 import { ApplicationBuilder } from '@joingo.vip/core';
+export { Base64Encoding, Encoding, HEXEncoding, UTF16Encoding, UTF8Encoding } from './lib/encoding.mjs';
 var JOINGO_DEFAULT_SECUREKEY = 'HF1Rtchx5LtuCfos';
 ApplicationBuilder.prototype.configureSecureKey = function (secureKey) {
     if (!String.isNullOrWhitespace(secureKey))

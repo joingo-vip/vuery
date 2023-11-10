@@ -6,6 +6,7 @@
 /// <reference path="../types/index.d.ts" />
 
 import { ApplicationBuilder } from '@joingo.vip/core';
+export { Base64Encoding, Encoding, HEXEncoding, UTF16Encoding, UTF8Encoding, type Encoders } from './lib/encoding.mjs';
 
 var JOINGO_DEFAULT_SECUREKEY: string = 'HF1Rtchx5LtuCfos';
 
