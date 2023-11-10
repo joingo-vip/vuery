@@ -3,6 +3,7 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 export { Application, ApplicationBuilder } from './lib/appbuilder.mjs';
+export { Environment } from './lib/environment.mjs';
 export { CultureInfo, DefaultCultureChangedCallbackHandler, DefaultCultureInfoGetProvider, DefaultCultureInfoStorageProvider, } from './lib/globalization.mjs';
 export { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitedStatesLanguagePack } from './lib/i18n/index.mjs';
 export { Nullable, useNullable } from './lib/nullable.mjs';

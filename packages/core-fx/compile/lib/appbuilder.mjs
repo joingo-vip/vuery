@@ -45,7 +45,7 @@ export class ApplicationBuilder {
      * @protected
      */
     constructor() {
-        this.applicationVersion = SdkVersion.toString();
+        __JOINGO_APPLICATION_VERSION__ = this.applicationVersion = SdkVersion.toString();
     }
     /**
      * 配置当前的应用程序版本。
@@ -61,6 +61,7 @@ export class ApplicationBuilder {
         else {
             this.applicationVersion = version.toString();
         }
+        __JOINGO_APPLICATION_VERSION__ = this.applicationVersion;
         return this;
     }
     /**

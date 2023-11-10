@@ -4,6 +4,7 @@
 // *******************************************************************************************************************************************************
 
 export { Application, ApplicationBuilder, type ApplicationContext, type ApplicationMiddleware } from './lib/appbuilder.mjs';
+export { Environment } from './lib/environment.mjs';
 export {
   CultureInfo,
   DefaultCultureChangedCallbackHandler,
