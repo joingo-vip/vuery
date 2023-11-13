@@ -176,18 +176,18 @@ HEXEncoding = __decorate([
 ], HEXEncoding);
 export { HEXEncoding };
 const _JOINGO_ENCODER_MAP_ = {
-    'BASE64': new Base64Encoding(),
-    'HEX': new HEXEncoding(),
-    'UTF-16': new UTF16Encoding(),
-    'UTF-8': new UTF8Encoding(),
-    'UTF8': new UTF8Encoding(),
     'base64': new Base64Encoding(),
+    'BASE64': new Base64Encoding(),
     'hex': new HEXEncoding(),
+    'HEX': new HEXEncoding(),
     'utf-16': new UTF16Encoding(),
+    'UTF-16': new UTF16Encoding(),
     'utf-8': new UTF8Encoding(),
+    'UTF-8': new UTF8Encoding(),
     'utf16': new UTF16Encoding(),
-    'utf8': new UTF8Encoding(),
     'UTF16': new UTF16Encoding(),
+    'utf8': new UTF8Encoding(),
+    'UTF8': new UTF8Encoding(),
 };
 /**
  * 使用指定名称为 {@linkcode encoder} 的编码方法。
