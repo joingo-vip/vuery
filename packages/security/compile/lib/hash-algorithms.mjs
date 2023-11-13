@@ -32,29 +32,34 @@ export class HashAlgorithm {
      * @protected
      * @param {string} name 哈希算法名称。
      * @param {sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>} provider 计算哈希算法相关的方法。
+     * @param {sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>} hmacProvider HMAC 哈希算法。
      */
-    constructor(name, provider) {
+    constructor(name, provider, hmacProvider) {
         this.name;
         this.hashProvider = provider;
+        this.hmacHashProvider = hmacProvider;
     }
     /**
      * 计算字符串 {@linkcode s} 的哈希数据。
      * @author Wang Yucai
      *
      * @param {sys.Null<string | CryptoJS.lib.WordArray>} s 字符串或 {@link CryptoJS.lib.WordArray} 类型的对象实例。
+     * @param {sys.Null<string>} secureKey 加密密钥。
      * @returns {sys.Null<CryptoJS.lib.WordArray>}
      * @see {@link https://www.npmjs.com/package/crypto-js}
      * @see {@linkcode useEncoding}
      */
-    computeHash(s) {
+    computeHash(s, secureKey) {
         if (console.debugIf(Object.isNull(s), `[DEBUG] - <hash-algorithms.mts: c2624e>: 无效的字符串 “s”，无法进行哈希计算，将返回 null 值。`)) {
             return null;
         }
         else if (typeof s === 'string') {
-            return this.hashProvider(useEncoding('utf-8').encode(s));
+            return String.isNullOrWhitespace(secureKey)
+                ? this.hashProvider(useEncoding('utf-8').encode(s))
+                : this.hmacHashProvider(useEncoding('utf-8').encode(s), secureKey);
         }
         else {
-            return this.hashProvider(s);
+            return String.isNullOrWhitespace(secureKey) ? this.hashProvider(s) : this.hmacHashProvider(s, secureKey);
         }
     }
 }
@@ -77,7 +82,7 @@ let MD5Algorithm = class MD5Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('MD5', CryptoJS.MD5);
+        super('MD5', CryptoJS.MD5, CryptoJS.HmacMD5);
     }
 };
 MD5Algorithm = __decorate([
@@ -104,7 +109,7 @@ let SHA1Algorithm = class SHA1Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('SHA1', CryptoJS.SHA1);
+        super('SHA1', CryptoJS.SHA1, CryptoJS.HmacSHA1);
     }
 };
 SHA1Algorithm = __decorate([
@@ -131,7 +136,7 @@ let SHA256Algorithm = class SHA256Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('SHA256', CryptoJS.SHA256);
+        super('SHA256', CryptoJS.SHA256, CryptoJS.HmacSHA256);
     }
 };
 SHA256Algorithm = __decorate([
@@ -158,7 +163,7 @@ let SHA224Algorithm = class SHA224Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('SHA224', CryptoJS.SHA224);
+        super('SHA224', CryptoJS.SHA224, CryptoJS.HmacSHA224);
     }
 };
 SHA224Algorithm = __decorate([
@@ -185,7 +190,7 @@ let SHA512Algorithm = class SHA512Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('SHA512', CryptoJS.SHA512);
+        super('SHA512', CryptoJS.SHA512, CryptoJS.HmacSHA512);
     }
 };
 SHA512Algorithm = __decorate([
@@ -212,7 +217,7 @@ let SHA384Algorithm = class SHA384Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('SHA384', CryptoJS.SHA384);
+        super('SHA384', CryptoJS.SHA384, CryptoJS.HmacSHA384);
     }
 };
 SHA384Algorithm = __decorate([
@@ -239,7 +244,7 @@ let SHA3Algorithm = class SHA3Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('SHA3', CryptoJS.SHA3);
+        super('SHA3', CryptoJS.SHA3, CryptoJS.HmacSHA3);
     }
 };
 SHA3Algorithm = __decorate([
@@ -266,7 +271,7 @@ let Ripemd160Algorithm = class Ripemd160Algorithm extends HashAlgorithm {
      * @constructor
      */
     constructor() {
-        super('RIPEMD160', CryptoJS.RIPEMD160);
+        super('RIPEMD160', CryptoJS.RIPEMD160, CryptoJS.HmacRIPEMD160);
     }
 };
 Ripemd160Algorithm = __decorate([

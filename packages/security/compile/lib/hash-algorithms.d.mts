@@ -23,6 +23,17 @@ export declare abstract class HashAlgorithm {
      */
     protected readonly hashProvider: sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>;
     /**
+     * HMAC 哈希算法方法。
+     * @author Wang Yucai
+     * @remarks
+     *  获取 {@linkcode sys.Func2} 类型的对象实例，用于表示 HMAC 哈希算法方法。
+     *
+     * @protected
+     * @readonly
+     * @type {sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>}
+     */
+    protected readonly hmacHashProvider: sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>;
+    /**
      * 哈希算法名称。
      * @author Wang Yucai
      * @remarks
@@ -40,18 +51,20 @@ export declare abstract class HashAlgorithm {
      * @protected
      * @param {string} name 哈希算法名称。
      * @param {sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>} provider 计算哈希算法相关的方法。
+     * @param {sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>} hmacProvider HMAC 哈希算法。
      */
-    protected constructor(name: string, provider: sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>);
+    protected constructor(name: string, provider: sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>, hmacProvider: sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>);
     /**
      * 计算字符串 {@linkcode s} 的哈希数据。
      * @author Wang Yucai
      *
      * @param {sys.Null<string | CryptoJS.lib.WordArray>} s 字符串或 {@link CryptoJS.lib.WordArray} 类型的对象实例。
+     * @param {sys.Null<string>} secureKey 加密密钥。
      * @returns {sys.Null<CryptoJS.lib.WordArray>}
      * @see {@link https://www.npmjs.com/package/crypto-js}
      * @see {@linkcode useEncoding}
      */
-    computeHash(s: sys.Null<string | CryptoJS.lib.WordArray>): sys.Null<CryptoJS.lib.WordArray>;
+    computeHash(s: sys.Null<string | CryptoJS.lib.WordArray>, secureKey?: sys.Null<string>): sys.Null<CryptoJS.lib.WordArray>;
 }
 /**
  * 提供了 MD5 哈希算法相关的方法。密闭的，不可以从此类型派生。

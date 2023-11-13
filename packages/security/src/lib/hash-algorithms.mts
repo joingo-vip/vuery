@@ -30,6 +30,18 @@ export abstract class HashAlgorithm {
   protected readonly hashProvider: sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>;
 
   /**
+   * HMAC 哈希算法方法。
+   * @author Wang Yucai
+   * @remarks
+   *  获取 {@linkcode sys.Func2} 类型的对象实例，用于表示 HMAC 哈希算法方法。
+   *
+   * @protected
+   * @readonly
+   * @type {sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>}
+   */
+  protected readonly hmacHashProvider: sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>;
+
+  /**
    * 哈希算法名称。
    * @author Wang Yucai
    * @remarks
@@ -48,10 +60,16 @@ export abstract class HashAlgorithm {
    * @protected
    * @param {string} name 哈希算法名称。
    * @param {sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>} provider 计算哈希算法相关的方法。
+   * @param {sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>} hmacProvider HMAC 哈希算法。
    */
-  protected constructor(name: string, provider: sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>) {
+  protected constructor(
+    name: string,
+    provider: sys.Func1<string | CryptoJS.lib.WordArray, CryptoJS.lib.WordArray>,
+    hmacProvider: sys.Func2<string | CryptoJS.lib.WordArray, string, CryptoJS.lib.WordArray>
+  ) {
     this.name;
     this.hashProvider = provider;
+    this.hmacHashProvider = hmacProvider;
   }
 
   /**
@@ -59,11 +77,12 @@ export abstract class HashAlgorithm {
    * @author Wang Yucai
    *
    * @param {sys.Null<string | CryptoJS.lib.WordArray>} s 字符串或 {@link CryptoJS.lib.WordArray} 类型的对象实例。
+   * @param {sys.Null<string>} secureKey 加密密钥。
    * @returns {sys.Null<CryptoJS.lib.WordArray>}
    * @see {@link https://www.npmjs.com/package/crypto-js}
    * @see {@linkcode useEncoding}
    */
-  computeHash(s: sys.Null<string | CryptoJS.lib.WordArray>): sys.Null<CryptoJS.lib.WordArray> {
+  computeHash(s: sys.Null<string | CryptoJS.lib.WordArray>, secureKey?: sys.Null<string>): sys.Null<CryptoJS.lib.WordArray> {
     if (
       console.debugIf(
         Object.isNull(s),
@@ -72,9 +91,11 @@ export abstract class HashAlgorithm {
     ) {
       return null;
     } else if (typeof s === 'string') {
-      return this.hashProvider(useEncoding('utf-8').encode(s));
+      return String.isNullOrWhitespace(secureKey)
+        ? this.hashProvider(useEncoding('utf-8').encode(s))
+        : this.hmacHashProvider(useEncoding('utf-8').encode(s), secureKey);
     } else {
-      return this.hashProvider(s);
+      return String.isNullOrWhitespace(secureKey) ? this.hashProvider(s) : this.hmacHashProvider(s, secureKey);
     }
   }
 }
@@ -99,7 +120,7 @@ export class MD5Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('MD5', CryptoJS.MD5);
+    super('MD5', CryptoJS.MD5, CryptoJS.HmacMD5);
   }
 }
 
@@ -123,7 +144,7 @@ export class SHA1Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('SHA1', CryptoJS.SHA1);
+    super('SHA1', CryptoJS.SHA1, CryptoJS.HmacSHA1);
   }
 }
 
@@ -147,7 +168,7 @@ export class SHA256Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('SHA256', CryptoJS.SHA256);
+    super('SHA256', CryptoJS.SHA256, CryptoJS.HmacSHA256);
   }
 }
 
@@ -171,7 +192,7 @@ export class SHA224Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('SHA224', CryptoJS.SHA224);
+    super('SHA224', CryptoJS.SHA224, CryptoJS.HmacSHA224);
   }
 }
 
@@ -195,7 +216,7 @@ export class SHA512Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('SHA512', CryptoJS.SHA512);
+    super('SHA512', CryptoJS.SHA512, CryptoJS.HmacSHA512);
   }
 }
 
@@ -219,7 +240,7 @@ export class SHA384Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('SHA384', CryptoJS.SHA384);
+    super('SHA384', CryptoJS.SHA384, CryptoJS.HmacSHA384);
   }
 }
 
@@ -243,7 +264,7 @@ export class SHA3Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('SHA3', CryptoJS.SHA3);
+    super('SHA3', CryptoJS.SHA3, CryptoJS.HmacSHA3);
   }
 }
 
@@ -267,7 +288,7 @@ export class Ripemd160Algorithm extends HashAlgorithm {
    * @constructor
    */
   constructor() {
-    super('RIPEMD160', CryptoJS.RIPEMD160);
+    super('RIPEMD160', CryptoJS.RIPEMD160, CryptoJS.HmacRIPEMD160);
   }
 }
 
