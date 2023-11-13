@@ -1,7 +1,7 @@
 {
-  "name": "@joingo.vip/security",
+  "name": "@joingo.vip/storage",
   "version": "1.0.0",
-  "description": "Beijing JoinGo Information Technology Co., Ltd.: Crypto-JS based encryption and decryption services.",
+  "description": "Beijing JoinGo Information Technology Co., Ltd.: Storage service for browser.",
   "main": "compile/index.mjs",
   "module": "compile/index.mjs",
   "types": "compile/index.d.mts",
@@ -19,7 +19,10 @@
   },
   "keywords": [
     "joingo.vip",
-    "security-library",
+    "storage",
+    "locale-storage",
+    "session-storage",
+    "browser",
     "typescript",
     "javascript",
     "es6"
@@ -40,13 +43,13 @@
   "license": "MIT",
   "readme": "README.md",
   "devDependencies": {
-    "@types/crypto-js": "^4.1.3",
     "@types/node": "^20.8.9",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "@joingo.vip/core": "workspace:^",
     "@joingo.vip/native-x": "workspace:^",
-    "crypto-js": "^4.2.0"
+    "@joingo.vip/security": "workspace:^",
+    "localforage": "^1.10.0"
   }
 }
