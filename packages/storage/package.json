@@ -49,7 +49,6 @@
   "dependencies": {
     "@joingo.vip/core": "workspace:^",
     "@joingo.vip/native-x": "workspace:^",
-    "@joingo.vip/security": "workspace:^",
-    "localforage": "^1.10.0"
+    "@joingo.vip/security": "workspace:^"
   }
 }

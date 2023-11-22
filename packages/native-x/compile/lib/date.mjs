@@ -31,3 +31,29 @@ Date.prototype.diff = function (target) {
         totalYears: $seed * $source.diff($target, 'year'),
     };
 };
+const __JOINGO_DATE_UNIT_MAP__ = {
+    'Day': 'day',
+    'Hour': 'hour',
+    'Millisecond': 'millisecond',
+    'Minute': 'minute',
+    'Month': 'month',
+    'Second': 'second',
+    'Year': 'year',
+    'd': 'day',
+    'day': 'day',
+    'h': 'hour',
+    'hour': 'hour',
+    'm': 'minute',
+    'minute': 'minute',
+    'month': 'month',
+    'ms': 'millisecond',
+    's': 'second',
+    'second': 'second',
+    'y': 'year',
+    'year': 'year',
+};
+Date.prototype.add = function (interval, unit = 'Millisecond') {
+    return $dateTime(this)
+        .add(interval, __JOINGO_DATE_UNIT_MAP__[unit !== null && unit !== void 0 ? unit : 'Millisecond'])
+        .toDate();
+};

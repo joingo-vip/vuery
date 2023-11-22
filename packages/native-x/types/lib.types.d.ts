@@ -120,6 +120,33 @@ declare namespace sys {
   }
 
   /**
+   * 定义了日期时间枚举类型。
+   * @author Wang Yucai
+   *
+   * @typedef {UnitOfDate}
+   */
+  type UnitOfDate =
+    | 'Year'
+    | 'year'
+    | 'y'
+    | 'Month'
+    | 'month'
+    | 'Day'
+    | 'day'
+    | 'd'
+    | 'Hour'
+    | 'hour'
+    | 'h'
+    | 'Minute'
+    | 'minute'
+    | 'm'
+    | 'Second'
+    | 'second'
+    | 's'
+    | 'Millisecond'
+    | 'ms';
+
+  /**
    * 定义了事件参数类型。
    * @author Wang Yucai
    *

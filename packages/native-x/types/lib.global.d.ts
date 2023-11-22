@@ -307,6 +307,16 @@ declare global {
      * @returns {Readonly<sys.TimeSpan>}
      */
     diff(target: Date): Readonly<sys.TimeSpan>;
+
+    /**
+     * 添加指定的时间间隔。
+     * @author Wang Yucai
+     *
+     * @param {number} interval 时间间隔。
+     * @param {sys.UnitOfDate} [unit='ms'] 时间单位。
+     * @returns {Date}
+     */
+    add(interval: number, unit: sys.UnitOfDate = 'ms'): Date;
   }
 
   /**
