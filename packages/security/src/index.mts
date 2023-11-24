@@ -7,7 +7,15 @@
 
 import { ApplicationBuilder } from '@joingo.vip/core';
 export { AESCryptographyAlgorithm, CryptographyAlgorithm, useAesAlgorithm } from './lib/cryptography.mjs';
-export { Base64Encoding, Encoding, HEXEncoding, UTF16Encoding, UTF8Encoding, type Encoders } from './lib/encoding.mjs';
+export {
+  Base64Encoding,
+  Encoding,
+  HEXEncoding,
+  UTF16Encoding,
+  UTF8Encoding,
+  useEncoding,
+  type Encoders,
+} from './lib/encoding.mjs';
 export {
   HashAlgorithm,
   MD5Algorithm,

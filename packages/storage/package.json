@@ -43,12 +43,14 @@
   "license": "MIT",
   "readme": "README.md",
   "devDependencies": {
+    "@types/crypto-js": "^4.1.3",
     "@types/node": "^20.8.9",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "@joingo.vip/core": "workspace:^",
     "@joingo.vip/native-x": "workspace:^",
-    "@joingo.vip/security": "workspace:^"
+    "@joingo.vip/security": "workspace:^",
+    "crypto-js": "^4.2.0"
   }
 }
