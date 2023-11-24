@@ -4,4 +4,4 @@
 > 
 > A scaffolding for [Vue3](https://cn.vuejs.org/) front-end projects developed for the "Ruoyi" server-side framework.
 
-![Vuery](D:\Git\@joingo\vuery2\assets\git-repo-48x48.png)
+![Vuery](assets/git-repo-48x48.png)
