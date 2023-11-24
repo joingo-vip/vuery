@@ -1,4 +1,4 @@
-# # README
+# README
 
 > 面向 "若依" 服务端框架开发的 [Vue3](https://cn.vuejs.org/) 前端项目脚手架。
 > 
