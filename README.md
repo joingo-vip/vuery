@@ -1,7 +1,7 @@
-# README
+# # README
 
-![Vuery][icon]
+> 面向 "若依" 服务端框架开发的 [Vue3](https://cn.vuejs.org/) 前端项目脚手架。
+> 
+> A scaffolding for [Vue3](https://cn.vuejs.org/) front-end projects developed for the "Ruoyi" server-side framework.
 
-> 面向若依服务器框架开发的 `Vue3` 前端框架脚手架。
-
-[icon]: ./assets/git-repo-64x64.png
+![Vuery](D:\Git\@joingo\vuery2\assets\git-repo-48x48.png)
