@@ -88,3 +88,15 @@ export class HttpClient {
         this.options = options;
     }
 }
+/**
+ * 提供了构建 HTTP 客户端对象实例相关的方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @abstract
+ * @class HttpClientBuilder
+ * @typedef {HttpClientBuilder}
+ * @template TRawResponse HTTP 响应类型。
+ */
+export class HttpClientBuilder {
+}

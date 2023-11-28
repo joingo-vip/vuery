@@ -101,3 +101,23 @@ export declare abstract class HttpClient<TRawResponse> {
      */
     abstract requestAsync(): Promise<HttpResult<TRawResponse>>;
 }
+/**
+ * 提供了构建 HTTP 客户端对象实例相关的方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @abstract
+ * @class HttpClientBuilder
+ * @typedef {HttpClientBuilder}
+ * @template TRawResponse HTTP 响应类型。
+ */
+export declare abstract class HttpClientBuilder<TRawResponse> {
+    /**
+     * 构建派生自 {@linkcode HttpClient} 类型的对象实例。
+     * @author Wang Yucai
+     *
+     * @abstract
+     * @returns {HttpClient<TRawResponse>}
+     */
+    abstract build(): HttpClient<TRawResponse>;
+}

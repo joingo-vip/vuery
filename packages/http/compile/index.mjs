@@ -3,8 +3,8 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 /// <reference path="../types/index.d.ts" />
-export { HttpAxiosClient, HttpAxiosResult } from './lib/http-axios.mjs';
-export { HttpClient, HttpResult } from './lib/http-core.mjs';
+export { HttpAxiosClient, HttpAxiosClientBuilder, HttpAxiosResult, useAxiosBuilder, } from './lib/http-axios.mjs';
+export { HttpClient, HttpClientBuilder, HttpResult } from './lib/http-core.mjs';
 export { HttpStatus } from './lib/http-status.mjs';
 import { ApplicationBuilder } from '@joingo.vip/core';
 var JOINGO_DEFAULT_HTTP_BASEURI = String.empty;
