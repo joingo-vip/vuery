@@ -13,4 +13,17 @@ var ArgumentError = function (message, argName) {
         return new ArgumentError(message, argName);
     }
 };
+var HttpError = function (message, statusCode, uri, response) {
+    if (new.target && new.target === HttpError) {
+        this.name = 'HttpError';
+        this.stack = new Error().stack;
+        this.message = message;
+        this.statusCode = statusCode;
+        this.uri = uri;
+        this.response = response;
+    }
+    else {
+        return new HttpError(message, statusCode, uri, response);
+    }
+};
 export {};

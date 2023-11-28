@@ -366,4 +366,70 @@ declare global {
   }
 
   var ArgumentError: ArgumentErrorConstructor;
+
+  /**
+   * 提供了 HTTP 请求异常相关的方法。
+   * @author Wang Yucai
+   *
+   * @interface HttpError
+   * @typedef {HttpError}
+   * @extends {Error}
+   */
+  interface HttpError extends Error {
+    /**
+     * HTTP 状态码。
+     * @author Wang Yucai
+     *
+     * @type {?number}
+     */
+    statusCode?: number;
+
+    /**
+     * HTTP 响应数据。
+     * @author Wang Yucai
+     *
+     * @type {?*}
+     */
+    response?: any;
+
+    /**
+     * HTTP 请求的 URI 地址。
+     * @author Wang Yucai
+     *
+     * @type {?string}
+     */
+    uri?: string;
+  }
+
+  /**
+   * 定义了构造 {@linkcode HttpError} 类型的对象实例的接口。
+   * @author Wang Yucai
+   *
+   * @interface HttpErrorConstructor
+   * @typedef {HttpErrorConstructor}
+   * @extends {ErrorConstructor}
+   */
+  interface HttpErrorConstructor extends ErrorConstructor {
+    /**
+     * 初始化 {@linkcode HttpError} 的新实例。
+     *
+     * @param {?string} [message] 异常描述信息。
+     * @param {?number} [statusCode] 错误的 HTTP 状态码。
+     * @param {?string} [uri] 当前请求的 HTTP URI 地址。
+     * @param {?*} [response] HTTP 请求响应信息。
+     */
+    new (message?: string, statusCode?: number, uri?: string, response?: any): HttpError;
+
+    /**
+     * 创建一个 {@linkcode HttpError} 类型的对象实例。
+     *
+     * @param {?string} [message] 异常描述信息。
+     * @param {?number} [statusCode] 错误的 HTTP 状态码。
+     * @param {?string} [uri] 当前请求的 HTTP URI 地址。
+     * @param {?*} [response] HTTP 请求响应信息。
+     */
+    (message?: string, statusCode?: number, uri?: string, response?: any): HttpError;
+  }
+
+  var HttpError: HttpErrorConstructor;
 }
