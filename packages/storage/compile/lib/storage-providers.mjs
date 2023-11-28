@@ -14,7 +14,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Nullable, SR, sealed } from '@joingo.vip/core';
 import { useAesAlgorithm } from '@joingo.vip/security';
 const aesCryptoService = useAesAlgorithm();
-const __JOINGO_STORAGE_OPTIONS_KEY__ = 'joingo.storage.options';
 const __JOINGO_STORAGE_OPTIONS_SECRETKEY__ = 'zomN7XXqPfxfhCap';
 /**
  * 提供了适用于浏览器数据存储相关的基本方法。
@@ -54,7 +53,7 @@ export class StorageProvider {
             if (String.isNullOrWhitespace(options.key)) {
                 throw ArgumentError(SR.getString('invalidArgumentException'), 'options');
             }
-            this.storageOptions = Object.extends({ secretKey: JOINGO_DEFAULT_SECUREKEY }, options);
+            this.storageOptions = Object.extends({ secretKey: __JOINGO_STORAGE_OPTIONS_SECRETKEY__ }, options);
         }
     }
     /**

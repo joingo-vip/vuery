@@ -17,7 +17,7 @@
 
 ### 开发环境 Development Environment
 
-| 开发环境<br/>Development Environment | 说明<br/>Description |
-| -------------------------------- | ------------------ |
-| [Node](https://nodejs.org/) 18+  |                    |
-| [PNPM](https://nodejs.org/)      |                    |
+| 开发环境<br/>Development Environment            | 说明<br/>Description |
+| ------------------------------------------- | ------------------ |
+| [Node](https://nodejs.org/) 18+             |                    |
+| [PNPM](https://www.yarnpkg.cn/package/pnpm) |                    |

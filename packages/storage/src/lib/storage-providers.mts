@@ -5,10 +5,8 @@
 
 import { Nullable, SR, sealed } from '@joingo.vip/core';
 import { useAesAlgorithm } from '@joingo.vip/security';
-import CryptoJS from 'crypto-js';
 
 const aesCryptoService = useAesAlgorithm();
-const __JOINGO_STORAGE_OPTIONS_KEY__: string = 'joingo.storage.options';
 const __JOINGO_STORAGE_OPTIONS_SECRETKEY__: string = 'zomN7XXqPfxfhCap';
 
 /**
@@ -136,7 +134,7 @@ export abstract class StorageProvider {
       if (String.isNullOrWhitespace(options.key)) {
         throw ArgumentError(SR.getString('invalidArgumentException'), 'options');
       }
-      this.storageOptions = Object.extends({ secretKey: JOINGO_DEFAULT_SECUREKEY }, options);
+      this.storageOptions = Object.extends({ secretKey: __JOINGO_STORAGE_OPTIONS_SECRETKEY__ }, options);
     }
   }
 
