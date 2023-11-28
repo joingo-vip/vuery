@@ -3,9 +3,9 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-import { AxiosResponse } from 'axios';
-import { HttpResult } from './http-core.mjs';
 import { SR } from '@joingo.vip/core';
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import { HttpClient, HttpClientOptions, HttpResult } from './http-core.mjs';
 
 /**
  * 提供了基于 {@link AxiosResponse} 相关的 HTTP 响应信息。
@@ -46,6 +46,84 @@ export class HttpAxiosResult extends HttpResult<AxiosResponse> {
     } else {
       this.error = null;
       this.hasErrors = false;
+    }
+  }
+}
+
+/**
+ * 定义了基于 Axios 的客户端配置选项。
+ * @author Wang Yucai
+ *
+ * @export
+ * @interface HttpAxiosClientOptions
+ * @typedef {HttpAxiosClientOptions}
+ * @extends {HttpClientOptions}
+ * @extends {AxiosRequestConfig}
+ */
+export interface HttpAxiosClientOptions extends HttpClientOptions, AxiosRequestConfig {}
+
+/**
+ * 提供了基于 Axios 的 HTTP 客户端相关的方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @class HttpAxiosClient
+ * @typedef {HttpAxiosClient}
+ * @extends {HttpClient}
+ */
+export class HttpAxiosClient extends HttpClient<AxiosResponse> {
+  /**
+   * Axios 客户端配置选项。
+   * @author Wang Yucai
+   * @remarks
+   *  获取 {@linkcode HttpAxiosClientOptions} 类型的对象实例，用于表示 Axios 客户端配置选项。
+   *
+   * @protected
+   * @readonly
+   * @type {HttpAxiosClientOptions}
+   */
+  protected readonly axiosOptions: HttpAxiosClientOptions;
+
+  /**
+   * Axios 客户端。
+   * @author Wang Yucai
+   * @remarks
+   *  获取 {@linkcode AxiosInstance} 类型的对象实例，用于表示 Axios 客户端。
+   *
+   * @protected
+   * @readonly
+   * @type {AxiosInstance}
+   */
+  protected readonly axiosClient: AxiosInstance;
+
+  /**
+   * 初始化 {@linkcode HttpAxiosClient} 的新实例。
+   * @author Wang Yucai
+   *
+   * @constructor
+   * @param {HttpAxiosClientOptions} options Axios 客户端配置选项。
+   */
+  constructor(options: HttpAxiosClientOptions) {
+    super(options);
+    this.axiosOptions = options;
+    if (String.isNullOrWhitespace(options.baseURL) && !options.url?.toLowerCase().startsWith('http')) {
+      this.axiosOptions.baseURL = JOINGO_DEFAULT_HTTP_BASEURI;
+    }
+    this.axiosClient = axios;
+  }
+
+  /**
+   * (可等待的方法) 执行 Axios HTTP 请求。
+   * @author Wang Yucai
+   *
+   * @returns {Promise<HttpResult<AxiosResponse>>}
+   */
+  async requestAsync(): Promise<HttpResult<AxiosResponse>> {
+    try {
+      const axiosResponse = await this.axiosClient(this.axiosOptions);
+      return new HttpAxiosResult(axiosResponse);
+    } catch (error) {
+      return new HttpAxiosResult((error as any)?.response);
     }
   }
 }

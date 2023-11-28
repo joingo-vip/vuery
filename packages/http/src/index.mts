@@ -3,6 +3,17 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-export { HttpAxiosResult } from './lib/http-axios.mjs';
-export { HttpResult } from './lib/http-core.mjs';
+/// <reference path="../types/index.d.ts" />
+
+export { HttpAxiosClient, HttpAxiosResult, type HttpAxiosClientOptions } from './lib/http-axios.mjs';
+export { HttpClient, HttpResult, type HttpClientOptions } from './lib/http-core.mjs';
 export { HttpStatus } from './lib/http-status.mjs';
+import { ApplicationBuilder } from '@joingo.vip/core';
+
+var JOINGO_DEFAULT_HTTP_BASEURI: string = String.empty;
+
+ApplicationBuilder.prototype.configureHttpBaseUri = function (baseUri: string): ApplicationBuilder {
+  console.debug(`[DEBUG] - <index.mts: 528bc3>: 尝试配置 HTTP 请求的基础 URI 地址。`);
+  JOINGO_DEFAULT_HTTP_BASEURI = baseUri;
+  return this;
+};

@@ -65,3 +65,26 @@ export class HttpResult {
         return this.m_error;
     }
 }
+/**
+ * 提供了执行 HTTP 请求相关的基本方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @abstract
+ * @class HttpClient
+ * @typedef {HttpClient}
+ * @template TRawResponse HTTP 响应类型。
+ */
+export class HttpClient {
+    /**
+     * 初始化 {@linkcode HttpClient} 的新实例。
+     * @author Wang Yucai
+     *
+     * @constructor
+     * @protected
+     * @param {HttpClientOptions} options HTTP 客户端配置选项。
+     */
+    constructor(options) {
+        this.options = options;
+    }
+}
