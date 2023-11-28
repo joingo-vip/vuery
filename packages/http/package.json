@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@joingo.vip/core": "workspace:^",
-    "@joingo.vip/native-x": "workspace:^"
+    "@joingo.vip/native-x": "workspace:^",
+    "axios": "^1.6.2"
   }
 }

@@ -14,6 +14,7 @@
 | `@joingo.vip/core`     | [此模块](packages/core-fx/README.md)提供了 `Vuery2` 核心类型定义、方法等。<br/>This module provides `Vuery2` core type definitions, methods, and more.                                                                                                      |
 | `@joingo.vip/security` | [此模块](packages/security/README.md)提供了基于 [crypto-js](https://www.yarnpkg.cn/package/crypto-js) 的加密、解密算法等。<br/>This module provides [crypto-js](https://www.yarnpkg.cn/package/crypto-js) based encryption, decryption algorithms, and more. |
 | `@joingo.vip/storage`  | [此模块](packages/storage/README.md)提供了面向浏览器的数据存储方法。<br/>This module provides browser-side data storage methods.                                                                                                                              |
+| `@joingo.vip/http`     | [此模块](packages/http/README.md)提供了基于 [axios](https://www.yarnpkg.cn/package/axios) 的 HTTP 服务客户端和相关工具方法等。<br/>This module provides axios based HTTP service clients, tool methods, and more.                                                 |
 
 ### 开发环境 Development Environment
 
