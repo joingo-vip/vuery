@@ -55,6 +55,9 @@ importers:
       '@joingo.vip/native-x':
         specifier: workspace:^
         version: link:../native-x
+      axios:
+        specifier: ^1.6.2
+        version: 1.6.2
     devDependencies:
       '@types/node':
         specifier: ^20.8.9
