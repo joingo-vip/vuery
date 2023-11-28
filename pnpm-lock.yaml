@@ -25,6 +25,22 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
+  packages/http:
+    dependencies:
+      '@joingo.vip/core':
+        specifier: workspace:^
+        version: link:../core-fx
+      '@joingo.vip/native-x':
+        specifier: workspace:^
+        version: link:../native-x
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.9
+        version: 20.8.9
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
   packages/native-x:
     dependencies:
       dayjs:
