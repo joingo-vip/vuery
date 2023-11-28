@@ -5,7 +5,9 @@
             "invalidArgumentException": "无效的参数。",
             "invalidArgumentException_1": "无效的参数 “{0}” 值：{1}。",
             "argumentNullException": "缺少必需的参数。",
-            "argumentNullException_1": "缺少必需的参数：“{0}”。"
+            "argumentNullException_1": "缺少必需的参数：“{0}”。",
+            "httpException_no_response": "HTTP 请求无响应。",
+            "httpException_wrong_http_status": "错误的 HTTP 状态码 #{}。"
         }
     }
 }
