@@ -6,10 +6,12 @@
 /// <reference path="../types/index.d.ts" />
 
 export {
+  AxiosChainBuilder,
   HttpAxiosClient,
   HttpAxiosClientBuilder,
   HttpAxiosResult,
   useAxiosBuilder,
+  useAxiosChain,
   type HttpAxiosClientOptions,
 } from './lib/http-axios.mjs';
 export { HttpChain, HttpChainBuilder } from './lib/http-chain.mjs';

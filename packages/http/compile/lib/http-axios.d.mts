@@ -1,5 +1,7 @@
+/// <reference types="@joingo.vip/native-x" />
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, Method } from 'axios';
 import { HttpClient, HttpClientBuilder, HttpResult, type HttpClientOptions } from './http-core.mjs';
+import { HttpChainBuilder } from './http-chain.mjs';
 /**
  * 提供了基于 {@link AxiosResponse} 相关的 HTTP 响应信息。
  * @author Wang Yucai
@@ -255,3 +257,31 @@ export declare class HttpAxiosClientBuilder extends HttpClientBuilder<AxiosRespo
  * @returns {HttpAxiosClientBuilder}
  */
 export declare function useAxiosBuilder(): HttpAxiosClientBuilder;
+/**
+ * 提供了构建 Axios HTTP 调用链相关的方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @class AxiosChainBuilder
+ * @typedef {AxiosChainBuilder}
+ * @extends {HttpChainBuilder<AxiosResponse>}
+ */
+export declare class AxiosChainBuilder extends HttpChainBuilder<AxiosResponse> {
+    /**
+     * 初始化 {@linkcode AxiosChainBuilder} 的新实例。
+     * @author Wang Yucai
+     *
+     * @constructor
+     * @param {(sys.Func<Promise<HttpAxiosResult>> | HttpAxiosClientBuilder)} executor Axios HTTP 请求执行方法。
+     */
+    constructor(executor: sys.Func<Promise<HttpAxiosResult>> | HttpAxiosClientBuilder);
+}
+/**
+ * 使用 Axios HTTP 调用链。
+ * @author Wang Yucai
+ *
+ * @export
+ * @param {(HttpAxiosClientOptions | HttpAxiosClientBuilder)} options
+ * @returns {HttpChainBuilder<AxiosResponse>}
+ */
+export declare function useAxiosChain(options: HttpAxiosClientOptions | HttpAxiosClientBuilder): HttpChainBuilder<AxiosResponse>;

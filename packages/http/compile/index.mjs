@@ -3,7 +3,7 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 /// <reference path="../types/index.d.ts" />
-export { HttpAxiosClient, HttpAxiosClientBuilder, HttpAxiosResult, useAxiosBuilder, } from './lib/http-axios.mjs';
+export { AxiosChainBuilder, HttpAxiosClient, HttpAxiosClientBuilder, HttpAxiosResult, useAxiosBuilder, useAxiosChain, } from './lib/http-axios.mjs';
 export { HttpChain, HttpChainBuilder } from './lib/http-chain.mjs';
 export { HttpClient, HttpClientBuilder, HttpResult } from './lib/http-core.mjs';
 export { HttpStatus } from './lib/http-status.mjs';
