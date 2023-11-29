@@ -123,6 +123,7 @@ export class HttpAxiosClient extends HttpClient<AxiosResponse> {
       const axiosResponse = await this.axiosClient(this.axiosOptions);
       return new HttpAxiosResult(axiosResponse);
     } catch (error) {
+      console.error(`[ERROR] - <http-axios.mts: 38eed4>: Axios HTTP 请求失败。详情参见：%o`, error);
       return new HttpAxiosResult((error as any)?.response);
     }
   }

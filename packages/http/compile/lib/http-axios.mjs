@@ -85,6 +85,7 @@ export class HttpAxiosClient extends HttpClient {
                 return new HttpAxiosResult(axiosResponse);
             }
             catch (error) {
+                console.error(`[ERROR] - <http-axios.mts: 38eed4>: Axios HTTP 请求失败。详情参见：%o`, error);
                 return new HttpAxiosResult(error === null || error === void 0 ? void 0 : error.response);
             }
         });

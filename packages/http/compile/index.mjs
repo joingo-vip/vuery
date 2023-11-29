@@ -4,6 +4,7 @@
 // *******************************************************************************************************************************************************
 /// <reference path="../types/index.d.ts" />
 export { HttpAxiosClient, HttpAxiosClientBuilder, HttpAxiosResult, useAxiosBuilder, } from './lib/http-axios.mjs';
+export { HttpChain, HttpChainBuilder } from './lib/http-chain.mjs';
 export { HttpClient, HttpClientBuilder, HttpResult } from './lib/http-core.mjs';
 export { HttpStatus } from './lib/http-status.mjs';
 import { ApplicationBuilder } from '@joingo.vip/core';
