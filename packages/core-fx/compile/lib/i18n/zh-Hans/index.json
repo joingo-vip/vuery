@@ -1,13 +1,16 @@
 {
     "resourceNamespaces": {
         "exceptions": {
-            "defaultException": "应用程序抛出了一个未处理的异常。",
-            "invalidArgumentException": "无效的参数。",
-            "invalidArgumentException_1": "无效的参数 “{0}” 值：{1}。",
             "argumentNullException": "缺少必需的参数。",
             "argumentNullException_1": "缺少必需的参数：“{0}”。",
+            "defaultException": "应用程序抛出了一个未处理的异常。",
             "httpException_no_response": "HTTP 请求无响应。",
-            "httpException_wrong_http_status": "错误的 HTTP 状态码 #{}。"
+            "httpException_wrong_http_status": "错误的 HTTP 状态码 #{0}。",
+            "invalidArgumentException": "无效的参数。",
+            "invalidArgumentException_1": "无效的参数 “{0}” 值：{1}。"
+        },
+        "words": {
+            "anonymousUser": "匿名的用户"
         }
     }
 }

@@ -1,11 +1,16 @@
 {
     "resourceNamespaces": {
         "exceptions": {
-            "defaultException": "The application threw an unhandled exception.",
-            "invalidArgumentException": "Invalid arguments.",
-            "invalidArgumentException_1": "Invalid parameter \"{0}\" value: {1}.",
             "argumentNullException": "Required parameter is missing.",
-            "argumentNullException_1": "Missing required parameter: \"{0}\"."
+            "argumentNullException_1": "Missing required parameter: \"{0}\".",
+            "defaultException": "The application threw an unhandled exception.",
+            "httpException_no_response": "The HTTP request is not responding.",
+            "httpException_wrong_http_status": "Bad HTTP status code #{0}.",
+            "invalidArgumentException": "Invalid arguments.",
+            "invalidArgumentException_1": "Invalid parameter \"{0}\" value: {1}."
         }
+    },
+    "words": {
+        "anonymousUser": "Unauthenticated"
     }
 }
