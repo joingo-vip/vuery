@@ -8,6 +8,7 @@
 import { HttpAxiosClientBuilder } from '@joingo.vip/http';
 
 export { type RyData, type RyDataTable, type RyVoid } from './lib/metadata-schemas.mjs';
+export { Ryu } from './lib/ryu.mjs';
 
 HttpAxiosClientBuilder.prototype.pagination = function (index: number = 1, rowsPerPage: number = 10): HttpAxiosClientBuilder {
   return this.withQuery({ pageNum: index ?? 1, pageIndex: rowsPerPage ?? 10 });
