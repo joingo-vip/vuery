@@ -48,6 +48,7 @@
   "dependencies": {
     "@joingo.vip/core": "workspace:^",
     "@joingo.vip/native-x": "workspace:^",
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "query-string": "^8.1.0"
   }
 }
