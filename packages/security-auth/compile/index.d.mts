@@ -1,1 +1,1 @@
-export { AnonymousIdentity, Identity } from './lib/identity.mjs';
+export { AnonymousIdentity, ClaimFields, ClaimsIdentity, Identity, type Claim, type Claims } from './lib/identity.mjs';
