@@ -20,3 +20,43 @@ export const DefaultAuthenticationStorageOptions = {
     secretKey: 'P^7HCG*GE<3G/T4B',
     secure: true,
 };
+/**
+ * 提供了身份认证相关的基本服务方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @abstract
+ * @class AuthenticationService
+ * @typedef {AuthenticationService}
+ * @template TResult 身份认证结果类型。
+ */
+export class AuthenticationService {
+    /**
+     * 初始化 {@linkcode AuthenticationService} 的新实例。
+     * @author Wang Yucai
+     *
+     * @constructor
+     * @protected
+     */
+    constructor() { }
+}
+/**
+ * 提供了用户授权相关的基本服务方法。
+ * @author Wang Yucai
+ *
+ * @export
+ * @abstract
+ * @class AuthorizationService
+ * @typedef {AuthorizationService}
+ * @template TAuthenticatedResult 身份认证结果类型。
+ */
+export class AuthorizationService {
+    /**
+     * 初始化 {@linkcode AuthorizationService} 的新实例。
+     * @author Wang Yucai
+     *
+     * @constructor
+     * @protected
+     */
+    constructor() { }
+}
