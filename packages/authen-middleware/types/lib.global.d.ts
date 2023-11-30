@@ -3,6 +3,16 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-export { DefaultAuthenticationStorageKey, DefaultAuthenticationStorageOptions } from './lib/authenticate.mjs';
-export { AnonymousIdentity, ClaimFields, ClaimsIdentity, Identity, type Claim, type Claims } from './lib/identity.mjs';
-export { AnonymousPrincipal, ClaimsPrincipal, Principal } from './lib/principal.mjs';
+import { Principal } from '@joingo.vip/security-authentication';
+
+export {};
+
+declare global {
+  /**
+   * 当前的用户身份摘要信息。
+   * @author Wang Yucai
+   *
+   * @type {Principal}
+   */
+  var currentPrincipal: Principal;
+}

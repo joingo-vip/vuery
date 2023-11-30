@@ -3,6 +3,16 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-export { DefaultAuthenticationStorageKey, DefaultAuthenticationStorageOptions } from './lib/authenticate.mjs';
-export { AnonymousIdentity, ClaimFields, ClaimsIdentity, Identity, type Claim, type Claims } from './lib/identity.mjs';
-export { AnonymousPrincipal, ClaimsPrincipal, Principal } from './lib/principal.mjs';
+import '@joingo.vip/core';
+
+declare module '@joingo.vip/core' {
+  interface ApplicationBuilder {
+    /**
+     * 启用身份认证中间件。
+     * @author Wang Yucai
+     *
+     * @returns {ApplicationBuilder}
+     */
+    useAuthentication(): ApplicationBuilder;
+  }
+}

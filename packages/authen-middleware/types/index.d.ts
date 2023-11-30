@@ -3,6 +3,5 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-export { DefaultAuthenticationStorageKey, DefaultAuthenticationStorageOptions } from './lib/authenticate.mjs';
-export { AnonymousIdentity, ClaimFields, ClaimsIdentity, Identity, type Claim, type Claims } from './lib/identity.mjs';
-export { AnonymousPrincipal, ClaimsPrincipal, Principal } from './lib/principal.mjs';
+/// <reference path="lib.global.d.ts" />
+/// <reference path="lib.core.d.ts" />
