@@ -7,6 +7,7 @@ export { AxiosChainBuilder, HttpAxiosClient, HttpAxiosClientBuilder, HttpAxiosRe
 export { HttpChain, HttpChainBuilder } from './lib/http-chain.mjs';
 export { HttpClient, HttpClientBuilder, HttpResult } from './lib/http-core.mjs';
 export { HttpStatus } from './lib/http-status.mjs';
+export { HttpUtilities } from './lib/http-utilities.mjs';
 import { ApplicationBuilder } from '@joingo.vip/core';
 var JOINGO_DEFAULT_HTTP_BASEURI = String.empty;
 ApplicationBuilder.prototype.configureHttpBaseUri = function (baseUri) {

@@ -17,6 +17,7 @@ export {
 export { HttpChain, HttpChainBuilder } from './lib/http-chain.mjs';
 export { HttpClient, HttpClientBuilder, HttpResult, type HttpClientOptions } from './lib/http-core.mjs';
 export { HttpStatus } from './lib/http-status.mjs';
+export { HttpUtilities, URLResolveResult } from './lib/http-utilities.mjs';
 
 import { ApplicationBuilder } from '@joingo.vip/core';
 
