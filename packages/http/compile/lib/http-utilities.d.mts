@@ -102,4 +102,16 @@ export declare class HttpUtilities {
      * @see {@link https://www.npmjs.com/package/query-string}
      */
     static resolveUrl(url: string | URL): Readonly<URLResolveResult>;
+    /**
+     * 创建完整的 URL 地址。
+     * @author Wang Yucai
+     *
+     * @static
+     * @param {string} url URL 字符串。
+     * @param {Record<string, any>} [query=null] 查询字符串。
+     * @param {string} [fragment=null] URL 中 # 后的字符串。
+     * @returns {string}
+     * @see {@link https://www.npmjs.com/package/query-string}
+     */
+    static createUrl(url: string, query?: Record<string, any>, fragment?: string): string;
 }
