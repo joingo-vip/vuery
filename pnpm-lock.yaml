@@ -12,6 +12,31 @@ importers:
         specifier: ^9.5.0
         version: 9.5.0
 
+  packages/authen-middleware:
+    dependencies:
+      '@joingo.vip/core':
+        specifier: workspace:^
+        version: link:../core-fx
+      '@joingo.vip/native-x':
+        specifier: workspace:^
+        version: link:../native-x
+      '@joingo.vip/security':
+        specifier: workspace:^
+        version: link:../security
+      '@joingo.vip/security-authentication':
+        specifier: workspace:^
+        version: link:../security-auth
+      '@joingo.vip/storage':
+        specifier: workspace:^
+        version: link:../storage
+    devDependencies:
+      '@types/node':
+        specifier: ^20.8.9
+        version: 20.8.9
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
   packages/core-fx:
     dependencies:
       '@joingo.vip/native-x':

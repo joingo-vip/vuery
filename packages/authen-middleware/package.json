@@ -1,0 +1,54 @@
+{
+  "name": "@joingo.vip/authentication-middleware",
+  "version": "1.0.0",
+  "description": "Beijing JoinGo Information Technology Co., Ltd.: Basic authentication middleware.",
+  "main": "compile/index.mjs",
+  "module": "compile/index.mjs",
+  "types": "compile/index.d.mts",
+  "typings": "compile/index.d.mts",
+  "type": "module",
+  "scripts": {
+    "version:prerelease": "npm version prerelease --no-git-tag-version",
+    "version:prepatch": "npm version prepatch --no-git-tag-version",
+    "version:preminor": "npm version preminor --no-git-tag-version",
+    "version:premajor": "npm version premajor --no-git-tag-version",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
+    "tsc:compile": "tsc --project ./tsconfig.json"
+  },
+  "keywords": [
+    "joingo.vip",
+    "security-library",
+    "authentication-basic",
+    "typescript",
+    "javascript",
+    "es6"
+  ],
+  "author": {
+    "email": "netowls-studio@outlook.com",
+    "name": "Wang Yucai"
+  },
+  "files": [
+    "./README.md",
+    "./types/*.d.ts",
+    "./types/**/*.d.ts",
+    "./compile/*.mjs",
+    "./compile/*.d.mts",
+    "./compile/**/*.mjs",
+    "./compile/**/*.d.mts"
+  ],
+  "license": "MIT",
+  "readme": "README.md",
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@joingo.vip/core": "workspace:^",
+    "@joingo.vip/native-x": "workspace:^",
+    "@joingo.vip/security": "workspace:^",
+    "@joingo.vip/security-authentication": "workspace:^",
+    "@joingo.vip/storage": "workspace:^"
+  }
+}
