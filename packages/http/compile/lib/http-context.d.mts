@@ -37,4 +37,12 @@ export declare class HttpContext {
      * @type {HttpContext}
      */
     static get currentContext(): HttpContext;
+    /**
+     * 重定向到指定的 {@linkcode url}。
+     * @author Wang Yucai
+     *
+     * @param {string} url 需要重定向的 URL 地址。
+     * @param {boolean} [replace=false] 是否使用 `window.location.replace` 方法替代 `window.location.assign`。
+     */
+    redirect(url: string, replace?: boolean): void;
 }
