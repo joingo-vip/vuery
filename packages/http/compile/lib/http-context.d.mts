@@ -45,4 +45,9 @@ export declare class HttpContext {
      * @param {boolean} [replace=false] 是否使用 `window.location.replace` 方法替代 `window.location.assign`。
      */
     redirect(url: string, replace?: boolean): void;
+    /**
+     * 刷新。
+     * @author Wang Yucai
+     */
+    refresh(): void;
 }

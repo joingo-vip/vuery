@@ -51,4 +51,11 @@ export class HttpContext {
             window.location.assign(url);
         }
     }
+    /**
+     * 刷新。
+     * @author Wang Yucai
+     */
+    refresh() {
+        window.location.reload();
+    }
 }
