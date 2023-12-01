@@ -1,5 +1,6 @@
 packages:
   - packages/**
+  - applications/**
   - '!**/test/**'
 link-workspace-packages: false
 prefer-workspace-packages: false

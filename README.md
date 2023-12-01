@@ -18,6 +18,7 @@
 | `@joingo.vip/http-ruoyi`                | [此模块](packages/http-ruoyi/README.md)提供了若依服务器框架 HTTP 客户端扩展、类型定义等。<br/>This module provides HTTP client extensions, type definitions, and more for the "Ruoyi" server-side framework.                                                        |
 | `@joingo.vip/security-authentication`   | [此模块](packages/security-auth/README.md)提供了身份认证相关基础功能。<br/>This module provides basic authentication functions.                                                                                                                             |
 | `@joingo.vip/authentication-middleware` | [此模块](packages/authen-middleware/README.md)提供了身份认证服务中间件扩展。<br/>This module provides extensions to authentication service middleware.                                                                                                       |
+| `@joingo.vip/webapp`                    | 基于 Vue3 和 Vite 的桌面浏览器端应用程序。<br/>An application for desktop browsers. This app is developed based on [Vue3](https://cn.vuejs.org/) and [Vite](https://cn.vitejs.dev/).<br/>项目源码 [Source Code](./applications/web-application/README.md)     |
 
 ### 开发环境 Development Environment
 
