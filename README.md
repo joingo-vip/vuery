@@ -25,3 +25,7 @@
 | ------------------------------------------- | ------------------ |
 | [Node](https://nodejs.org/) 18+             |                    |
 | [PNPM](https://www.yarnpkg.cn/package/pnpm) |                    |
+
+----
+
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/joingo-vip/vuery?logo=github&label=Commits) ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/joingo-vip/vuery?logo=github&label=Last%20Commit) ![GitHub issues](https://img.shields.io/github/issues/joingo-vip/vuery?logo=github&label=Opened%20Issues) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/joingo-vip/vuery?logo=git&label=Repo%20Size)
