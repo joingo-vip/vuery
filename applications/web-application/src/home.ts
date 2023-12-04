@@ -5,6 +5,7 @@
 
 import '@joingo.vip/native-x';
 import '@joingo.vip/core';
+import '@joingo.vip/authentication-middleware';
 import { Version } from '@joingo.vip/core';
 import ElementPlusComponentSet from 'element-plus';
 import i18next from 'i18next';
@@ -39,5 +40,6 @@ new WebApplicationBuilder(appInstance, 'body')
       .use(ElementPlusComponentSet, { size: 'default', zIndex: 3000 })
       .use(I18nextVue, { i18next });
   })
+  .useAuthentication()
   .build()
   .run();
