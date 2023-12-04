@@ -9,3 +9,4 @@ export { StopWatch, useStopWatch } from './lib/stopwatch.mjs';
 export { StringBuilder } from './lib/string-builder.mjs';
 export { Timer } from './lib/timer.mjs';
 export { SdkVersion, Version, type Patch } from './lib/version.mjs';
+import '@joingo.vip/native-x';

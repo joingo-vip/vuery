@@ -97,7 +97,6 @@ export class WebApplicationBuilder extends ApplicationBuilder {
     super();
     this.m_appInstance = app;
     this.m_mountedSelector = mountedSelector;
-    this.applicationVersion = import('../../package.json').version;
   }
 
   /** {@inheritdoc Application} */

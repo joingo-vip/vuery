@@ -3,9 +3,8 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-export {
-  SimplifiedChineseLanguagePack,
-  TraditionalChineseLanguagePack,
-  UnitiedStatesAmericaLanguagePack,
-} from './i18n/index.mjs';
-export { WebApplication, WebApplicationBuilder, type WebApplicationContext } from './vue-appbuild.mjs';
+import UnitiedStatesAmericaLanguagePack from './en-US.json';
+import SimplifiedChineseLanguagePack from './zh-Hans.json';
+import TraditionalChineseLanguagePack from './zh-Hant.json';
+
+export { SimplifiedChineseLanguagePack, TraditionalChineseLanguagePack, UnitiedStatesAmericaLanguagePack };
