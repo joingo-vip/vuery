@@ -22,8 +22,20 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"]
-    }
+    },
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": [
+      "@joingo.vip/native-x",
+      "@joingo.vip/core",
+      "@joingo.vip/storage",
+      "@joingo.vip/http",
+      "@joingo.vip/http-ruoyi",
+      "@joingo.vip/security",
+      "@joingo.vip/security-authentication",
+      "@joingo.vip/authentication-middleware"
+    ]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts", "src/**/*.mts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

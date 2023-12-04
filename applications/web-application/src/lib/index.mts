@@ -3,4 +3,4 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-var __JOINGO_APPLICATION_VERSION__: string = '';
+export { WebApplication, WebApplicationBuilder, type WebApplicationContext } from './vue-appbuild.mjs';

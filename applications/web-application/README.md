@@ -4,8 +4,6 @@
 > 
 > An application for desktop browsers. This app is developed based on [Vue3](https://cn.vuejs.org/) and [Vite](https://cn.vitejs.dev/).
 
-
-
 ## 调试和构建脚本 Debug & Build Scripts
 
 ```powershell
@@ -28,3 +26,9 @@ pnpm run build:pre-release
 ### RELEASE BUILD
 pnpm run build:release
 ```
+
+## NPM Dependencies
+
+| NPM Package    | URL                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------- |
+| `element-plus` | [https://www.npmjs.com/package/element-plus](https://www.npmjs.com/package/element-plus) |

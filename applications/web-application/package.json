@@ -27,6 +27,7 @@
     "@joingo.vip/security": "workspace:^",
     "@joingo.vip/security-authentication": "workspace:^",
     "@joingo.vip/storage": "workspace:^",
+    "element-plus": "^2.4.3",
     "i18next": "^23.6.0",
     "i18next-vue": "^3.0.0",
     "vue": "^3.3.8"
