@@ -20,6 +20,10 @@
     $fontsize-value in lib.$fontsize-map {
         --v-fontsize-#{$fontsize-name}: #{math.div($fontsize-value, lib.$fontsize-base)}rem;
     }
+
+    --scrollbar-track-color : rgba(238, 238, 238, 1.0);
+    --scrollbar-thumb-color : rgba(224, 224, 224, 1.0);
+    --scrollbar-size        : 6px;
 }
 
 html {
@@ -196,4 +200,45 @@ $boxsize-alias in lib.$boxsize-map {
             }
         }
     }
+}
+
+
+%scrollbar {
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+%scrollbar::-webkit-scrollbar-track {
+    background   : var(--scrollbar-track-color);
+    border-radius: 3px;
+}
+
+%scrollbar::-webkit-scrollbar-thumb {
+    background   : var(--scrollbar-thumb-color);
+    border-radius: 3px;
+}
+
+.use-horizontal-scrollabr {
+    @extend %scrollbar;
+    overflow-x: auto;
+}
+
+.use-horizontal-scrollabr::-webkit-scrollbar {
+    height: var(--scrollbar-size);
+}
+
+.use-vertical-scrollbar {
+    @extend %scrollbar;
+    overflow-y: auto;
+}
+
+.use-vertical-scrollbar::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+}
+
+html,
+body {
+    @extend .w-100p;
+    @extend .h-100p;
+    @extend .no-padding;
+    @extend .no-margin;
 }
