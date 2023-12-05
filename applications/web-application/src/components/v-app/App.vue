@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { type AppOverrideStyle, type ThisProps } from './props';
+import { type AppOverrideStyle, type ThisProps } from './defs';
 import { getComponentOverrideStyle } from '../common/index.mjs';
 
 /**
@@ -30,3 +30,4 @@ const $props = withDefaults(defineProps<ThisProps>(), {});
  */
 const canOverrideStyle = computed(() => getComponentOverrideStyle<AppOverrideStyle>('v-app', $props.overrideStyle));
 </script>
+./defs
