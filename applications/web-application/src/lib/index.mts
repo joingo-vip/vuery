@@ -8,4 +8,5 @@ export {
   TraditionalChineseLanguagePack,
   UnitiedStatesAmericaLanguagePack,
 } from './i18n/index.mjs';
+export { createHomeRouter } from './route.mjs';
 export { WebApplication, WebApplicationBuilder, type WebApplicationContext } from './vue-appbuild.mjs';

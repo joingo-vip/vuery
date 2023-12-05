@@ -17,6 +17,7 @@ import {
   TraditionalChineseLanguagePack,
   UnitiedStatesAmericaLanguagePack,
   WebApplicationBuilder,
+  createHomeRouter,
   type WebApplicationContext,
 } from '~/lib/index.mjs';
 import HomeApp from './Home.vue';
@@ -43,6 +44,10 @@ new WebApplicationBuilder(appInstance, 'body')
     (context as WebApplicationContext).appInstance
       .use(ElementPlusComponentSet, { size: 'default', zIndex: 3000 })
       .use(I18nextVue, { i18next });
+  })
+  .use((context) => {
+    const router = createHomeRouter();
+    (context as WebApplicationContext).appInstance.use(router);
   })
   .useAuthentication()
   .build()

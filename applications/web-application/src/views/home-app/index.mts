@@ -3,5 +3,6 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-/// <reference path="lib.vite-env.d.ts" />
-/// <reference path="lib.vue-router.d.ts" />
+import HomeView from './Default.vue';
+
+export { HomeView };
