@@ -1,0 +1,25 @@
+@use "sass:math";
+@use "../lib/index"as lib;
+
+@forward 'element-plus/theme-chalk/src/common/var.scss'with ($colors: ('white': lib.$white-color,
+        'black': lib.$black-color,
+        'primary': ('base': lib.$primary-color,
+        ),
+        'success': ('base': lib.$success-color,
+        ),
+        'warning': ('base': lib.$warning-color,
+        ),
+        'danger': ('base': lib.$danger-color,
+        ),
+        'error': ('base': lib.$error-color,
+        ),
+        'info': ('base': lib.$info-color,
+        ),
+    ),
+    $border-radius: ('base': #{math.div(lib.$border-radius-base, lib.$fontsize-base)}rem,
+        'small': #{math.div(lib.$border-radius-base, lib.$fontsize-base)}rem,
+        'round': #{math.div(20, lib.$fontsize-base)}rem,
+        'circle': percentage($number: 1),
+    ));
+
+@use "element-plus/theme-chalk/src/index.scss"as *;
