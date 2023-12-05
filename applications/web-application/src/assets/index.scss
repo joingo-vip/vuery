@@ -1,0 +1,199 @@
+@use "sass:math";
+@use "sass:map";
+@use "./lib/index"as lib;
+
+:root {
+    --v-zindex            : #{lib.$zindex-maxvalue};
+    --v-border-radius-base: #{math.div(lib.$border-radius-base, lib.$fontsize-base)}rem;
+
+    @each $color-name,
+    $color-value in lib.$color-map {
+        --v-#{$color-name}: #{$color-value};
+    }
+
+    @each $color-name,
+    $color-value in lib.$text-color-map {
+        --v-#{$color-name}-text: #{$color-value};
+    }
+
+    @each $fontsize-name,
+    $fontsize-value in lib.$fontsize-map {
+        --v-fontsize-#{$fontsize-name}: #{math.div($fontsize-value, lib.$fontsize-base)}rem;
+    }
+}
+
+html {
+    font-size: #{lib.$fontsize-base}px;
+}
+
+.text {
+    font-family: 'Microsoft Yahei', Arial, Helvetica, sans-serif;
+}
+
+.bold-text {
+    @extend .text;
+    font-weight: bold;
+}
+
+.italic-text {
+    @extend .text;
+    font-style: italic;
+}
+
+.has-underline {
+    @extend .text;
+    text-decoration: underline;
+}
+
+.has-through-line {
+    @extend .text;
+    text-decoration: line-through;
+}
+
+.upper-text {
+    @extend .text;
+    text-transform: uppercase;
+}
+
+.lower-text {
+    @extend .text;
+    text-transform: lowercase;
+}
+
+.capitalize-text {
+    @extend .text;
+    text-transform: capitalize;
+}
+
+@each $color-name in map-keys(lib.$color-map) {
+    .#{$color-name} {
+        background: {
+            color: var(--v-#{$color-name});
+        }
+    }
+}
+
+@each $color-name in map-keys(lib.$text-color-map) {
+    .#{$color-name}-text {
+        @extend .text;
+        color: var(--v-#{$color-name}-text);
+    }
+}
+
+@each $fontsize-name in map-keys($map: lib.$fontsize-map) {
+    .#{$fontsize-name}-text {
+        @extend .text;
+        font-size: var(--v-fontsize-#{$fontsize-name});
+    }
+}
+
+.use-radius {
+    border-radius: var(--v-border-radius-base);
+}
+
+@each $textalign in lib.$textalign-list {
+    .#{$textalign}-text {
+        text-align: #{$textalign};
+    }
+}
+
+@each $position in lib.$position-list {
+    .is-#{$position} {
+        position: #{$position};
+    }
+}
+
+@each $display in lib.$display-list {
+    .is-#{$display} {
+        display: #{$display};
+    }
+}
+
+@each $align-name,
+$align-value in lib.$flex-justify-map {
+    .justify-#{$align-name} {
+        @extend .is-flex;
+        justify-content: #{$align-value};
+    }
+}
+
+@each $align-name,
+$align-value in lib.$flex-alignitems-map {
+    .alignitems-#{$align-name} {
+        @extend .is-flex;
+        align-items: #{$align-value};
+    }
+}
+
+@each $direction in lib.$flex-direction-list {
+    .#{$direction}-flex {
+        @extend .is-flex;
+        flex-direction: #{$direction};
+    }
+
+    .#{$direction}-flex-reverse {
+        @extend .is-flex;
+        flex-direction: #{$direction}-reverse;
+    }
+}
+
+.wrap-flex {
+    @extend .is-flex;
+    flex-wrap: wrap;
+}
+
+.wrap-flex-reverse {
+    @extend .is-flex;
+    flex-wrap: wrap-reverse;
+}
+
+.is-flex {
+    >.grow {
+        flex-grow: 1;
+    }
+}
+
+@each $boxsize-name,
+$boxsize-alias in lib.$boxsize-map {
+    @for $index from 0 through 100 {
+        @if $index==0 {
+            .no-#{$boxsize-name} {
+                #{$boxsize-name}: 0;
+            }
+
+            @if ($boxsize-name=="padding") or ($boxsize-name=="margin") {
+
+                @each $rect-name,
+                $rect-alias in lib.$rectangle-map {
+                    .no-#{$rect-name}-#{$boxsize-name} {
+                        #{$boxsize-name}-#{$rect-name}: 0;
+                    }
+                }
+            }
+        }
+
+        @else {
+            .#{$boxsize-alias}-#{$index} {
+                #{$boxsize-name}: #{math.div($index, lib.$fontsize-base)}rem;
+            }
+
+            .#{$boxsize-alias}-#{$index}p {
+                #{$boxsize-name}: percentage($number: math.div($index, 100));
+            }
+
+            @if ($boxsize-name=="padding") or ($boxsize-name=="margin") {
+
+                @each $rect-name,
+                $rect-alias in lib.$rectangle-map {
+                    .#{$boxsize-alias}-#{$rect-alias}-#{$index} {
+                        #{$boxsize-name}-#{$rect-name}: #{math.div($index, lib.$fontsize-base)}rem;
+                    }
+
+                    .#{$boxsize-alias}-#{$rect-alias}-#{$index}p {
+                        #{$boxsize-name}-#{$rect-name}: percentage($number: math.div($index, 100));
+                    }
+                }
+            }
+        }
+    }
+}

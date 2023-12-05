@@ -1,0 +1,88 @@
+@use "sass:map";
+
+$primary-color : rgba(26, 35, 126, 1.0);
+$success-color : rgba(27, 94, 32, 1.0);
+$warning-color : rgba(255, 111, 0, 1.0);
+$danger-color  : rgba(183, 28, 28, 1.0);
+$error-color   : rgba(211, 47, 47, 1.0);
+$info-color    : rgba(158, 158, 158, 1.0);
+$white-color   : rgba(255, 255, 255, 1.0);
+$black-color   : rgba(0, 0, 0, 1.0);
+
+$color-map : ("primary": $primary-color,
+    "success": $success-color,
+    "warning": $warning-color,
+    "danger": $danger-color,
+    "error": $error-color,
+    "info": $info-color,
+    "white": $white-color,
+    "black": $black-color);
+
+$black-text-color        : $black-color;
+$white-text-color        : $white-color;
+$main-text-color         : rgba(33, 33, 33, 1.0);
+$secondary-text-color    : rgba(66, 66, 66, 1.0);
+$tertiary-text-color     : rgba(97, 97, 97, 1.0);
+$placeholder-text-color  : rgba(158, 158, 158, 1.0);
+$disabled-text-color     : rgba(189, 189, 189, 1.0);
+$scene-primary-text-color: $primary-color;
+$scene-success-text-color: $success-color;
+$scene-warning-text-color: $warning-color;
+$scene-danger-text-color : $danger-color;
+$scene-error-text-color  : $error-color;
+$scene-info-text-color   : $info-color;
+
+$text-color-map:("black": $black-text-color,
+    "white": $white-text-color,
+    "main": $main-text-color,
+    "secondary": $secondary-text-color,
+    "tertiary": $tertiary-text-color,
+    "placeholder": $placeholder-text-color,
+    "disabled": $disabled-text-color,
+    "primary": $scene-primary-text-color,
+    "success": $scene-success-text-color,
+    "warning": $scene-warning-text-color,
+    "danger": $scene-danger-text-color,
+    "error": $scene-error-text-color,
+    "info": $scene-info-text-color);
+
+$zindex-maxvalue: 3000;
+
+$fontsize-base       : 16;
+$fontsize-default    : $fontsize-base;
+$fontsize-large      : 18;
+$fontsize-larger     : 20;
+$fontsize-largest    : 22;
+$fontsize-extra-large: 24;
+$fontsize-small      : 14;
+$fontsize-smaller    : 12;
+$fontsize-smallest   : 10;
+
+$fontsize-map: ("normal": $fontsize-default,
+    "large": $fontsize-large,
+    "larger": $fontsize-larger,
+    "largest": $fontsize-largest,
+    "extra-large": $fontsize-extra-large,
+    "small": $fontsize-small,
+    "smaller": $fontsize-smaller,
+    "smallest": $fontsize-smallest);
+
+$border-radius-base: 2;
+
+$textalign-list:("left", "center", "right");
+
+$position-list:("absolute", "relative", "fixed");
+
+$display-list:("block", "inline-block", "flex", "inline");
+
+$flex-align-map: ("start": "flex-start", "end": "flex-end", "center": "center");
+
+$flex-justify-map: map-merge($map1: $flex-align-map, $map2: ("between": "space-between", "around": "space-around"));
+
+$flex-alignitems-map: map-merge($map1: $flex-align-map, $map2: ("baseline": "baseline", "stretch": "stretch"));
+
+$flex-direction-list: ("row", "column");
+
+$boxsize-map:("width": "w", "height": "h", "line-height": "lh", "margin": "mg", "padding": "pd");
+
+$rectangle-map: ("top": "tp", "right": "rt", "bottom": "bm", "left": "lt");
