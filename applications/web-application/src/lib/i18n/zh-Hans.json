@@ -1,3 +1,5 @@
 {
-  "words": {}
+  "default": {
+    "corporationName": "北京匠果信息技术有限公司"
+  }
 }

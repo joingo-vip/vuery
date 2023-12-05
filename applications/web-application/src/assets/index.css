@@ -10785,6 +10785,10 @@ body {
   width: var(--scrollbar-size);
 }
 
+.border-box, * {
+  box-sizing: border-box;
+}
+
 .v-app {
   --v-app-height: 100%;
   --v-app-width: 100%;
@@ -10792,4 +10796,11 @@ body {
   height: var(--v-app-height);
   width: var(--v-app-width);
   background-color: var(--v-app-background-color);
+}
+
+.v-statusbar {
+  --v-statusbar-width: 100%;
+  --v-statusbar-background-color: transparent;
+  width: var(--v-statusbar-width);
+  background-color: var(--v-statusbar-background-color);
 }

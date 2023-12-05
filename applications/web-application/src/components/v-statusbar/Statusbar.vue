@@ -4,23 +4,13 @@
   // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
   // *******************************************************************************************************************************************************
 -->
-<!--Index.vue: Home Default 视图-->
+<!--Statusbar.vue: 全局状态操作条组件-->
 <template>
-  <div class="h-100p w-100p default-view">
-    <v-flexbox class="h-100p w-100p" direction="column">
-      <v-flexbox-item class="w-100p pd-10 primary"></v-flexbox-item>
-      <v-flexbox-item class="w-100p no-height" :grow="1"></v-flexbox-item>
-      <v-flexbox-item class="w-100p pd-10 default-view__footer">
-        <v-statusbar></v-statusbar>
-      </v-flexbox-item>
-    </v-flexbox>
+  <div class="v-statusbar">
+    <v-flexbox justify="space-between" align-items="center"></v-flexbox>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { vFlexbox, vFlexboxItem, vStatusbar } from '~/components/index.mjs';
+import { vFlexbox, vFlexboxItem } from '../v-flexbox/index.mjs';
 </script>
-
-<style lang="scss" scoped>
-@use './style/default.scss';
-</style>

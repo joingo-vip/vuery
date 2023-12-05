@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*tips: Home 默认页容器视图样式。*/
+.default-view {
+  --default-view-footer-border-color: rgba(245, 245, 245, 1.0);
+  --default-view-footer-border-size: 0.0625rem;
+  --default-view-footer-background-color: rgba(250, 250, 250, 1.0);
+}
+.default-view .default-view__footer {
+  border-top: var(--default-view-footer-border-size) solid var(--default-view-footer-border-color);
+  background-color: var(--default-view-footer-background-color);
+}

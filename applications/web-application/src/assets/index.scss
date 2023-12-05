@@ -236,6 +236,14 @@ $boxsize-alias in lib.$boxsize-map {
     width: var(--scrollbar-size);
 }
 
+.border-box {
+    box-sizing: border-box;
+}
+
+* {
+    @extend .border-box;
+}
+
 html,
 body {
     @extend .w-100p;
@@ -246,3 +254,4 @@ body {
 
 @include components.v-app-compile;
 @include components.v-flexbox-compile;
+@include components.v-statusbar-compile;

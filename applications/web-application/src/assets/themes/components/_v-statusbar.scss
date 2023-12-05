@@ -1,0 +1,16 @@
+@use "../../lib/index"as lib;
+
+@mixin compile() {
+    .v-statusbar {
+        --v-statusbar-width           : #{percentage(1)};
+        --v-statusbar-background-color: transparent;
+
+        width           : var(--v-statusbar-width);
+        background-color: var(--v-statusbar-background-color);
+
+
+        >.v-flexbox {
+            width: var(--v-statusbar-width);
+        }
+    }
+}
