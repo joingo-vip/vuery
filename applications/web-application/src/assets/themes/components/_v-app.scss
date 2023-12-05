@@ -1,0 +1,16 @@
+@use "../../lib/index"as lib;
+
+@mixin compile() {
+    .v-app {
+        --v-app-height          : #{percentage($number: 1)};
+        --v-app-width           : #{percentage($number: 1)};
+        --v-app-background-color: var(--v-white);
+
+        @extend .no-padding;
+        @extend .no-margin;
+
+        height          : var(--v-app-height);
+        width           : var(--v-app-width);
+        background-color: var(--v-app-background-color);
+    }
+}

@@ -2,7 +2,7 @@
 // LICENSED UNDER THE MIT LICENSE. SEE LICENSE FILE IN THE PROJECT ROOT FOR FULL LICENSE INFORMATION.
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
-import ChangeCase from 'change-case';
+import * as ChangeCase from 'change-case';
 String.prototype.equals = function (s, options = 'Default') {
     if (console.debugIf((options !== null && options !== void 0 ? options : 'Default') === 'Default', `[DEBUG] - <string.mts: 4f68ed>: The value of the "StringComparerOptions" option is "Default".`)) {
         return Object.referenceEquals(this, s);
