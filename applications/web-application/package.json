@@ -30,7 +30,8 @@
     "element-plus": "^2.4.3",
     "i18next": "^23.6.0",
     "i18next-vue": "^3.0.0",
-    "vue": "^3.3.8"
+    "vue": "^3.3.8",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
