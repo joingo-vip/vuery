@@ -34,4 +34,4 @@ pnpm run build:release
 | `element-plus` | [https://www.npmjs.com/package/element-plus](https://www.npmjs.com/package/element-plus) |
 | `sass`         | [https://www.npmjs.com/package/sass](https://www.npmjs.com/package/sass)                 |
 | `i18next`      | [https://www.npmjs.com/package/i18next](https://www.npmjs.com/package/i18next)           |
-| `i18next-vue`  | [https://www.npmjs.com/package/i18next-vue]()                                            |
+| `i18next-vue`  | [https://www.npmjs.com/package/i18next-vue](https://www.npmjs.com/package/i18next-vue)   |

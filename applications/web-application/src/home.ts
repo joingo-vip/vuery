@@ -4,13 +4,14 @@
 // *******************************************************************************************************************************************************
 
 import '@joingo.vip/native-x';
-import '@joingo.vip/core';
 import '@joingo.vip/authentication-middleware';
+import '@joingo.vip/core';
 import { Version } from '@joingo.vip/core';
 import ElementPlusComponentSet from 'element-plus';
 import i18next from 'i18next';
 import I18nextVue from 'i18next-vue';
 import { App, createApp } from 'vue';
+import '~/assets/index.mjs';
 import {
   SimplifiedChineseLanguagePack,
   TraditionalChineseLanguagePack,

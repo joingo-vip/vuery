@@ -27,6 +27,59 @@
 | [Node](https://nodejs.org/) 18+             |                    |
 | [PNPM](https://www.yarnpkg.cn/package/pnpm) |                    |
 
+## 构建 Vue 应用程序 WebApplicationBuilder
+
+[@see SourceCode](applications/web-application/src/home.ts)
+
+```typescript
+// @see applications/web-application/src/home.ts
+
+
+import '@joingo.vip/native-x'; // 导入 JavaScript 原生对象扩展。必须优先与其他 "@joingo.vip/*" 模块导入。
+import '@joingo.vip/authentication-middleware'; // 导入身份认证中间件扩展。
+import '@joingo.vip/core'; // 导入核心模块扩展。
+import { Version } from '@joingo.vip/core';
+import ElementPlusComponentSet from 'element-plus'; // 导入 element-plus 组件库模块。
+import i18next from 'i18next'; // 导入 i18next 全球化模块。
+import I18nextVue from 'i18next-vue'; // 导入 i18next-vue 全球化集成模块。
+import { App, createApp } from 'vue';
+import '~/assets/index.mjs';
+import {
+  SimplifiedChineseLanguagePack,
+  TraditionalChineseLanguagePack,
+  UnitiedStatesAmericaLanguagePack,
+  WebApplicationBuilder, // Vue Web 应用程序构建器。
+  type WebApplicationContext,
+} from '~/lib/index.mjs';
+import HomeApp from './Home.vue'; // 入库应用程序 VueSFC 组件。
+
+const appInstance: App = createApp(HomeApp);
+
+new WebApplicationBuilder(appInstance, 'body')
+  .configureAppVersion(new Version(1, 0, 0)) // 配置应用程序版本号。
+  .useI18n((_options) => { // 启用 i18next 全球化中间件。
+    return {
+      'resources': {
+        'zh-Hans': SimplifiedChineseLanguagePack,
+        'zh-Hant': TraditionalChineseLanguagePack,
+        'en-US': UnitiedStatesAmericaLanguagePack,
+      },
+      'natural': 'zh-Hans',
+      'resourceNamespace': 'exceptions',
+    };
+  })
+  .use((context) => { // 启用 Element-Plus 组件库中间件。
+    (context as WebApplicationContext).appInstance
+      .use(ElementPlusComponentSet, { size: 'default', zIndex: 3000 })
+      .use(I18nextVue, { i18next });
+  })
+  .useAuthentication() // 启用身份认证中间件。
+  .build() // 构建 WebApplication 应用程序实例。
+  .run(); // 启动 Vue 应用程序。
+```
+
+
+
 ----
 
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/joingo-vip/vuery?logo=github&label=Commits) ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/joingo-vip/vuery?logo=github&label=Last%20Commit) ![GitHub issues](https://img.shields.io/github/issues/joingo-vip/vuery?logo=github&label=Opened%20Issues) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/joingo-vip/vuery?logo=git&label=Repo%20Size)
