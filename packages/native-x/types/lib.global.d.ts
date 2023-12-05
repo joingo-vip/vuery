@@ -14,10 +14,6 @@ declare global {
    */
   var __JOINGO_APPLICATION_VERSION__: string;
 
-  interface Window {
-    __JOINGO_APPLICATION_VERSION__: string;
-  }
-
   /**
    * 为 {@link Object} 类型提供的扩展方法。
    * @author Wang Yucai

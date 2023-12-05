@@ -10,10 +10,10 @@ var currentPrincipal;
 ApplicationBuilder.prototype.useAuthentication = function () {
     const sessionStorageProvider = useSessionStorage(DefaultAuthenticationStorageOptions);
     if (sessionStorageProvider.exists) {
-        currentPrincipal = new ClaimsPrincipal(new ClaimsIdentity(sessionStorageProvider.tryGet().value({})));
+        window.currentPrincipal = currentPrincipal = new ClaimsPrincipal(new ClaimsIdentity(sessionStorageProvider.tryGet().value({})));
     }
     else {
-        currentPrincipal = new AnonymousPrincipal();
+        window.currentPrincipal = currentPrincipal = new AnonymousPrincipal();
     }
     return this;
 };

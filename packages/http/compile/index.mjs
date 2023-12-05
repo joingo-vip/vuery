@@ -11,8 +11,14 @@ export { HttpStatus } from './lib/http-status.mjs';
 export { HttpUtilities } from './lib/http-utilities.mjs';
 import { ApplicationBuilder } from '@joingo.vip/core';
 var JOINGO_DEFAULT_HTTP_BASEURI = String.empty;
+if (window) {
+    window.JOINGO_DEFAULT_HTTP_BASEURI = String.empty;
+}
 ApplicationBuilder.prototype.configureHttpBaseUri = function (baseUri) {
     console.debug(`[DEBUG] - <index.mts: 528bc3>: 尝试配置 HTTP 请求的基础 URI 地址。`);
     JOINGO_DEFAULT_HTTP_BASEURI = baseUri;
+    if (window) {
+        window.JOINGO_DEFAULT_HTTP_BASEURI = baseUri;
+    }
     return this;
 };

@@ -31,8 +31,14 @@ export {
 } from './lib/hash-algorithms.mjs';
 
 var JOINGO_DEFAULT_SECUREKEY: string = 'HF1Rtchx5LtuCfos';
+if (window) {
+  window.JOINGO_DEFAULT_SECUREKEY = JOINGO_DEFAULT_SECUREKEY;
+}
 
 ApplicationBuilder.prototype.configureSecureKey = function (secureKey?: string): ApplicationBuilder {
-  if (!String.isNullOrWhitespace(secureKey)) JOINGO_DEFAULT_SECUREKEY = secureKey;
+  if (!String.isNullOrWhitespace(secureKey)) {
+    JOINGO_DEFAULT_SECUREKEY = secureKey;
+    if (window) window.JOINGO_DEFAULT_SECUREKEY = secureKey;
+  }
   return this;
 };

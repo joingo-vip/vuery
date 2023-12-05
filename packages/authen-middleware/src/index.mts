@@ -21,9 +21,11 @@ var currentPrincipal: Principal;
 ApplicationBuilder.prototype.useAuthentication = function (): ApplicationBuilder {
   const sessionStorageProvider = useSessionStorage(DefaultAuthenticationStorageOptions);
   if (sessionStorageProvider.exists) {
-    currentPrincipal = new ClaimsPrincipal(new ClaimsIdentity(sessionStorageProvider.tryGet<Claims>().value({})));
+    window.currentPrincipal = currentPrincipal = new ClaimsPrincipal(
+      new ClaimsIdentity(sessionStorageProvider.tryGet<Claims>().value({}))
+    );
   } else {
-    currentPrincipal = new AnonymousPrincipal();
+    window.currentPrincipal = currentPrincipal = new AnonymousPrincipal();
   }
   return this;
 };

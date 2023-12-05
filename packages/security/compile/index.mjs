@@ -8,8 +8,14 @@ export { AESCryptographyAlgorithm, CryptographyAlgorithm, useAesAlgorithm } from
 export { Base64Encoding, Encoding, HEXEncoding, UTF16Encoding, UTF8Encoding, useEncoding, } from './lib/encoding.mjs';
 export { HashAlgorithm, MD5Algorithm, Ripemd160Algorithm, SHA1Algorithm, SHA224Algorithm, SHA256Algorithm, SHA384Algorithm, SHA3Algorithm, SHA512Algorithm, useHashAlgorithm, } from './lib/hash-algorithms.mjs';
 var JOINGO_DEFAULT_SECUREKEY = 'HF1Rtchx5LtuCfos';
+if (window) {
+    window.JOINGO_DEFAULT_SECUREKEY = JOINGO_DEFAULT_SECUREKEY;
+}
 ApplicationBuilder.prototype.configureSecureKey = function (secureKey) {
-    if (!String.isNullOrWhitespace(secureKey))
+    if (!String.isNullOrWhitespace(secureKey)) {
         JOINGO_DEFAULT_SECUREKEY = secureKey;
+        if (window)
+            window.JOINGO_DEFAULT_SECUREKEY = secureKey;
+    }
     return this;
 };
