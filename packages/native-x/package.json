@@ -44,6 +44,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "change-case": "^5.2.0",
     "dayjs": "^1.11.10",
     "deepmerge": "^4.3.1",
     "fast-deep-equal": "^3.1.3",

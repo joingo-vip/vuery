@@ -2713,7 +2713,7 @@ body {
   line-height: 100%;
 }
 
-.no-margin, html,
+.no-margin, .v-app, html,
 body {
   margin: 0;
 }
@@ -6734,7 +6734,7 @@ body {
   margin-left: 100%;
 }
 
-.no-padding, html,
+.no-padding, .v-app, html,
 body {
   padding: 0;
 }
@@ -10783,4 +10783,13 @@ body {
 
 .use-vertical-scrollbar::-webkit-scrollbar {
   width: var(--scrollbar-size);
+}
+
+.v-app {
+  --v-app-height: 100%;
+  --v-app-width: 100%;
+  --v-app-background-color: var(--v-white);
+  height: var(--v-app-height);
+  width: var(--v-app-width);
+  background-color: var(--v-app-background-color);
 }

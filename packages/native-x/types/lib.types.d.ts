@@ -173,4 +173,26 @@ declare namespace sys {
      */
     payload: sys.Null<TPayload>;
   }
+
+  /**
+   * 定义了文本大小写选项枚举类型。
+   * @author Wang Yucai
+   *
+   * @typedef {TextCaseOptions}
+   */
+  type TextCaseOptions =
+    | 'lower'
+    | 'upper'
+    | 'camel'
+    | 'capital'
+    | 'constant'
+    | 'dot'
+    | 'kebab'
+    | 'pascal'
+    | 'pascal-snake'
+    | 'path'
+    | 'sentence'
+    | 'snake'
+    | 'train'
+    | 'none';
 }

@@ -1,6 +1,7 @@
 @use "sass:math";
 @use "sass:map";
 @use "./lib/index"as lib;
+@use "./themes/components/index"as components;
 
 :root {
     --v-zindex            : #{lib.$zindex-maxvalue};
@@ -242,3 +243,5 @@ body {
     @extend .no-padding;
     @extend .no-margin;
 }
+
+@include components.v-app-compile;

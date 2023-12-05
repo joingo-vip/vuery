@@ -214,6 +214,16 @@ declare global {
      * @see {@linkcode Object.referenceEquals}
      */
     equals(s: sys.Null<string>, options: sys.StringComparerOptions = 'Default'): boolean;
+
+    /**
+     * 将字符串转换成指定的大小写格式。
+     * @author Wang Yucai
+     *
+     * @param {sys.TextCaseOptions} [options='none'] {@linkcode sys.TextCaseOptions} 中的一个值。
+     * @returns {string}
+     * @see {@link https://www.npmjs.com/package/change-case}
+     */
+    transform(options: sys.TextCaseOptions = 'none'): string;
   }
 
   /**
