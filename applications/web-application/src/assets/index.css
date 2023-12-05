@@ -223,7 +223,7 @@ html {
   display: inline-block;
 }
 
-.is-flex, .wrap-flex-reverse, .wrap-flex, .column-flex-reverse, .column-flex, .row-flex-reverse, .row-flex, .alignitems-stretch, .alignitems-baseline, .alignitems-center, .alignitems-end, .alignitems-start, .justify-around, .justify-between, .justify-center, .justify-end, .justify-start {
+.is-flex, .v-flexbox, .wrap-flex-reverse, .wrap-flex, .column-flex-reverse, .column-flex, .row-flex-reverse, .row-flex, .alignitems-stretch, .alignitems-baseline, .alignitems-center, .alignitems-end, .alignitems-start, .justify-around, .justify-between, .justify-center, .justify-end, .justify-start {
   display: flex;
 }
 
@@ -295,7 +295,7 @@ html {
   flex-wrap: wrap-reverse;
 }
 
-.is-flex > .grow, .justify-start > .grow, .justify-end > .grow, .justify-center > .grow, .justify-between > .grow, .justify-around > .grow, .alignitems-start > .grow, .alignitems-end > .grow, .alignitems-center > .grow, .alignitems-baseline > .grow, .alignitems-stretch > .grow, .row-flex > .grow, .row-flex-reverse > .grow, .column-flex > .grow, .column-flex-reverse > .grow, .wrap-flex > .grow, .wrap-flex-reverse > .grow {
+.is-flex > .grow, .v-flexbox > .grow, .justify-start > .grow, .justify-end > .grow, .justify-center > .grow, .justify-between > .grow, .justify-around > .grow, .alignitems-start > .grow, .alignitems-end > .grow, .alignitems-center > .grow, .alignitems-baseline > .grow, .alignitems-stretch > .grow, .row-flex > .grow, .row-flex-reverse > .grow, .column-flex > .grow, .column-flex-reverse > .grow, .wrap-flex > .grow, .wrap-flex-reverse > .grow {
   flex-grow: 1;
 }
 

@@ -1,0 +1,7 @@
+@use "../../lib/index"as lib;
+
+@mixin compile() {
+    .v-flexbox {
+        @extend .is-flex;
+    }
+}
