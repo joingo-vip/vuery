@@ -6,7 +6,7 @@
 -->
 <!--Index.vue: Home Default 视图-->
 <template>
-  <div></div>
+  <div class="h-100p w-100p"></div>
 </template>
 
 <script lang="ts" setup></script>

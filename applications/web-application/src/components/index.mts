@@ -5,4 +5,4 @@
 
 export { getComponentOverrideStyle, type OverrideStyle, type StringOrNumeric } from './common/index.mjs';
 export { vApp } from './v-app/index.mjs';
-export { vFlexbox } from './v-flexbox/index.mjs';
+export { vFlexbox, vFlexboxItem } from './v-flexbox/index.mjs';

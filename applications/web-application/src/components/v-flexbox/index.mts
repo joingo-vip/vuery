@@ -4,5 +4,6 @@
 // *******************************************************************************************************************************************************
 
 import vFlexbox from './FlexBox.vue';
+import vFlexboxItem from './FlexItem.vue';
 
-export { vFlexbox };
+export { vFlexbox, vFlexboxItem };

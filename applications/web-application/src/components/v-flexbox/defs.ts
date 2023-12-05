@@ -101,3 +101,39 @@ export const DefaultPropsValue: ThisProps = {
   justify: 'flex-start',
   alignItems: 'flex-start',
 };
+
+/**
+ * 定义了内部容器属性类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {InternalItemProps}
+ */
+export type InternalItemProps = {
+  /**
+   * `flex-grow` 属性值。
+   * @author Wang Yucai
+   *
+   * @type {?number}
+   */
+  grow?: number;
+
+  /**
+   * `flex-shrink` 属性值。
+   * @author Wang Yucai
+   *
+   * @type {?number}
+   */
+  shrink?: number;
+};
+
+/**
+ * 默认的弹性盒内部容器属性值。
+ * @author Wang Yucai
+ *
+ * @type {InternalItemProps}
+ */
+export const DefaultInternalItemPropsValue: InternalItemProps = {
+  grow: 0,
+  shrink: 1,
+};
