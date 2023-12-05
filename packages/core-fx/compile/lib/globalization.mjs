@@ -15,7 +15,7 @@ var CultureInfo_1;
 import { changeLanguage } from 'i18next';
 import { sealedDecorator as sealed } from './sealed-decorator.mjs';
 let __JOINGO_NATURAL_CULTUREINFO_MAP__ = 'zh-Hans';
-let __JOINGO_CURRENT_CULTUREINFO__ = __JOINGO_NATURAL_CULTUREINFO_MAP__;
+let __JOINGO_CURRENT_CULTUREINFO__ = String.empty;
 const __JOINGO_CULTUREINFO_STORAGEKEY__ = 'joingo.vip.globalization.cultureinfo';
 /**
  * 提供了文化区域信息相关的方法。密闭的，不可以从此类型派生。
@@ -36,7 +36,7 @@ let CultureInfo = CultureInfo_1 = class CultureInfo {
      * @param {string} name 文化区域名称。
      */
     constructor(name) {
-        this.name = String.isNullOrWhitespace(name) ? __JOINGO_NATURAL_CULTUREINFO_MAP__ : name.trim();
+        this.name = Object.isNull(name) ? __JOINGO_NATURAL_CULTUREINFO_MAP__ : name.trim();
     }
     /**
      * 设置默认的文化区域。
