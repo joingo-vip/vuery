@@ -34,7 +34,8 @@
       "@joingo.vip/security",
       "@joingo.vip/security-authentication",
       "@joingo.vip/authentication-middleware"
-    ]
+    ],
+    "strictNullChecks": false
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts", "src/**/*.mts"],
   "references": [{ "path": "./tsconfig.node.json" }]
