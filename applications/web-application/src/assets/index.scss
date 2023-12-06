@@ -251,7 +251,3 @@ body {
     @extend .no-padding;
     @extend .no-margin;
 }
-
-@include components.v-app-compile;
-@include components.v-flexbox-compile;
-@include components.v-statusbar-compile;

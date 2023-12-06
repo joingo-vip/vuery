@@ -223,7 +223,7 @@ html {
   display: inline-block;
 }
 
-.is-flex, .v-flexbox, .wrap-flex-reverse, .wrap-flex, .column-flex-reverse, .column-flex, .row-flex-reverse, .row-flex, .alignitems-stretch, .alignitems-baseline, .alignitems-center, .alignitems-end, .alignitems-start, .justify-around, .justify-between, .justify-center, .justify-end, .justify-start {
+.is-flex, .wrap-flex-reverse, .wrap-flex, .column-flex-reverse, .column-flex, .row-flex-reverse, .row-flex, .alignitems-stretch, .alignitems-baseline, .alignitems-center, .alignitems-end, .alignitems-start, .justify-around, .justify-between, .justify-center, .justify-end, .justify-start {
   display: flex;
 }
 
@@ -295,7 +295,7 @@ html {
   flex-wrap: wrap-reverse;
 }
 
-.is-flex > .grow, .v-flexbox > .grow, .justify-start > .grow, .justify-end > .grow, .justify-center > .grow, .justify-between > .grow, .justify-around > .grow, .alignitems-start > .grow, .alignitems-end > .grow, .alignitems-center > .grow, .alignitems-baseline > .grow, .alignitems-stretch > .grow, .row-flex > .grow, .row-flex-reverse > .grow, .column-flex > .grow, .column-flex-reverse > .grow, .wrap-flex > .grow, .wrap-flex-reverse > .grow {
+.is-flex > .grow, .justify-start > .grow, .justify-end > .grow, .justify-center > .grow, .justify-between > .grow, .justify-around > .grow, .alignitems-start > .grow, .alignitems-end > .grow, .alignitems-center > .grow, .alignitems-baseline > .grow, .alignitems-stretch > .grow, .row-flex > .grow, .row-flex-reverse > .grow, .column-flex > .grow, .column-flex-reverse > .grow, .wrap-flex > .grow, .wrap-flex-reverse > .grow {
   flex-grow: 1;
 }
 
@@ -2713,7 +2713,7 @@ body {
   line-height: 100%;
 }
 
-.no-margin, .v-app, html,
+.no-margin, html,
 body {
   margin: 0;
 }
@@ -6734,7 +6734,7 @@ body {
   margin-left: 100%;
 }
 
-.no-padding, .v-app, html,
+.no-padding, html,
 body {
   padding: 0;
 }
@@ -10787,20 +10787,4 @@ body {
 
 .border-box, * {
   box-sizing: border-box;
-}
-
-.v-app {
-  --v-app-height: 100%;
-  --v-app-width: 100%;
-  --v-app-background-color: var(--v-white);
-  height: var(--v-app-height);
-  width: var(--v-app-width);
-  background-color: var(--v-app-background-color);
-}
-
-.v-statusbar {
-  --v-statusbar-width: 100%;
-  --v-statusbar-background-color: transparent;
-  width: var(--v-statusbar-width);
-  background-color: var(--v-statusbar-background-color);
 }

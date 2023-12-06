@@ -4,7 +4,6 @@
 // *******************************************************************************************************************************************************
 
 import { RouteRecordRaw, Router, createRouter, createWebHashHistory } from 'vue-router';
-import { HomeView } from '~/views/home-app/index.mjs';
 
 /**
  * Home 应用程序路由表。
@@ -12,13 +11,7 @@ import { HomeView } from '~/views/home-app/index.mjs';
  *
  * @type {RouteRecordRaw[]}
  */
-const HomeRouteTable: RouteRecordRaw[] = [
-  {
-    name: 'Default',
-    path: '/',
-    component: HomeView,
-  },
-];
+const HomeRouteTable: RouteRecordRaw[] = [];
 
 /**
  * 创建 Home 应用程序路由。

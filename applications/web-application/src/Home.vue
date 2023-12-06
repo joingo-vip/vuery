@@ -7,13 +7,9 @@
 
 <!--Home.vue: 组件-->
 <template>
-  <v-app>
-    <router-view />
-  </v-app>
+  <div></div>
 </template>
 
-<script lang="ts" setup>
-import { vApp } from '~/components/index.mjs';
-</script>
+<script lang="ts" setup></script>
 
 <style lang="scss" scoped></style>
