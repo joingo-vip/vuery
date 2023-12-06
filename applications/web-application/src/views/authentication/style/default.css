@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*tips: 身份认证默认视图页。*/
+.authentication-default-view {
+  --authentication-default-container-width: 25rem;
+  --authentication-default-footer-border-style: 0.0625rem dotted #9e9e9e;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.authentication-default-view .authentication-default-view__container {
+  width: var(--authentication-default-container-width);
+}
+.authentication-default-view .authentication-default-view__footer {
+  border-top: var(--authentication-default-footer-border-style);
+}

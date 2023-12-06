@@ -1,0 +1,22 @@
+@use "sass:math";
+@use "../../../assets/lib/index"as lib;
+
+/*tips: 身份认证默认视图页。*/
+.authentication-default-view {
+    --authentication-default-container-width    : #{math.div(400, lib.$fontsize-base)}rem;
+    --authentication-default-footer-border-style: #{math.div(1, lib.$fontsize-base)}rem solid #424242;
+
+
+    background: {
+        size  : percentage($number: 1) percentage($number: 1);
+        repeat: no-repeat;
+    }
+
+    #{&}__container {
+        width: var(--authentication-default-container-width);
+    }
+
+    #{&}__footer {
+        border-top: var(--authentication-default-footer-border-style);
+    }
+}

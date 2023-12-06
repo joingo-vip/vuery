@@ -4,5 +4,7 @@
 // *******************************************************************************************************************************************************
 
 import AppWidget from './v-app/App.vue';
+import FlexboxWidget from './v-flexbox/Flexbox.vue';
+import FlexboxItemWidget from './v-flexbox/FlexboxItem.vue';
 
-export { AppWidget as vApp };
+export { AppWidget as vApp, FlexboxWidget as vFlexbox, FlexboxItemWidget as vFlexboxItem };

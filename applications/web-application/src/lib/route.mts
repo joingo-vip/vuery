@@ -4,6 +4,7 @@
 // *******************************************************************************************************************************************************
 
 import { RouteRecordRaw, Router, createRouter, createWebHashHistory } from 'vue-router';
+import { AuthenticationDefaultView } from '~/views/index.mjs';
 
 /**
  * Home 应用程序路由表。
@@ -11,7 +12,24 @@ import { RouteRecordRaw, Router, createRouter, createWebHashHistory } from 'vue-
  *
  * @type {RouteRecordRaw[]}
  */
-const HomeRouteTable: RouteRecordRaw[] = [];
+const HomeRouteTable: RouteRecordRaw[] = [
+  {
+    name: 'Default',
+    path: '/',
+    component: AuthenticationDefaultView,
+    meta: {
+      allowAnonymous: true,
+    },
+  },
+  {
+    name: 'Authentication',
+    path: '/authentication',
+    component: AuthenticationDefaultView,
+    meta: {
+      allowAnonymous: true,
+    },
+  },
+];
 
 /**
  * 创建 Home 应用程序路由。

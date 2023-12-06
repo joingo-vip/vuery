@@ -3,12 +3,14 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-export { getOverridableStyles, type OverridableStyle } from './component-utils.mjs';
-export {
-  SimplifiedChineseLanguagePack,
-  TraditionalChineseLanguagePack,
-  UnitiedStatesAmericaLanguagePack,
-} from './i18n/index.mjs';
-export { createHomeRouter } from './route.mjs';
-export { getNobuildResourceUri } from './utilties.mjs';
-export { WebApplication, WebApplicationBuilder, type WebApplicationContext } from './vue-appbuild.mjs';
+/**
+ * 获取未构建资源 URL 字符串。
+ * @author Wang Yucai
+ *
+ * @export
+ * @param {string} fileName 资源文件名称。
+ * @returns {string}
+ */
+export function getNobuildResourceUri(fileName: string): string {
+  return String.format('{0}resources/no-build/{1}', import.meta.env.BASE_URL, fileName);
+}

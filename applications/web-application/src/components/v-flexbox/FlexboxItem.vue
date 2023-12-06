@@ -4,31 +4,30 @@
   // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
   // *******************************************************************************************************************************************************
 -->
-
-<!--App.vue: 应用程序根节点组件-->
+<!--FlexboxItem.vue: 弹性盒条目容器组件-->
 <template>
-  <div role="v-app" class="v-app" :style="[$inlineOverridableStyles]">
-    <!-- 组件：App.vue 应用程序根节点组件。 -->
+  <div role="v-flexbox-item" :style="[$inlineStyles]">
+    <!-- 组件：FlexboxItem.vue 弹性盒条目容器组件 -->
     <slot />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { type AppProperty } from './defs';
-import { computed } from 'vue';
-import { getOverridableStyles } from '~/lib/index.mjs';
+import { type FlexboxItemProperty, FlexboxItemDefaultPropertyValue } from './defs';
+import { computed, StyleValue } from 'vue';
 
 /**
- * 定义了组件 “App.vue” 的属性。
+ * 定义了组件 “FlexboxItem.vue” 的属性。
  */
-const $props = defineProps<AppProperty>();
+const $props = withDefaults(defineProps<FlexboxItemProperty>(), FlexboxItemDefaultPropertyValue);
 
 /**
- * 内联可覆盖私有样式。
+ * 组件内联样式。
  */
-const $inlineOverridableStyles = computed<Record<string, any>>(() => getOverridableStyles($props.overridableStyles));
+const $inlineStyles = computed<StyleValue>(() => {
+  return {
+    flexGrow: $props.scaleUp,
+    flexShrink: $props.scaleDown,
+  };
+});
 </script>
-
-<style lang="scss">
-@use './style/v-app.scss';
-</style>
