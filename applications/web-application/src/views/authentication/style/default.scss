@@ -3,7 +3,7 @@
 
 /*tips: 身份认证默认视图页。*/
 .authentication-default-view {
-    --authentication-default-container-width    : #{math.div(400, lib.$fontsize-base)}rem;
+    --authentication-default-container-width    : #{math.div(500, lib.$fontsize-base)}rem;
     --authentication-default-footer-border-style: #{math.div(1, lib.$fontsize-base)}rem solid #424242;
 
 

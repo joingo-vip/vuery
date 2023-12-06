@@ -1,5 +1,40 @@
 {
   "default": {
-    "corporationName": "北京匠果資訊技術有限公司"
+    "corporationName": "北京匠果資訊技術有限公司",
+    "symbols": {
+      "colon": "：",
+      "comma": "，",
+      "exclamation": "！",
+      "leftBracket": "（",
+      "leftQuot": "“",
+      "leftSingleQuot": "‘",
+      "period": "。",
+      "questionMark": "？",
+      "rightBracket": "）",
+      "rightQuot": "”",
+      "rightSingleQuot": "’"
+    },
+    "words": {
+      "signIn": "登錄"
+    }
+  },
+  "fields": {
+    "password": {
+      "invalidLengthError": "提示：登錄口令長度不足 {0} 位。",
+      "label": "登錄口令",
+      "placeholder": "請輸入登錄口令。",
+      "requiredError": "提示：登錄口令是必需的。"
+    },
+    "userName": {
+      "label": "帳戶名",
+      "placeholder": "請輸入登錄帳戶名。",
+      "requiredError": "提示：登錄帳戶名是必需的。"
+    },
+    "validationCode": {
+      "invalidLengthError": "提示：驗證碼長度不足 {0} 位。",
+      "label": "驗證碼",
+      "placeholder": "請輸入驗證碼。",
+      "requiredError": "提示：驗證碼是必需的。"
+    }
   }
 }

@@ -1,5 +1,40 @@
 {
   "default": {
-    "corporationName": "北京匠果信息技术有限公司"
+    "corporationName": "北京匠果信息技术有限公司",
+    "symbols": {
+      "colon": "：",
+      "comma": "，",
+      "exclamation": "！",
+      "leftBracket": "（",
+      "leftQuot": "“",
+      "leftSingleQuot": "‘",
+      "period": "。",
+      "questionMark": "？",
+      "rightBracket": "）",
+      "rightQuot": "”",
+      "rightSingleQuot": "’"
+    },
+    "words": {
+      "signIn": "登录"
+    }
+  },
+  "fields": {
+    "password": {
+      "invalidLengthError": "提示：登录口令长度不足 {0} 位。",
+      "label": "登录口令",
+      "placeholder": "请输入登录口令。",
+      "requiredError": "提示：登录口令是必需的。"
+    },
+    "userName": {
+      "label": "账户名",
+      "placeholder": "请输入登录账户名。",
+      "requiredError": "提示：登录账户名是必需的。"
+    },
+    "validationCode": {
+      "invalidLengthError": "提示：验证码长度不足 {0} 位。",
+      "label": "验证码",
+      "placeholder": "请输入验证码。",
+      "requiredError": "提示：验证码是必需的。"
+    }
   }
 }
