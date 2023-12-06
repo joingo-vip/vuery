@@ -1,0 +1,11 @@
+@use "../../../assets/lib/index"as lib;
+
+.v-app {
+    --v-app-height          : #{percentage($number: 1)};
+    --v-app-width           : #{percentage($number: 1)};
+    --v-app-background-color: #{lib.$white-color};
+
+    width           : var(--v-app-width);
+    height          : var(--v-app-height);
+    background-color: var(--v-app-background-color);
+}

@@ -12,23 +12,6 @@
  */
 export type OverridableStyle = Record<string, any>;
 
-/**
- * 定义了组件公共属性定义。
- * @author Wang Yucai
- *
- * @export
- * @typedef {ComponentProperty}
- */
-export type ComponentProperty = {
-  /**
-   * 可重写的组件私有样式定义。
-   * @author Wang Yucai
-   *
-   * @type {?OverridableStyle}
-   */
-  overridableStyle?: OverridableStyle;
-};
-
 const __OVERRIDABLE_STYLE_PREFIX__: string = '--v-';
 
 /**
