@@ -12,6 +12,33 @@
  */
 export type OverridableStyle = Record<string, any>;
 
+/**
+ * 定义了内置的颜色命名枚举类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {BuiltInColor}
+ */
+export type BuiltInColor = 'white' | 'black' | 'primary' | 'warning' | 'success' | 'danger' | 'error' | 'info';
+
+/**
+ * 定义了内置背景色命名枚举类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {BackgroundColor}
+ */
+export type BackgroundColor = BuiltInColor;
+
+/**
+ * 定义了内置的文本前景色命名枚举类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {ForegroundColor}
+ */
+export type ForegroundColor = BuiltInColor | 'main' | 'secondary' | 'tertiary' | 'placeholder' | 'disabled';
+
 const __OVERRIDABLE_STYLE_PREFIX__: string = '--v-';
 
 /**

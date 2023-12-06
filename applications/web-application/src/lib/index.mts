@@ -3,7 +3,13 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-export { getOverridableStyles, type OverridableStyle } from './component-utils.mjs';
+export {
+  getOverridableStyles,
+  type BackgroundColor,
+  type BuiltInColor,
+  type ForegroundColor,
+  type OverridableStyle,
+} from './component-utils.mjs';
 export {
   SimplifiedChineseLanguagePack,
   TraditionalChineseLanguagePack,
