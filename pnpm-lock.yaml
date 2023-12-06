@@ -38,6 +38,12 @@ importers:
       '@joingo.vip/storage':
         specifier: workspace:^
         version: link:../../packages/storage
+      '@mdi/font':
+        specifier: ^7.3.67
+        version: 7.3.67
+      animate.css:
+        specifier: ^4.1.1
+        version: 4.1.1
       element-plus:
         specifier: ^2.4.3
         version: 2.4.3(vue@3.3.9)
@@ -540,6 +546,10 @@ packages:
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
 
+  /@mdi/font@7.3.67:
+    resolution: {integrity: sha512-SWxvzRbUQRfewlIV+OF4/YF4DkeTjMWoT8Hh9yeU/5UBVdJZj9Uf4a9+cXjknSIhIaMxZ/4N1O/s7ojApOOGjg==}
+    dev: false
+
   /@rollup/rollup-android-arm-eabi@4.6.1:
     resolution: {integrity: sha512-0WQ0ouLejaUCRsL93GD4uft3rOmB8qoQMU05Kb8CmMtMBe7XUDLAltxVZI1q6byNqEtU7N1ZX1Vw5lIpgulLQA==}
     cpu: [arm]
@@ -847,6 +857,10 @@ packages:
   /add@2.0.6:
     resolution: {integrity: sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==}
     dev: true
+
+  /animate.css@4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
+    dev: false
 
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}

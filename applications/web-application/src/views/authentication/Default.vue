@@ -13,7 +13,7 @@
           <v-flexbox class="w-100p h-100p" justify="center" align-items="center">
             <div class="authentication-default-view__container">
               <div class="pd-20 center-text extra-large-text white-text upper-text">
-                {{ `@ ${$t('default:words.signIn')}` }}
+                {{ `@${$t('default:words.signIn')}` }}
               </div>
               <div>
                 <router-view />

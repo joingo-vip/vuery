@@ -2,12 +2,25 @@
 /*tips: 身份认证默认视图页。*/
 .authentication-default-view {
   --authentication-default-container-width: 25rem;
-  --authentication-default-footer-border-style: 0.0625rem dotted #9e9e9e;
+  --authentication-default-footer-border-style: 0.0625rem solid #424242;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .authentication-default-view .authentication-default-view__container {
   width: var(--authentication-default-container-width);
+}
+.authentication-default-view ::v-deep(.authentication-default-view__container) .el-input__wrapper {
+  background-color: rgba(250, 250, 250, 0.2) !important;
+  box-shadow: none !important;
+  border-bottom: var(--v-warning) 0.125rem solid;
+}
+.authentication-default-view ::v-deep(.authentication-default-view__container) .el-input__wrapper > input {
+  text-align: center;
+  color: var(--v-warning-text);
+}
+.authentication-default-view ::v-deep(.authentication-default-view__container) .el-input__wrapper.is-focus {
+  box-shadow: 0px 0px 0.125rem 0.125rem rgb(255, 111, 0) !important;
+  border-bottom: 0 none;
 }
 .authentication-default-view .authentication-default-view__footer {
   border-top: var(--authentication-default-footer-border-style);

@@ -4,7 +4,7 @@
 // *******************************************************************************************************************************************************
 
 import { RouteRecordRaw, Router, createRouter, createWebHashHistory } from 'vue-router';
-import { AuthenticationDefaultView } from '~/views/index.mjs';
+import { AuthenticationDefaultView, BasicAuthenticationPartial } from '~/views/index.mjs';
 
 /**
  * Home 应用程序路由表。
@@ -14,17 +14,30 @@ import { AuthenticationDefaultView } from '~/views/index.mjs';
  */
 const HomeRouteTable: RouteRecordRaw[] = [
   {
-    name: 'Default',
     path: '/',
-    component: AuthenticationDefaultView,
+    redirect(to) {
+      return { path: '/authentication/basic' };
+    },
     meta: {
       allowAnonymous: true,
     },
   },
   {
-    name: 'Authentication',
     path: '/authentication',
     component: AuthenticationDefaultView,
+    children: [
+      {
+        path: '',
+        redirect: '/authentication/basic',
+      },
+      {
+        path: 'basic',
+        component: BasicAuthenticationPartial,
+        meta: {
+          allowAnonymous: true,
+        },
+      },
+    ],
     meta: {
       allowAnonymous: true,
     },
