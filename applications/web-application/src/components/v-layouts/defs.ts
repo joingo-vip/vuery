@@ -3,7 +3,7 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-import { type OverridableStyle } from '~/lib/index.mjs';
+import { getNobuildResourceUri, type OverridableStyle, type Visibility } from '~/lib/index.mjs';
 
 /**
  * 定义了布局容器组件属性类型。
@@ -107,4 +107,70 @@ export type LayoutSlots = {
    * @type {LayoutSlot}
    */
   'right-side': LayoutSlot;
+};
+
+/**
+ * 定义了 `v-app-bar.vue` 组件属性。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {AppBarProperty}
+ */
+export type AppBarProperty = {
+  /**
+   * 应用图标 URI 地址。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  appIconUrl?: string;
+
+  /**
+   * 是否显示应用图标。
+   * @author Wang Yucai
+   *
+   * @type {?Visibility}
+   */
+  appIconVisibility?: Visibility;
+
+  /**
+   * 可覆盖的组件样式。
+   * @author Wang Yucai
+   *
+   * @type {?OverridableStyle}
+   */
+  overridableStyles?: OverridableStyle;
+
+  /**
+   * 应用图标是否允许单击。
+   * @author Wang Yucai
+   *
+   * @type {?boolean}
+   */
+  appIconClickable?: boolean;
+
+  /**
+   * 应用程序标题。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  title?: string;
+};
+
+/**
+ * 定义了应用条组件事件类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {AppBarEmits}
+ */
+export type AppBarEmits = {
+  /**
+   * 应用图标单击事件。
+   * @author Wang Yucai
+   *
+   * @type {[e: sys.EventArgs]}
+   */
+  'app-icon-click': [e: sys.EventArgs];
 };

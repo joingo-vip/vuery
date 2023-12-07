@@ -9,6 +9,7 @@ export {
   type BuiltInColor,
   type ForegroundColor,
   type OverridableStyle,
+  type Visibility,
 } from './component-utils.mjs';
 export {
   SimplifiedChineseLanguagePack,

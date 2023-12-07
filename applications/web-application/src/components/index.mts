@@ -9,3 +9,4 @@ export { default as vFlexboxItem } from './v-flexbox/FlexboxItem.vue';
 export { default as vLayout } from './v-layouts/Layout.vue';
 export { default as vMdi } from './v-mdi/Mdi.vue';
 export { default as vTransitionbox } from './v-transitionbox/Transitionbox.vue';
+export { default as vAppBar } from './v-layouts/AppBar.vue';

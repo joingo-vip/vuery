@@ -1,0 +1,35 @@
+@use "sass:math";
+@use "../../../assets/lib/index"as lib;
+
+$-appicon-size: 0.7;
+
+.v-layout {
+    .v-app-bar {
+        --v-app-bar-padding         : #{math.div(10, lib.$fontsize-base)}rem;
+        --v-app-bar-background-color: var(--v-primary);
+        --v-app-bar-item-height     : #{math.div(30, lib.$fontsize-base)}rem;
+        --v-app-bar-icon-width      : var(--v-app-bar-item-height);
+        --v-app-bar-title-color     : var(--v-white-text);
+        --v-app-bar-title-font-size : var(--v-fontsize-normal);
+
+
+        padding         : calc(var(--v-app-bar-padding) / 2) var(--v-app-bar-padding);
+        background-color: var(--v-app-bar-background-color);
+
+        .v-app-bar__icon {
+            width : var(--v-app-bar-icon-width);
+            height: var(--v-app-bar-item-height);
+
+            background: {
+                size    : percentage($number: $-appicon-size) percentage($number: $-appicon-size);
+                repeat  : no-repeat;
+                position: center center;
+            }
+        }
+
+        .v-app-bar__title {
+            color    : var(--v-app-bar-title-color);
+            font-size: var(--v-app-bar-title-font-size);
+        }
+    }
+}

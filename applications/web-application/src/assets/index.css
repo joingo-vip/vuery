@@ -32,7 +32,7 @@
   --v-fontsize-smallest: 0.625rem;
   --scrollbar-track-color: rgba(238, 238, 238, 1.0);
   --scrollbar-thumb-color: rgba(224, 224, 224, 1.0);
-  --scrollbar-size: 6px;
+  --scrollbar-size: 0.375rem;
 }
 
 html {
@@ -10787,4 +10787,44 @@ body {
 
 .border-box, * {
   box-sizing: border-box;
+}
+
+.in-process {
+  cursor: progress;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.wait {
+  cursor: wait;
+}
+
+.moveable {
+  cursor: move;
+}
+
+.draggble {
+  cursor: grab;
+}
+
+.is-dragging {
+  cursor: grabbing;
+}
+
+.resizable-h {
+  cursor: col-resize;
+}
+
+.resizable-v {
+  cursor: row-resize;
+}
+
+.zoom-in {
+  cursor: zoom-in;
+}
+
+.zoom-out {
+  cursor: zoom-out;
 }

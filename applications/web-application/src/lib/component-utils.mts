@@ -39,6 +39,15 @@ export type BackgroundColor = BuiltInColor;
  */
 export type ForegroundColor = BuiltInColor | 'main' | 'secondary' | 'tertiary' | 'placeholder' | 'disabled';
 
+/**
+ * 定义了是否可见枚举类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {Visibility}
+ */
+export type Visibility = 'visible' | 'hidden';
+
 const __OVERRIDABLE_STYLE_PREFIX__: string = '--v-';
 
 /**
