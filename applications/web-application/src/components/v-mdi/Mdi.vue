@@ -16,7 +16,7 @@
 import { type MdiProperty, MdiPropertyDefaultValue } from './defs';
 import { computed, useSlots } from 'vue';
 
-const $slots = useSlots();
+const $runtimeSlots = useSlots();
 
 /**
  * 定义了组件 “Mdi.vue” 的属性。
@@ -48,7 +48,7 @@ const $cssClassName = computed<string[]>(() => {
   if ($props.useSpin) {
     cssClassName.push('mdi-spin');
   }
-  if (!Object.isNull($slots['default'])) {
+  if (!Object.isNull($runtimeSlots['default'])) {
     cssClassName.push('pd-lt-10');
   }
   return cssClassName;

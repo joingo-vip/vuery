@@ -1,0 +1,45 @@
+@use "../../../assets/lib/index"as lib;
+
+.v-layout {
+    --v-layout-width           : #{percentage($number: 1)};
+    --v-layout-height          : #{percentage($number: 1)};
+    --v-layout-background-color: var(--v-white);
+
+    width           : var(--v-layout-width);
+    height          : var(--v-layout-height);
+    background-color: var(--v-layout-background-color);
+
+    .is-flex.v-layout__primary {
+        width : percentage($number: 1);
+        height: percentage($number: 1);
+
+        >div {
+            width: percentage($number: 1);
+
+            %layout-region {
+                width : percentage($number: 1);
+                height: percentage($number: 1);
+            }
+
+            >header {
+                @extend %layout-region;
+            }
+
+            >main {
+                @extend %layout-region;
+
+                aside {
+                    @extend %layout-region;
+                }
+
+                main {
+                    @extend %layout-region;
+                }
+            }
+
+            >footer {
+                @extend %layout-region;
+            }
+        }
+    }
+}

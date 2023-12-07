@@ -3,16 +3,9 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
-import AppWidget from './v-app/App.vue';
-import FlexboxWidget from './v-flexbox/Flexbox.vue';
-import FlexboxItemWidget from './v-flexbox/FlexboxItem.vue';
-import MdiWidget from './v-mdi/Mdi.vue';
-import TransitionboxWidget from './v-transitionbox/Transitionbox.vue';
-
-export {
-  AppWidget as vApp,
-  FlexboxWidget as vFlexbox,
-  FlexboxItemWidget as vFlexboxItem,
-  MdiWidget as vMdi,
-  TransitionboxWidget as vTransitionbox,
-};
+export { default as vApp } from './v-app/App.vue';
+export { default as vFlexbox } from './v-flexbox/Flexbox.vue';
+export { default as vFlexboxItem } from './v-flexbox/FlexboxItem.vue';
+export { default as vLayout } from './v-layouts/Layout.vue';
+export { default as vMdi } from './v-mdi/Mdi.vue';
+export { default as vTransitionbox } from './v-transitionbox/Transitionbox.vue';
