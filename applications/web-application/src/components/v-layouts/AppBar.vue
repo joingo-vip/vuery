@@ -26,6 +26,9 @@
           >{{ title }}</span
         >
       </v-flexbox-item>
+      <v-flexbox-item class="no-width" :scale-up="1">
+        <slot />
+      </v-flexbox-item>
     </v-flexbox>
   </div>
 </template>
