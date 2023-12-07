@@ -8,12 +8,16 @@
 <!--Home.vue: 组件-->
 <template>
   <v-app>
-    <router-view />
+    <router-view #default="{ Component }">
+      <v-transitionbox enter-class-name="flipInY" exit-class-name="flipOutY">
+        <component :is="Component" />
+      </v-transitionbox>
+    </router-view>
   </v-app>
 </template>
 
 <script lang="ts" setup>
-import { vApp } from '~/components/index.mjs';
+import { vApp, vTransitionbox } from '~/components/index.mjs';
 </script>
 
 <style lang="scss" scoped></style>
