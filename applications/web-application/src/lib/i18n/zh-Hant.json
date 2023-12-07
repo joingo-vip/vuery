@@ -13,30 +13,6 @@
       "rightBracket": "）",
       "rightQuot": "”",
       "rightSingleQuot": "’"
-    },
-    "words": {
-      "other": "其他",
-      "rememberMe": "記住登錄帳戶名",
-      "signIn": "登錄"
-    }
-  },
-  "fields": {
-    "password": {
-      "invalidLengthError": "提示：登錄口令長度不足 {0} 位。",
-      "label": "登錄口令",
-      "placeholder": "請輸入登錄口令",
-      "requiredError": "提示：登錄口令是必需的。"
-    },
-    "userName": {
-      "label": "帳戶名",
-      "placeholder": "請輸入登錄帳戶名",
-      "requiredError": "提示：登錄帳戶名是必需的。"
-    },
-    "validationCode": {
-      "invalidLengthError": "提示：驗證碼長度不足 {0} 位。",
-      "label": "驗證碼",
-      "placeholder": "請輸入驗證碼",
-      "requiredError": "提示：驗證碼是必需的。"
     }
   }
 }

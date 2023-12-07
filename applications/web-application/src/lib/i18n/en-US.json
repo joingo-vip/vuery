@@ -13,30 +13,6 @@
       "rightBracket": ")",
       "rightQuot": "\"",
       "rightSingleQuot": "'"
-    },
-    "words": {
-      "other": "Other",
-      "rememberMe": "Remember Me",
-      "signIn": "Sign In"
-    }
-  },
-  "fields": {
-    "password": {
-      "invalidLengthError": "Tip: The password must be at least {0} characters.",
-      "label": "Password",
-      "placeholder": "Please enter your password",
-      "requiredError": "Tip: The password is required."
-    },
-    "userName": {
-      "label": "User Name",
-      "placeholder": "Please enter your user-name",
-      "requiredError": "Tip: The user-name is required."
-    },
-    "validationCode": {
-      "invalidLengthError": "Tip: The validation code must be {0} characters long.",
-      "label": "Validation Code",
-      "placeholder": "Please enter a validation code",
-      "requiredError": "Tip: The validation code is required."
     }
   }
 }
