@@ -7,5 +7,12 @@ import AppWidget from './v-app/App.vue';
 import FlexboxWidget from './v-flexbox/Flexbox.vue';
 import FlexboxItemWidget from './v-flexbox/FlexboxItem.vue';
 import MdiWidget from './v-mdi/Mdi.vue';
+import TransitionboxWidget from './v-transitionbox/Transitionbox.vue';
 
-export { AppWidget as vApp, FlexboxWidget as vFlexbox, FlexboxItemWidget as vFlexboxItem, MdiWidget as vMdi };
+export {
+  AppWidget as vApp,
+  FlexboxWidget as vFlexbox,
+  FlexboxItemWidget as vFlexboxItem,
+  MdiWidget as vMdi,
+  TransitionboxWidget as vTransitionbox,
+};
