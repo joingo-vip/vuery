@@ -23,6 +23,7 @@
           </v-flexbox>
         </v-app-bar>
       </template>
+      <router-view />
       <template #footer>
         <v-status-bar></v-status-bar>
       </template>
