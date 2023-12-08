@@ -26,19 +26,23 @@
           >{{ title }}</span
         >
       </v-flexbox-item>
-      <v-flexbox-item class="no-width" :scale-up="1">
-        <slot />
+      <v-flexbox-item class="no-width" :scale-up="1" v-if="$hasDefaultSlots">
+        <div class="w-100p">
+          <slot />
+        </div>
       </v-flexbox-item>
     </v-flexbox>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, useSlots } from 'vue';
 import { getOverridableStyles } from '~/lib/index.mjs';
 import vFlexbox from '../v-flexbox/Flexbox.vue';
 import vFlexboxItem from '../v-flexbox/FlexboxItem.vue';
 import { type AppBarProperty, type AppBarEmits } from './defs';
+
+const $runtimeSlots = useSlots();
 
 /**
  * 定义了组件 “AppBar.vue” 的属性。
@@ -64,6 +68,11 @@ const $showAppIcon = computed<boolean>(() => {
     (($props.appIconVisibility ?? 'visible') === 'visible' && !String.isNullOrWhitespace($props.appIconUrl))
   );
 });
+
+/**
+ * 是否已经使用的 `default` 插槽。
+ */
+const $hasDefaultSlots = computed<boolean>(() => !Object.isNull($runtimeSlots.default));
 
 /**
  * 用于处理 “HTML” 组件的 “AppIconClick” 事件。
