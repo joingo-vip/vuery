@@ -199,3 +199,29 @@ export type AvatarButtonProperty = {
    */
   overridableStyles?: OverridableStyle;
 };
+
+/**
+ * 定义了头像按钮单击事件触发者枚举类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {AvatarButtonClickEventSource}
+ */
+export type AvatarButtonClickEventSource = 'user-profile' | 'sign-out';
+
+/**
+ * 定义了头像按钮事件类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {AvatarButtonEmits}
+ */
+export type AvatarButtonEmits = {
+  /**
+   * 内部按钮单击事件。
+   * @author Wang Yucai
+   *
+   * @type {[e: sys.GenericEventArgs<AvatarButtonClickEventSource>]}
+   */
+  'button-click': [e: sys.GenericEventArgs<AvatarButtonClickEventSource>];
+};

@@ -6,7 +6,7 @@
 -->
 <!--AvatarButton.vue: 用户头像按钮组件-->
 <template>
-  <el-popover trigger="click" :show-arrow="false" width="var(--v-avatar-button-popover-width)">
+  <el-popover trigger="click" :show-arrow="false" width="var(--v-avatar-button-popover-width)" v-model:visible="popoverVisible">
     <template #reference>
       <img :src="$url" class="v-avatar-button" :title="$t('default:userProfile')" :style="[$inlineOverridableStyles]" />
     </template>
@@ -23,15 +23,19 @@
       </div>
       <el-divider></el-divider>
       <div class="pd-10 right-text">
-        <el-button type="default" text class="upper-text">{{ $t('default:userProfile') }}</el-button>
-        <el-button type="danger" text class="upper-text">{{ $t('default:signOut') }}</el-button>
+        <el-button type="default" text class="upper-text" @click="onInnerButtonClick('user-profile')">{{
+          $t('default:userProfile')
+        }}</el-button>
+        <el-button type="danger" text class="upper-text" @click="onInnerButtonClick('sign-out')">{{
+          $t('default:signOut')
+        }}</el-button>
       </div>
     </div>
   </el-popover>
 </template>
 
 <script lang="ts" setup>
-import { AvatarButtonProperty } from './defs';
+import { AvatarButtonProperty, AvatarButtonEmits, AvatarButtonClickEventSource } from './defs';
 import { computed, ref } from 'vue';
 import { getNobuildResourceUri, getOverridableStyles } from '~/lib/index.mjs';
 
@@ -44,6 +48,11 @@ const $props = defineProps<AvatarButtonProperty>();
  * 头像 URL 地址。
  */
 const $url = computed<string>(() => (String.isNullOrWhitespace($props.url) ? getNobuildResourceUri('avatar.png') : $props.url));
+
+/**
+ * 定义了组件 “AvatarButton.vue” 的事件。
+ */
+const $emits = defineEmits<AvatarButtonEmits>();
 
 /**
  * 可覆盖的内联样式。
@@ -65,11 +74,39 @@ const emailAddress = ref<string>('');
  */
 const mobileNumber = ref<string>('');
 
+/**
+ * 是否显示菜单弹窗。
+ */
+const popoverVisible = ref<boolean>(false);
+
 // TODO: 此处为模拟代码，请酌情修改。
 console.log(
   '%cTODO: 脚本 “AvatarButton.vue” 中包含了模拟代码。<35c128>',
   'background-color: #BF360C; color: #FFEB3B; font-weight: bold; padding: 5px 10px'
 );
+
+/**
+ * 用于处理 “Element-Plus Button” 组件的 “InnerButtonClick” 事件
+ * @remarks
+ *  `AvatarButton` 组件内部按钮单击事件处理方法。
+ *
+ * @private
+ */
+function onInnerButtonClick(source: AvatarButtonClickEventSource): void {
+  /**
+   * 触发组件的 “ButtonClick” 事件。
+   *
+   * @private
+   * @see {@link $emits}
+   */
+  function $onButtonClick(): void {
+    $emits('button-click', { payload: source });
+  }
+
+  popoverVisible.value = false;
+
+  $onButtonClick();
+}
 </script>
 
 <style lang="scss">
