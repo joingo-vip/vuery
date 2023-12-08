@@ -1,6 +1,6 @@
 {
   "name": "@joingo.vip/http-ruoyi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: \"Ruoyi\" server-side framework HTTP type definitions, extensions, etc.",
   "main": "compile/index.mjs",
   "module": "compile/index.mjs",

@@ -1,6 +1,6 @@
 {
   "name": "@joingo.vip/authentication-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: Basic authentication middleware.",
   "main": "compile/index.mjs",
   "module": "compile/index.mjs",
