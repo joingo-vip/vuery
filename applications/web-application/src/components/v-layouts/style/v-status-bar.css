@@ -1,0 +1,4 @@
+.v-status-bar {
+  --v-status-bar-background-color: #fafafa;
+  background-color: var(--v-status-bar-background-color);
+}

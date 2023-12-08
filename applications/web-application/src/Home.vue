@@ -23,12 +23,15 @@
           </v-flexbox>
         </v-app-bar>
       </template>
+      <template #footer>
+        <v-status-bar></v-status-bar>
+      </template>
     </v-layout>
   </v-app>
 </template>
 
 <script lang="ts" setup>
-import { vApp, vAppBar, vAvatarButton, vFlexbox, vFlexboxItem, vLayout } from '~/components/index.mjs';
+import { vApp, vAppBar, vAvatarButton, vFlexbox, vFlexboxItem, vLayout, vStatusBar } from '~/components/index.mjs';
 import { getNobuildResourceUri } from '~/lib/index.mjs';
 
 /**
