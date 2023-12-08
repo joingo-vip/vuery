@@ -14,13 +14,9 @@
     "release:minor": "standard-version -r minor -i CHANGELOG.md",
     "release:major-dryrun": "standard-version -r major -i CHANGELOG.md --dry-run",
     "release:major": "standard-version -r major -i CHANGELOG.md",
-    "version:prerelease": "npm version prerelease --no-git-tag-version --workspaces",
-    "version:prepatch": "npm version prepatch --no-git-tag-version --workspaces",
-    "version:preminor": "npm version preminor --no-git-tag-version --workspaces",
-    "version:premajor": "npm version premajor --no-git-tag-version --workspaces",
-    "version:patch": "npm version patch --no-git-tag-version --workspaces",
-    "version:minor": "npm version minor --no-git-tag-version --workspaces",
-    "version:major": "npm version major --no-git-tag-version --workspaces",
+    "version:patch": "pnpm --filter ./packages/** run version:patch && pnpm --filter ./applications/** run version:patch",
+    "version:minor": "pnpm --filter ./packages/** run version:minor && pnpm --filter ./applications/** run version:minor",
+    "version:major": "pnpm --filter ./packages/** run version:major && pnpm --filter ./applications/** run version:major",
     "compile:pnpm": "pnpm --filter ./packages/** run tsc:compile"
   },
   "devDependencies": {
