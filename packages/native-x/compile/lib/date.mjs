@@ -3,7 +3,7 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 import $dateTime from 'dayjs';
-Date.prototype.toString = function (formatter) {
+Date.prototype.format = function (formatter) {
     if (console.debugIf(Object.isNull(formatter), `[DEBUG] - <date.mts: c28362>: 格式化参数 formatter 为 undefined 类型或 null 值，将调用默认的 toString 方法。`)) {
         return this.toString();
     }

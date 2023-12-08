@@ -307,7 +307,7 @@ declare global {
      * @param {?(string | sys.Func<string>)} [formatter] 格式化模板字符串。
      * @returns {string}
      */
-    toString(formatter?: string | sys.Func<string>): string;
+    format(formatter?: string | sys.Func<string>): string;
 
     /**
      * 计算指定日期时间与 {@linkcode target} 之间的时间跨度。

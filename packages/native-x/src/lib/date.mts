@@ -5,7 +5,7 @@
 
 import $dateTime from 'dayjs';
 
-Date.prototype.toString = function (formatter?: string | sys.Func<string>): string {
+Date.prototype.format = function (this: Date, formatter?: string | sys.Func<string>): string {
   if (
     console.debugIf(
       Object.isNull(formatter),
@@ -21,7 +21,7 @@ Date.prototype.toString = function (formatter?: string | sys.Func<string>): stri
   }
 };
 
-Date.prototype.diff = function (target: Date): Readonly<sys.TimeSpan> {
+Date.prototype.diff = function (this: Date, target: Date): Readonly<sys.TimeSpan> {
   const $source = $dateTime(this);
   const $target = $dateTime(target);
   const $seed: number = $source.isBefore($target) ? -1 : 1;
@@ -61,7 +61,7 @@ const __JOINGO_DATE_UNIT_MAP__: Record<sys.UnitOfDate, $dateTime.ManipulateType>
   'year': 'year',
 };
 
-Date.prototype.add = function (interval: number, unit: sys.UnitOfDate = 'Millisecond'): Date {
+Date.prototype.add = function (this: Date, interval: number, unit: sys.UnitOfDate = 'Millisecond'): Date {
   return $dateTime(this)
     .add(interval, __JOINGO_DATE_UNIT_MAP__[unit ?? 'Millisecond'])
     .toDate();
