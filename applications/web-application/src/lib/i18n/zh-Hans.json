@@ -2,6 +2,8 @@
   "default": {
     "applicationName": "匠果出品",
     "corporationName": "北京匠果信息技术有限公司",
+    "emailAddress": "电邮地址",
+    "mobileNumber": "移动电话",
     "symbols": {
       "colon": "：",
       "comma": "，",
@@ -14,6 +16,8 @@
       "rightBracket": "）",
       "rightQuot": "”",
       "rightSingleQuot": "’"
-    }
+    },
+    "userProfile": "用户配置",
+    "signOut": "登出"
   }
 }

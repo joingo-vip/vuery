@@ -2,6 +2,8 @@
   "default": {
     "applicationName": "Produced by Joingo.vip",
     "corporationName": "Beijing Joingo.vip Information Technology Co., Ltd",
+    "emailAddress": "E-mail",
+    "mobileNumber": "Mobile",
     "symbols": {
       "colon": ":",
       "comma": ",",
@@ -14,6 +16,8 @@
       "rightBracket": ")",
       "rightQuot": "\"",
       "rightSingleQuot": "'"
-    }
+    },
+    "userProfile": "User Profile",
+    "signOut": "Sign Out"
   }
 }

@@ -23,3 +23,12 @@
     ));
 
 @use "element-plus/theme-chalk/src/index.scss"as *;
+
+.el-popover {
+    --el-popover-padding      : #{math.div(4, lib.$fontsize-base)}rem;
+    --el-popover-border-radius: #{math.div(lib.$border-radius-base, lib.$fontsize-base)}rem;
+}
+
+.el-divider--horizontal {
+    margin: #{math.div(4, lib.$fontsize-base)}rem 0 !important;
+}

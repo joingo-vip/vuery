@@ -6,7 +6,8 @@
 export { default as vApp } from './v-app/App.vue';
 export { default as vFlexbox } from './v-flexbox/Flexbox.vue';
 export { default as vFlexboxItem } from './v-flexbox/FlexboxItem.vue';
+export { default as vAppBar } from './v-layouts/AppBar.vue';
+export { default as vAvatarButton } from './v-layouts/AvatarButton.vue';
 export { default as vLayout } from './v-layouts/Layout.vue';
 export { default as vMdi } from './v-mdi/Mdi.vue';
 export { default as vTransitionbox } from './v-transitionbox/Transitionbox.vue';
-export { default as vAppBar } from './v-layouts/AppBar.vue';

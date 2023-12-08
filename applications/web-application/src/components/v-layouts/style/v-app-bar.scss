@@ -7,7 +7,7 @@ $-appicon-size: 0.7;
     .v-app-bar {
         --v-app-bar-padding         : #{math.div(10, lib.$fontsize-base)}rem;
         --v-app-bar-background-color: var(--v-primary);
-        --v-app-bar-item-height     : #{math.div(30, lib.$fontsize-base)}rem;
+        --v-app-bar-item-height     : var(--v-appbar-item-size-base);
         --v-app-bar-icon-width      : var(--v-app-bar-item-height);
         --v-app-bar-title-color     : var(--v-white-text);
         --v-app-bar-title-font-size : var(--v-fontsize-normal);

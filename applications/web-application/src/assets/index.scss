@@ -1,11 +1,11 @@
 @use "sass:math";
 @use "sass:map";
 @use "./lib/index"as lib;
-@use "./themes/components/index"as components;
 
 :root {
-    --v-zindex            : #{lib.$zindex-maxvalue};
-    --v-border-radius-base: #{math.div(lib.$border-radius-base, lib.$fontsize-base)}rem;
+    --v-zindex               : #{lib.$zindex-maxvalue};
+    --v-border-radius-base   : #{math.div(lib.$border-radius-base, lib.$fontsize-base)}rem;
+    --v-appbar-item-size-base: #{math.div(lib.$appbar-item-size,lib.$fontsize-base)}rem;
 
     @each $color-name,
     $color-value in lib.$color-map {
@@ -22,9 +22,9 @@
         --v-fontsize-#{$fontsize-name}: #{math.div($fontsize-value, lib.$fontsize-base)}rem;
     }
 
-    --scrollbar-track-color : rgba(238, 238, 238, 1.0);
-    --scrollbar-thumb-color : rgba(224, 224, 224, 1.0);
-    --scrollbar-size        : #{math.div(6, lib.$fontsize-base)}rem;
+    --v-scrollbar-track-color : rgba(238, 238, 238, 1.0);
+    --v-scrollbar-thumb-color : rgba(224, 224, 224, 1.0);
+    --v-scrollbar-size        : #{math.div(6, lib.$fontsize-base)}rem;
 }
 
 html {
@@ -205,16 +205,16 @@ $boxsize-alias in lib.$boxsize-map {
 
 
 %scrollbar {
-    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+    scrollbar-color: var(--v-scrollbar-thumb-color) var(--v-scrollbar-track-color);
 }
 
 %scrollbar::-webkit-scrollbar-track {
-    background   : var(--scrollbar-track-color);
+    background   : var(--v-scrollbar-track-color);
     border-radius: 3px;
 }
 
 %scrollbar::-webkit-scrollbar-thumb {
-    background   : var(--scrollbar-thumb-color);
+    background   : var(--v-scrollbar-thumb-color);
     border-radius: 3px;
 }
 
@@ -224,7 +224,7 @@ $boxsize-alias in lib.$boxsize-map {
 }
 
 .use-horizontal-scrollabr::-webkit-scrollbar {
-    height: var(--scrollbar-size);
+    height: var(--v-scrollbar-size);
 }
 
 .use-vertical-scrollbar {
@@ -233,7 +233,7 @@ $boxsize-alias in lib.$boxsize-map {
 }
 
 .use-vertical-scrollbar::-webkit-scrollbar {
-    width: var(--scrollbar-size);
+    width: var(--v-scrollbar-size);
 }
 
 .border-box {
@@ -250,6 +250,8 @@ body {
     @extend .h-100p;
     @extend .no-padding;
     @extend .no-margin;
+    @extend .use-horizontal-scrollabr;
+    @extend .use-vertical-scrollbar;
 }
 
 .in-process {
@@ -290,4 +292,14 @@ body {
 
 .zoom-out {
     cursor: zoom-out;
+}
+
+a,
+a:visited,
+a:focus {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

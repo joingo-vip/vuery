@@ -15,14 +15,20 @@
           app-icon-visibility="visible"
           app-icon-clickable
           :title="$t('default:applicationName')"
-        ></v-app-bar>
+        >
+          <v-flexbox justify="flex-end" align-items="center">
+            <v-flexbox-item>
+              <v-avatar-button></v-avatar-button>
+            </v-flexbox-item>
+          </v-flexbox>
+        </v-app-bar>
       </template>
     </v-layout>
   </v-app>
 </template>
 
 <script lang="ts" setup>
-import { vApp, vAppBar, vLayout } from '~/components/index.mjs';
+import { vApp, vAppBar, vAvatarButton, vFlexbox, vFlexboxItem, vLayout } from '~/components/index.mjs';
 import { getNobuildResourceUri } from '~/lib/index.mjs';
 
 /**

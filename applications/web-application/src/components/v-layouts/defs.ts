@@ -174,3 +174,28 @@ export type AppBarEmits = {
    */
   'app-icon-click': [e: sys.EventArgs];
 };
+
+/**
+ * 定义了头像按钮属性类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {AvatarButtonProperty}
+ */
+export type AvatarButtonProperty = {
+  /**
+   * 用户头像图片 URL 地址。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  url?: string;
+
+  /**
+   * 可覆盖的自定义样式。
+   * @author Wang Yucai
+   *
+   * @type {?OverridableStyle}
+   */
+  overridableStyles?: OverridableStyle;
+};

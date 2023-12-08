@@ -1,0 +1,18 @@
+@use "sass:math";
+@use "../../../assets/lib/index"as lib;
+
+:root {
+    --v-avatar-button-popover-width: #{math.div(300, lib.$fontsize-base)}rem;
+}
+
+.v-avatar-button {
+    --v-avatar-button-image-width : var(--v-appbar-item-size-base);
+    --v-avatar-button-image-height: var(--v-appbar-item-size-base);
+
+    height       : var(--v-avatar-button-image-height);
+    width        : var(--v-avatar-button-image-width);
+    display      : block;
+    border       : 0 none;
+    cursor       : pointer;
+    border-radius: percentage($number: 1);
+}
