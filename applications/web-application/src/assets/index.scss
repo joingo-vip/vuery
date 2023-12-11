@@ -25,6 +25,8 @@
     --v-scrollbar-track-color : rgba(238, 238, 238, 1.0);
     --v-scrollbar-thumb-color : rgba(224, 224, 224, 1.0);
     --v-scrollbar-size        : #{math.div(6, lib.$fontsize-base)}rem;
+
+    --v-padding-base: #{math.div(10, lib.$fontsize-base)}rem;
 }
 
 html {

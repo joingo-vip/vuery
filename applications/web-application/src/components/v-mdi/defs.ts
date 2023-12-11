@@ -88,6 +88,14 @@ export type MdiProperty = {
    * @type {?sys.Null<MdiColor>}
    */
   color?: sys.Null<MdiColor>;
+
+  /**
+   * `@mdi/font` 图标名称。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  iconName: string;
 };
 
 /**
@@ -102,4 +110,5 @@ export const MdiPropertyDefaultValue: MdiProperty = {
   size: null,
   rotate: null,
   flipMode: null,
+  iconName: '',
 };

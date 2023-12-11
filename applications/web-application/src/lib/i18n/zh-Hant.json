@@ -4,6 +4,15 @@
     "corporationName": "北京匠果資訊技術有限公司",
     "emailAddress": "電郵位址",
     "mobileNumber": "行動電話",
+    "pin": "固定",
+    "sidemenuItems": {
+      "administrateTitle": "應用管理平臺",
+      "applicationPermissions": "授權許可權管理",
+      "applicationRoles": "授權角色管理",
+      "organization": "組織機構管理",
+      "users": "使用者管理"
+    },
+    "signOut": "登出",
     "symbols": {
       "colon": "：",
       "comma": "，",
@@ -17,7 +26,7 @@
       "rightQuot": "”",
       "rightSingleQuot": "’"
     },
-    "userProfile": "使用者配置",
-    "signOut": "登出"
+    "unpin": "取消固定",
+    "userProfile": "使用者配置"
   }
 }

@@ -11,6 +11,7 @@ export {
   type OverridableStyle,
   type Visibility,
 } from './component-utils.mjs';
+export { default as SideMenuConfiguration } from './configuration/sidemenu-configuration.json';
 export { isAdministrateMode } from './environments.mjs';
 export {
   SimplifiedChineseLanguagePack,

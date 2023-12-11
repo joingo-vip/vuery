@@ -37,3 +37,4 @@ pnpm run build:release
 | `i18next-vue`  | [https://www.npmjs.com/package/i18next-vue](https://www.npmjs.com/package/i18next-vue)   |
 | `animate.css`  | [https://www.npmjs.com/package/animate.css](https://www.npmjs.com/package/animate.css)   |
 | `@mdi/font`    | [https://www.npmjs.com/package/@mdi/font](https://www.npmjs.com/package/@mdi/font)       |
+| `pinia`        | [https://www.npmjs.com/package/pinia](https://www.npmjs.com/package/pinia)               |

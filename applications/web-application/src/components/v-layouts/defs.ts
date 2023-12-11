@@ -225,3 +225,118 @@ export type AvatarButtonEmits = {
    */
   'button-click': [e: sys.GenericEventArgs<AvatarButtonClickEventSource>];
 };
+
+/**
+ * 定义了侧边栏菜单项图标配置选项类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {SideMenuIconOptions}
+ */
+export type SideMenuIconOptions = {
+  /**
+   * 激活状态下的图标 URL 地址。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  actived?: string;
+
+  /**
+   * 未激活状态下的图标 URL 地址。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  unactived?: string;
+};
+
+/**
+ * 定义了侧边栏菜单项配置选项类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {SideMenuItemOptions}
+ */
+export type SideMenuItemOptions = {
+  /**
+   * 侧边栏菜单项唯一标识。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  id: string;
+
+  /**
+   * 侧边栏菜单项显示文本资源名称。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  resourceKeyOfText: string;
+
+  /**
+   * 单击侧边栏菜单项时跳转的路由路径。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  routePath?: string;
+
+  /**
+   * 侧边栏菜单项图标配置。
+   * @author Wang Yucai
+   *
+   * @type {?SideMenuIconOptions}
+   */
+  icons?: SideMenuIconOptions;
+
+  /**
+   * 是否启用侧边栏菜单项。
+   * @author Wang Yucai
+   *
+   * @type {?boolean}
+   */
+  enabled?: boolean;
+};
+
+/**
+ * 定义了侧边栏菜单属性类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {SideMenuProperty}
+ */
+export type SideMenuProperty = {
+  /**
+   * 默认激活的侧边栏菜单条目唯一标识。
+   * @author Wang Yucai
+   *
+   * @type {string}
+   */
+  default: string;
+
+  /**
+   * 侧边栏菜单项配置。
+   * @author Wang Yucai
+   *
+   * @type {SideMenuItemOptions[]}
+   */
+  menuItems: SideMenuItemOptions[];
+
+  /**
+   * 可覆盖的样式。
+   * @author Wang Yucai
+   *
+   * @type {?OverridableStyle}
+   */
+  overridableStyles?: OverridableStyle;
+
+  /**
+   * 菜单标题。
+   * @author Wang Yucai
+   *
+   * @type {?string}
+   */
+  title?: string;
+};

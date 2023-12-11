@@ -4,6 +4,15 @@
     "corporationName": "Beijing Joingo.vip Information Technology Co., Ltd",
     "emailAddress": "E-mail",
     "mobileNumber": "Mobile",
+    "pin": "Pin",
+    "sidemenuItems": {
+      "administrateTitle": "Administration Console",
+      "applicationPermissions": "Permission",
+      "applicationRoles": "Role",
+      "organization": "Organization",
+      "users": "Users"
+    },
+    "signOut": "Sign Out",
     "symbols": {
       "colon": ":",
       "comma": ",",
@@ -17,7 +26,7 @@
       "rightQuot": "\"",
       "rightSingleQuot": "'"
     },
-    "userProfile": "User Profile",
-    "signOut": "Sign Out"
+    "unpin": "Unpin",
+    "userProfile": "User Profile"
   }
 }

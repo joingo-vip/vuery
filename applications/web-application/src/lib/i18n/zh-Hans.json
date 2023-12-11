@@ -4,6 +4,15 @@
     "corporationName": "北京匠果信息技术有限公司",
     "emailAddress": "电邮地址",
     "mobileNumber": "移动电话",
+    "pin": "固定",
+    "sidemenuItems": {
+      "administrateTitle": "应用管理平台",
+      "applicationPermissions": "授权权限管理",
+      "applicationRoles": "授权角色管理",
+      "organization": "组织机构管理",
+      "users": "用户管理"
+    },
+    "signOut": "登出",
     "symbols": {
       "colon": "：",
       "comma": "，",
@@ -17,13 +26,7 @@
       "rightQuot": "”",
       "rightSingleQuot": "’"
     },
-    "userProfile": "用户配置",
-    "signOut": "登出",
-    "sidemenuItems": {
-      "applicationRoles": "授权角色管理",
-      "applicationPermissions": "授权权限管理",
-      "users": "用户管理",
-      "organization": "组织机构管理"
-    }
+    "unpin": "取消固定",
+    "userProfile": "用户配置"
   }
 }

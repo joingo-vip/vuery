@@ -27,7 +27,7 @@ const $props = withDefaults(defineProps<MdiProperty>(), MdiPropertyDefaultValue)
  * 组件样式表。
  */
 const $cssClassName = computed<string[]>(() => {
-  const cssClassName: string[] = [];
+  const cssClassName: string[] = [`mdi-${$props.iconName.transform('kebab')}`];
   if (!String.isNullOrWhitespace($props.color)) {
     cssClassName.push(`${$props.color.transform('kebab')}-text`);
   }
