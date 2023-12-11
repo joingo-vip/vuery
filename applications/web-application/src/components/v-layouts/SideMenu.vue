@@ -17,7 +17,12 @@
             </v-flexbox-item>
             <v-flexbox-item>
               <div class="pd-lt-20">
-                <v-mdi icon-name="" :rotate="45" class="clickable" />
+                <v-mdi
+                  :icon-name="sideMenuCollapsed ? 'PinOffOutline' : 'PinOutline'"
+                  :rotate="45"
+                  class="clickable"
+                  :title="$t(`default:${sideMenuCollapsed ? 'unpin' : 'pin'}`)"
+                />
               </div>
             </v-flexbox-item>
           </v-flexbox>
@@ -33,6 +38,11 @@ import vFlexbox from '../v-flexbox/Flexbox.vue';
 import vFlexboxItem from '../v-flexbox/FlexboxItem.vue';
 import vMdi from '../v-mdi/Mdi.vue';
 import { computed } from 'vue';
+import { useUIStore } from '~/lib/index.mjs';
+import { storeToRefs } from 'pinia';
+
+const uiStore = useUIStore();
+const { sideMenuCollapsed } = storeToRefs(uiStore);
 
 /**
  * 定义了组件 “SideMenu.vue” 的属性。
