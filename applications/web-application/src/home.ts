@@ -10,6 +10,8 @@ import { CultureInfo, DefaultCultureInfoGetProvider, Version } from '@joingo.vip
 import ElementPlusComponentSet from 'element-plus';
 import i18next from 'i18next';
 import I18nextVue from 'i18next-vue';
+import { createPinia } from 'pinia';
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import { App, createApp } from 'vue';
 import '~/assets/index.mjs';
 import {
@@ -48,6 +50,11 @@ new WebApplicationBuilder(appInstance, 'body')
   .use((context) => {
     const router = createHomeRouter();
     (context as WebApplicationContext).appInstance.use(router);
+  })
+  .use((context) => {
+    const piniaStore = createPinia();
+    piniaStore.use(piniaPluginPersistedstate);
+    (context as WebApplicationContext).appInstance.use(piniaStore);
   })
   .useAuthentication()
   .build()

@@ -29,12 +29,13 @@ pnpm run build:release
 
 ## NPM Dependencies
 
-| NPM Package    | URL                                                                                      |
-| -------------- | ---------------------------------------------------------------------------------------- |
-| `element-plus` | [https://www.npmjs.com/package/element-plus](https://www.npmjs.com/package/element-plus) |
-| `sass`         | [https://www.npmjs.com/package/sass](https://www.npmjs.com/package/sass)                 |
-| `i18next`      | [https://www.npmjs.com/package/i18next](https://www.npmjs.com/package/i18next)           |
-| `i18next-vue`  | [https://www.npmjs.com/package/i18next-vue](https://www.npmjs.com/package/i18next-vue)   |
-| `animate.css`  | [https://www.npmjs.com/package/animate.css](https://www.npmjs.com/package/animate.css)   |
-| `@mdi/font`    | [https://www.npmjs.com/package/@mdi/font](https://www.npmjs.com/package/@mdi/font)       |
-| `pinia`        | [https://www.npmjs.com/package/pinia](https://www.npmjs.com/package/pinia)               |
+| NPM Package                   | URL                                                                                                                    |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `element-plus`                | [https://www.npmjs.com/package/element-plus](https://www.npmjs.com/package/element-plus)                               |
+| `sass`                        | [https://www.npmjs.com/package/sass](https://www.npmjs.com/package/sass)                                               |
+| `i18next`                     | [https://www.npmjs.com/package/i18next](https://www.npmjs.com/package/i18next)                                         |
+| `i18next-vue`                 | [https://www.npmjs.com/package/i18next-vue](https://www.npmjs.com/package/i18next-vue)                                 |
+| `animate.css`                 | [https://www.npmjs.com/package/animate.css](https://www.npmjs.com/package/animate.css)                                 |
+| `@mdi/font`                   | [https://www.npmjs.com/package/@mdi/font](https://www.npmjs.com/package/@mdi/font)                                     |
+| `pinia`                       | [https://www.npmjs.com/package/pinia](https://www.npmjs.com/package/pinia)                                             |
+| `pinia-plugin-persistedstate` | [https://www.npmjs.com/package/pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate) |
