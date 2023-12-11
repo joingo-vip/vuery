@@ -11,6 +11,17 @@ interface ImportMetaEnv {
    * @type {string}
    */
   readonly RUNTIME_DEFAULT_CULTUREINFO: string;
+
+  /**
+   * 应用程序角色。
+   * @author Wang Yucai
+   * @remarks
+   *  获取一个字符串，用于表示应用程序角色。
+   *
+   * @readonly
+   * @type {string}
+   */
+  readonly VITE_APPLICATION_ROLE: string;
 }
 
 interface ImportMeta {

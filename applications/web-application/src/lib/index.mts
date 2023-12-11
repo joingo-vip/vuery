@@ -11,6 +11,7 @@ export {
   type OverridableStyle,
   type Visibility,
 } from './component-utils.mjs';
+export { isAdministrateMode } from './environments.mjs';
 export {
   SimplifiedChineseLanguagePack,
   TraditionalChineseLanguagePack,
