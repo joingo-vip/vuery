@@ -18,6 +18,12 @@
       "rightSingleQuot": "’"
     },
     "userProfile": "用户配置",
-    "signOut": "登出"
+    "signOut": "登出",
+    "sidemenuItems": {
+      "applicationRoles": "授权角色管理",
+      "applicationPermissions": "授权权限管理",
+      "users": "用户管理",
+      "organization": "组织机构管理"
+    }
   }
 }

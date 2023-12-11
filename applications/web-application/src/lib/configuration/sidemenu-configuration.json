@@ -1,0 +1,47 @@
+{
+  "administrate": {
+    "default": "4BC547D7-0BFD-4260-B6A3-274591E5CCB5",
+    "menuItems": [
+      {
+        "id": "C3B469C3-6B14-4C7E-8BC5-7F1A4D575590",
+        "resourceKeyOfText": "default:sidemenuItems.applicationRoles",
+        "routePath": "/roles",
+        "icons": {
+          "actived": "resources/no-build/role-actived.png",
+          "unactived": "resources/no-build/role-unactived.png"
+        },
+        "enabled": true
+      },
+      {
+        "id": "0C9AFBFB-F6AD-4DAC-806E-EB438810E8D9",
+        "resourceKeyOfText": "default:sidemenuItems.applicationPermissions",
+        "routePath": "/permissions",
+        "icons": {
+          "actived": "resources/no-build/permission-actived.png",
+          "unactived": "resources/no-build/permission-unactived.png"
+        },
+        "enabled": true
+      },
+      {
+        "id": "4BC547D7-0BFD-4260-B6A3-274591E5CCB5",
+        "resourceKeyOfText": "default:sidemenuItems.users",
+        "routePath": "/users",
+        "icons": {
+          "actived": "resources/no-build/users-actived.png",
+          "unactived": "resources/no-build/users-unactived.png"
+        },
+        "enabled": true
+      },
+      {
+        "id": "21C7D5F1-995F-4545-9DFC-F8E59785526E",
+        "resourceKeyOfText": "default:sidemenuItems.organization",
+        "routePath": "/organizations",
+        "icons": {
+          "actived": "resources/no-build/organization-actived.png",
+          "unactived": "resources/no-build/organization-unactived.png"
+        },
+        "enabled": true
+      }
+    ]
+  }
+}

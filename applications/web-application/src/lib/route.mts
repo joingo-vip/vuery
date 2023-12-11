@@ -11,7 +11,16 @@ import { RouteRecordRaw, Router, createRouter, createWebHashHistory } from 'vue-
  *
  * @type {RouteRecordRaw[]}
  */
-const HomeRouteTable: RouteRecordRaw[] = [];
+const HomeRouteTable: RouteRecordRaw[] = [
+  {
+    name: 'Default',
+    path: '/',
+    component: () => import('~/views/layouts/RootSection.vue'),
+    meta: {
+      allowAnonymous: false,
+    },
+  },
+];
 
 /**
  * 创建 Home 应用程序路由。
