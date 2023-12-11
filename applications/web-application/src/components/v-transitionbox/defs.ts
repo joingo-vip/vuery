@@ -16,17 +16,17 @@ export type TransitionboxProperty = {
    * 进入时的 CSS 样式名称。
    * @author Wang Yucai
    *
-   * @type {string}
+   * @type {?string}
    */
-  enterClassName: string;
+  enterClassName?: string;
 
   /**
    * 退场时的 CSS 样式名称。
    * @author Wang Yucai
    *
-   * @type {string}
+   * @type {?string}
    */
-  exitClassName: string;
+  exitClassName?: string;
 };
 
 /**

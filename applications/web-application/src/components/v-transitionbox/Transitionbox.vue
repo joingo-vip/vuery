@@ -24,15 +24,15 @@ const $props = withDefaults(defineProps<TransitionboxProperty>(), TransitionboxP
 /**
  * 入场时的转场动画样式。
  */
-const $enterClassName = computed<string[]>(() => {
-  return ['animate__animated', `animate__${$props.enterClassName}`];
+const $enterClassName = computed<string>(() => {
+  return `animate__animated animate__${$props.enterClassName}`;
 });
 
 /**
  * 退场时的转场动画样式。
  */
-const $exitClassName = computed<string[]>(() => {
-  return ['animate__animated', `animate__${$props.exitClassName}`];
+const $exitClassName = computed<string>(() => {
+  return `animate__animated animate__${$props.exitClassName}`;
 });
 </script>
 
