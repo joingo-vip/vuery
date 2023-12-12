@@ -1,0 +1,35 @@
+@use "sass:math";
+@use "../../../assets/lib/index"as lib;
+
+.v-databox {
+    --v-databox-size                       : #{percentage(1)};
+    --v-databox-item-padding               : calc(var(--v-padding-base) / 2);
+    --v-databox-search-box-background-color: rgba(250, 250, 250, 1.0);
+
+    width : var(--v-databox-size);
+    height: var(--v-databox-size);
+
+    >div {
+        padding: {
+            top   : var(--v-databox-item-padding);
+            bottom: var(--v-databox-item-padding);
+        }
+    }
+
+    >div:first-child {
+        padding-top: calc(var(--v-databox-item-padding) * 2) !important;
+    }
+
+    >div:last-child {
+        padding-bottom: calc(var(--v-databox-item-padding) * 2) !important;
+    }
+
+    &__search-area {
+        background-color: var(--v-databox-search-box-background-color);
+
+        padding: {
+            left : var(--v-padding-base);
+            right: var(--v-padding-base);
+        }
+    }
+}
