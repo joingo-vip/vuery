@@ -39,3 +39,4 @@ pnpm run build:release
 | `@mdi/font`                   | [https://www.npmjs.com/package/@mdi/font](https://www.npmjs.com/package/@mdi/font)                                     |
 | `pinia`                       | [https://www.npmjs.com/package/pinia](https://www.npmjs.com/package/pinia)                                             |
 | `pinia-plugin-persistedstate` | [https://www.npmjs.com/package/pinia-plugin-persistedstate](https://www.npmjs.com/package/pinia-plugin-persistedstate) |
+| `v-resize-observer`           | [https://www.yarnpkg.cn/package/v-resize-observer](https://www.yarnpkg.cn/package/v-resize-observer)                   |
