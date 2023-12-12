@@ -7,11 +7,13 @@
 
 <!--Summary.vue: 摘要视图-->
 <template>
-  <v-main></v-main>
+  <v-main>
+    <v-action-area :title="$t('default:summary')"></v-action-area>
+  </v-main>
 </template>
 
 <script lang="ts" setup>
-import { vMain } from '~/components/index.mjs';
+import { vActionArea, vMain } from '~/components/index.mjs';
 </script>
 
 <style lang="scss" scoped></style>

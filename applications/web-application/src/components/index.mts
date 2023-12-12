@@ -3,6 +3,7 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
+export { default as vActionArea } from './v-action-area/ActionArea.vue';
 export { default as vApp } from './v-app/App.vue';
 export { default as vFlexbox } from './v-flexbox/Flexbox.vue';
 export { default as vFlexboxItem } from './v-flexbox/FlexboxItem.vue';

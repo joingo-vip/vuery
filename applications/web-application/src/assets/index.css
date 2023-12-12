@@ -33,7 +33,7 @@
   --v-fontsize-smallest: 0.625rem;
   --v-scrollbar-track-color: rgba(238, 238, 238, 1.0);
   --v-scrollbar-thumb-color: rgba(224, 224, 224, 1.0);
-  --v-scrollbar-size: 0.375rem;
+  --v-scrollbar-size: 0.1875rem;
   --v-padding-base: 0.625rem;
 }
 
