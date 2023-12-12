@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "../../../assets/lib/index"as lib;
+
+.v-processbox {
+    --v-processbox-size                    : #{percentage($number: 1)};
+    --v-processbox-prompt-zindex           : calc(var(--v-zindex) + 1);
+    --v-processbox-prompt-background-color : rgba(250, 250, 250, 1.0);
+    --v-processbox-spinner-background-color: rgba(250, 250, 250, 1.0);
+    --v-processbox-spinner-border-color    : var(--v-primary);
+
+    width   : var(--v-processbox-size);
+    height  : var(--v-processbox-size);
+    position: relative;
+
+    &__prompt {
+        z-index         : var(--v-processbox-prompt-zindex);
+        position        : absolute;
+        left            : 0;
+        top             : 0;
+        width           : var(--v-processbox-size);
+        height          : var(--v-processbox-size);
+        background-color: var(--v-processbox-prompt-background-color);
+        opacity         : 0.95;
+
+
+        div[role="spinner"] {
+            border-radius   : var(--v-border-radius-base);
+            background-color: var(--v-processbox-spinner-background-color);
+            padding         : var(--v-padding-base);
+            box-shadow      : 0px 0px #{math.div(6, lib.$fontsize-base)}rem #{math.div(2, lib.$fontsize-base)}rem var(--v-processbox-spinner-border-color);
+        }
+    }
+}

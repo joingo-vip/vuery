@@ -25,6 +25,11 @@ const HomeRouteTable: RouteRecordRaw[] = [
         path: '',
         component: () => import('~/views/summary/Summary.vue'),
       },
+      {
+        name: 'Default:Roles',
+        path: 'roles',
+        component: () => import('~/views/administration/roles/Roles.vue'),
+      },
     ],
   },
 ];

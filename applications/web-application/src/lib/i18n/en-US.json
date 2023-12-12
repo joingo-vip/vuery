@@ -3,6 +3,7 @@
     "applicationName": "Produced by Joingo.vip",
     "corporationName": "Beijing Joingo.vip Information Technology Co., Ltd",
     "emailAddress": "E-mail",
+    "loadingPrompt": "Loading data, please wait a few minutes...",
     "mobileNumber": "Mobile",
     "pin": "Pin",
     "sidemenuItems": {
@@ -27,6 +28,7 @@
       "rightQuot": "\"",
       "rightSingleQuot": "'"
     },
+    "tip": "Tip",
     "unpin": "Unpin",
     "userProfile": "User Profile"
   }
