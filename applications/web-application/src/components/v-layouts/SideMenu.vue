@@ -123,6 +123,7 @@ function onMenuItemClick(item: SideMenuItemOptions): void {
   }
 
   if (item.enabled ?? true) {
+    activedItemId.value = item.id;
     if (!String.isNullOrWhitespace(item.routePath)) {
       $routeContext.router.push({ path: item.routePath, query: { 'route-id': item.id } });
     }
