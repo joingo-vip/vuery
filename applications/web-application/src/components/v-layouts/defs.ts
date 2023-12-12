@@ -357,3 +357,20 @@ export type SideMenuEmits = {
    */
   'item-click': [e: sys.GenericEventArgs<SideMenuItemOptions>];
 };
+
+/**
+ * 定义了 `v-main.vue` 组件属性类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {MainProperty}
+ */
+export type MainProperty = {
+  /**
+   * 可覆盖的组件样式。
+   * @author Wang Yucai
+   *
+   * @type {?OverridableStyle}
+   */
+  overridableStyles?: OverridableStyle;
+};

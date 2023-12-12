@@ -59,6 +59,9 @@ importers:
       pinia-plugin-persistedstate:
         specifier: ^3.2.0
         version: 3.2.0(pinia@2.1.7)
+      v-resize-observer:
+        specifier: ^2.1.0
+        version: 2.1.0(vue@3.3.9)
       vue:
         specifier: ^3.3.8
         version: 3.3.9(typescript@5.2.2)
@@ -2159,6 +2162,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /resize-observer-polyfill@1.5.1:
+    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
+    dev: false
+
   /resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
@@ -2431,6 +2438,20 @@ packages:
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
+
+  /v-resize-observer@2.1.0(vue@3.3.9):
+    resolution: {integrity: sha512-QyTdSFAAtsP1/2ISR2hsz8PeEyxhaACqJXIzs5INlHXtu/pkMqyva8tHPWA54YejUyhxmU1bPriDBnW2cqbBcA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.7.0
+      vue: ^2.5.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      resize-observer-polyfill: 1.5.1
+      vue: 3.3.9(typescript@5.2.2)
+      vue-demi: 0.14.6(vue@3.3.9)
+    dev: false
 
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}

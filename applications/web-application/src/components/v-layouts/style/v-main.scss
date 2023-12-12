@@ -1,0 +1,15 @@
+@use "sass:math";
+@use "../../../assets/lib/index"as lib;
+
+.v-main {
+    --v-main-size   : #{percentage(1)};
+    --v-main-padding: var(--v-padding-base);
+
+    width : var(--v-main-size);
+    height: var(--v-main-size);
+
+    padding: {
+        left : var(--v-main-padding);
+        right: var(--v-main-padding);
+    }
+}

@@ -19,6 +19,13 @@ const HomeRouteTable: RouteRecordRaw[] = [
     meta: {
       allowAnonymous: false,
     },
+    children: [
+      {
+        name: 'Default:Summary',
+        path: '',
+        component: () => import('~/views/summary/Summary.vue'),
+      },
+    ],
   },
 ];
 
