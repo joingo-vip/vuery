@@ -340,3 +340,20 @@ export type SideMenuProperty = {
    */
   title?: string;
 };
+
+/**
+ * 定义了侧边栏菜单事件类型。
+ * @author Wang Yucai
+ *
+ * @export
+ * @typedef {SideMenuEmits}
+ */
+export type SideMenuEmits = {
+  /**
+   * 菜单项单击事件。
+   * @author Wang Yucai
+   *
+   * @type {[e: sys.GenericEventArgs<SideMenuItemOptions>]}
+   */
+  'item-click': [e: sys.GenericEventArgs<SideMenuItemOptions>];
+};

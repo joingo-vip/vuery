@@ -1,7 +1,17 @@
 {
   "administrate": {
-    "default": "4BC547D7-0BFD-4260-B6A3-274591E5CCB5",
+    "default": "12214209-206D-4A8F-8C4F-68B43FFF150D",
     "menuItems": [
+      {
+        "id": "12214209-206D-4A8F-8C4F-68B43FFF150D",
+        "resourceKeyOfText": "default:summary",
+        "routePath": "/",
+        "icons": {
+          "actived": "resources/no-build/home-actived.png",
+          "unactived": "resources/no-build/home-unactived.png"
+        },
+        "enabled": true
+      },
       {
         "id": "C3B469C3-6B14-4C7E-8BC5-7F1A4D575590",
         "resourceKeyOfText": "default:sidemenuItems.applicationRoles",
