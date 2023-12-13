@@ -1,8 +1,11 @@
 {
   "default": {
+    "all": "全部",
     "applicationName": "匠果出品",
     "corporationName": "北京匠果信息技术有限公司",
+    "disabled": "禁用的",
     "emailAddress": "电邮地址",
+    "enabled": "启用的",
     "loadingPrompt": "正在加载数据，请稍候...",
     "mobileNumber": "移动电话",
     "pin": "固定",

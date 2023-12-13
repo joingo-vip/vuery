@@ -8,7 +8,9 @@
 <!--DataContainer.vue: 数据容器组件-->
 <template>
   <div role="v-databox" class="v-databox">
-    <div class="v-databox__search-area"></div>
+    <div class="v-databox__search-area">
+      <slot name="search-area" />
+    </div>
   </div>
 </template>
 

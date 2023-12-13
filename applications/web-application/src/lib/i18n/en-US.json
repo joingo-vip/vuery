@@ -1,8 +1,11 @@
 {
   "default": {
+    "all": "All",
     "applicationName": "Produced by Joingo.vip",
     "corporationName": "Beijing Joingo.vip Information Technology Co., Ltd",
+    "disabled": "Disabled",
     "emailAddress": "E-mail",
+    "enabled": "Enabled",
     "loadingPrompt": "Loading data, please wait a few minutes...",
     "mobileNumber": "Mobile",
     "pin": "Pin",

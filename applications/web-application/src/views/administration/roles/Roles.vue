@@ -10,7 +10,9 @@
   <v-main>
     <v-action-area :title="$t('default:sidemenuItems.applicationRoles')">
       <v-processbox :in-processing="rolesTable.loading">
-        <v-databox></v-databox>
+        <v-databox>
+          <template #search-area> </template>
+        </v-databox>
       </v-processbox>
     </v-action-area>
   </v-main>

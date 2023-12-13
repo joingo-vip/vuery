@@ -19,6 +19,8 @@ export {
   UnitiedStatesAmericaLanguagePack,
 } from './i18n/index.mjs';
 export { createHomeRouter } from './route.mjs';
+export { EnabledStateOptions, type EnabledState } from './services/common.mjs';
+export { DefaultRoleFilters, type RoleFilters } from './services/role.mjs';
 export { useUIStore, type UIState } from './store.mjs';
 export { getNobuildResourceUri } from './utilties.mjs';
 export { WebApplication, WebApplicationBuilder, type WebApplicationContext } from './vue-appbuild.mjs';
