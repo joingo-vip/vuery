@@ -195,4 +195,31 @@ declare namespace sys {
     | 'snake'
     | 'train'
     | 'none';
+
+  /**
+   * 定义了键值对类型。
+   * @author Wang Yucai
+   *
+   * @interface KeyValuePair
+   * @typedef {KeyValuePair}
+   * @template TKey 键类型。
+   * @template TValue 值类型。
+   */
+  interface KeyValuePair<TKey, TValue> {
+    /**
+     * {@linkcode TKey} 类型的键值。
+     * @author Wang Yucai
+     *
+     * @type {TKey}
+     */
+    key: TKey;
+
+    /**
+     * {@linkcode TValue} 类型的值。
+     * @author Wang Yucai
+     *
+     * @type {?sys.Null<TValue>}
+     */
+    value?: sys.Null<TValue>;
+  }
 }
