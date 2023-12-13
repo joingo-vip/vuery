@@ -222,7 +222,7 @@ $boxsize-alias in lib.$boxsize-map {
 
 .use-horizontal-scrollabr {
     @extend %scrollbar;
-    overflow-x: auto;
+    overflow-x: scroll;
 }
 
 .use-horizontal-scrollabr::-webkit-scrollbar {

@@ -24,9 +24,7 @@
         </v-app-bar>
       </template>
       <router-view #default="{ Component }">
-        <v-transitionbox enter-class-name="zoomIn" exit-class-name="zoomOutLeft">
-          <component :is="Component"></component>
-        </v-transitionbox>
+        <component :is="Component"></component>
       </router-view>
       <template #footer>
         <v-status-bar></v-status-bar>
@@ -36,16 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  vApp,
-  vAppBar,
-  vAvatarButton,
-  vFlexbox,
-  vFlexboxItem,
-  vLayout,
-  vStatusBar,
-  vTransitionbox,
-} from '~/components/index.mjs';
+import { vApp, vAppBar, vAvatarButton, vFlexbox, vFlexboxItem, vLayout, vStatusBar } from '~/components/index.mjs';
 import { getNobuildResourceUri } from '~/lib/index.mjs';
 
 /**

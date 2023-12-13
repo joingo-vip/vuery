@@ -9,23 +9,15 @@
     width : var(--v-databox-size);
     height: var(--v-databox-size);
 
-    >div {
+    &__item {
         padding: {
             top   : var(--v-databox-item-padding);
             bottom: var(--v-databox-item-padding);
         }
     }
 
-    >div:first-child {
-        padding-top: calc(var(--v-databox-item-padding) * 2) !important;
-    }
-
-    >div:last-child {
-        padding-bottom: calc(var(--v-databox-item-padding) * 2) !important;
-    }
-
     &__search-area {
-        background-color: var(--v-databox-search-box-background-color);
+        border-bottom: #{math.div(1, lib.$fontsize-base)}rem solid rgba(238, 238, 238, 1.0);
 
         padding: {
             left : var(--v-padding-base);

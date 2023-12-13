@@ -18,9 +18,7 @@
       </template>
       <template #default>
         <router-view #default="{ Component }">
-          <v-transitionbox enter-class-name="slideInRight" exit-class-name="slideOutLeft">
-            <component :is="Component"></component>
-          </v-transitionbox>
+          <component :is="Component"></component>
         </router-view>
       </template>
     </v-layout>
@@ -28,7 +26,7 @@
 </template>
 
 <script lang="ts" setup>
-import { vLayout, vSideMenu, SideMenuProperty, vTransitionbox } from '~/components/index.mjs';
+import { vLayout, vSideMenu, SideMenuProperty } from '~/components/index.mjs';
 import { SideMenuConfiguration, isAdministrateMode } from '~/lib/index.mjs';
 import { computed } from 'vue';
 
