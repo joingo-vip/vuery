@@ -28,7 +28,6 @@
     "@joingo.vip/security-authentication": "workspace:^",
     "@joingo.vip/storage": "workspace:^",
     "@mdi/font": "^7.3.67",
-    "animate.css": "^4.1.1",
     "element-plus": "^2.4.3",
     "i18next": "^23.6.0",
     "i18next-vue": "^3.0.0",

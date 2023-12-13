@@ -4,6 +4,5 @@
 // *******************************************************************************************************************************************************
 
 import '@mdi/font/css/materialdesignicons.css';
-import 'animate.css/animate.css';
 import './index.scss';
 import './themes/element-plus.scss';
