@@ -1,6 +1,6 @@
 {
   "name": "@joingo.vip/core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: Front-end core class library. Such libraries contain public methods, type definitions, etc.",
   "main": "compile/index.mjs",
   "module": "compile/index.mjs",

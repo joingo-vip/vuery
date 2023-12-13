@@ -1,6 +1,6 @@
 {
   "name": "@joingo.vip/security-authentication",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: Basic functions of Authentication.",
   "main": "compile/index.mjs",
   "module": "compile/index.mjs",

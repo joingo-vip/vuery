@@ -1,6 +1,6 @@
 {
   "name": "@joingo.vip/http",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Beijing JoinGo Information Technology Co., Ltd.: HTTP Service Client.",
   "main": "compile/index.mjs",
   "module": "compile/index.mjs",
