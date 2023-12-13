@@ -9,14 +9,7 @@
   padding-top: var(--v-databox-item-padding);
   padding-bottom: var(--v-databox-item-padding);
 }
-.v-databox__item:first-child {
-  padding-top: calc(var(--v-databox-item-padding) * 2) !important;
-}
-.v-databox__item:last-child {
-  padding-bottom: calc(var(--v-databox-item-padding) * 2) !important;
-}
 .v-databox__search-area {
-  background-color: var(--v-databox-search-box-background-color);
   padding-left: var(--v-padding-base);
   padding-right: var(--v-padding-base);
 }

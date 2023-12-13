@@ -10776,7 +10776,7 @@ body::-webkit-scrollbar-thumb, .use-horizontal-scrollabr::-webkit-scrollbar-thum
 
 .use-horizontal-scrollabr, html,
 body {
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 .use-horizontal-scrollabr::-webkit-scrollbar, html::-webkit-scrollbar,

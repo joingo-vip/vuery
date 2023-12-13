@@ -48,7 +48,7 @@
           </template>
           <template #default>
             <v-size-listener @resize="onSizeChanged">
-              <el-table border stripe :height="dataTableSize.height" :style="{ width: dataTableSize.width }">
+              <el-table border stripe :style="{ width: dataTableSize.width, maxHeight: dataTableSize.height }">
                 <el-table-column
                   v-for="item in 100"
                   :key="`role-table-column__${item}`"

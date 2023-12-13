@@ -17,7 +17,7 @@
     }
 
     &__search-area {
-        border-bottom: #{math.div(1, lib.$fontsize-base)}rem solid rgba(238, 238, 238, 1.0);
+        // border-bottom: #{math.div(1, lib.$fontsize-base)}rem solid rgba(238, 238, 238, 1.0);
 
         padding: {
             left : var(--v-padding-base);
