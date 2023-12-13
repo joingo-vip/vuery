@@ -1,4 +1,53 @@
 # RELEASE NOTES
+### [1.0.2](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/compare/v1.0.1...v1.0.2) (2023-12-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* **#8:** 删除了 vTransitionbox 转场动画组件。
+
+### 修复 BUG FIXED
+
+* **#8:** 修复侧边栏菜单选中状态未设置问题。 ([9cba1cf](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/9cba1cf25a556e94587d8c8816a94a086e6844fe)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 修复了 Transitionbox.vue 转场动画容器组件属性定义错误。 ([bf1371d](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/bf1371de3331c9d6ff2ada1dc59c9b0a8db8c9eb)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+
+
+### 构建 BUILD
+
+* 重新构建了 packages/** 目录下的项目。 ([5512444](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/5512444dbbc240534d2823e90370c4ca54a381dc))
+
+
+### 新功能 NEW FEATURE
+
+* **#8:** 💥 完成了数据表布局组件 Databox。 ([1b41e1a](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/1b41e1a2d5732054c87dc4cbd9f55a7f8fafd94d)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 🔖 新增 Databox 组件（未完）。 ([1e80cdc](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/1e80cdcfef15f758279e295a4b6bc848ad1d862b)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 🔖 新增 SizeListener 组件，并尝试与 Element-Plus Table 组件集成。 ([7d0069f](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/7d0069faf08e1858bbda325dab16a35670f8fd10)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 调整了 RouterView 中的转场效果。 ([a61be7e](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/a61be7eed9ba06676079a4ab16117b73e4f6f620)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 完成了 Databox 组件查询区域插槽调试。 ([c30ea68](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/c30ea689fb5aed44c82ffb2389bc1c479ff2ad2b)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 完成了侧边栏菜单 SideMenu 组件。 ([334d230](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/334d230f8b7efe5983bc71ec12188dc9d8afd3d4)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增 Pinia 状态管理服务。 ([a73adcb](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/a73adcbd3cdd9cfa384472bf614eef73b10f6ff6)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增 ProcessBox 组件。 ([28f0f80](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/28f0f801b92d310d4879a5c78b2df29db3603987)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增 SideMenu 菜单是否折叠状态集成。 ([bcfb48a](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/bcfb48ac38593a06ee31d7a7adeb20902e4c88f0)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增 SideMenu 侧边栏菜单组件。 ([762968e](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/762968e9c87424512b18d57e6413ff5c865e8adb)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增 vMain 组件。 ([66a8598](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/66a8598e46ad02b9b68832ce718dc8e58bfd01b6)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增操作区容器 ActionArea 组件。 ([dd6946a](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/dd6946a4dc0cc4d27775a6611cc93e88df2dc674)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增环境变量相关的服务。 ([131e394](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/131e394b66f229aeaceb1c2f09f6c158c58fbe92)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* **#8:** 新增应用侧边栏菜单配置。 ([ff317d4](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/ff317d4a8a7e7b296326e384f9e191a1de0651ba)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* ➖ 删除了 animate.css 动画包依赖。 ([5572048](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/5572048a78229a51f111219131156e9898445e1b))
+* 新增键值对类型。 ([208d7c5](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/208d7c592dd2766b18e5c01329f8b39089ba4bf0))
+
+
+### 代码样式变更 CODE STYLE
+
+* 调整了 Databox 样式。 ([b395757](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/b395757da0f350aee3820c62038e2d94fb5ff179))
+* 调整了 export default 代码样式。 ([da50f9c](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/da50f9ce3a853e30f11a51bd6062e6549cf4a444))
+
+
+### 其他 CHORE
+
+* **#8:** 新增 v-resize-observer 组件库。 ([d62c580](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/d62c580520cf776e289ed98b33786ea590f978cb)), closes [#8](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/issues/8)
+* 🔖 调整了版本号为 1.0.2 。 ([221269c](https://codeup.aliyun.com/61935ec0e84c82e79291a8b7/base/vuery/commit/221269c369a82d3d531b87e3e309a42aa07a571d))
+
 ### 1.0.1 (2023-12-08)
 
 
