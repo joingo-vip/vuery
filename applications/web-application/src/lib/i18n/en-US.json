@@ -9,6 +9,8 @@
     "loadingPrompt": "Loading data, please wait a few minutes...",
     "mobileNumber": "Mobile",
     "pin": "Pin",
+    "query": "Query",
+    "reset": "Reset",
     "sidemenuItems": {
       "administrateTitle": "Administration Console",
       "applicationPermissions": "Permission",
@@ -17,6 +19,7 @@
       "users": "Users"
     },
     "signOut": "Sign Out",
+    "status": "Status",
     "summary": "Summary",
     "symbols": {
       "colon": ":",
@@ -34,5 +37,17 @@
     "tip": "Tip",
     "unpin": "Unpin",
     "userProfile": "User Profile"
+  },
+  "modules": {
+    "roles": {
+      "label": {
+        "code": "Role Code",
+        "name": "Role Name"
+      },
+      "placeholder": {
+        "code": "Please enter role code.",
+        "name": "Please enter role name."
+      }
+    }
   }
 }

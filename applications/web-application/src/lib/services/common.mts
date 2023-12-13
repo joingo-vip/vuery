@@ -47,6 +47,6 @@ export const EnabledStateOptions: Required<sys.KeyValuePair<EnabledState, string
   },
   {
     key: EnabledState.DISABLED,
-    value: 'default.disabled',
+    value: 'default:disabled',
   },
 ];

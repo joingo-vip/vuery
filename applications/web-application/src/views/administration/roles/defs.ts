@@ -3,6 +3,8 @@
 // COPYRIGHT © 2023 BEIJING JOINGO.VIP INFORMATION TECHNOLOGY CO., LTD. ALL RIGHTS RESERVED.
 // *******************************************************************************************************************************************************
 
+import { type RoleFilters } from '~/lib/index.mjs';
+
 /**
  * 定义了角色数据表绑定类型。
  * @author Wang Yucai
@@ -38,5 +40,5 @@ export type ObservableRolesTable = {
   /**
    * 查询过滤条件。
    */
-  filter: {};
+  filter: RoleFilters;
 };

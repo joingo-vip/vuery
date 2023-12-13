@@ -9,6 +9,8 @@
     "loadingPrompt": "載入資料，請稍候...",
     "mobileNumber": "行動電話",
     "pin": "固定",
+    "query": "查詢",
+    "reset": "重置",
     "sidemenuItems": {
       "administrateTitle": "應用管理平臺",
       "applicationPermissions": "授權許可權管理",
@@ -17,6 +19,7 @@
       "users": "使用者管理"
     },
     "signOut": "登出",
+    "status": "狀態",
     "summary": "摘要",
     "symbols": {
       "colon": "：",
@@ -34,5 +37,17 @@
     "tip": "提示",
     "unpin": "取消固定",
     "userProfile": "使用者配置"
+  },
+  "modules": {
+    "roles": {
+      "label": {
+        "code": "角色編碼",
+        "name": "角色名稱"
+      },
+      "placeholder": {
+        "code": "請輸入角色編碼",
+        "name": "請輸入角色名稱"
+      }
+    }
   }
 }

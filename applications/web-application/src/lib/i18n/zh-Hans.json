@@ -9,6 +9,8 @@
     "loadingPrompt": "正在加载数据，请稍候...",
     "mobileNumber": "移动电话",
     "pin": "固定",
+    "query": "查询",
+    "reset": "重置",
     "sidemenuItems": {
       "administrateTitle": "应用管理平台",
       "applicationPermissions": "授权权限管理",
@@ -17,6 +19,7 @@
       "users": "用户管理"
     },
     "signOut": "登出",
+    "status": "状态",
     "summary": "摘要",
     "symbols": {
       "colon": "：",
@@ -34,5 +37,17 @@
     "tip": "提示",
     "unpin": "取消固定",
     "userProfile": "用户配置"
+  },
+  "modules": {
+    "roles": {
+      "label": {
+        "code": "角色编码",
+        "name": "角色名称"
+      },
+      "placeholder": {
+        "code": "请输入角色编码",
+        "name": "请输入角色名称"
+      }
+    }
   }
 }
