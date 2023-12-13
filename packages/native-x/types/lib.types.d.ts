@@ -222,4 +222,31 @@ declare namespace sys {
      */
     value?: sys.Null<TValue>;
   }
+
+  namespace ui {
+    /**
+     * 定义了尺寸结构。
+     * @author Wang Yucai
+     *
+     * @interface Size
+     * @typedef {Size}
+     */
+    interface Size {
+      /**
+       * 宽度。
+       * @author Wang Yucai
+       *
+       * @type {(number | string)}
+       */
+      width: number | string;
+
+      /**
+       * 高度。
+       * @author Wang Yucai
+       *
+       * @type {(number | string)}
+       */
+      height: number | string;
+    }
+  }
 }

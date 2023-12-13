@@ -17,3 +17,4 @@ export { default as vStatusBar } from './v-layouts/StatusBar.vue';
 export { type SideMenuProperty } from './v-layouts/defs';
 export { default as vMdi } from './v-mdi/Mdi.vue';
 export { default as vProcessbox } from './v-processbox/Processbox.vue';
+export { default as vSizeListener } from './v-size-listener/SizeListener.vue';

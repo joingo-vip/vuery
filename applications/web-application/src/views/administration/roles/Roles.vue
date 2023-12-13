@@ -46,6 +46,18 @@
               </el-form-item>
             </el-form>
           </template>
+          <template #default>
+            <v-size-listener @resize="onSizeChanged">
+              <el-table border stripe :height="dataTableSize.height" :style="{ width: dataTableSize.width }">
+                <el-table-column
+                  v-for="item in 100"
+                  :key="`role-table-column__${item}`"
+                  :label="`Column ${item}`"
+                  width="200px"
+                ></el-table-column>
+              </el-table>
+            </v-size-listener>
+          </template>
         </v-databox>
       </v-processbox>
     </v-action-area>
@@ -54,7 +66,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { vActionArea, vDatabox, vMain, vProcessbox } from '~/components/index.mjs';
+import { vActionArea, vDatabox, vMain, vProcessbox, vSizeListener } from '~/components/index.mjs';
 import { DefaultRoleFilters, EnabledStateOptions } from '~/lib/index.mjs';
 import { type ObservableRolesTable } from './defs';
 
@@ -70,6 +82,25 @@ const rolesTable = ref<ObservableRolesTable>({
   loading: false,
   filter: DefaultRoleFilters,
 });
+
+/**
+ * 数据表尺寸。
+ */
+const dataTableSize = ref<sys.ui.Size>({
+  width: '100%',
+  height: '100%',
+});
+
+/**
+ * 用于处理 “SizeListener” 组件的 “SizeChanged” 事件
+ * @remarks
+ *  用于监听数据表容器尺寸变更事件。
+ *
+ * @private
+ */
+function onSizeChanged(e: sys.GenericEventArgs<sys.ui.Size>): void {
+  dataTableSize.value = e.payload;
+}
 </script>
 
 <style lang="scss" scoped></style>
