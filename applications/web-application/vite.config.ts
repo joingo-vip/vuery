@@ -119,6 +119,7 @@ class Program {
         rollupOptions: {
           input: {
             'index': 'index.html',
+            'authentication': 'authentication.html',
           },
           output: {
             assetFileNames: `resources/[ext]/v${applicationInformation.version}-[name]-[hash][extname]`,
