@@ -8,7 +8,7 @@
 <!--Summary.vue: 摘要视图-->
 <template>
   <v-main>
-    <v-action-area :title="$t('default:summary')"></v-action-area>
+    <v-action-area :title="$t('default:summary')"> </v-action-area>
   </v-main>
 </template>
 
