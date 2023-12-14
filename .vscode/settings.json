@@ -1,5 +1,5 @@
 {
   "explorer.excludeGitIgnore": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "conventionalCommits.scopes": ["#8"]
+  "conventionalCommits.scopes": ["#8", "#9"]
 }

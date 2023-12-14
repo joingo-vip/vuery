@@ -13,6 +13,15 @@ interface ImportMetaEnv {
   readonly RUNTIME_DEFAULT_CULTUREINFO: string;
 
   /**
+   * 身份认证单点登录页面 URL 地址。
+   * @author Wang Yucai
+   *
+   * @readonly
+   * @type {string}
+   */
+  readonly RUNTIME_AUTHENTICATION_SSO_URL: string;
+
+  /**
    * 应用程序角色。
    * @author Wang Yucai
    * @remarks
